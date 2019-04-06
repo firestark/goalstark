@@ -1,5 +1,9 @@
 /* Reset */
 
+*:not(.material-icons) {
+    font-family: 'Exo 2', Roboto, sans-serif !important;
+}
+
 html, body {
     margin: 0;
     padding: 0;
