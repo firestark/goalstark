@@ -2,10 +2,10 @@
 
 @section('content')
     @if(count($goals))
-        <section id="goal-listing" class="mdc-card">
+        <section id="goal-listing">
             <ul class="mdc-list">
                 @foreach($goals as $goal)
-                    <li class="mdc-list-item">
+                    <li class="mdc-list-item mdc-card">
                         <a href="/{{ $goal->id }}">
                             <span class="mdc-list-item__text">{{ $goal->description }}</span>
                         </a>

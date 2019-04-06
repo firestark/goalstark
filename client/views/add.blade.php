@@ -6,8 +6,8 @@
 
 @section('content')
     <form method="POST" action="/">        
-        <div class="mdc-text-field mdc-text-field--textarea">
-            <textarea id="description" name="description" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
+        <div id="description-input" class="mdc-text-field mdc-text-field--textarea">
+            <textarea id="description" name="description" class="mdc-text-field__input" required></textarea>
             <div class="mdc-notched-outline">
                 <div class="mdc-notched-outline__leading"></div>
                 <div class="mdc-notched-outline__notch">
