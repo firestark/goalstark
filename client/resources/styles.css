@@ -1,0 +1,35 @@
+/* Reset */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Styling */
+
+main {
+    padding: 16px;
+}
+
+a.mdc-list-item__meta {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.mdc-fab {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+#goal-listing {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#goal-listing a {
+    color: rgba(0, 0, 0, 0.87);
+}
