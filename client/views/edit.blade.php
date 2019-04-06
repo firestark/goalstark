@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('navigation')
+    <a href="/" class="material-icons mdc-top-app-bar__navigation-icon">arrow_back</a>
+@endsection
+
 @section('content')
     <form method="POST" action="/{{ $goal->id }}">
         <input type="hidden" name="id" value="{{ $goal->id }}">
