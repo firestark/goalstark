@@ -57,6 +57,11 @@ input[type="date"]::-webkit-inner-spin-button {
     fill: var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.38));
 }
 
+.mdc-text-field__icon {
+    fill: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+}
+
+
 /* ---------------------------------------------------------
     Styling 
 --------------------------------------------------------- */
