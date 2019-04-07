@@ -7,15 +7,23 @@
             <ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
                 @foreach($goals as $goal)
                     <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
-                        <a  href="/complete/{{ $goal->id }}" 
-                            class="mdc-list-item__graphic material-icons {{ ($goal->completed) ? 'completed' : '' }}" 
-                            aria-hidden="true">check
-                        </a>
+
+                        @if($goal->completed)
+                            <a  href="/uncomplete/{{ $goal->id }}" 
+                                class="mdc-list-item__graphic material-icons completed" 
+                                aria-hidden="true">check_circle
+                            </a>
+                        @else
+                            <a  href="/complete/{{ $goal->id }}" 
+                                class="mdc-list-item__graphic material-icons" 
+                                aria-hidden="true">check_circle_outline
+                            </a>
+                        @endif
 
                         <a href="/{{ $goal->id }}">
                             <span class="mdc-list-item__text">
                                 <span class="mdc-list-item__primary-text">{{ $goal->description }}</span>
-                                <span class="mdc-list-item__secondary-text">{{ gmdate("M d, Y ", $goal->completeBy) }}</span>
+                                <span class="mdc-list-item__secondary-text">{{  date("M d, Y ", $goal->completeBy) }}</span>
                             </span>
                         </a>
                         
