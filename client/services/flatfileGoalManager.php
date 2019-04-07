@@ -61,6 +61,15 @@ class flatfileGoalManager implements goalManager
         $this->write ( );
     }
 
+    function complete ( goal $goal )
+    {
+        if ( ! isset ( $this->goals [ $goal->id ] ) )
+            throw new \exception ( "A goal with id: {$goal->id} does not exist." );
+        
+        $this->goals [ $goal->id ]->completed = true;
+        $this->write ( );
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->goals ) );

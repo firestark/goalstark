@@ -6,6 +6,10 @@
             <ul class="mdc-list">
                 @foreach($goals as $goal)
                     <li class="mdc-list-item mdc-card">
+                        <a  href="/complete/{{ $goal->id }}" 
+                            class="mdc-list-item__graphic material-icons {{ ($goal->completed) ? 'completed' : '' }}" 
+                            aria-hidden="true">check
+                        </a>
                         <a href="/{{ $goal->id }}">
                             <span class="mdc-list-item__text">{{ $goal->description }}</span>
                         </a>

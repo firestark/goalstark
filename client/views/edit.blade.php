@@ -18,6 +18,16 @@
             </div>
         </div>
 
+        <div class="mdc-text-field mdc-text-field--no-label">
+            <input 
+                type="date" 
+                id="completeBy" name="completeBy"
+                class="mdc-text-field__input"
+                value="{{ date('Y-m-d', $goal->completeBy) }}" 
+                min="{{ date('Y-m-d') }}">
+            <div class="mdc-line-ripple"></div>
+        </div>
+
         <button type="submit" class="mdc-fab">
             <span class="mdc-fab__icon material-icons">check</span>
         </button>

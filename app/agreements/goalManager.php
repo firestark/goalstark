@@ -15,4 +15,6 @@ interface goalManager
     function update ( goal $goal );
 
     function remove ( goal $goal );
+
+    function complete ( goal $goal );
 }

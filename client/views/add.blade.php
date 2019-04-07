@@ -6,6 +6,7 @@
 
 @section('content')
     <form method="POST" action="/">        
+        
         <div id="description-input" class="mdc-text-field mdc-text-field--textarea">
             <textarea id="description" name="description" class="mdc-text-field__input" required></textarea>
             <div class="mdc-notched-outline">
@@ -17,6 +18,17 @@
             </div>
         </div>
 
+        <div class="mdc-text-field mdc-text-field--no-label">
+            <input 
+                type="date" 
+                id="completeBy" name="completeBy"
+                class="mdc-text-field__input"
+                value="{{ date('Y-m-d') }}" 
+                min="{{ date('Y-m-d') }}">
+            <div class="mdc-line-ripple"></div>
+        </div>
+
+        
         <button type="submit" class="mdc-fab">
             <span class="mdc-fab__icon material-icons">check</span>
         </button>
@@ -28,5 +40,5 @@
     <script>
         mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
         mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));        
-    </script>
+    </script>    
 @endsection
