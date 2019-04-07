@@ -69,7 +69,11 @@ a.mdc-list-item__meta {
     z-index: 5000;
 }
 
-#goal-listing li a:first-child {
+#goal-listing li a.completed {
+    color: #cddc39;
+}
+
+#goal-listing li a:nth-child(2) {
     color: rgba(0, 0, 0, 0.87);
     width: 100%;
     height: 100%;
@@ -86,4 +90,5 @@ a.mdc-list-item__meta {
 #description-input {
     width: 100%;
     height: 200px;
+    margin-bottom: 24px;
 }
