@@ -1,9 +1,9 @@
 module.exports = [{
-    entry: './resources/app.scss',
+    entry: ['./resources/app.scss', './resources/app.js'],
     output: {
       // This is necessary for webpack to compile
       // But we never use style-bundle.js
-      filename: 'resources/-.js',
+      filename: './resources/bundle.js',
     },
     module: {
       rules: [
@@ -25,6 +25,13 @@ module.exports = [{
               }
             }
           ]
+        },
+        {
+          test: /\.js$/,
+          loader: 'babel-loader',
+          query: {
+            presets: ['es2015'],
+          },
         }
       ]
     },
