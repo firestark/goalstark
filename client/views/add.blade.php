@@ -1,7 +1,12 @@
 @extends('master')
 
 @section('navigation')
-    <a href="/" class="material-icons mdc-top-app-bar__navigation-icon">arrow_back</a>
+    <a href="/" class="mdc-top-app-bar__navigation-icon">
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0V0z"/>
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+    </a>
 @endsection
 
 @section('content')
@@ -31,7 +36,12 @@
 
         
         <button type="submit" class="mdc-fab">
-            <span class="mdc-fab__icon material-icons">check</span>
+            <span class="mdc-fab__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0V0z"/>
+                    <path opacity=".3" d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-2 13l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                </svg>
+            </span>
         </button>
     </form>
 @endsection

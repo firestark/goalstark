@@ -1,6 +1,6 @@
 :root[data-theme="light"] {
   --mdc-theme-primary: #db004d;
-  --mdc-theme-secondary: #fff;
+  --mdc-theme-secondary: #CDDC39;
   --mdc-theme-background: #fff;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #b00020;
@@ -26,11 +26,11 @@
 
 :root[data-theme="dark"] {
   --mdc-theme-primary: #DB004D;
-  --mdc-theme-secondary: #FFFFFF;
+  --mdc-theme-secondary: #fff;
   --mdc-theme-background: #303030;
   --mdc-theme-surface: #424242;
   --mdc-theme-error: #b00020;
-  --mdc-theme-on-primary: #FFFFFF;
+  --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #343434;
   --mdc-theme-on-surface: #fff;
   --mdc-theme-on-error: #fff;
@@ -1990,7 +1990,7 @@ svg.mdc-button__icon {
 *:focus {
   outline: none; }
 
-*:not(.material-icons) {
+* {
   font-family: 'Exo 2', Roboto, sans-serif !important; }
 
 html, body {
@@ -2011,6 +2011,9 @@ input[type="date"]::-webkit-inner-spin-button {
   ::-webkit-calendar-picker-indicator:hover {
     background: none; }
 
+.mdc-list-item__meta {
+  fill: var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.38)); }
+
 /* ---------------------------------------------------------
     Styling 
 --------------------------------------------------------- */
@@ -2019,7 +2022,7 @@ html, body {
 
 main {
   padding: 16px;
-  max-width: 800px;
+  max-width: 1280px;
   margin: 0 auto; }
 
 .mdc-fab {

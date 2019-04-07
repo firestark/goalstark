@@ -8,7 +8,7 @@
 
 .mdc-text-field {
     @include mdc-text-field-ink-color(var(--mdc-theme-text-primary-on-background, #343434));
-    @include mdc-text-field-label-color(var(--mdc-theme-text-primary-on-background, #343434))
+    @include mdc-text-field-label-color(var(--mdc-theme-text-primary-on-background, #343434));
 
     input, textarea {
         background-color: var(--mdc-theme-background, #fff);
@@ -24,7 +24,7 @@
     outline: none;
 }
 
-*:not(.material-icons) {
+* {
     font-family: 'Exo 2', Roboto, sans-serif !important;
 }
 
@@ -53,6 +53,10 @@ input[type="date"]::-webkit-inner-spin-button {
     }
 }
 
+.mdc-list-item__meta {
+    fill: var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.38));
+}
+
 /* ---------------------------------------------------------
     Styling 
 --------------------------------------------------------- */
@@ -63,7 +67,7 @@ html, body {
 
 main {
     padding: 16px;
-    max-width: 800px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
