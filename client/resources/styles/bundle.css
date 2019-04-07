@@ -1,3 +1,55 @@
+:root[data-theme="light"] {
+  --mdc-theme-primary: #db004d;
+  --mdc-theme-secondary: #fff;
+  --mdc-theme-background: #fff;
+  --mdc-theme-surface: #fff;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-primary: #fff;
+  --mdc-theme-on-secondary: #343434;
+  --mdc-theme-on-surface: #000;
+  --mdc-theme-on-error: #fff;
+  --mdc-theme-text-primary-on-background: #343434;
+  --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
+  --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-icon-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-light: #343434;
+  --mdc-theme-text-secondary-on-light: rgba(0, 0, 0, 0.54);
+  --mdc-theme-text-hint-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-disabled-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-icon-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-dark: white;
+  --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, 0.7);
+  --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5); }
+
+:root[data-theme="dark"] {
+  --mdc-theme-primary: #DB004D;
+  --mdc-theme-secondary: #FFFFFF;
+  --mdc-theme-background: #303030;
+  --mdc-theme-surface: #424242;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-primary: #FFFFFF;
+  --mdc-theme-on-secondary: #343434;
+  --mdc-theme-on-surface: #fff;
+  --mdc-theme-on-error: #fff;
+  --mdc-theme-text-primary-on-background: #f2f2f2;
+  --mdc-theme-text-secondary-on-background: rgba(255, 255, 255, 0.54);
+  --mdc-theme-text-hint-on-background: rgba(255, 255, 255, 0.38);
+  --mdc-theme-text-disabled-on-background: rgba(255, 255, 255, 0.38);
+  --mdc-theme-text-icon-on-background: rgba(255, 255, 255, 0.38);
+  --mdc-theme-text-primary-on-light: #343434;
+  --mdc-theme-text-secondary-on-light: rgba(255, 255, 255, 0.54);
+  --mdc-theme-text-hint-on-light: rgba(255, 255, 255, 0.38);
+  --mdc-theme-text-disabled-on-light: rgba(255, 255, 255, 0.38);
+  --mdc-theme-text-icon-on-light: rgba(255, 255, 255, 0.38);
+  --mdc-theme-text-primary-on-dark: #fff;
+  --mdc-theme-text-secondary-on-dark: rgba(0, 0, 0, 0.7);
+  --mdc-theme-text-hint-on-dark: rgba(0, 0, 0, 0.5);
+  --mdc-theme-text-disabled-on-dark: rgba(0, 0, 0, 0.5);
+  --mdc-theme-text-icon-on-dark: rgba(0, 0, 0, 0.5); }
+
 .mdc-button {
   font-family: Roboto, sans-serif;
   -moz-osx-font-smoothing: grayscale;
@@ -1923,69 +1975,14 @@ svg.mdc-button__icon {
   .mdc-top-app-bar--fixed-adjust {
     padding-top: 56px; } }
 
-.mdc-button:not(:disabled) {
-  color: teal; }
-
-.mdc-button::before, .mdc-button::after {
-  background-color: teal; }
-
-.mdc-button:hover::before {
-  opacity: 0.04; }
-
-.mdc-button:not(.mdc-ripple-upgraded):focus::before, .mdc-button.mdc-ripple-upgraded--background-focused::before {
-  transition-duration: 75ms;
-  opacity: 0.12; }
-
-.mdc-button:not(.mdc-ripple-upgraded)::after {
-  transition: opacity 150ms linear; }
-
-.mdc-button:not(.mdc-ripple-upgraded):active::after {
-  transition-duration: 75ms;
-  opacity: 0.12; }
-
-.mdc-button.mdc-ripple-upgraded {
-  --mdc-ripple-fg-opacity: 0.12; }
-
-.mdc-fab {
-  background-color: white;
-  color: rgba(0, 0, 0, 0.87);
-  /* @alternate */
-  color: var(--mdc-theme-text-primary-on-light, rgba(0, 0, 0, 0.87)); }
-  .mdc-fab::before, .mdc-fab::after {
-    background-color: rgba(0, 0, 0, 0.87); }
-    @supports not (-ms-ime-align: auto) {
-      .mdc-fab::before, .mdc-fab::after {
-        /* @alternate */
-        background-color: var(--mdc-theme-text-primary-on-light, rgba(0, 0, 0, 0.87)); } }
-  .mdc-fab:hover::before {
-    opacity: 0.04; }
-  .mdc-fab:not(.mdc-ripple-upgraded):focus::before, .mdc-fab.mdc-ripple-upgraded--background-focused::before {
-    transition-duration: 75ms;
-    opacity: 0.12; }
-  .mdc-fab:not(.mdc-ripple-upgraded)::after {
-    transition: opacity 150ms linear; }
-  .mdc-fab:not(.mdc-ripple-upgraded):active::after {
-    transition-duration: 75ms;
-    opacity: 0.12; }
-  .mdc-fab.mdc-ripple-upgraded {
-    --mdc-ripple-fg-opacity: 0.12; }
-
-.mdc-top-app-bar {
-  background-color: #DB004D; }
-
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-  color: #343434; }
+  color: var(--mdc-theme-text-primary-on-background, #343434); }
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: #DB004D; }
+  color: var(--mdc-theme-text-primary-on-background, #343434); }
 
-.mdc-text-field .mdc-text-field__input {
-  caret-color: #DB004D; }
-
-.mdc-text-field:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
-.mdc-text-field:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
-.mdc-text-field:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
-  border-color: #DB004D; }
+.mdc-text-field input, .mdc-text-field textarea {
+  background-color: var(--mdc-theme-background, #fff); }
 
 /* ---------------------------------------------------------
     Reset 
@@ -2003,20 +2000,31 @@ html, body {
 a {
   text-decoration: none; }
 
+input[type="date"]::-webkit-clear-button {
+  display: none; }
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none; }
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer; }
+  ::-webkit-calendar-picker-indicator:hover {
+    background: none; }
+
 /* ---------------------------------------------------------
     Styling 
 --------------------------------------------------------- */
+html, body {
+  background-color: var(--mdc-theme-background, #fff); }
+
 main {
   padding: 16px;
   max-width: 800px;
   margin: 0 auto; }
 
-a.mdc-list-item__meta {
-  color: rgba(0, 0, 0, 0.87); }
-
 .mdc-fab {
   position: absolute;
-  top: 34px;
+  bottom: 34px;
   right: 40px;
   z-index: 5000; }
 
@@ -2024,16 +2032,11 @@ a.mdc-list-item__meta {
   color: #cddc39; }
 
 #goal-listing li a:nth-child(2) {
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--mdc-theme-text-primary-on-background, #343434);
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center; }
-
-.mdc-list-item.mdc-card {
-  flex-direction: row;
-  margin: 16px 0;
-  height: 72px; }
 
 #description-input {
   width: 100%;

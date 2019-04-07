@@ -75,7 +75,7 @@ module.exports = __webpack_require__(2);
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "resources/bundle.css";
+module.exports = __webpack_require__.p + "resources/styles/bundle.css";
 
 /***/ }),
 /* 2 */

@@ -18,13 +18,14 @@
             </div>
         </div>
 
-        <div class="mdc-text-field mdc-text-field--no-label">
+        <div class="mdc-text-field" id="complete-by-input">
             <input 
                 type="date" 
-                id="completeBy" name="completeBy"
+                id="complete-by" name="completeBy"
                 class="mdc-text-field__input"
                 value="{{ date('Y-m-d') }}" 
                 min="{{ date('Y-m-d') }}">
+            <label class="mdc-floating-label" for="complete-by">Due date</label>
             <div class="mdc-line-ripple"></div>
         </div>
 
@@ -39,6 +40,7 @@
 @section('mdc-js')
     <script>
         mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
-        mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));        
+        mdc.textField.MDCTextField.attachTo(document.getElementById('description-input'));
+        mdc.textField.MDCTextField.attachTo(document.getElementById('complete-by-input'));    
     </script>    
 @endsection

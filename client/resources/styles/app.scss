@@ -1,30 +1,18 @@
+@import "./themes/light.scss";
+@import "./themes/dark.scss";
+
 @import "@material/button/mdc-button";
 @import "@material/textfield/mdc-text-field";
 @import "@material/fab/mdc-fab";
 @import "@material/top-app-bar/mdc-top-app-bar";
 
-$primary: #DB004D;
-$secondary: white;
-$text: #343434;
-
-.mdc-button {
-    @include mdc-button-ink-color(teal);
-    @include mdc-states(teal);
-}
-
-.mdc-fab {
-    @include mdc-fab-accessible($secondary);
-}
-
-.mdc-top-app-bar {
-    @include mdc-top-app-bar-fill-color($primary);
-}
-
 .mdc-text-field {
-    @include mdc-text-field-ink-color($text);
-    @include mdc-text-field-label-color($primary);
-    @include mdc-text-field-caret-color($primary);
-    @include mdc-text-field-focused-outline-color($primary);
+    @include mdc-text-field-ink-color(var(--mdc-theme-text-primary-on-background, #343434));
+    @include mdc-text-field-label-color(var(--mdc-theme-text-primary-on-background, #343434))
+
+    input, textarea {
+        background-color: var(--mdc-theme-background, #fff);
+    }
 }
 
 
@@ -49,22 +37,39 @@ a {
     text-decoration: none;
 }
 
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+
+    &:hover {
+        background: none;
+    }
+}
+
 /* ---------------------------------------------------------
     Styling 
 --------------------------------------------------------- */
+
+html, body {
+    background-color: var(--mdc-theme-background, #fff);
+}
+
 main {
     padding: 16px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-a.mdc-list-item__meta {
-    color: rgba(0, 0, 0, 0.87);
-}
-
 .mdc-fab {
     position: absolute;
-    top: 34px;
+    bottom: 34px;
     right: 40px;
     z-index: 5000;
 }
@@ -74,7 +79,7 @@ a.mdc-list-item__meta {
 }
 
 #goal-listing li a:nth-child(2) {
-    color: rgba(0, 0, 0, 0.87);
+    color: var(--mdc-theme-text-primary-on-background, #343434);
     width: 100%;
     height: 100%;
     display: flex;

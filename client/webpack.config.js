@@ -1,5 +1,5 @@
 module.exports = [{
-    entry: ['./resources/app.scss', './resources/app.js'],
+    entry: ['./resources/styles/app.scss', './resources/app.js'],
     output: {
       // This is necessary for webpack to compile
       // But we never use style-bundle.js
@@ -13,7 +13,7 @@ module.exports = [{
             {
               loader: 'file-loader',
               options: {
-                name: 'resources/bundle.css',
+                name: 'resources/styles/bundle.css',
               },
             },
             { loader: 'extract-loader' },

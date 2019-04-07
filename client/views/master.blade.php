@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB ">
+<html lang="en-GB" data-theme="{{ session::has('theme') ? session::get('theme') : 'light' }}">
 
 <head>
     <!--[if IE]>
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link rel="stylesheet" href="/resources/bundle.css">
+    <link rel="stylesheet" href="/resources/styles/bundle.css">
 
     <link rel="icon" href="/favicon.png">
     <meta name="theme-color" content="#fafafa">
@@ -31,6 +31,13 @@
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                 @yield('navigation')
                 <span class="mdc-top-app-bar__title">Goalstark</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                @if(session::get('theme') === 'dark')
+                    <a href="/theme/light" class="material-icons mdc-top-app-bar__action-item">invert_colors</a>
+                @else
+                    <a href="/theme/dark" class="material-icons mdc-top-app-bar__action-item">invert_colors</a>
+                @endif
             </section>
         </div>
     </header>

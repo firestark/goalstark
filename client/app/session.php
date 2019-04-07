@@ -19,7 +19,7 @@ class session
             ( $_SESSION [ 'deprecated' ] [ $key ] ?? $default ) );
     }
 
-    public function add ( string $key, $value )
+    public function set ( string $key, $value )
     {
         $_SESSION [ $key ] = $value;
     }

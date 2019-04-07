@@ -23,7 +23,7 @@
                         <a href="/{{ $goal->id }}">
                             <span class="mdc-list-item__text">
                                 <span class="mdc-list-item__primary-text">{{ $goal->description }}</span>
-                                <span class="mdc-list-item__secondary-text">{{  date("M d, Y ", $goal->completeBy) }}</span>
+                                <span class="mdc-list-item__secondary-text">Due {{  date("M d, Y ", $goal->completeBy) }}</span>
                             </span>
                         </a>
                         
