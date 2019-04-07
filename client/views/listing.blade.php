@@ -1,18 +1,24 @@
 @extends('master')
 
 @section('content')
+
     @if(count($goals))
         <section id="goal-listing">
-            <ul class="mdc-list">
+            <ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
                 @foreach($goals as $goal)
-                    <li class="mdc-list-item mdc-card">
+                    <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
                         <a  href="/complete/{{ $goal->id }}" 
                             class="mdc-list-item__graphic material-icons {{ ($goal->completed) ? 'completed' : '' }}" 
                             aria-hidden="true">check
                         </a>
+
                         <a href="/{{ $goal->id }}">
-                            <span class="mdc-list-item__text">{{ $goal->description }}</span>
+                            <span class="mdc-list-item__text">
+                                <span class="mdc-list-item__primary-text">{{ $goal->description }}</span>
+                                <span class="mdc-list-item__secondary-text">{{ gmdate("M d, Y ", $goal->completeBy) }}</span>
+                            </span>
                         </a>
+                        
                         <a href="/remove/{{ $goal->id }}" class="mdc-list-item__meta material-icons" aria-hidden="true">delete</a>
                     </li>
                 @endforeach
