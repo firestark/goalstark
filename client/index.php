@@ -15,7 +15,7 @@ $app->instance ( 'router', new firestark\router );
 $app->instance ( 'view', 
     new firestark\view ( 
         $app [ 'response' ], 
-        new Blade ( __DIR__ . '/views', __DIR__ . '/storage/cache' ) 
+        new Blade ( __DIR__ . '/views', __DIR__ . '/storage/cache/blade' ) 
     ) 
 );
 
