@@ -1,7 +1,7 @@
 :root[data-theme="light"] {
   --mdc-theme-primary: #EA4C62;
   --mdc-theme-secondary: #fff;
-  --mdc-theme-background: #fff;
+  --mdc-theme-background: #F8F9FA;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
@@ -2480,6 +2480,18 @@ input[type="date"]::-webkit-inner-spin-button {
 
 html, body {
   background-color: var(--mdc-theme-background, #fff); }
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden; }
+
+.mdc-top-app-bar {
+  position: relative; }
+
+#app {
+  overflow: auto; }
 
 main {
   padding: 16px;

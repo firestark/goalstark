@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link rel="stylesheet" href="/resources/styles/bundle.css">
-    @yield('styles')
-
     <link rel="icon" href="/favicon.png">
     <meta name="theme-color" content="#fafafa">
 </head>
@@ -54,7 +52,7 @@
         @yield('top-app-bar-alt-row')
     </header>
 
-    <div class="mdc-top-app-bar--fixed-adjust">
+    <div id="app">
         <main>
             @yield('content')
         </main>

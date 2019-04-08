@@ -144,6 +144,21 @@ html, body {
     background-color: var(--mdc-theme-background, #fff);
 }
 
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+}
+
+.mdc-top-app-bar {
+    position: relative;
+}
+
+#app {
+    overflow: auto;
+}
+
 main {
     padding: 16px;
     max-width: 1280px;

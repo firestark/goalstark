@@ -1,13 +1,5 @@
 @extends('master')
 
-@section('styles')
-    <style>
-        .mdc-top-app-bar--fixed-adjust {
-            padding-top: 128px;
-        }
-    </style>
-@endsection
-
 @section('top-app-bar-alt-row')
 
     <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
