@@ -8,7 +8,7 @@ $app = new firestark\app;
 $app->instance ( 'app', $app );
 $app->instance ( 'session', new firestark\session );
 $app->instance ( 'statuses', new firestark\statuses );
-$app->instance ( 'request', http\request::capture ( ) );
+$app->instance ( 'request', firestark\request::capture ( ) );
 $app->instance ( 'response', new http\response\factory ( firestark\response::class ) );
 $app->instance ( 'redirector', new firestark\redirector ( 'http://goalstark', $app [ 'session' ]->get ( 'uri', '/' ) ) );
 $app->instance ( 'router', new firestark\router );

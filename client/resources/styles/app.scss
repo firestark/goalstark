@@ -5,6 +5,10 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/fab/mdc-fab";
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
 
 .mdc-text-field {
     @include mdc-text-field-ink-color(var(--mdc-theme-text-primary-on-background, #343434));
@@ -13,6 +17,21 @@
     input, textarea {
         background-color: var(--mdc-theme-background, #fff);
     }
+}
+
+.mdc-top-app-bar .mdc-tab-bar {
+    @include mdc-tab-bar-width(auto);
+    @include mdc-tab-text-label-color(var(--mdc-theme-on-primary, rgba(255, 255, 255, 0.87)));
+    @include mdc-tab-icon-color(var(--mdc-theme-on-primary, rgba(255, 255, 255, 0.87)));
+
+    .mdc-tab-indicator {
+        @include mdc-tab-indicator-underline-color(var(--mdc-theme-on-primary, rgba(255, 255, 255, 0.87)));
+    }
+}
+
+.mdc-top-app-bar__tabrow .mdc-top-app-bar__section {
+    align-items: flex-end;
+    padding: 0;
 }
 
 

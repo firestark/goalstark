@@ -1,5 +1,52 @@
 @extends('master')
 
+@section('styles')
+    <style>
+        .mdc-top-app-bar--fixed-adjust {
+            padding-top: 128px;
+        }
+    </style>
+@endsection
+
+@section('top-app-bar-alt-row')
+
+    <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+               <div class="mdc-tab-bar" role="tablist">
+                    <div class="mdc-tab-scroller">
+                        <div class="mdc-tab-scroller__scroll-area">
+                            <div class="mdc-tab-scroller__scroll-content">
+                                <a href="/">
+                                    <button class="mdc-tab {{ ( request::uri() === '/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                        <span class="mdc-tab__content">
+                                            <span class="mdc-tab__text-label">All goals</span>
+                                        </span>
+                                        <span class="mdc-tab-indicator {{ ( request::uri() === '/' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                        </span>
+                                        <span class="mdc-tab__ripple"></span>
+                                    </button>
+                                </a>
+                                <a href="/overdue">
+                                    <button class="mdc-tab {{ ( request::uri() === '/overdue' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                        <span class="mdc-tab__content">
+                                            <span class="mdc-tab__text-label">Overdue goals</span>
+                                        </span>
+                                        <span class="mdc-tab-indicator {{ ( request::uri() === '/overdue' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                        </span>
+                                        <span class="mdc-tab__ripple"></span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+@endsection
+
 @section('content')
 
     @if(count($goals))
@@ -63,6 +110,7 @@
 @section('mdc-js')
     <script>
         mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
+        mdc.tabBar.MDCTabBar.attachTo(document.querySelector('.mdc-tab-bar'));
         
         @if(count($goals))
             mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
