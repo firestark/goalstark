@@ -1,6 +1,6 @@
 <?php
 
-class flatfileGoalManager implements goalManager
+class flatfileGoalManager extends goalManager
 {
     private $goals, $file;
 

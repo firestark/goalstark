@@ -1,22 +1,33 @@
 <?php
 
-interface goalManager
+abstract class goalManager
 {
-    function all ( ) : array;
+    abstract function all ( ) : array;
 
-    function add ( goal $goal );
+    function overdue ( ) : array
+    {
+        $now = time ( );
+        
+        foreach ( $this->all ( ) as $goal )
+            if ( $goal->completeBy < $now )
+                $overdue [ ] = $goal;
 
-    function has ( goal $goal ) : bool;
+        return $overdue ?? [ ];
+    }
 
-    function hasGoalWithDescription ( string $description ) : bool;
+    abstract function add ( goal $goal );
 
-    function find ( $id ) : goal;
+    abstract function has ( goal $goal ) : bool;
 
-    function update ( goal $goal );
+    abstract function hasGoalWithDescription ( string $description ) : bool;
 
-    function remove ( goal $goal );
+    abstract function find ( $id ) : goal;
 
-    function complete ( goal $goal );
+    abstract function update ( goal $goal );
 
-    function uncomplete ( goal $goal );
+    abstract function remove ( goal $goal );
+
+    abstract function complete ( goal $goal );
+
+    abstract function uncomplete ( goal $goal );
 }
