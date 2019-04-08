@@ -19,6 +19,17 @@
                                         <span class="mdc-tab__ripple"></span>
                                     </button>
                                 </a>
+                                <a href="/completed">
+                                    <button class="mdc-tab {{ ( request::uri() === '/completed' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                        <span class="mdc-tab__content">
+                                            <span class="mdc-tab__text-label">Completed goals</span>
+                                        </span>
+                                        <span class="mdc-tab-indicator {{ ( request::uri() === '/completed' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                        </span>
+                                        <span class="mdc-tab__ripple"></span>
+                                    </button>
+                                </a>
                                 <a href="/overdue">
                                     <button class="mdc-tab {{ ( request::uri() === '/overdue' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                                         <span class="mdc-tab__content">

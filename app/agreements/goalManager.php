@@ -15,6 +15,15 @@ abstract class goalManager
         return $overdue ?? [ ];
     }
 
+    function completed ( ) : array
+    {
+        foreach ( $this->all ( ) as $goal )
+            if ( $goal->completed )
+                $completed [ ] = $goal;
+
+        return $completed ?? [ ];
+    }
+
     abstract function add ( goal $goal );
 
     abstract function has ( goal $goal ) : bool;
