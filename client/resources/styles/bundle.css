@@ -3,7 +3,7 @@
   --mdc-theme-secondary: #fff;
   --mdc-theme-background: #fff;
   --mdc-theme-surface: #fff;
-  --mdc-theme-error: #b00020;
+  --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: rgba(0, 0, 0, 0.87);
   --mdc-theme-on-surface: #000;
@@ -29,7 +29,7 @@
   --mdc-theme-secondary: #fff;
   --mdc-theme-background: #303030;
   --mdc-theme-surface: #424242;
-  --mdc-theme-error: #b00020;
+  --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #343434;
   --mdc-theme-on-surface: #fff;
@@ -2031,6 +2031,10 @@ main {
 @media (min-width: 1025px) {
   main {
     width: 70%; } }
+
+.overdue {
+  color: var(--mdc-theme-error, #f44336);
+  fill: var(--mdc-theme-error, #f44336); }
 
 .mdc-fab {
   position: absolute;

@@ -84,6 +84,11 @@ main {
     
 }
 
+.overdue {
+    color: var(--mdc-theme-error, #f44336);
+    fill: var(--mdc-theme-error, #f44336);
+}
+
 .mdc-fab {
     position: absolute;
     bottom: 34px;
