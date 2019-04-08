@@ -76,6 +76,14 @@ main {
     margin: 0 auto;
 }
 
+@media (min-width: 1025px) {
+  
+    main {
+        width: 70%
+    }
+    
+}
+
 .mdc-fab {
     position: absolute;
     bottom: 34px;
