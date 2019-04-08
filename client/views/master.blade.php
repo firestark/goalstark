@@ -6,7 +6,7 @@
       http-equiv="refresh" content="0; URL='https://browsehappy.com'"
     <![endif]-->
     <meta charset="utf-8">
-    <title>Goalstark</title>
+    <title>Goalstark®</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,9 @@
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                 @yield('navigation')
-                <span class="mdc-top-app-bar__title">Goalstark</span>
+                <span class="mdc-top-app-bar__title">
+                    {{ (isset($title)) ? $title : 'Goalstark®' }}
+                </span>
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
                 @if(session::get('theme') === 'dark')

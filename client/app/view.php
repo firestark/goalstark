@@ -32,4 +32,9 @@ class view
         $view = $this->view->make ( $template, $data );
         return $this->response->conflict ( ( string ) $view );
     }
+
+    public function title ( string $title )
+    {
+        $this->view->share ( 'title', $title );
+    }
 }
