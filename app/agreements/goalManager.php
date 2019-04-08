@@ -9,7 +9,7 @@ abstract class goalManager
         $now = time ( );
         
         foreach ( $this->all ( ) as $goal )
-            if ( $goal->completeBy < $now )
+            if ( ! $goal->completed and $goal->completeBy < $now )
                 $overdue [ ] = $goal;
 
         return $overdue ?? [ ];
