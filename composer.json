@@ -7,7 +7,7 @@
     "authors": [
         {
             "name": "Aron Wouters",
-            "email": "aron@qbil.com",
+            "email": "firestark@mail.com",
             "role": "Developer"
         }
     ],
@@ -15,8 +15,7 @@
 
     },
     "require-dev": {
-        "firestark/testing": "*",
-        "psy/psysh": "*"
+        "firestark/testing": "*"
     },
     "autoload": {
         "psr-4": {
