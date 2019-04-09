@@ -10,6 +10,7 @@ $app->instance ( 'session', new firestark\session );
 $app->instance ( 'statuses', new firestark\statuses );
 $app->instance ( 'request', firestark\request::capture ( ) );
 $app->instance ( 'response', new http\response\factory ( firestark\response::class ) );
+$app->instance ( 'jsonresponse', new http\response\factory ( firestark\jsonresponse::class ) );
 $app->instance ( 'redirector', new firestark\redirector ( 'http://goalstark', $app [ 'session' ]->get ( 'uri', '/' ) ) );
 $app->instance ( 'router', new firestark\router );
 $app->instance ( 'view', 
