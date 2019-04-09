@@ -9,33 +9,44 @@
                         <div class="mdc-tab-scroller__scroll-area">
                             <div class="mdc-tab-scroller__scroll-content">
                                 <a href="/" id="all">
-                                    <button class="mdc-tab {{ ( request::uri() === '/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <button class="mdc-tab {{ ( request::uri ( ) === '/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                                         <span class="mdc-tab__content">
                                             <span class="mdc-tab__text-label">All goals</span>
                                         </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri() === '/' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                        </span>
+                                        <span class="mdc-tab__ripple"></span>
+                                    </button>
+                                </a>
+                                <a href="/open" id="open">
+                                    <button class="mdc-tab {{ ( request::uri ( ) === '/open' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                        <span class="mdc-tab__content">
+                                            <span class="mdc-tab__text-label">Open goals</span>
+                                        </span>
+                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/open' ) ? 'mdc-tab-indicator--active' : '' }}">
                                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                                         </span>
                                         <span class="mdc-tab__ripple"></span>
                                     </button>
                                 </a>
                                 <a href="/completed" id="completed">
-                                    <button class="mdc-tab {{ ( request::uri() === '/completed' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <button class="mdc-tab {{ ( request::uri ( ) === '/completed' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                                         <span class="mdc-tab__content">
                                             <span class="mdc-tab__text-label">Completed goals</span>
                                         </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri() === '/completed' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/completed' ) ? 'mdc-tab-indicator--active' : '' }}">
                                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                                         </span>
                                         <span class="mdc-tab__ripple"></span>
                                     </button>
                                 </a>
                                 <a href="/overdue" id="overdue">
-                                    <button class="mdc-tab {{ ( request::uri() === '/overdue' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <button class="mdc-tab {{ ( request::uri ( ) === '/overdue' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                                         <span class="mdc-tab__content">
                                             <span class="mdc-tab__text-label">Overdue goals</span>
                                         </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri() === '/overdue' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/overdue' ) ? 'mdc-tab-indicator--active' : '' }}">
                                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                                         </span>
                                         <span class="mdc-tab__ripple"></span>

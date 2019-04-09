@@ -91,6 +91,11 @@
         load ( 'http://goalstark/' );
     };
 
+    open.onclick = async function ( event ) {
+        event.preventDefault ( );
+        load ( 'http://goalstark/open' );
+    };
+
     completed.onclick = async function ( event ) {
         event.preventDefault ( );
         load ( 'http://goalstark/completed' );

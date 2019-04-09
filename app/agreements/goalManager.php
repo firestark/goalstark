@@ -4,15 +4,13 @@ abstract class goalManager
 {
     abstract function all ( ) : array;
 
-    function overdue ( ) : array
+    function open ( ) : array
     {
-        $now = time ( );
-        
         foreach ( $this->all ( ) as $goal )
-            if ( ! $goal->completed and $goal->completeBy < $now )
-                $overdue [ ] = $goal;
-
-        return $overdue ?? [ ];
+            if ( ! $goal->completed )
+                $open [ ] = $goal;
+        
+        return $open ?? [ ];
     }
 
     function completed ( ) : array
@@ -22,6 +20,17 @@ abstract class goalManager
                 $completed [ ] = $goal;
 
         return $completed ?? [ ];
+    }
+
+    function overdue ( ) : array
+    {
+        $now = time ( );
+        
+        foreach ( $this->all ( ) as $goal )
+            if ( ! $goal->completed and $goal->completeBy < $now )
+                $overdue [ ] = $goal;
+
+        return $overdue ?? [ ];
     }
 
     abstract function add ( goal $goal );
