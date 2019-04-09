@@ -76,6 +76,8 @@
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="/resources/bundle.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
+    
     <script>
         const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
         
