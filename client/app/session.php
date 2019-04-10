@@ -24,6 +24,11 @@ class session
         $_SESSION [ $key ] = $value;
     }
 
+    public function unset ( string $key )
+    {
+        unset ( $_SESSION [ $key ] );
+    }
+
     public function flash ( string $key, $value )
     {
         $_SESSION [ 'flash' ] [ $key ] = $value;

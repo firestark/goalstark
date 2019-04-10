@@ -2525,3 +2525,14 @@ main {
   width: 100%;
   height: 200px;
   margin-bottom: 24px; }
+
+section#login {
+  max-width: 400px;
+  margin: auto;
+  padding: 16px; }
+  section#login form {
+    display: grid; }
+  section#login .mdc-text-field {
+    margin: 16px 0; }
+  section#login button[type='submit'] {
+    margin-top: 32px; }

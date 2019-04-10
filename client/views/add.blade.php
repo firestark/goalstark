@@ -1,4 +1,4 @@
-@extends('master')
+@extends('page')
 
 @section('navigation')
     <a href="/" class="mdc-top-app-bar__navigation-icon">

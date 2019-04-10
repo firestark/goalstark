@@ -1,4 +1,4 @@
-@extends('master')
+@extends('page')
 
 @section('top-app-bar-alt-row')
 
