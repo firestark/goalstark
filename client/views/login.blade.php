@@ -30,10 +30,9 @@
             <button type="submit" class="mdc-button mdc-button--raised">
                 <span class="mdc-button__label">Login</span>
             </button>
-        </form>
-
-        
+        </form> 
     </section>
+    <div id="triangle"></div>
 @endsection
 
 @section('mdc-js')
