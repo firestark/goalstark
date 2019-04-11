@@ -34,7 +34,7 @@
                 </a>
             </section>
         </div>
-        @yield('top-app-bar-alt-row')
+        @yield('top-app-bar-second-row')
     </header>
 
     @section('mdc-js')

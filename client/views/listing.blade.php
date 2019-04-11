@@ -1,6 +1,6 @@
 @extends('page')
 
-@section('top-app-bar-alt-row')
+@section('top-app-bar-second-row')
 
     <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
