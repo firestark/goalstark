@@ -2539,7 +2539,8 @@ main {
 section#login {
   max-width: 400px;
   margin: auto;
-  padding: 16px; }
+  padding: 16px;
+  margin-top: 32px; }
   section#login form {
     display: grid; }
   section#login .mdc-text-field {
