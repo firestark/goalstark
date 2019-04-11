@@ -10,29 +10,28 @@
 @endsection
 
 @section('top-app-bar-second-row')
-    <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
+    <form method="POST" action="/{{ $goal->id }}">
+        <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-               <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-bar" role="tablist">
                     <div class="mdc-tab-scroller">
                         <div class="mdc-tab-scroller__scroll-area">
                             <div class="mdc-tab-scroller__scroll-content">
-                                <a href="/{{ $goal->id }}" id="all">
-                                    <button class="mdc-tab {{ ( request::uri ( ) === "/{$goal->id}" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                        <span class="mdc-tab__content">
-                                            <span class="mdc-tab__text-label">General</span>
-                                        </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/{$goal->id}" ) ? 'mdc-tab-indicator--active' : '' }}">
-                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                        </span>
-                                        <span class="mdc-tab__ripple"></span>
-                                    </button>
-                                </a>
+                                <button type="submit" name="general-submit" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">General</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
 
-                                <button class="mdc-tab {{ ( request::uri ( ) === "/{$goal->id}/tasks" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                                     <span class="mdc-tab__content">
                                         <span class="mdc-tab__text-label">Tasks</span>
                                     </span>
-                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/{$goal->id}/tasks" ) ? 'mdc-tab-indicator--active' : '' }}">
+                                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
                                         <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                                     </span>
                                     <span class="mdc-tab__ripple"></span>
@@ -47,34 +46,44 @@
 
 
 @section('content')
-    <form method="POST" action="/{{ $goal->id }}" id="goal-tasks-form">
         <input type="hidden" name="id" value="{{ $goal->id }}">
         <input type="hidden" name="description" value="{{ $goal->description }}">
-        <input type="hidden" name="completeBy" value="{{ date('Y-m-d', $goal->completeBy) }}" >
+        <input type="hidden" name="completeBy" value="{{ date ( 'Y-m-d', $goal->completeBy ) }}" >
 
-        <div id="tasks-input[0][description]" class="mdc-text-field mdc-text-field--textarea">
-            <textarea id="tasks[description][0]" name="tasks[0][description]" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
-            <div class="mdc-notched-outline">
-                <div class="mdc-notched-outline__leading"></div>
-                <div class="mdc-notched-outline__notch">
-                    <label for="goal" class="mdc-floating-label">Task 1</label>
-                </div>
-                <div class="mdc-notched-outline__trailing"></div>
-            </div>
-        </div>
+        <section id="tasks-fields">
 
-        @foreach($goal->tasks as $index => $task)
-            <div id="tasks-input[{{ $index + 1 }}][description]" class="mdc-text-field mdc-text-field--textarea">
-                <textarea id="tasks[{{ $index + 1 }}][description]" name="tasks[{{ $index + 1 }}][description]" class="mdc-text-field__input" rows="8" cols="40" required>{{ $task->description }}</textarea>
-                <div class="mdc-notched-outline">
-                    <div class="mdc-notched-outline__leading"></div>
-                    <div class="mdc-notched-outline__notch">
-                        <label for="goal" class="mdc-floating-label">Task {{ $index + 2 }}</label>
+            <button type="submit" name="add-task" class="mdc-button mdc-button--raised" id="add-task">
+                Add a task
+            </button>
+
+            @foreach($goal->tasks as $index => $task)
+                <div id="tasks-input[{{ $index }}][description]" class="mdc-text-field mdc-text-field--textarea">
+                    <textarea id="tasks[{{ $index }}][description]" name="tasks[{{ $index }}][description]" class="mdc-text-field__input" rows="8" cols="40">{{ $task->description }}</textarea>
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label for="tasks[{{ $index }}][description]" class="mdc-floating-label">Task {{ $index + 1 }}</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
                     </div>
-                    <div class="mdc-notched-outline__trailing"></div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+
+            @if(session::has('add-task-field'))
+                <div id="tasks-input[{{ count ( $goal->tasks ) }}][description]" class="mdc-text-field mdc-text-field--textarea">
+                    <textarea id="tasks[description][{{ count ( $goal->tasks ) }}]" name="tasks[{{ count ( $goal->tasks ) }}][description]" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label for="tasks[description][{{ count ( $goal->tasks ) }}]" class="mdc-floating-label">Task {{ count ( $goal->tasks ) + 1 }}</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+            @endif
+        </section>
+
+        
 
         <button type="submit" class="mdc-fab">
             <span class="mdc-fab__icon">
@@ -90,10 +99,13 @@
 @section('mdc-js')
     <script>
         mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
-        mdc.textField.MDCTextField.attachTo(document.getElementById('tasks-input[0][description]'));
 
         @foreach($goal->tasks as $index => $task)
-            mdc.textField.MDCTextField.attachTo(document.getElementById("tasks-input[{{ $index + 1 }}][description]"));
+            mdc.textField.MDCTextField.attachTo(document.getElementById("tasks-input[{{ $index }}][description]"));
         @endforeach
+
+        @if(session::has('add-task-field'))
+        mdc.textField.MDCTextField.attachTo(document.getElementById("tasks-input[{{ count ( $goal->tasks ) }}][description]"));
+        @endif
     </script>
 @endsection

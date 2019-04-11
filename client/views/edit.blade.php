@@ -10,45 +10,43 @@
 @endsection
 
 @section('top-app-bar-second-row')
-    <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <div class="mdc-tab-bar" role="tablist">
-                <div class="mdc-tab-scroller">
-                    <div class="mdc-tab-scroller__scroll-area">
-                        <div class="mdc-tab-scroller__scroll-content">
-                            <span id="all">
-                                <button class="mdc-tab {{ ( request::uri ( ) === "/{$goal->id}" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                    <span class="mdc-tab__content">
-                                        <span class="mdc-tab__text-label">General</span>
-                                    </span>
-                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/{$goal->id}" ) ? 'mdc-tab-indicator--active' : '' }}">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <span class="mdc-tab__ripple"></span>
-                                </button>
-                            </span>
+    <form method="POST" action="/{{ $goal->id }}">
+        <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <div class="mdc-tab-bar" role="tablist">
+                    <div class="mdc-tab-scroller">
+                        <div class="mdc-tab-scroller__scroll-area">
+                            <div class="mdc-tab-scroller__scroll-content">
+                                <span id="all">
+                                    <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                                        <span class="mdc-tab__content">
+                                            <span class="mdc-tab__text-label">General</span>
+                                        </span>
+                                        <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                        </span>
+                                        <span class="mdc-tab__ripple"></span>
+                                    </button>
+                                </span>
 
-                            <a href="/{{ $goal->id }}/tasks" id="all">
-                                <button class="mdc-tab {{ ( request::uri ( ) === "/{$goal->id}/tasks" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                <button type="submit" name="task-submit" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
                                     <span class="mdc-tab__content">
                                         <span class="mdc-tab__text-label">Tasks</span>
                                     </span>
-                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/{$goal->id}/tasks" ) ? 'mdc-tab-indicator--active' : '' }}">
+                                    <span class="mdc-tab-indicator">
                                         <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                                     </span>
                                     <span class="mdc-tab__ripple"></span>
                                 </button>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
 @endsection
 
 @section('content')
-    <form method="POST" action="/{{ $goal->id }}">
         <input type="hidden" name="id" value="{{ $goal->id }}">
         
         @foreach($goal->tasks as $index => $task)
