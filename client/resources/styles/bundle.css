@@ -2532,6 +2532,10 @@ main {
   height: 200px;
   margin-bottom: 24px; }
 
+#goal-tasks-form {
+  display: grid;
+  grid-row-gap: 24px; }
+
 section#login {
   max-width: 400px;
   margin: auto;

@@ -9,9 +9,52 @@
     </a>
 @endsection
 
+@section('top-app-bar-second-row')
+    <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <span id="all">
+                                <button class="mdc-tab {{ ( request::uri ( ) === "/{$goal->id}" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">General</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/{$goal->id}" ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                            </span>
+
+                            <a href="/{{ $goal->id }}/tasks" id="all">
+                                <button class="mdc-tab {{ ( request::uri ( ) === "/{$goal->id}/tasks" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">Tasks</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/{$goal->id}/tasks" ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+@endsection
+
 @section('content')
     <form method="POST" action="/{{ $goal->id }}">
         <input type="hidden" name="id" value="{{ $goal->id }}">
+        
+        @foreach($goal->tasks as $index => $task)
+            <input type="hidden" name="tasks[{{ $index }}][description]" value="{{ $task->description }}">
+        @endforeach
+        
         <div id="description-input" class="mdc-text-field mdc-text-field--textarea">
             <textarea id="description" name="description" class="mdc-text-field__input" rows="8" cols="40" required>{{ $goal->description }}</textarea>
             <div class="mdc-notched-outline">

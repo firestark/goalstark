@@ -3,12 +3,14 @@
 class goal
 {
     public $id, $description, $completeBy, $completed;
+    public $tasks = [ ];
 
-    function __construct ( $id, string $description, int $completeBy, bool $completed = false )
+    function __construct ( $id, string $description, int $completeBy, array $tasks = [ ], bool $completed = false )
     {
         $this->id           = $id;
         $this->description  = $description;
         $this->completeBy   = $this->completeByEndOfDay ( $completeBy );
+        $this->tasks        = $tasks;
         $this->completed    = $completed;
     }
 
