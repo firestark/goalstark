@@ -19,6 +19,16 @@ class goal
         $this->tasks [ $task->id ] = $task;
     }
 
+    function remove ( task $task )
+    {
+        unset ( $this->tasks [ $task->id ] );
+    }
+
+    function update ( task $task )
+    {
+        $this->tasks [ $task->id ] = $task;
+    }
+
     /**
      * Setting the completeBy timestamp to the end of the day.
      * This makes the goal only overdue based on the day.

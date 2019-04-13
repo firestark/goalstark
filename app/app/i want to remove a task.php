@@ -2,7 +2,7 @@
 
 use function compact as with;
 
-when ( 'i want to add a task', then ( apply ( a ( 
+when ( 'i want to remove a task', then ( apply ( a ( 
     
 function ( goal $goal, task $task, goalManager $manager )
 {
@@ -10,8 +10,8 @@ function ( goal $goal, task $task, goalManager $manager )
         return [ 2001, with ( 'goal' ) ];
 
     $goal = $manager->find ( $goal->id );
-    $goal->add ( $task );
+    $goal->remove ( $task );
     $manager->update ( $goal );
-    
-    return [ 1007, [ 'id' => $goal->id ] ];
+
+    return [ 1008, [ 'id' => $goal->id ] ];
 } ) ) ) );
