@@ -81,7 +81,7 @@
                             </a>
                         @else
                             <a  href="/complete/{{ $goal->id }}" 
-                                class="mdc-list-item__graphic {{ ( $goal->completeBy < time() ) ? 'overdue' : '' }}" 
+                                class="mdc-list-item__graphic {{ ( $goal->completeBy < time ( ) ) ? 'overdue' : '' }}" 
                                 aria-hidden="true">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@
                         <a href="/{{ $goal->id }}">
                             <span class="mdc-list-item__text">
                                 <span class="mdc-list-item__primary-text">{{ $goal->description }}</span>
-                                <span class="mdc-list-item__secondary-text">Due {{  date("M d, Y ", $goal->completeBy) }}</span>
+                                <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $goal->completeBy ) }}</span>
                             </span>
                         </a>
                         
