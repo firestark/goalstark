@@ -1,7 +1,7 @@
 <script id="goals" type="text/x-handlebars-template">
     {{#if goals.length}}
         <section id="goal-listing" class="mdc-card">
-            <ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
+            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
                 {{#each goals}}
                     <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 
