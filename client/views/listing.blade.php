@@ -3,61 +3,61 @@
 @section('top-app-bar-second-row')
 
     <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-               <div class="mdc-tab-bar" role="tablist">
-                    <div class="mdc-tab-scroller">
-                        <div class="mdc-tab-scroller__scroll-area">
-                            <div class="mdc-tab-scroller__scroll-content">
-                                <a href="/" id="all">
-                                    <button class="mdc-tab {{ ( request::uri ( ) === '/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                        <span class="mdc-tab__content">
-                                            <span class="mdc-tab__text-label">All goals</span>
-                                        </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/' ) ? 'mdc-tab-indicator--active' : '' }}">
-                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                        </span>
-                                        <span class="mdc-tab__ripple"></span>
-                                    </button>
-                                </a>
-                                <a href="/open" id="open">
-                                    <button class="mdc-tab {{ ( request::uri ( ) === '/open' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                        <span class="mdc-tab__content">
-                                            <span class="mdc-tab__text-label">Open goals</span>
-                                        </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/open' ) ? 'mdc-tab-indicator--active' : '' }}">
-                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                        </span>
-                                        <span class="mdc-tab__ripple"></span>
-                                    </button>
-                                </a>
-                                <a href="/completed" id="completed">
-                                    <button class="mdc-tab {{ ( request::uri ( ) === '/completed' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                        <span class="mdc-tab__content">
-                                            <span class="mdc-tab__text-label">Completed goals</span>
-                                        </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/completed' ) ? 'mdc-tab-indicator--active' : '' }}">
-                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                        </span>
-                                        <span class="mdc-tab__ripple"></span>
-                                    </button>
-                                </a>
-                                <a href="/overdue" id="overdue">
-                                    <button class="mdc-tab {{ ( request::uri ( ) === '/overdue' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                        <span class="mdc-tab__content">
-                                            <span class="mdc-tab__text-label">Overdue goals</span>
-                                        </span>
-                                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/overdue' ) ? 'mdc-tab-indicator--active' : '' }}">
-                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                        </span>
-                                        <span class="mdc-tab__ripple"></span>
-                                    </button>
-                                </a>
-                            </div>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <a href="/" id="all">
+                                <button class="mdc-tab {{ ( request::uri ( ) === '/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">All goals</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                            </a>
+                            <a href="/open" id="open">
+                                <button class="mdc-tab {{ ( request::uri ( ) === '/open' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">Open goals</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/open' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                            </a>
+                            <a href="/completed" id="completed">
+                                <button class="mdc-tab {{ ( request::uri ( ) === '/completed' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">Completed goals</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/completed' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                            </a>
+                            <a href="/overdue" id="overdue">
+                                <button class="mdc-tab {{ ( request::uri ( ) === '/overdue' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">Overdue goals</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/overdue' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 
 @endsection
 
@@ -65,7 +65,7 @@
 
     @if(count($goals))
         <section id="goal-listing" class="mdc-card">
-            <ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
+            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
                 @foreach($goals as $goal)
                     <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 
