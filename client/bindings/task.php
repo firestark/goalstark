@@ -1,9 +1,9 @@
 <?php
 
-app::bind ( task::class, function ( $app, array $input )
+app::bind ( task::class, function ( $app )
 {
     return new task (
-        $input [ 'id' ] ?? uniqid ( ),
-        $input [ 'description' ] ?? ''
+        input::get ( 'taskid', uniqid ( ) ),
+        input::get ( 'description', '' )
     );
 } );

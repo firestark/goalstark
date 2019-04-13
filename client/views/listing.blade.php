@@ -64,8 +64,8 @@
 @section('content')
 
     @if(count($goals))
-        <section id="goal-listing" class="mdc-card">
-            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+        <section class="mdc-card">
+            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
                 @foreach($goals as $goal)
                     <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 

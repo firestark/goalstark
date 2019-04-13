@@ -3,11 +3,9 @@
 namespace firestark;
 
 use closure;
-use http\optionsRouter;
 use http\route;
 
-
-class router extends optionsRouter
+class router extends \http\router
 {
     public function get ( string $uri, closure $task )
     {

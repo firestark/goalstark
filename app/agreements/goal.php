@@ -14,6 +14,11 @@ class goal
         $this->completed    = $completed;
     }
 
+    function add ( task $task )
+    {
+        $this->tasks [ $task->id ] = $task;
+    }
+
     /**
      * Setting the completeBy timestamp to the end of the day.
      * This makes the goal only overdue based on the day.
