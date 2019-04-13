@@ -5,14 +5,14 @@
 @endsection
 
 @section('top-app-bar-second-row')
-    <form method="POST" action="/{{ $goal->id }}">
-        <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <div class="mdc-tab-bar" role="tablist">
-                    <div class="mdc-tab-scroller">
-                        <div class="mdc-tab-scroller__scroll-area">
-                            <div class="mdc-tab-scroller__scroll-content">
-                                <button type="submit" name="general-submit" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+    <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <a href="/{{ $goal->id }}">
+                                <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
                                     <span class="mdc-tab__content">
                                         <span class="mdc-tab__text-label">General</span>
                                     </span>
@@ -21,26 +21,28 @@
                                     </span>
                                     <span class="mdc-tab__ripple"></span>
                                 </button>
+                            </a>
 
-                                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                    <span class="mdc-tab__content">
-                                        <span class="mdc-tab__text-label">Tasks</span>
-                                    </span>
-                                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <span class="mdc-tab__ripple"></span>
-                                </button>
-                            </div>
+                            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__text-label">Tasks</span>
+                                </span>
+                                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 @endsection
 
 
 @section('content')
+    <form method="POST" action="/{{ $goal->id }}">
         <input type="hidden" name="id" value="{{ $goal->id }}">
         <input type="hidden" name="description" value="{{ $goal->description }}">
         <input type="hidden" name="completeBy" value="{{ date ( 'Y-m-d', $goal->completeBy ) }}" >
@@ -100,7 +102,7 @@
         @endforeach
 
         @if(session::has('add-task-field'))
-        mdc.textField.MDCTextField.attachTo(document.getElementById("tasks-input[{{ count ( $goal->tasks ) }}][description]"));
+            mdc.textField.MDCTextField.attachTo(document.getElementById("tasks-input[{{ count ( $goal->tasks ) }}][description]"));
         @endif
     </script>
 @endsection

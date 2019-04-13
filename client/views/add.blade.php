@@ -5,42 +5,42 @@
 @endsection
 
 @section('top-app-bar-second-row')
-    <form method="POST" action="/">
-        <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <div class="mdc-tab-bar" role="tablist">
-                    <div class="mdc-tab-scroller">
-                        <div class="mdc-tab-scroller__scroll-area">
-                            <div class="mdc-tab-scroller__scroll-content">
-                                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                    <span class="mdc-tab__content">
-                                        <span class="mdc-tab__text-label">General</span>
-                                    </span>
-                                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <span class="mdc-tab__ripple"></span>
-                                </button>
+    <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__text-label">General</span>
+                                </span>
+                                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
 
-                                <button type="submit" name="task-submit" class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                    <span class="mdc-tab__content">
-                                        <span class="mdc-tab__text-label">Tasks</span>
-                                    </span>
-                                    <span class="mdc-tab-indicator">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <span class="mdc-tab__ripple"></span>
-                                </button>
-                            </div>
+                            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__text-label">Tasks</span>
+                                </span>
+                                <span class="mdc-tab-indicator">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 @endsection
 
 @section('content')
-        <input type="hidden" name="id" value="{{ uniqid() }}">
+    <form method="POST" action="/">
+        <input type="hidden" name="id" value="{{ uniqid ( ) }}">
 
         <div id="description-input" class="mdc-text-field mdc-text-field--textarea">
             <textarea id="description" name="description" class="mdc-text-field__input" required></textarea>
