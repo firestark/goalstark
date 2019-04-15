@@ -51,7 +51,7 @@
                         <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 
                             @if($task->completed)
-                                <a  href="/{{ $goal->id }}/tasks/{{ $task->id }}/uncomplete" 
+                                <a  href="/{{ $goal->id }}/tasks/uncomplete/{{ $task->id }}" 
                                     class="mdc-list-item__graphic completed" 
                                     aria-hidden="true">
                                     

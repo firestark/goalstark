@@ -10,4 +10,14 @@ class task
         $this->description  = $description;
         $this->completed    = $completed;
     }
+
+    function complete ( )
+    {
+        $this->completed = true;
+    }
+
+    function uncomplete ( )
+    {
+        $this->completed = false;
+    }
 }

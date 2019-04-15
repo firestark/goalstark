@@ -29,6 +29,16 @@ class goal
         $this->tasks [ $task->id ] = $task;
     }
 
+    function complete ( task $task )
+    {
+        $this->tasks [ $task->id ]->complete ( );
+    }
+
+    function uncomplete ( task $task )
+    {
+        $this->tasks [ $task->id ]->uncomplete ( );
+    }
+
     function dailies ( ) : array
     {
         foreach ( $this->tasks as $task )
