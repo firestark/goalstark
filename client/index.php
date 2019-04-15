@@ -29,8 +29,14 @@ requiring ( __DIR__ . '/bindings' );
 requiring ( __DIR__ . '/statuses' );
 requiring ( __DIR__ . '/../app/app' );
 
+$routes = $app [ 'router' ]->routes;
 
-$dispatcher = new http\dispatcher ( $app [ 'router' ]->routes );
+usort ( $routes, function ( $a, $b )
+{
+    return strcasecmp ( $a->uri , $b->uri ); 
+} );
+
+$dispatcher = new http\dispatcher ( $routes );
 $kernel = new firestark\kernel ( $dispatcher );
 $response = $kernel->handle ( $app [ 'request' ] );
 
