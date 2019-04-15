@@ -1,10 +1,10 @@
-@extends('page')
+@extends( 'page' )
 
-@section('navigation')
-    @include('partials.up-arrow', [ 'link' => "/" ] )
+@section( 'navigation' )
+    @include( 'partials.up-arrow', [ 'link' => "/" ] )
 @endsection
 
-@section('top-app-bar-second-row')
+@section( 'top-app-bar-second-row' )
     <div class="mdc-top-app-bar__row mdc-top-app-bar__tabrow">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <div class="mdc-tab-bar" role="tablist">
@@ -41,7 +41,7 @@
 @endsection
 
 
-@section('content')
+@section( 'content' )
     @if( count ( $goal->tasks ) )
         <section>            
             <ul class="mdc-card mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
@@ -50,7 +50,7 @@
                     @foreach ( $goal->dailies ( ) as $task )
                         <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 
-                            @if($task->completed)
+                            @if( $task->completed )
                                 <a  href="/{{ $goal->id }}/tasks/uncomplete/{{ $task->id }}" 
                                     class="mdc-list-item__graphic completed" 
                                     aria-hidden="true">
@@ -75,7 +75,7 @@
                             <a href="/{{ $goal->id }}/tasks/{{ $task->id }}">
                                 <span class="mdc-list-item__text">
                                     <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
-                                    <span class="mdc-list-item__secondary-text">Due {{  date ( "M d, Y ", $goal->completeBy ) }}</span>
+                                    <span class="mdc-list-item__secondary-text">Finishes {{  date ( 'M d, Y', $goal->completeBy ) }}</span>
                                 </span>
                             </a>
                             
@@ -92,7 +92,7 @@
                     @if ( count ( $goal->dailies ( ) ) )
                         <hr class="mdc-list-divider">
                     @endif
-                    <h6 class="mdc-list-group__subheader">Tasks to do once</h6>
+                    <h6 class="mdc-list-group__subheader">Onetime tasks</h6>
                     @foreach ( $goal->oneTimers ( ) as $task )
                         <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 
@@ -108,7 +108,7 @@
                                 </a>
                             @else
                                 <a  href="/{{ $goal->id }}/tasks/complete/{{ $task->id }}" 
-                                    class="mdc-list-item__graphic {{ ( $goal->completeBy < time() ) ? 'overdue' : '' }}" 
+                                    class="mdc-list-item__graphic {{ ( $goal->completeBy < time ( ) ) ? 'overdue' : '' }}" 
                                     aria-hidden="true">
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -121,7 +121,7 @@
                             <a href="/{{ $goal->id }}/tasks/{{ $task->id }}">
                                 <span class="mdc-list-item__text">
                                     <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
-                                    <span class="mdc-list-item__secondary-text">Due {{  date ( "M d, Y ", $goal->completeBy ) }}</span>
+                                    <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y', $goal->completeBy ) }}</span>
                                 </span>
                             </a>
                             
@@ -150,12 +150,12 @@
     
 @endsection
 
-@section('mdc-js')
+@section( 'mdc-js' )
     <script>
-        mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
+        mdc.ripple.MDCRipple.attachTo ( document.querySelector ( '.mdc-fab' ) );
 
-        @if(count($goal->tasks))
-            mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
+        @if ( count ( $goal->tasks ) )
+            mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
         @endif
     </script>
 @endsection
