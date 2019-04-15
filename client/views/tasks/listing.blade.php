@@ -89,8 +89,10 @@
                     @endforeach
                 @endif
                 @if( count ( $goal->oneTimers ( ) ) )
-                    <hr class="mdc-list-divider">
-                    <h6 class="mdc-list-group__subheader">Other tasks</h6>
+                    @if ( count ( $goal->dailies ( ) ) )
+                        <hr class="mdc-list-divider">
+                    @endif
+                    <h6 class="mdc-list-group__subheader">Tasks to do once</h6>
                     @foreach ( $goal->oneTimers ( ) as $task )
                         <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 
