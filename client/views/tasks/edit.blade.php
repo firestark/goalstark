@@ -7,41 +7,42 @@
 @section('content')
     <section class="mdc-card form-section">
         <form method="POST" action="/{{ $goal }}/tasks/{{ $task->id }}">
-            
-            <div class="mdc-form-field" id="once-type-field">
-                <div class="mdc-radio" id="once-radio">
-                    <input 
-                        class="mdc-radio__native-control" 
-                        type="radio" 
-                        id="once" 
-                        value="once" 
-                        name="type" 
-                        {{ ( ! $task instanceOf dailyTask ) ? 'checked' : '' }}>
-                    
-                    <div class="mdc-radio__background">
-                        <div class="mdc-radio__outer-circle"></div>
-                        <div class="mdc-radio__inner-circle"></div>
+            <div id="type-field">
+                <div class="mdc-form-field" id="once-type-field">
+                    <div class="mdc-radio" id="once-radio">
+                        <input 
+                            class="mdc-radio__native-control" 
+                            type="radio" 
+                            id="once" 
+                            value="once" 
+                            name="type" 
+                            {{ ( ! $task instanceOf dailyTask ) ? 'checked' : '' }}>
+                        
+                        <div class="mdc-radio__background">
+                            <div class="mdc-radio__outer-circle"></div>
+                            <div class="mdc-radio__inner-circle"></div>
+                        </div>
                     </div>
+                    <label for="once">Once</label>
                 </div>
-                <label for="once">Once</label>
-            </div>
 
-            <div class="mdc-form-field" id="daily-type-field">
-                <div class="mdc-radio" id="daily-radio">
-                    <input 
-                        class="mdc-radio__native-control" 
-                        type="radio" 
-                        id="daily" 
-                        value="daily" 
-                        name="type" 
-                        {{ ( $task instanceOf dailyTask ) ? 'checked' : '' }}>
-                    
-                    <div class="mdc-radio__background">
-                        <div class="mdc-radio__outer-circle"></div>
-                        <div class="mdc-radio__inner-circle"></div>
+                <div class="mdc-form-field" id="daily-type-field">
+                    <div class="mdc-radio" id="daily-radio">
+                        <input 
+                            class="mdc-radio__native-control" 
+                            type="radio" 
+                            id="daily" 
+                            value="daily" 
+                            name="type" 
+                            {{ ( $task instanceOf dailyTask ) ? 'checked' : '' }}>
+                        
+                        <div class="mdc-radio__background">
+                            <div class="mdc-radio__outer-circle"></div>
+                            <div class="mdc-radio__inner-circle"></div>
+                        </div>
                     </div>
+                    <label for="daily">Daily</label>
                 </div>
-                <label for="daily">Daily</label>
             </div>
 
             <div id="description-field" class="mdc-text-field mdc-text-field--textarea">

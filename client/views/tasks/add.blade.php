@@ -7,7 +7,8 @@
 @section('content')
     <section class="mdc-card form-section">    
         <form method="POST" action="/{{ $goal }}/tasks">
-            <div class="mdc-form-field" id="once-type-field">
+            <div id="type-field">
+                <div class="mdc-form-field" id="once-type-field">
                     <div class="mdc-radio" id="once-radio">
                         <input 
                             class="mdc-radio__native-control" 
@@ -41,6 +42,8 @@
                     </div>
                     <label for="daily">Daily</label>
                 </div>
+            </div>
+            
 
             <div id="description-field" class="mdc-text-field mdc-text-field--textarea">
                 <textarea id="description" name="description" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
