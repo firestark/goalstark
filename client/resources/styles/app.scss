@@ -36,7 +36,6 @@
     }
 }
 
-
 .mdc-top-app-bar .mdc-tab-bar {
     @include mdc-tab-bar-width(auto);
     @include mdc-tab-text-label-color(var(--mdc-theme-on-primary, rgba(255, 255, 255, 0.87)));
@@ -50,6 +49,10 @@
 .mdc-top-app-bar__tabrow .mdc-top-app-bar__section {
     align-items: flex-end;
     padding: 0;
+}
+
+.mdc-list-divider {
+    margin: 8px 0;
 }
 
 
