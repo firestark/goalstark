@@ -3137,6 +3137,9 @@ main {
 #type-field {
   margin-bottom: 24px; }
 
+.form-section {
+  padding: 16px; }
+
 section#login {
   max-width: 400px;
   margin: auto;

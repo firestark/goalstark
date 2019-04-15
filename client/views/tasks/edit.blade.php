@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="mdc-card" style="padding: 16px;">
+    <section class="mdc-card form-section">
         <form method="POST" action="/{{ $goal }}/tasks/{{ $task->id }}">
             
             <div class="mdc-form-field" id="once-type-field">
