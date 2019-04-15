@@ -29,6 +29,24 @@ class goal
         $this->tasks [ $task->id ] = $task;
     }
 
+    function dailies ( ) : array
+    {
+        foreach ( $this->tasks as $task )
+            if ( $task instanceof dailyTask )
+                $dailies [ ] = $task;
+        
+        return $dailies ?? [ ];
+    }
+
+    function oneTimers ( ) : array
+    {
+        foreach ( $this->tasks as $task )
+            if ( ! $task instanceof dailyTask )
+                $oneTimers [ ] = $task;
+        
+        return $oneTimers ?? [ ];
+    }
+
     /**
      * Setting the completeBy timestamp to the end of the day.
      * This makes the goal only overdue based on the day.

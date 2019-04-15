@@ -10,5 +10,5 @@ function ( goal $goal, goalManager $manager )
         return [ 2000, with ( 'goal' ) ];
     
     $manager->add ( $goal );
-    return [ 1001, with ( 'goal' ) ];
+    return [ 1001, [ 'id' => $goal->id ] ];
 } ) ) ) );

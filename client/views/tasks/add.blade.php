@@ -6,6 +6,22 @@
 
 @section('content')
     <form method="POST" action="/{{ $goal }}/tasks">
+
+        <div class="mdc-select" id="type-field">
+            <i class="mdc-select__dropdown-icon"></i>
+            <select class="mdc-select__native-control" name="type">
+                <option value="" disabled selected></option>
+                <option value="once">
+                    Once
+                </option>
+                <option value="daily">
+                    Daily
+                </option>
+            </select>
+            <label class="mdc-floating-label">Type</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+
         <div id="description-field" class="mdc-text-field mdc-text-field--textarea">
             <textarea id="description" name="description" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
             <div class="mdc-notched-outline">
@@ -30,7 +46,8 @@
 
 @section('mdc-js')
     <script>
-        mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
-        mdc.textField.MDCTextField.attachTo(document.getElementById('description-field'));
+        mdc.ripple.MDCRipple.attachTo ( document.querySelector ( '.mdc-fab' ) );
+        mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'description-field' ) );
+        mdc.select.MDCSelect.attachTo ( document.querySelector ( '.mdc-select' ) );
     </script>
 @endsection

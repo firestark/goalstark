@@ -48,7 +48,7 @@
             <input type="hidden" name="tasks[{{ $index }}][description]" value="{{ $task->description }}">
         @endforeach
         
-        <div id="description-input" class="mdc-text-field mdc-text-field--textarea">
+        <div id="description-field" class="mdc-text-field mdc-text-field--textarea">
             <textarea id="description" name="description" class="mdc-text-field__input" rows="8" cols="40" required>{{ $goal->description }}</textarea>
             <div class="mdc-notched-outline">
                 <div class="mdc-notched-outline__leading"></div>
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <div class="mdc-text-field mdc-text-field--with-leading-icon" id="complete-by-input">
+        <div class="mdc-text-field mdc-text-field--with-leading-icon" id="complete-by-field">
             <span class="material-icons mdc-text-field__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path fill="none" d="M0 0h24v24H0V0z"/><path opacity=".3" d="M5 8h14V6H5z"/>
@@ -70,8 +70,8 @@
                 type="date" 
                 id="complete-by" name="completeBy"
                 class="mdc-text-field__input"
-                value="{{ date('Y-m-d', $goal->completeBy) }}" 
-                min="{{ date('Y-m-d') }}">
+                value="{{ date ( 'Y-m-d', $goal->completeBy ) }}" 
+                min="{{ date ( 'Y-m-d' ) }}">
             <label class="mdc-floating-label" for="complete-by">Due date</label>
             <div class="mdc-line-ripple"></div>
         </div>
@@ -89,8 +89,8 @@
 
 @section('mdc-js')
     <script>
-        mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-fab'));
-        mdc.textField.MDCTextField.attachTo(document.getElementById('description-input'));
-        mdc.textField.MDCTextField.attachTo(document.getElementById('complete-by-input'));       
+        mdc.ripple.MDCRipple.attachTo(document.querySelector ( '.mdc-fab' ) );
+        mdc.textField.MDCTextField.attachTo(document.getElementById ( 'description-field' ) );
+        mdc.textField.MDCTextField.attachTo(document.getElementById ( 'complete-by-field' ) );       
     </script>
 @endsection

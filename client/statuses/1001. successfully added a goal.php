@@ -3,8 +3,8 @@
 use function compact as with;
 
 
-status::matching ( 1001, function ( goal $goal )
+status::matching ( 1001, function ( $id )
 {
 	session::flash ( 'message', 'Successfully added goal.' );
-	return redirect::to ( '/' );
+	return redirect::to ( "/{$id}" );
 } );

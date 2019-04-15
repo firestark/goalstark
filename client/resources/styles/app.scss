@@ -9,6 +9,7 @@
 @import "@material/tab-scroller/mdc-tab-scroller";
 @import "@material/tab-indicator/mdc-tab-indicator";
 @import "@material/tab/mdc-tab";
+@import "@material/select/mdc-select";
 
 .mdc-text-field {
     @include mdc-text-field-ink-color(var(--mdc-theme-text-primary-on-background, #343434));
@@ -18,6 +19,18 @@
         background-color: var(--mdc-theme-background, #fff);
     }
 }
+
+.mdc-select {
+    @include mdc-select-ink-color(var(--mdc-theme-text-primary-on-background, #343434));
+    @include mdc-select-container-fill-color(var(--mdc-theme-background, #fff));
+    @include mdc-select-label-color(var(--mdc-theme-text-primary-on-background, #343434));
+    @include mdc-select-focused-label-color(var(--mdc-theme-primary));
+
+    option {
+        background-color: var(--mdc-theme-background, #fff);
+    }
+}
+
 
 .mdc-top-app-bar .mdc-tab-bar {
     @include mdc-tab-bar-width(auto);
@@ -179,11 +192,6 @@ main {
     
 }
 
-.overdue {
-    color: var(--mdc-theme-error, #f44336);
-    fill: var(--mdc-theme-error, #f44336);
-}
-
 .mdc-fab {
     position: absolute;
     bottom: 34px;
@@ -191,8 +199,14 @@ main {
     z-index: 5000;
 }
 
-.target-listing li a.completed {
+.overdue {
+    color: var(--mdc-theme-error, #f44336);
+    fill: var(--mdc-theme-error, #f44336);
+}
+
+.completed {
     color: #cddc39;
+    fill: #cddc39;
 }
 
 .target-listing li a:nth-child(2) {
@@ -203,16 +217,16 @@ main {
     align-items: center;
 }
 
-#description-input {
+#description-field {
     width: 100%;
     height: 200px;
     margin-bottom: 24px;
 }
 
-#tasks-fields {
-    display: grid;
-    grid-row-gap: 24px;
+#type-field {
+    margin-bottom: 24px;
 }
+
 
 // login page
 
