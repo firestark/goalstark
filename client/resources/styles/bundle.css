@@ -1,11 +1,11 @@
 :root[data-theme="light"] {
   --mdc-theme-primary: #EA4C62;
-  --mdc-theme-secondary: #fff;
+  --mdc-theme-secondary: #0389ff;
   --mdc-theme-background: #F2F8FE;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
-  --mdc-theme-on-secondary: rgba(0, 0, 0, 0.87);
+  --mdc-theme-on-secondary: #fff;
   --mdc-theme-on-surface: #000;
   --mdc-theme-on-error: #fff;
   --mdc-theme-text-primary-on-background: #343434;
@@ -2962,6 +2962,10 @@ svg.mdc-button__icon {
 
 .mdc-text-field input, .mdc-text-field textarea {
   background-color: var(--mdc-theme-background, #fff); }
+
+.mdc-text-field--textarea .mdc-text-field__input {
+  padding-top: 8px;
+  margin-top: 0; }
 
 .mdc-select:not(.mdc-select--disabled) .mdc-select__native-control,
 .mdc-select:not(.mdc-select--disabled) .mdc-select__selected-text {

@@ -20,6 +20,11 @@
     }
 }
 
+.mdc-text-field--textarea .mdc-text-field__input {
+    padding-top: 8px;
+    margin-top: 0;
+}
+
 .mdc-select {
     @include mdc-select-ink-color(var(--mdc-theme-text-primary-on-background, #343434));
     @include mdc-select-container-fill-color(var(--mdc-theme-background, #fff));
