@@ -41,7 +41,5 @@
         <script>
             const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo ( document.querySelector ( '.mdc-top-app-bar' ) );
         </script>
-
-        @yield ( 'mdc-js' )
     @endsection
 @endsection

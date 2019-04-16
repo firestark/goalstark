@@ -14,3 +14,11 @@
     <label class="mdc-floating-label" for="due">Due date</label>
     <div class="mdc-line-ripple"></div>
 </div>
+
+@section ( 'mdc-js' )
+    @parent
+    
+    <script>
+        mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'due-field' ) );
+    </script>    
+@endsection

@@ -53,6 +53,8 @@
 @endsection
 
 @section( 'mdc-js' )
+    @parent
+
     <script>
         @if ( count ( $tasks ) )
             mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
