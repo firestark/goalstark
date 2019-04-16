@@ -18,6 +18,8 @@
                 </div>
             </div>
 
+            @include ( 'partials.input.due', [ 'value' => $task->due ] )
+
             <button type="submit" class="mdc-fab">
                 <span class="mdc-fab__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -34,5 +36,6 @@
     <script>
         mdc.ripple.MDCRipple.attachTo ( document.querySelector ( '.mdc-fab' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'description-field' ) );
+        mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'due-field' ) );
     </script>
 @endsection

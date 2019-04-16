@@ -22,7 +22,7 @@
                             </a>
                         @else
                             <a  href="/tasks/complete/{{ $task->id }}" 
-                                class="mdc-list-item__graphic" 
+                                class="mdc-list-item__graphic {{ ( $task->due < time() ) ? 'overdue' : '' }}" 
                                 aria-hidden="true">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@
                         <a href="/tasks/{{ $task->id }}">
                             <span class="mdc-list-item__text">
                                 <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
-                                <span class="mdc-list-item__secondary-text">Finishes some time</span>
+                                <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $task->due ) }}</span>
                             </span>
                         </a>
                         
