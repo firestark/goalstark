@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB" data-theme="{{ session::has('theme') ? session::get('theme') : 'light' }}">
+<html lang="en-GB" data-theme="{{ session::has ( 'theme' ) ? session::get ( 'theme' ) : 'light' }}">
 
 <head>
     <!--[if IE]>
@@ -23,21 +23,21 @@
 
 <body class="mdc-typography">
   
-    @yield('top-app-bar')
+    @yield ( 'top-app-bar' )
 
     <div id="app">
         <main>
-            @yield('content')
+            @yield ( 'content' )
         </main>
     </div>
 
-    @if(session::has('message'))
+    @if ( session::has ( 'message' ) )
         <div class="mdc-snackbar">
             <div class="mdc-snackbar__surface">
                 <div class="mdc-snackbar__label"
                     role="status"
                     aria-live="polite">
-                    {{ session::get('message') }}
+                    {{ session::get ( 'message' ) }}
                 </div>
                 <div class="mdc-snackbar__actions">
                     {{-- <button type="button" class="mdc-button mdc-snackbar__action">Retry</button> --}}
@@ -49,22 +49,15 @@
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="/resources/bundle.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
     
     <script>        
-        @if(session::has('message'))
-            const snackbar = mdc.snackbar.MDCSnackbar.attachTo(document.querySelector('.mdc-snackbar'));
-            snackbar.open();
+        @if ( session::has ( 'message' ) )
+            const snackbar = mdc.snackbar.MDCSnackbar.attachTo ( document.querySelector ( '.mdc-snackbar' ) );
+            snackbar.open ( );
         @endif
     </script>
-    @yield('mdc-js')
-  
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    
+    @yield ( 'mdc-js' )  
 </body>
 
 </html>

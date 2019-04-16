@@ -1,50 +1,12 @@
-@extends('page')
+@extends ( 'page' )
 
-@section('navigation')
-    @include('partials.up-arrow', [ 'link' => "/{$goal}/tasks" ] )
+@section ( 'navigation' )
+    @include ( 'partials.up-arrow', [ 'link' => "/{$goal}/tasks" ] )
 @endsection
 
-@section('content')
+@section ( 'content' )
     <section class="mdc-card form-section">    
         <form method="POST" action="/{{ $goal }}/tasks">
-            <div id="type-field">
-                <div class="mdc-form-field" id="once-type-field">
-                    <div class="mdc-radio" id="once-radio">
-                        <input 
-                            class="mdc-radio__native-control" 
-                            type="radio" 
-                            id="once" 
-                            value="once" 
-                            name="type"
-                            checked>
-                        
-                        <div class="mdc-radio__background">
-                            <div class="mdc-radio__outer-circle"></div>
-                            <div class="mdc-radio__inner-circle"></div>
-                        </div>
-                    </div>
-                    <label for="once">Once</label>
-                </div>
-
-                <div class="mdc-form-field" id="daily-type-field">
-                    <div class="mdc-radio" id="daily-radio">
-                        <input 
-                            class="mdc-radio__native-control" 
-                            type="radio" 
-                            id="daily" 
-                            value="daily" 
-                            name="type">
-                        
-                        <div class="mdc-radio__background">
-                            <div class="mdc-radio__outer-circle"></div>
-                            <div class="mdc-radio__inner-circle"></div>
-                        </div>
-                    </div>
-                    <label for="daily">Daily</label>
-                </div>
-            </div>
-            
-
             <div id="description-field" class="mdc-text-field mdc-text-field--textarea">
                 <textarea id="description" name="description" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
                 <div class="mdc-notched-outline">
@@ -68,17 +30,9 @@
     </section>
 @endsection
 
-@section('mdc-js')
+@section ( 'mdc-js' )
     <script>
         mdc.ripple.MDCRipple.attachTo ( document.querySelector ( '.mdc-fab' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'description-field' ) );
-
-        const onceRadio = mdc.radio.MDCRadio.attachTo ( document.getElementById ( 'once-radio' ) );
-        const onceField = mdc.formField.MDCFormField.attachTo ( document.getElementById ( 'once-type-field' ) );
-        onceField.input = onceRadio;
-
-        const dailyRadio = mdc.radio.MDCRadio.attachTo ( document.getElementById ( 'daily-radio' ) );
-        const dailyField = mdc.formField.MDCFormField.attachTo ( document.getElementById ( 'daily-type-field' ) );
-        dailyField.input = dailyRadio;
     </script>
 @endsection

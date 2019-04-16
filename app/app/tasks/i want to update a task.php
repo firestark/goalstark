@@ -1,17 +1,12 @@
 <?php
 
-use function compact as with;
-
 when ( 'i want to updated a task', then ( apply ( a ( 
     
-function ( goal $goal, task $task, goalManager $manager )
+function ( task $task, taskManager $taskManager )
 {
-    if ( ! $manager->has ( $goal ) )
-        return [ 2001, with ( 'goal' ) ];
+    if ( ! $taskManager->has ( $task ) )
+        return [ 4000, [ ] ];
         
-    $goal = $manager->find ( $goal->id );
-    $goal->update ( $task );
-    $manager->update ( $goal );
-
-    return [ 1009, [ 'id' => $goal->id ] ];
+    $taskManager->update ( $task );
+    return [ 3003, [ 'id' => $task->goalid ] ];
 } ) ) ) );

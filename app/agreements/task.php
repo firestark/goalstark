@@ -2,22 +2,13 @@
 
 class task
 {
-    public $id, $description, $completed;
+    public $goalid, $id, $description, $completed;
 
-    function __construct ( $id, string $description, bool $completed = false )
+    function __construct ( $goalid, $id, string $description, bool $completed = false )
     {
+        $this->goalid       = $goalid;
         $this->id           = $id;
         $this->description  = $description;
         $this->completed    = $completed;
-    }
-
-    function complete ( )
-    {
-        $this->completed = true;
-    }
-
-    function uncomplete ( )
-    {
-        $this->completed = false;
     }
 }

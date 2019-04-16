@@ -46,8 +46,6 @@ class flatfileGoalManager extends goalManager
     function update ( goal $goal )
     {
         $this->check ( $goal );
-        $stored = $this->goals [ $goal->id ];
-        $goal->tasks = $stored->tasks;
         $this->goals [ $goal->id ] = $goal;
         $this->write ( );
     }

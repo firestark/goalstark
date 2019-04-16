@@ -1,16 +1,16 @@
-@extends('master')
+@extends ( 'master' )
 
-@section('top-app-bar')
+@section ( 'top-app-bar' )
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z2">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                @yield('navigation')
+                @yield ( 'navigation' )
                 <span class="mdc-top-app-bar__title">
-                    {{ (isset($title)) ? $title : 'Goalstark®' }}
+                    {{ ( isset ( $title ) ) ? $title : 'Goalstark®' }}
                 </span>
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">                
-                @if(session::get('theme') === 'dark')
+                @if ( session::get ( 'theme' ) === 'dark' )
                     <a href="/theme/light" class="mdc-top-app-bar__action-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill="none" d="M0 0h24v24H0z"/>
@@ -34,14 +34,14 @@
                 </a>
             </section>
         </div>
-        @yield('top-app-bar-second-row')
+        @yield ( 'top-app-bar-second-row' )
     </header>
 
-    @section('mdc-js')
+    @section ( 'mdc-js' )
         <script>
-            const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+            const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo ( document.querySelector ( '.mdc-top-app-bar' ) );
         </script>
 
-        @yield('mdc-js')
+        @yield ( 'mdc-js' )
     @endsection
 @endsection

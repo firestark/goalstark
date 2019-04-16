@@ -2,14 +2,11 @@
 
 when ( 'i want to uncomplete a task', then ( apply ( a ( 
     
-function ( goal $goal, task $task, goalManager $manager )
-{
-    if ( ! $manager->has ( $goal ) )
-        return [ 2001, with ( 'goal' ) ];
-        
-    $goal = $manager->find ( $goal->id );
-    $goal->uncomplete ( $task );
-    $manager->update ( $goal );
-
-    return [ 1011, [ 'id' => $goal->id ] ];
-} ) ) ) );
+    function ( task $task, taskManager $taskManager )
+    {
+        if ( ! $taskManager->has ( $task ) )
+            return [ 4000, [ ] ];
+             
+        $taskManager->uncomplete ( $task );
+        return [ 3005, [ ] ];
+    } ) ) ) );

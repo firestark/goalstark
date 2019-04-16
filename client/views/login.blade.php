@@ -1,6 +1,6 @@
-@extends('master')
+@extends ( 'master' )
 
-@section('content')
+@section ( 'content' )
     <section id="login" class="mdc-card">
         <form action="/login" method="POST">
             <div id="username-input" class="mdc-text-field mdc-text-field--with-leading-icon">
@@ -35,10 +35,10 @@
     <div id="triangle"></div>
 @endsection
 
-@section('mdc-js')
+@section ( 'mdc-js' )
     <script>
-        mdc.textField.MDCTextField.attachTo(document.getElementById('username-input'));
-        mdc.textField.MDCTextField.attachTo(document.getElementById('password-input'));
-        mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
+        mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'username-input' ) );
+        mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'password-input' ) );
+        mdc.ripple.MDCRipple.attachTo ( document.querySelector ( '.mdc-button' ) );
     </script>
 @endsection
