@@ -49,7 +49,9 @@
                 @endforeach
             </ul>
         </section>
-    @endif    
+    @endif   
+
+    @include ( 'partials.link.fab', [ 'link' => '/add/task', 'action' => 'add' ] ) 
 @endsection
 
 @section( 'mdc-js' )
