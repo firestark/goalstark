@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/{id}/tasks/{taskid}', function ( $id, $taskid )
+route::get ( '/tasks/{taskid}', function ( )
 {
     return app::fulfill ( 'i want to see a task' );
 } );
