@@ -2,21 +2,21 @@
 
 class goal
 {
-    public $id, $description, $completeBy, $completed;
+    public $id, $description, $due, $completed;
 
-    function __construct ( $id, string $description, int $completeBy, bool $completed = false )
+    function __construct ( $id, string $description, int $due, bool $completed = false )
     {
         $this->id           = $id;
         $this->description  = $description;
-        $this->completeBy   = $this->completeByEndOfDay ( $completeBy );
+        $this->due          = $this->dueByEndOfDay ( $due );
         $this->completed    = $completed;
     }
 
     /**
-     * Setting the completeBy timestamp to the end of the day.
+     * Setting the due timestamp to the end of the day.
      * This makes the goal only overdue based on the day.
      */
-    private function completeByEndOfDay ( int $timestamp ) : int
+    private function dueByEndOfDay ( int $timestamp ) : int
     {
         $beginOfDay = strtotime ( 'midnight', $timestamp );
         return strtotime ( 'tomorrow', $beginOfDay ) - 1;
