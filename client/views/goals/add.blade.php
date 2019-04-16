@@ -65,8 +65,8 @@
                     type="date" 
                     id="complete-by" name="completeBy"
                     class="mdc-text-field__input"
-                    value="{{ date('Y-m-d') }}" 
-                    min="{{ date('Y-m-d') }}">
+                    value="{{ date ( 'Y-m-d' ) }}" 
+                    min="{{ date ( 'Y-m-d' ) }}">
                 <label class="mdc-floating-label" for="complete-by">Due date</label>
                 <div class="mdc-line-ripple"></div>
             </div>
