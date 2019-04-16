@@ -2,6 +2,6 @@
 
 route::get ( '/', function ( )
 {
-    view::title ( 'My goals' );
+    view::title ( 'Overview' );
     return app::fulfill ( 'i want to see my goals' );
 } );
