@@ -43,10 +43,13 @@
         <form method="POST" action="/">
             <input type="hidden" name="id" value="{{ uniqid ( ) }}">
 
-            @include ( 'partials.input.description', [ 'value' => '' ] )
-            @include ( 'partials.input.due', [ 'value' => time ( ) ] )
-            @include ( 'partials.input.fab', [ 'action' => 'save' ] )
+            <div id="title-and-due">
+                @include ( 'partials.input.title', [ 'value' => '' ] )
+                @include ( 'partials.input.due', [ 'value' => time ( ) ] )
+            </div>
             
+            @include ( 'partials.input.description', [ 'value' => '' ] )
+            @include ( 'partials.input.fab', [ 'action' => 'save' ] )            
         </form>
     </section>
 @endsection

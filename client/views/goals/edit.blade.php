@@ -44,9 +44,13 @@
     <section class="mdc-card form-section">    
         <form method="POST" action="/{{ $goal->id }}">
             <input type="hidden" name="id" value="{{ $goal->id }}">
+
+            <div id="title-and-due">
+                @include ( 'partials.input.title', [ 'value' => $goal->title ] )
+                @include ( 'partials.input.due', [ 'value' => $goal->due ] )
+            </div>
             
             @include ( 'partials.input.description', [ 'value' => $goal->description ] )
-            @include ( 'partials.input.due', [ 'value' => $goal->due ] )
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )
         </form>
     </section>
