@@ -18,4 +18,18 @@ class dailyTask extends task
         array_pop ( $this->completions );
         parent::uncomplete ( );
     }
+
+    function isCompleted ( ) : bool
+    {
+        return end ( $this->completions ) >= $this->beginOfDay ( time ( ) );
+    }
+
+    /**
+     * Setting the due timestamp to the end of the day.
+     * This makes the goal only overdue based on the day.
+     */
+    private function beginOfDay ( int $timestamp ) : int
+    {
+        return strtotime ( 'midnight', $timestamp );
+    }
 }

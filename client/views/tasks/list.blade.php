@@ -10,7 +10,7 @@
             <ul class="mdc-card mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
                 @foreach ( $tasks as $task )
                     <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
-                        @if( $task->completed )
+                        @if( $task->isCompleted ( ) )
                             <a  href="/tasks/uncomplete/{{ $task->id }}" 
                                 class="mdc-list-item__graphic completed" 
                                 aria-hidden="true">
