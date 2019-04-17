@@ -19,4 +19,6 @@ interface taskManager
     function uncomplete ( task $task );
 
     function remove ( task $task );
+
+    function removeForGoal ( $goalid );
 }

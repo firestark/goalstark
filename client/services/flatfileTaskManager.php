@@ -69,6 +69,15 @@ class flatfileTaskManager implements taskManager
         $this->write ( );
     }
 
+    function removeForGoal ( $goalid )
+    {
+        foreach ( $this->tasks as $task )
+            if ( $task->goalid === $goalid )
+                unset ( $this->tasks [ $task->id ] );
+        
+        $this->write ( );
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->tasks ) );
