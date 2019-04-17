@@ -45,13 +45,3 @@
     @include ( 'partials.task-list' )
     @include ( 'partials.link.fab', [ 'link' => "/{$goal->id}/tasks/add", 'action' => 'add' ] )
 @endsection
-
-@section( 'mdc-js' )
-    @parent
-    
-    <script>
-        @if ( count ( $tasks ) )
-            mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
-        @endif
-    </script>
-@endsection

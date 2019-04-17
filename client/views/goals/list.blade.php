@@ -36,7 +36,7 @@
 
                         <a href="/{{ $goal->id }}">
                             <span class="mdc-list-item__text">
-                                <span class="mdc-list-item__primary-text">{{ $goal->description }}</span>
+                                <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
                                 <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $goal->due ) }}</span>
                             </span>
                         </a>
@@ -65,7 +65,8 @@
         mdc.tabBar.MDCTabBar.attachTo ( document.querySelector ( '.mdc-tab-bar' ) );
         
         @if ( count ( $goals ) )
-            mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
+            const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
+            const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
         @endif
     </script>
 @endsection

@@ -91,3 +91,14 @@
         </ul>
     </section>
 @endif
+
+@section( 'mdc-js' )
+    @parent
+    
+    <script>
+        @if ( count ( $tasks ) )
+            const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
+            const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
+        @endif
+    </script>
+@endsection
