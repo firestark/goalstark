@@ -20,6 +20,14 @@
     }
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow:  0 0 0px 1000px var(--mdc-theme-background) inset;
+    -webkit-text-fill-color: var(--mdc-theme-text-primary-on-background) !important;
+}
+
 .mdc-text-field--textarea .mdc-text-field__input {
     padding-top: 8px;
     margin-top: 0;
@@ -259,10 +267,13 @@ form > *:not(:last-of-type) {
 // login page
 
 section#login {
-    max-width: 400px;
+    max-width: 480px;
     margin: auto;
-    padding: 16px;
+    padding: 32px;
     margin-top: 32px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
 
     form {
         display: grid;
@@ -290,10 +301,24 @@ section#login {
     transform-origin: bottom left;
 }
 
+#triangle2 {
+    background: linear-gradient(to right, #94103e, #db004d);
+    display: block;
+    height: 1400px;
+    right: 0;
+    top: -1401px;
+    position: absolute;
+    width: 60%;
+    z-index: 0;
+    transform: skewY(-147deg);
+    transform-origin: bottom left;
+}
+
 #login-theme-switcher {
     position: absolute;
     right: 24px;
     top: 16px;
     color: var(--mdc-theme-text-primary-on-background);
     fill: var(--mdc-theme-text-primary-on-background);
+    z-index: 1;
 }
