@@ -12,6 +12,3 @@ function ( task $task, taskManager $taskManager )
     $task = $taskManager->find ( $task );
     return [ 3002, with ( 'task' ) ];
 } ) ) ) );
-
-
-
