@@ -8,5 +8,5 @@ status::matching ( 3001, function ( goal $goal, array $tasks )
 	$tasks = array_reverse ( $tasks );
 	$oneTimers = array_filter ( $tasks, function ( $task ) { return ! $task instanceof dailyTask; } );
 	$dailies = array_filter ( $tasks, function ( $task ) { return $task instanceof dailyTask; } );
-	return view::ok ( 'goals.tasklist', with ( 'goal', 'tasks', 'oneTimers', 'dailies' ) );
+	return view::ok ( 'goals.task-list', with ( 'goal', 'tasks', 'oneTimers', 'dailies' ) );
 } );
