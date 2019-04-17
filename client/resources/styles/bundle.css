@@ -3142,7 +3142,7 @@ main {
 .form-section {
   padding: 16px; }
 
-.mdc-text-field:not(:last-of-type) {
+form > *:not(:last-of-type) {
   margin-bottom: 24px; }
 
 #description-field {
