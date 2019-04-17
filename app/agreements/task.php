@@ -2,7 +2,8 @@
 
 class task
 {
-    public $goalid, $id, $description, $completed;
+    public $goalid, $id, $description;
+    private $completed;
 
     function __construct ( $goalid, $id, string $description, int $due, bool $completed = false )
     {
