@@ -1,6 +1,11 @@
 @extends ( 'master' )
 
 @section ( 'content' )
+
+    <div id="login-theme-switcher">
+        @include ( 'partials.theme-switcher' )
+    </div>
+
     <section id="login" class="mdc-card">
         <form action="/login" method="POST">
             <div id="username-input" class="mdc-text-field mdc-text-field--with-leading-icon">

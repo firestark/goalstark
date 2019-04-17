@@ -282,3 +282,11 @@ section#login {
     transform: skewY(36deg);
     transform-origin: bottom left;
 }
+
+#login-theme-switcher {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    color: var(--mdc-theme-text-primary-on-background);
+    fill: var(--mdc-theme-text-primary-on-background);
+}
