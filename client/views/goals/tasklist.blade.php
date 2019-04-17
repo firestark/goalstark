@@ -74,7 +74,7 @@
                             <a href="/tasks/{{ $task->id }}">
                                 <span class="mdc-list-item__text">
                                     <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
-                                    <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $task->due ) }}</span>
+                                    <span class="mdc-list-item__secondary-text">Finishes {{  date ( 'M d, Y ', $task->due ) }}</span>
                                 </span>
                             </a>
                             
