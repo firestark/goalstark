@@ -1,5 +1,9 @@
 @extends ( 'page' )
 
+@section ( 'navigation' )
+    @include ( 'partials.up-arrow', [ 'link' => "/tasks" ] )
+@endsection
+
 @section ( 'content' )
 
     @if ( count ( $goals ) )
