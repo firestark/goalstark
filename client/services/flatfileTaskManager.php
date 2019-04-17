@@ -51,14 +51,14 @@ class flatfileTaskManager implements taskManager
     function complete ( task $task )
     {
         $this->check ( $task );
-        $this->tasks [ $task->id ]->completed = true;
+        $this->tasks [ $task->id ]->complete ( );
         $this->write ( );
     }
 
     function uncomplete ( task $task )
     {
         $this->check ( $task );
-        $this->tasks [ $task->id ]->completed = false;
+        $this->tasks [ $task->id ]->uncomplete ( );
         $this->write ( );
     }
 

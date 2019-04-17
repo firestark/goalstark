@@ -2,7 +2,9 @@
 
 app::bind ( task::class, function ( $app )
 {
-    return new task (
+    $class = ( input::get ( 'type', '' ) === 'daily' ) ? dailyTask::class : task::class;
+        
+    return new $class (
         input::get ( 'id', '' ),
         input::get ( 'taskid', uniqid ( ) ),
         input::get ( 'description', '' ),

@@ -13,6 +13,16 @@ class task
         $this->completed    = $completed;
     }
 
+    function complete ( )
+    {
+        $this->completed = true;
+    }
+
+    function uncomplete ( )
+    {
+        $this->completed = false;
+    }
+
     /**
      * Setting the due timestamp to the end of the day.
      * This makes the task only overdue based on the day.
