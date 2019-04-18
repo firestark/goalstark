@@ -1,24 +1,42 @@
 <?php
 
-interface taskManager
+abstract class taskManager
 {
-    function add ( task $task );
+    abstract function add ( task $task );
 
-    function tasksFor ( goal $goal ) : array;
+    abstract function tasksFor ( goal $goal ) : array;
 
-    function has ( task $task ) : bool;
+    abstract function has ( task $task ) : bool;
 
-    function all ( ) : array;
+    abstract function all ( ) : array;
 
-    function find ( task $task ) : task;
+    abstract function find ( task $task ) : task;
 
-    function update ( task $task );
+    abstract function update ( task $task );
 
-    function complete ( task $task );
+    abstract function complete ( task $task );
 
-    function uncomplete ( task $task );
+    abstract function uncomplete ( task $task );
 
-    function remove ( task $task );
+    abstract function remove ( task $task );
 
-    function removeForGoal ( $goalid );
+    abstract function removeForGoal ( $goalid );
+
+    function today ( ) : array
+    {
+        foreach ( $this->all ( ) as $task )
+            if ( $task->dueToday ( ) )
+                $tasks [ ] = $task;
+        
+        return $tasks ?? [ ];
+    }
+
+    function later ( ) : array
+    {
+        foreach ( $this->all ( ) as $task )
+            if ( ! $task->dueToday ( ) )
+                $tasks [ ] = $task;
+        
+        return $tasks ?? [ ];
+    }
 }
