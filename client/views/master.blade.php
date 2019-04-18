@@ -23,13 +23,7 @@
 
 <body class="mdc-typography">
   
-    @yield ( 'top-app-bar' )
-
-    <div id="app">
-        <main>
-            @yield ( 'content' )
-        </main>
-    </div>
+    @yield ( 'page' )
 
     @if ( session::has ( 'message' ) )
         <div class="mdc-snackbar">

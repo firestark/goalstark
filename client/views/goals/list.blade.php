@@ -59,9 +59,7 @@
 @section ( 'mdc-js' )
     @parent
 
-    <script>
-        mdc.tabBar.MDCTabBar.attachTo ( document.querySelector ( '.mdc-tab-bar' ) );
-        
+    <script>        
         @if ( count ( $goals ) )
             const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
             const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
