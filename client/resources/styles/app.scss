@@ -20,14 +20,6 @@
     }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-    box-shadow:  0 0 0px 1000px var(--mdc-theme-background) inset;
-    -webkit-text-fill-color: var(--mdc-theme-text-primary-on-background) !important;
-}
-
 .mdc-text-field--textarea .mdc-text-field__input {
     padding-top: 8px;
     margin-top: 0;
@@ -99,6 +91,14 @@ input[type="date"]::-webkit-inner-spin-button {
     &:hover {
         background: none;
     }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow:  0 0 0px 1000px var(--mdc-theme-background) inset;
+    -webkit-text-fill-color: var(--mdc-theme-text-primary-on-background) !important;
 }
 
 fieldset {
@@ -188,7 +188,10 @@ body {
 
 .mdc-top-app-bar {
     position: relative;
+    background: linear-gradient(to right, #94103e, #db004d);
 }
+
+
 
 #app {
     overflow: auto;
