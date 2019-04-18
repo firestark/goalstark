@@ -1,4 +1,4 @@
-@extends ( 'page' )
+@extends ( 'page.details' )
 
 @section ( 'navigation' )
     @include ( 'partials.up-arrow', [ 'link' => "/tasks" ] )
