@@ -1,6 +1,10 @@
 @if ( count ( $tasks ) )
-    <section>            
-        <ul class="mdc-card mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
+    <section class="mdc-card">
+        <div style="text-align: right; padding: 0 16px;">
+            <button class="mdc-button mdc-button--raised">Add task</button>
+        </div>
+
+        <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
             @if ( count ( $dailies ) )
                 <h6 class="mdc-list-group__subheader">Daily tasks</h6>
                 @foreach ( $dailies as $task )

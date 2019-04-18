@@ -27,7 +27,7 @@
         </header>
 
         {{-- <div id="page">             --}}
-            <main>
+            <main style="margin: 0 auto;">
                 @yield ( 'content' )
             </main>
         {{-- </div>         --}}

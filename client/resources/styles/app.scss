@@ -2,6 +2,7 @@
 @import "./themes/dark.scss";
 
 @import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
 @import "@material/textfield/mdc-text-field";
 @import "@material/fab/mdc-fab";
 @import "@material/top-app-bar/mdc-top-app-bar";
@@ -14,6 +15,11 @@
     input, textarea {
         background-color: var(--mdc-theme-background, #fff);
     }
+}
+
+.mdc-card {
+    @include mdc-card-shape-radius(24px 8px);
+    padding-top: 16px;
 }
 
 .mdc-text-field--textarea .mdc-text-field__input {
@@ -177,12 +183,11 @@ body {
     box-sizing: border-box;
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-row-gap: 32px;
 }
 
 #page {
     display: grid;
-    grid-template-columns: 192px 1fr;
+    grid-template-columns: 168px 1fr;
     box-sizing: border-box;
     min-height: 0;
 }
@@ -209,7 +214,6 @@ body {
                 fill: var(--mdc-theme-text-hint-on-background);
                 display: grid;
                 justify-items: center;
-                font-weight: bold;
                 font-size: 14px;
                 grid-row-gap: 8px;
             }
@@ -223,9 +227,10 @@ body {
 }
 
 main {
-    padding: 0 40px 16px 16px;
+    padding: 32px 106px 32px 16px;
     overflow: auto;
     box-sizing: border-box;
+    width: 100%;
 }
 
 // lists

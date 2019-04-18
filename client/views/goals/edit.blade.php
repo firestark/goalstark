@@ -5,7 +5,7 @@
 @endsection
 
 @section ( 'content' )
-    <section class="mdc-card form-section">    
+    <section class="mdc-card form-section" style="margin-bottom: 40px;">    
         <form method="POST" action="/{{ $goal->id }}">
             <input type="hidden" name="id" value="{{ $goal->id }}">
 
@@ -18,4 +18,6 @@
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )
         </form>
     </section>
+
+    @include ( 'partials.task-list' )
 @endsection
