@@ -2156,7 +2156,7 @@ body {
 
 #page {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 192px 1fr;
   margin-top: 32px; }
 
 #rail-navigation {
