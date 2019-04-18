@@ -26,6 +26,17 @@
                                 <span class="mdc-tab__ripple"></span>
                             </button>
                         </a>
+                        <a href="/apps" id="apps">
+                            <button class="mdc-tab {{ ( request::uri ( ) === '/apps' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__text-label">Apps</span>
+                                </span>
+                                <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/apps' ) ? 'mdc-tab-indicator--active' : '' }}">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
