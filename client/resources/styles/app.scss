@@ -266,6 +266,8 @@ main {
     bottom: 34px;
     right: 40px;
     z-index: 5000;
+
+    @include mdc-fab-accessible(#EA4C62);
 }
 
 // Forms

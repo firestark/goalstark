@@ -2433,7 +2433,29 @@ main {
   position: absolute;
   bottom: 34px;
   right: 40px;
-  z-index: 5000; }
+  z-index: 5000;
+  background-color: #EA4C62;
+  color: white;
+  /* @alternate */
+  color: var(--mdc-theme-text-primary-on-dark, white); }
+  .mdc-fab::before, .mdc-fab::after {
+    background-color: white; }
+    @supports not (-ms-ime-align: auto) {
+      .mdc-fab::before, .mdc-fab::after {
+        /* @alternate */
+        background-color: var(--mdc-theme-text-primary-on-dark, white); } }
+  .mdc-fab:hover::before {
+    opacity: 0.08; }
+  .mdc-fab:not(.mdc-ripple-upgraded):focus::before, .mdc-fab.mdc-ripple-upgraded--background-focused::before {
+    transition-duration: 75ms;
+    opacity: 0.24; }
+  .mdc-fab:not(.mdc-ripple-upgraded)::after {
+    transition: opacity 150ms linear; }
+  .mdc-fab:not(.mdc-ripple-upgraded):active::after {
+    transition-duration: 75ms;
+    opacity: 0.24; }
+  .mdc-fab.mdc-ripple-upgraded {
+    --mdc-ripple-fg-opacity: 0.24; }
 
 .form-section {
   padding: 16px; }
