@@ -2702,6 +2702,53 @@ fieldset {
   box-shadow: none;
   margin: 0px 4px; }
 
+[data-mdc-tooltip] {
+  position: relative;
+  display: inline-block; }
+  [data-mdc-tooltip]:before {
+    content: attr(data-mdc-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    padding: 8px;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: top;
+    background: #616161e6;
+    color: white;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+    font-weight: 400; }
+  [data-mdc-tooltip]:hover:before {
+    transform: translateX(-50%) scale(1); }
+  [data-mdc-tooltip].mdc-tooltip--right:before {
+    left: auto;
+    right: -10px;
+    bottom: auto;
+    top: 50%;
+    transform: translate(100%, -50%) scale(0);
+    transform-origin: left center; }
+  [data-mdc-tooltip].mdc-tooltip--right:hover:before {
+    transform: translate(100%, -50%) scale(1); }
+  [data-mdc-tooltip].mdc-tooltip--left:before {
+    left: -15px;
+    right: auto;
+    bottom: auto;
+    top: 50%;
+    transform: translate(-100%, -50%) scale(0);
+    transform-origin: right center; }
+  [data-mdc-tooltip].mdc-tooltip--left:hover:before {
+    transform: translate(-100%, -50%) scale(1); }
+  [data-mdc-tooltip].mdc-tooltip-disabled:before {
+    display: none; }
+
+.mdc-tooltip--top:before {
+  top: -35px;
+  bottom: auto;
+  transform: translateX(-50%) scale(0);
+  transform-origin: bottom center; }
+
 html, body {
   background-color: var(--mdc-theme-background, #fff); }
 
