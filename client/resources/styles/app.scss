@@ -1,6 +1,9 @@
+$mdc-typography-font-family: "Exo 2", unquote("sans-serif");
+
 @import "./themes/light.scss";
 @import "./themes/dark.scss";
 
+@import "@material/list/mdc-list";
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
 @import "@material/textfield/mdc-text-field";
@@ -20,6 +23,7 @@
 .mdc-card {
     @include mdc-card-shape-radius(24px 8px);
     padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .mdc-text-field--textarea .mdc-text-field__input {
@@ -38,10 +42,6 @@
 
 *:focus {
     outline: none;
-}
-
-* {
-    font-family: 'Exo 2', Roboto, sans-serif !important;
 }
 
 html, body {
@@ -160,13 +160,16 @@ body {
 }
 
 .mdc-top-app-bar {
+    @include mdc-top-app-bar-ink-color(var(--mdc-theme-text-primary-on-background));      
+    
     position: relative;
     background: transparent;
     box-shadow: none;
 }
 
 :root[data-theme="light"] {
-    .mdc-top-app-bar {        
+    .mdc-top-app-bar {
+        
         @include mdc-top-app-bar-icon-ink-color(#343434);
     }
 }
@@ -227,7 +230,7 @@ body {
 }
 
 main {
-    padding: 32px 106px 32px 16px;
+    padding: 32px 168px 32px 16px;
     overflow: auto;
     box-sizing: border-box;
     width: 100%;

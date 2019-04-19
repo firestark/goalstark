@@ -1,7 +1,7 @@
 @if ( count ( $tasks ) )
     <section class="mdc-card">
         <div style="text-align: right; padding: 0 16px;">
-            <button class="mdc-button mdc-button--raised">Add task</button>
+            <a href="/{{ $goal->id }}/tasks/add" class="mdc-button mdc-button--raised">Add task</a>
         </div>
 
         <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
@@ -94,6 +94,10 @@
             @endif
         </ul>
     </section>
+@else
+    <div style="text-align: right; padding: 0 16px;">
+        <a href="/{{ $goal->id }}/tasks/add" class="mdc-button mdc-button--raised">Add task</a>
+    </div>
 @endif
 
 @section( 'mdc-js' )
