@@ -1,5 +1,17 @@
 @extends ( 'page.overview' )
 
 @section ( 'content' )
-    <h1>App list</h1>
+    @if ( count ( $apps ) )
+        <section class="mdc-card">
+            <ul class="mdc-list linked">
+                @foreach ( $apps as $app )
+                    <li class="mdc-list-item" tabindex="0">
+                        <a href="/apps/{{ $app->uri }}">
+                            <span class="mdc-list-item__text">{{ $app->title }}</span>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+    @endif
 @endsection
