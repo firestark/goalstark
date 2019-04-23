@@ -1,10 +1,9 @@
 <?php
 
-app::bind ( product::class, function ( )
+app::bind ( product::class, function ( $app )
 {
     return new product (
         input::get ( 'name', '' ),
-        input::get ( 'protein', 0 ),
-        input::get ( 'sugars', 0 )
+        $app->make ( product\nutrition::class )
     );
 } );

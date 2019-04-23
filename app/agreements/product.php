@@ -2,12 +2,11 @@
 
 class product
 {
-    public $name, $protein, $sugars;
+    public $name, $nutrition;
 
-    function __construct ( string $name, float $protein, float $sugars )
+    function __construct ( string $name, product\nutrition $nutrition )
     {
-        $this->name     = $name;
-        $this->protein  = $protein;
-        $this->sugars   = $sugars;
+        $this->name         = $name;
+        $this->nutrition    = $nutrition;
     }
 }
