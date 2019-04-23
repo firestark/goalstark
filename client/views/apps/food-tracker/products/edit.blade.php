@@ -8,7 +8,7 @@
     <section class="mdc-card form-section">
         <form method="POST" action="/apps/food-tracker/products/{{ $product->name }}">
             
-            <div class="mdc-text-field" id="name-field">
+            <div class="mdc-text-field mdc-text-field--disabled" id="name-field">
                 <input 
                     type="text" 
                     id="name" name="name"
@@ -16,7 +16,7 @@
                     value="{{ $product->name }}"
                     required
                     disabled>
-                <label class="mdc-floating-label" for="name">Name</label>
+                <label class="mdc-floating-label  mdc-floating-label--float-above" for="name">Name</label>
                 <div class="mdc-line-ripple"></div>
             </div>
 
@@ -31,7 +31,7 @@
                         value="{{ $product->nutrition->fats->saturated }}"
                         required
                         step="any">
-                    <label class="mdc-floating-label" for="saturated-fats">Saturated fats</label>
+                    <label class="mdc-floating-label  mdc-floating-label--float-above" for="saturated-fats">Saturated fats</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
@@ -43,7 +43,7 @@
                         value="{{ $product->nutrition->fats->unsaturated }}"
                         required
                         step="any">
-                    <label class="mdc-floating-label" for="unsaturated-fats">Unsaturated fats</label>
+                    <label class="mdc-floating-label  mdc-floating-label--float-above" for="unsaturated-fats">Unsaturated fats</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
             </section>            
@@ -59,7 +59,7 @@
                         value="{{ $product->nutrition->carbohydrates->total }}"
                         required
                         step="any">
-                    <label class="mdc-floating-label" for="carbohydrates-total">Carbohydrates total</label>
+                    <label class="mdc-floating-label  mdc-floating-label--float-above" for="carbohydrates-total">Carbohydrates total</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
@@ -71,7 +71,7 @@
                         value="{{ $product->nutrition->carbohydrates->fiber }}"
                         required
                         step="any">
-                    <label class="mdc-floating-label" for="fiber">Fiber</label>
+                    <label class="mdc-floating-label  mdc-floating-label--float-above" for="fiber">Fiber</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
@@ -83,7 +83,7 @@
                         value="{{ $product->nutrition->carbohydrates->sugars }}"
                         required
                         step="any">
-                    <label class="mdc-floating-label" for="sugars">Sugars</label>
+                    <label class="mdc-floating-label  mdc-floating-label--float-above" for="sugars">Sugars</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
             </section>
@@ -96,7 +96,7 @@
                     value="{{ $product->nutrition->protein }}"
                     required
                     step="any">
-                <label class="mdc-floating-label" for="protein">Protein</label>
+                <label class="mdc-floating-label  mdc-floating-label--float-above" for="protein">Protein</label>
                 <div class="mdc-line-ripple"></div>
             </div>
 
@@ -108,7 +108,7 @@
                     value="{{ $product->nutrition->salt }}"
                     required
                     step="any">
-                <label class="mdc-floating-label" for="salt">Salt</label>
+                <label class="mdc-floating-label  mdc-floating-label--float-above" for="salt">Salt</label>
                 <div class="mdc-line-ripple"></div>
             </div>
 

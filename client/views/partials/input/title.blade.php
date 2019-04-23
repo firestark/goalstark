@@ -8,7 +8,7 @@
     <input 
         type="text" 
         id="title" name="title"
-        class="mdc-text-field__input"
+        class="mdc-text-field__input {{ ( $value ) ?  'mdc-floating-label--float-above' : '' }}"
         value="{{ $value }}"
         required>
     <label class="mdc-floating-label" for="title">Title</label>

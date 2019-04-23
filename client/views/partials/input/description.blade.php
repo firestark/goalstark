@@ -3,7 +3,7 @@
     <div class="mdc-notched-outline">
         <div class="mdc-notched-outline__leading"></div>
         <div class="mdc-notched-outline__notch">
-            <label for="goal" class="mdc-floating-label">Description</label>
+            <label for="goal" class="mdc-floating-label {{ ( $value ) ?  'mdc-floating-label--float-above' : '' }}">Description</label>
         </div>
         <div class="mdc-notched-outline__trailing"></div>
     </div>
