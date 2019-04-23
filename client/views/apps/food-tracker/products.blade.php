@@ -1,9 +1,7 @@
-@extends ( 'page.details' )
-
-@section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => '/apps/food-tracker' ] )
-@endsection
+@extends ( 'apps.food-tracker.page.overview' )
 
 @section ( 'content' )
-    <h1>Product listing</h1>
+    <h1>Products</h1>
+    
+    @include ( 'partials.link.fab', [ 'link' => '/apps/food-tracker/add', 'action' => 'add' ] )
 @endsection
