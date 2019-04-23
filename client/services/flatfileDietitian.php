@@ -39,6 +39,13 @@ class flatfileDietitian implements dietitian
         $this->write ( );
     }
 
+    function remove ( product $product )
+    {
+        $this->check ( $product );
+        unset ( $this->products [ $product->name ] );
+        $this->write ( );
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->products ) );

@@ -11,4 +11,6 @@ interface dietitian
     function find ( product $product ) : product;
 
     function update ( product $product );
+
+    function remove ( product $product );
 }

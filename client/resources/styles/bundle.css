@@ -2863,7 +2863,7 @@ main {
   color: #cddc39;
   fill: #cddc39; }
 
-.mdc-list.linked a {
+.mdc-list.linked a:first-child {
   align-items: center;
   width: 100%;
   height: 100%;
