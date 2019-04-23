@@ -8,10 +8,10 @@
     <input 
         type="text" 
         id="title" name="title"
-        class="mdc-text-field__input {{ ( $value ) ?  'mdc-floating-label--float-above' : '' }}"
+        class="mdc-text-field__input"
         value="{{ $value }}"
         required>
-    <label class="mdc-floating-label" for="title">Title</label>
+    <label class="mdc-floating-label {{ ( $value ) ?  'mdc-floating-label--float-above' : '' }}" for="title">Title</label>
     <div class="mdc-line-ripple"></div>
 </div>
 
