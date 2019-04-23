@@ -1,7 +1,7 @@
 @extends('page.details')
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => "/" ] )
+    @include ( 'partials.up-arrow', [ 'link' => '/' ] )
 @endsection
 
 @section ( 'content' )
