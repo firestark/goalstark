@@ -2600,7 +2600,7 @@ svg.mdc-button__icon {
   background-color: var(--mdc-theme-background, #fff); }
 
 .mdc-card {
-  border-radius: 24px 8px;
+  border-radius: 0;
   padding-top: 16px;
   padding-bottom: 16px; }
 
