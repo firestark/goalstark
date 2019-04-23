@@ -18,7 +18,18 @@ $mdc-typography-font-family: "Exo 2", unquote("sans-serif");
     input, textarea {
         background-color: var(--mdc-theme-background, #fff);
     }
+
+    &.mdc-text-field--disabled {
+        .mdc-text-field__input {
+            color: var(--mdc-theme-text-disabled-on-light);
+        }
+        .mdc-floating-label {
+            color: var(--mdc-theme-text-disabled-on-light);
+        }
+    }
 }
+
+
 
 .mdc-card {
     @include mdc-card-shape-radius(0);
