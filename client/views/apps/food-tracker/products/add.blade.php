@@ -18,6 +18,16 @@
                 <div class="mdc-line-ripple"></div>
             </div>
 
+            <div class="mdc-text-field" id="per-field">
+                <input 
+                    type="text" 
+                    id="per" name="per"
+                    class="mdc-text-field__input"
+                    required>
+                <label class="mdc-floating-label" for="per">Per</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+
             <section style="margin-bottom: 32px;">
                 <h3 class="mdc-typography--caption">Fats</h3>
                 
@@ -54,7 +64,7 @@
                         class="mdc-text-field__input"
                         required
                         step="any">
-                    <label class="mdc-floating-label" for="carbohydrates-total">Carbohydrates total</label>
+                    <label class="mdc-floating-label" for="carbohydrates-total">Total</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
@@ -113,6 +123,7 @@
     
     <script>
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'name-field' ) );
+        mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'per-field' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'protein-field' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'sugars-field' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'saturated-fats-field' ) );

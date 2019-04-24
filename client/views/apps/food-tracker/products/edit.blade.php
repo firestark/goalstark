@@ -6,7 +6,7 @@
 
 @section ( 'content' )
     <section class="mdc-card form-section">
-        <form method="POST" action="/apps/food-tracker/products/{{ $product->name }}">
+        <form method="POST" action="/apps/food-tracker/products/{{ $product->id }}">
             
             <div class="mdc-text-field mdc-text-field--disabled" id="name-field">
                 <input 
@@ -14,9 +14,19 @@
                     id="name" name="name"
                     class="mdc-text-field__input"
                     value="{{ $product->name }}"
-                    required
-                    disabled>
+                    required>
                 <label class="mdc-floating-label  mdc-floating-label--float-above" for="name">Name</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+
+            <div class="mdc-text-field" id="per-field">
+                <input 
+                    type="text" 
+                    id="per" name="per"
+                    value="{{ $product->nutrition->per }}"
+                    class="mdc-text-field__input"
+                    required>
+                <label class="mdc-floating-label mdc-floating-label--float-above" for="per">Per</label>
                 <div class="mdc-line-ripple"></div>
             </div>
 
@@ -59,7 +69,7 @@
                         value="{{ $product->nutrition->carbohydrates->total }}"
                         required
                         step="any">
-                    <label class="mdc-floating-label  mdc-floating-label--float-above" for="carbohydrates-total">Carbohydrates total</label>
+                    <label class="mdc-floating-label  mdc-floating-label--float-above" for="carbohydrates-total">Total</label>
                     <div class="mdc-line-ripple"></div>
                 </div>
 
@@ -122,6 +132,7 @@
     
     <script>
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'name-field' ) );
+        mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'per-field' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'protein-field' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'sugars-field' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'saturated-fats-field' ) );

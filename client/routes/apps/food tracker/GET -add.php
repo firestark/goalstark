@@ -2,6 +2,5 @@
 
 route::get ( '/apps/food-tracker/add', function ( )
 {
-    view::title ( 'Select a product' );
-    return view::ok ( 'apps.food-tracker.products' );
+    return app::fulfill ( 'i want to select a product' );
 } );

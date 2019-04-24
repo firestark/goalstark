@@ -12,7 +12,7 @@ class flatfileDietitian implements dietitian
 
     function add ( product $product )
     {
-        $this->products [ $product->name ] = $product;
+        $this->products [ $product->id ] = $product;
         $this->write ( );
     }
 
@@ -23,26 +23,26 @@ class flatfileDietitian implements dietitian
 
     function has ( product $product ) : bool
     {
-        return isset ( $this->products [ $product->name ] );
+        return isset ( $this->products [ $product->id ] );
     }
 
     function find ( product $product ) : product
     {
         $this->check ( $product );
-        return $this->products [ $product->name ];
+        return $this->products [ $product->id ];
     }
 
     function update ( product $product )
     {
         $this->check ( $product );
-        $this->products [ $product->name ] = $product;
+        $this->products [ $product->id ] = $product;
         $this->write ( );
     }
 
     function remove ( product $product )
     {
         $this->check ( $product );
-        unset ( $this->products [ $product->name ] );
+        unset ( $this->products [ $product->id ] );
         $this->write ( );
     }
 
@@ -53,7 +53,7 @@ class flatfileDietitian implements dietitian
 
     private function check ( product $product )
     {
-        if ( ! isset ( $this->products [ $product->name ] ) )
-            throw new \exception ( "A product with name: {$product->name} does not exist." );
+        if ( ! isset ( $this->products [ $product->id ] ) )
+            throw new \exception ( "A product with id: {$product->id} does not exist." );
     }
 }
