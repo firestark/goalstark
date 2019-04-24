@@ -21,6 +21,12 @@ class flatfileDietitian implements dietitian
         return $this->consumations;
     }
 
+    function remove ( consumation $consumation )
+    {
+        unset ( $this->consumations [ $consumation->id ] );
+        $this->write ( );
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->consumations ) );
