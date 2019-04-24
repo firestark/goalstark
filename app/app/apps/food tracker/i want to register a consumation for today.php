@@ -1,8 +1,9 @@
 <?php
 
-when ( 'i want to register a consumation for today', then ( apply ( a ( 
+when ( 'i want to add a consumation', then ( apply ( a ( 
     
-function (  )
+function ( consumation $consumation, dietitian $dietitian )
 {
-
+    $dietitian->add ( $consumation );
+    return [ 7006, [ ] ];
 } ) ) ) );
