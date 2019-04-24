@@ -2,6 +2,5 @@
 
 route::get ( '/apps/food-tracker', function ( )
 {
-    view::title ( 'Food tracker' );
-    return view::ok ( 'apps.food-tracker.list' );
+    return app::fulfill ( 'i want to see my consumations' );
 } );

@@ -16,6 +16,11 @@ class flatfileDietitian implements dietitian
         $this->write ( );
     }
 
+    function all ( ) : array
+    {
+        return $this->consumations;
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->consumations ) );
