@@ -2756,7 +2756,8 @@ fieldset {
   transform-origin: bottom center; }
 
 html, body {
-  background-color: var(--mdc-theme-background, #fff); }
+  background-color: var(--mdc-theme-background, #fff);
+  color: var(--mdc-theme-text-primary-on-background, #000); }
 
 body {
   overflow: hidden; }
@@ -2764,8 +2765,7 @@ body {
 .mdc-top-app-bar {
   color: var(--mdc-theme-text-primary-on-background);
   position: relative;
-  background: transparent;
-  box-shadow: none; }
+  background: transparent; }
 
 :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item,
 :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {

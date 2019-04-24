@@ -235,6 +235,7 @@ fieldset {
 
 html, body {
     background-color: var(--mdc-theme-background, #fff);
+    color: var(--mdc-theme-text-primary-on-background, #000);
 }
 
 body {
