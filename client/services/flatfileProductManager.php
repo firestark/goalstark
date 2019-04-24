@@ -1,6 +1,6 @@
 <?php
 
-class flatfileDietitian implements dietitian
+class flatfileProductManager implements productManager
 {
     private $products, $file;
 

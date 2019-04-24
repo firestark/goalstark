@@ -2,12 +2,12 @@
 
 when ( 'i want to update a product', then ( apply ( a ( 
     
-function ( product $product, dietitian $dietitian )
+function ( product $product, productManager $productManager )
 {
-    if ( ! $dietitian->has ( $product ) )
+    if ( ! $productManager->has ( $product ) )
         return [ 8000, [ ] ];
 
 
-    $dietitian->update ( $product );
+    $productManager->update ( $product );
     return [ 7003, [ ] ];
 } ) ) ) );

@@ -2,8 +2,8 @@
 
 when ( 'i want to add a product', then ( apply ( a ( 
     
-function ( product $product, dietitian $dietitian )
+function ( product $product, productManager $productManager )
 {
-    $dietitian->add ( $product );
+    $productManager->add ( $product );
     return [ 7000, [ ] ];
 } ) ) ) );

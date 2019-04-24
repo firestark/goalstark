@@ -2,11 +2,11 @@
 
 when ( 'i want to remove a product', then ( apply ( a ( 
     
-function ( product $product, dietitian $dietitian )
+function ( product $product, productManager $productManager )
 {
-    if ( ! $dietitian->has ( $product ) )
+    if ( ! $productManager->has ( $product ) )
         return [ 8000, [ ] ];
     
-    $dietitian->remove ( $product );
+    $productManager->remove ( $product );
     return [ 7004, [ ] ];
 } ) ) ) );

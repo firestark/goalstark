@@ -4,11 +4,11 @@ use function compact as with;
 
 when ( 'i want to see a product', then ( apply ( a ( 
     
-function ( product $product, dietitian $dietitian )
+function ( product $product, productManager $productManager )
 {
-    if ( ! $dietitian->has ( $product ) )
+    if ( ! $productManager->has ( $product ) )
         return [ 8000, [ ] ];
 
-    $product = $dietitian->find ( $product );
+    $product = $productManager->find ( $product );
     return [ 7002, with ( 'product' ) ];
 } ) ) ) );
