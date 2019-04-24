@@ -33,8 +33,6 @@ $mdc-typography-font-family: "Exo 2", unquote("sans-serif");
 
 .mdc-card {
     @include mdc-card-shape-radius(0);
-    padding-top: 16px;
-    padding-bottom: 16px;
 }
 
 .mdc-text-field--textarea .mdc-text-field__input {
