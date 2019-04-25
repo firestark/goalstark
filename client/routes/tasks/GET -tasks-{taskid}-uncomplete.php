@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/tasks/uncomplete/{taskid}', function ( )
+route::get ( '/tasks/{taskid}/uncomplete', function ( )
 {
     return app::fulfill ( 'i want to uncomplete a task' );
 } );

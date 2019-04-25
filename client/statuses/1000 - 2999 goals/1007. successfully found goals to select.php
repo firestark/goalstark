@@ -4,6 +4,8 @@ use function compact as with;
 
 status::matching ( 1007, function ( array $goals )
 {
+	view::title ( 'Select a goal' );
+	
 	usort ( $goals, function ( $a, $b )
 	{
 		if ( $a->rating === $b->rating )
