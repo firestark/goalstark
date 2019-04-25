@@ -6,7 +6,7 @@
   --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #fff;
-  --mdc-theme-on-surface: #343434;
+  --mdc-theme-on-surface: #000;
   --mdc-theme-on-error: #fff;
   --mdc-theme-text-primary-on-background: #343434;
   --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
@@ -2824,7 +2824,9 @@ body {
   height: 100vh;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: auto 1fr; }
+  grid-template-rows: auto 1fr;
+  position: relative;
+  z-index: 1; }
 
 #page {
   display: grid;
@@ -3111,3 +3113,14 @@ section#login {
   transition-duration: 0.9s;
   transition-delay: 0.3s;
   opacity: 0; }
+
+.svg-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0; }
+
+.bg-color {
+  stroke: var(--mdc-theme-on-surface); }
