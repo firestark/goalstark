@@ -7,7 +7,7 @@
 @section ( 'content' )
     <section class="mdc-card form-section" style="margin-bottom: 40px;">    
         <form method="POST" action="/{{ $goal->id }}">
-            <input type="hidden" name="id" value="{{ $goal->id }}">
+            <input type="hidden" name="goalid" value="{{ $goal->id }}">
 
             <div id="title-and-due">
                 @include ( 'partials.input.title', [ 'value' => $goal->title ] )

@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/{id}/remove', function ( $id )
+route::get ( '/{goalid}/remove', function ( )
 {
     return app::fulfill ( 'i want to remove a goal' );
 } );

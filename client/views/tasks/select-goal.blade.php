@@ -12,7 +12,7 @@
                 @foreach ( $goals as $goal )
                     <li class="mdc-list-item mdc-ripple-upgraded" tabindex="0">
 
-                        <a href="/add/task/{{ $goal->id }}/type">
+                        <a href="{{ $goal->id }}/tasks/select-type">
                             <span class="mdc-list-item__text" style="width: 100%;">
                                 <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
                                 <span class="mdc-list-item__secondary-text"><span>Due {{  date ( 'M d, Y ', $goal->due ) }}</span>        

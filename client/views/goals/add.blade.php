@@ -7,8 +7,6 @@
 @section ( 'content' )
     <section class="mdc-card form-section" style="margin-bottom: 32px;">
         <form method="POST" action="/">
-            <input type="hidden" name="id" value="{{ uniqid ( ) }}">
-
             <div id="title-and-due">
                 @include ( 'partials.input.title', [ 'value' => '' ] )
                 @include ( 'partials.input.due', [ 'value' => time ( ) ] )

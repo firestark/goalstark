@@ -1,6 +1,6 @@
 <?php
 
-route::post ( '/{id}', function ( )
+route::post ( '/{goalid}', function ( )
 {
     return app::fulfill ( 'i want to update a goal' );
 } );
