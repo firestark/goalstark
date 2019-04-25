@@ -26,11 +26,12 @@
             </div>
         </header>
 
-        {{-- <div id="page">             --}}
-            <main style="margin: 0 auto;">
+        <div id="page">
+            <div></div>      
+            <main>
                 @yield ( 'content' )
             </main>
-        {{-- </div>         --}}
+        </div>        
     </div>
 @endsection
 
