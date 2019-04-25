@@ -3,6 +3,7 @@
 route::post ( '/login', function ( )
 {
     $credentials = app::make ( 'credentials' );
+    
     if ( $credentials->username !== 'admin' or $credentials->password !== 'admin' )
     {
         session::flash ( 'message', 'Invalid credentials' );
@@ -10,6 +11,6 @@ route::post ( '/login', function ( )
     }
 
     session::set ( 'token', app::make ( 'guard' )->stamp ( app::make ( 'credentials' ) ) );
-    session::flash ( 'message', 'Successfully logged in.' );
+    session::flash ( 'message', 'Logged in.' );
     return redirect::to ( '/' );
 } );
