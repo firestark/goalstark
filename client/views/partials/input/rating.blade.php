@@ -1,4 +1,8 @@
 <div style="display: inline-block; position: relative; z-index: 1;">
+    @if ( $caption )
+        <h3 class="mdc-typography--caption">{{ $caption }}</h3>
+    @endif
+
     <svg class="svg-icon__sprite">
         <defs>
             <symbol id="star" viewbox="0 0 32 32">
@@ -11,35 +15,35 @@
 
     <fieldset>
         <div class="rating rating__fx--1 flexy__item">
-            <input type="radio" id="value-1-4" name="rating-1"/>
+            <input type="radio" id="value-1-4" name="rating" value="5" {{ ( $value === 5 ) ? 'checked' : '' }}>
             <label class="rating__label sparks" for="value-1-4">
                 <svg class="rating__label__icon svg-icon">
                     <use class="use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </label>
             
-            <input type="radio" id="value-1-3" name="rating-1"/>
+            <input type="radio" id="value-1-3" name="rating" value="4" {{ ( $value === 4 ) ? 'checked' : '' }}>
             <label class="rating__label" for="value-1-3">
                 <svg class="rating__label__icon svg-icon">
                     <use class="use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </label>
             
-            <input type="radio" id="value-1-2" name="rating-1"/>
+            <input type="radio" id="value-1-2" name="rating" value="3" {{ ( $value === 3 ) ? 'checked' : '' }}>
             <label class="rating__label" for="value-1-2">
                 <svg class="rating__label__icon svg-icon">
                     <use class="use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </label>
             
-            <input type="radio" id="value-1-1" name="rating-1"/>
+            <input type="radio" id="value-1-1" name="rating" value="2" {{ ( $value === 2 ) ? 'checked' : '' }}>
             <label class="rating__label" for="value-1-1">
                 <svg class="rating__label__icon svg-icon">
                     <use class="use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
                 </svg>
             </label>
             
-            <input type="radio" id="value-1-0" name="rating-1" checked="checked"/>
+            <input type="radio" id="value-1-0" name="rating" value="1" {{ ( $value === 1 ) ? 'checked' : '' }}>
             <label class="rating__label" for="value-1-0">
                 <svg class="rating__label__icon svg-icon">
                     <use class="use" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>

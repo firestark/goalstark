@@ -15,7 +15,7 @@
             </div>
             
             @include ( 'partials.input.description', [ 'value' => $goal->description ] )
-            @include ( 'partials.input.rating' )    
+            @include ( 'partials.input.rating', [ 'value' => $goal->rating, 'caption' => 'Importance' ] )
 
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )
         </form>

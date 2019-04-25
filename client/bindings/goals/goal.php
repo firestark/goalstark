@@ -7,6 +7,7 @@ app::bind ( goal::class, function ( )
         input::get ( 'title', '' ),
         input::get ( 'description', '' ),
         strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) ),
+        input::get ( 'rating', 1 ),
         input::get ( 'completed', false )
     );
 } );

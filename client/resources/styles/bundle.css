@@ -3019,7 +3019,6 @@ section#login {
   display: flex;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--mdc-theme-on-surface);
   margin-left: -1px; }
 
 .rating__label__icon {
