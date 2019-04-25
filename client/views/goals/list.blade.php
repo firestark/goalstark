@@ -34,7 +34,7 @@
                                 <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
                                 <span class="mdc-list-item__secondary-text"><span>Due {{  date ( 'M d, Y ', $goal->due ) }}</span>        
                                     
-                                    <span style="position: relative; top: 6px; left: 16px;">
+                                    <span style="position: relative; top: 6px; left: 8px;">
                                         @for ( $i = 0; $i < $goal->rating; $i++ )
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" style="fill: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));">
                                                 <path fill="none" d="M0 0h18v18H0V0z"/>
