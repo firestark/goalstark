@@ -21,6 +21,17 @@ class flatfileDietitian implements dietitian
         return $this->consumations;
     }
 
+    function today ( ) : array
+    {
+        $date = date ( 'Ymd' );
+
+        foreach ( $this->consumations as $consumation ) 
+            if ( date ( 'Ymd', $consumation->date ) === $date )
+                $consumations [ ] = $consumation;
+
+        return $consumations ?? [ ];
+    }
+
     function remove ( consumation $consumation )
     {
         unset ( $this->consumations [ $consumation->id ] );

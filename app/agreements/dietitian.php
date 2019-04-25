@@ -7,4 +7,6 @@ interface dietitian
     function all ( ) : array;
 
     function remove ( consumation $consumation );
+
+    function today ( ) : array;
 }
