@@ -1,6 +1,6 @@
 @if ( count ( $tasks ) )
     <section class="mdc-card" style="padding-top: 16px; position: relative;">
-        <a href="/{{ $goal->id }}/tasks/add" class="mdc-button mdc-button--raised" style="position: absolute; right: 16px; top: 16px;">Add task</a>
+        <a href="/tasks/{{ $goal->id }}/select-type" class="mdc-button mdc-button--raised" style="position: absolute; right: 16px; top: 16px;">Add task</a>
 
         <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
             @if ( count ( $dailies ) )
@@ -94,7 +94,7 @@
     </section>
 @else
     <div style="text-align: right; padding: 0 16px;">
-        <a href="/{{ $goal->id }}/tasks/add" class="mdc-button mdc-button--raised">Add task</a>
+        <a href="/tasks/{{ $goal->id }}/select-type" class="mdc-button mdc-button--raised">Add task</a>
     </div>
 @endif
 
