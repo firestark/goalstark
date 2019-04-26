@@ -1,6 +1,6 @@
 <?php
 
-class flatfileTaskManager extends taskManager
+class flatfileTaskManager extends \task\manager
 {
     private $tasks, $file;
 

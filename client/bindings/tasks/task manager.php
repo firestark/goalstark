@@ -1,6 +1,6 @@
 <?php
 
-app::share ( taskManager::class, function ( $app )
+app::share ( \task\manager::class, function ( $app )
 {
     return new flatfileTaskManager ( 
         $app [ 'tasks file' ],

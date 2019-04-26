@@ -1,6 +1,11 @@
 <?php
 
-abstract class taskManager
+namespace task;
+
+use goal;
+use task;
+
+abstract class manager
 {
     abstract function add ( task $task );
 
