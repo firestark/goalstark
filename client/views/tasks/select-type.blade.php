@@ -8,17 +8,17 @@
     <section class="mdc-card">
         <ul class="mdc-list linked">
             <li class="mdc-list-item" tabindex="0">
-                <a href="#">
+                <a href="once/add">
                     <span class="mdc-list-item__text">One time task</span>
                 </a>
             </li>
             <li class="mdc-list-item" tabindex="0">
-                <a href="#">
+                <a href="daily/add">
                     <span class="mdc-list-item__text">Daily task</span>
                 </a>
             </li>
             <li class="mdc-list-item" tabindex="0">
-                <a href="#">
+                <a href="protein/add">
                     <span class="mdc-list-item__text">Protein task</span>
                 </a>
             </li>
