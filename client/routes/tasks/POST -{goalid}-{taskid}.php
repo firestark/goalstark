@@ -1,6 +1,6 @@
 <?php
 
-route::post ( '/{goalid}/tasks/{taskid}', function ( )
+route::post ( '/{goalid}/{taskid}', function ( )
 {
     return app::fulfill ( 'i want to updated a task' );
 } );

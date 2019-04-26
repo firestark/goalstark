@@ -1,12 +1,12 @@
 @extends ( 'page.details' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => "/tasks" ] )
+    @include ( 'partials.up-arrow', [ 'link' => '/tasks/' ] )
 @endsection
 
 @section ( 'content' )
     <section class="mdc-card form-section">    
-        <form method="POST" action="/{{ $goal }}/tasks">
+        <form method="POST" action="/tasks/{{ $goal }}">
             @include ( 'partials.input.type', [ 'value' => 'once' ] )
             @include ( 'partials.input.description', [ 'value' => '' ] )
             @include ( 'partials.input.due', [ 'value' => time ( ) ] )

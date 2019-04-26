@@ -125,12 +125,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/firestark/http.git",
-                "reference": "d49354f9f7f4ef3fd6cd93a6a460b176852d1e6d"
+                "reference": "cedfcee22040100cd4ef221e704400da9afd1b08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firestark/http/zipball/d49354f9f7f4ef3fd6cd93a6a460b176852d1e6d",
-                "reference": "d49354f9f7f4ef3fd6cd93a6a460b176852d1e6d",
+                "url": "https://api.github.com/repos/firestark/http/zipball/cedfcee22040100cd4ef221e704400da9afd1b08",
+                "reference": "cedfcee22040100cd4ef221e704400da9afd1b08",
                 "shasum": ""
             },
             "require": {
@@ -173,7 +173,7 @@
                 "library",
                 "lionar"
             ],
-            "time": "2019-04-24T07:26:06+00:00"
+            "time": "2019-04-26T09:50:35+00:00"
         },
         {
             "name": "firestark/ioc",

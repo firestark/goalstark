@@ -24,12 +24,12 @@ $app [ 'session' ]->flash ( 'uri', $app [ 'request' ]->uri );
 
 facade::setFacadeApplication ( $app );
 
-requiring ( __DIR__ . '/routes' );
+require ( __DIR__ . '/routes/routes.php' );
 requiring ( __DIR__ . '/bindings' );
 requiring ( __DIR__ . '/statuses' );
 requiring ( __DIR__ . '/../app/app' );
 
-$dispatcher = new http\dispatcher ( $app [ 'router' ]->routes );
+$dispatcher = new http\dispatcher ( $app [ 'router' ]->routes, $app [ 'router' ]->groups );
 $kernel = new firestark\kernel ( $dispatcher );
 $response = $kernel->handle ( $app [ 'request' ] );
 

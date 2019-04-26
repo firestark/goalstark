@@ -1,7 +1,7 @@
 @extends ( 'page.details' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => "/tasks" ] )
+    @include ( 'partials.up-arrow', [ 'link' => '/tasks/' ] )
 @endsection
 
 @section ( 'content' )
