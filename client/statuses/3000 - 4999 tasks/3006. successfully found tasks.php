@@ -2,9 +2,8 @@
 
 use function compact as with;
 
-status::matching ( 3006, function ( array $today, array $later )
+status::matching ( 3006, function ( array $tasks )
 {
-	$today = array_reverse ( $today );
-	$later = array_reverse ( $later );
-	return view::ok ( 'tasks.list', with ( 'today', 'later' ) );
+	$tasks = array_reverse ( $tasks );
+	return view::ok ( 'tasks.list', with ( 'tasks' ) );
 } );

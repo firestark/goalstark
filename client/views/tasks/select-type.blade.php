@@ -8,8 +8,8 @@
     <section class="mdc-card">
         <ul class="mdc-list linked">
             <li class="mdc-list-item" tabindex="0">
-                <a href="once/add">
-                    <span class="mdc-list-item__text">One time task</span>
+                <a href="simple/add">
+                    <span class="mdc-list-item__text">Simple task</span>
                 </a>
             </li>
             <li class="mdc-list-item" tabindex="0">
