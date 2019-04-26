@@ -77,7 +77,7 @@
         </mask>
     </defs>
 
-    <g class="bg-color" style="mix-blend-mode:overlay;" fill="none" fill-rule="evenodd" opacity=".35" stroke="#FFF">
+    <g class="bg-color" style="mix-blend-mode:overlay;" fill="none" fill-rule="evenodd" opacity=".40" stroke="#FFF">
         <use class="svg-bg_element" mask="url(#h)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a"></use>
         <use class="svg-bg_element" mask="url(#i)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#b"></use>
         <use class="svg-bg_element opacity-anim" mask="url(#j)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#c"></use>
