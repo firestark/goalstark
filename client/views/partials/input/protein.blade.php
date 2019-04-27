@@ -1,4 +1,4 @@
-<div class="mdc-text-field" id="protein-field">
+<div class="mdc-text-field mdc-text-field--with-trailing-icon" id="protein-field">
     <input 
         type="number" 
         id="protein" name="protein"
@@ -6,6 +6,9 @@
         value="{{ $value }}"
         required>
     <label class="mdc-floating-label {{ ( $value ) ?  'mdc-floating-label--float-above' : '' }}" for="protein">Protein</label>
+    <span class="mdc-text-field__icon">
+        g
+    </span>
     <div class="mdc-line-ripple"></div>
 </div>
 
