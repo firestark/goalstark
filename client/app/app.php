@@ -13,7 +13,10 @@ class app extends container
         $token = $this [ 'session' ]->get ( 'token', '' );
 
         if ( $this [ 'guard' ]->allows ( $this [ 'request' ], $token ) )
-            return $this->run ( $request, $payload );
+            if ( $this [ 'session' ]->has ( 'intended' ) )
+                return $this [ 'redirector' ]->to ( $this [ 'session' ]->getAndForget ( 'intended' ) );
+            else
+                return $this->run ( $request, $payload );
 
         return $this->deny ( );
     }
@@ -28,6 +31,7 @@ class app extends container
 
     private function deny ( )
     {
+        $this [ 'session' ]->set ( 'intended', $this [ 'request' ]->uri ( ) );
         $response = $this->call ( $this [ 'statuses' ]->match ( 0 ), [ ] );
         $response [ 'X-Firestark-Status' ] = 0;
         return $response;
