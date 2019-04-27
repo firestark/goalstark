@@ -2,5 +2,5 @@
 
 route::post ( '/{goalid}/protein', function ( )
 {
-    dd ( input::all ( ) );
+    return app::fulfill ( 'i want to add a protein task' );
 } );

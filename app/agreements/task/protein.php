@@ -2,7 +2,7 @@
 
 namespace task;
 
-class protein extends \dailyTask
+class protein extends daily
 {
     public $goal; 
 

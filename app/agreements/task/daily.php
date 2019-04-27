@@ -2,7 +2,7 @@
 
 namespace task;
 
-class dailyDue extends \task
+class daily extends \task
 {
     /**
      * An array of timestamps to track completion dates.
@@ -12,13 +12,11 @@ class dailyDue extends \task
     function complete ( )
     {
         $this->completions [ ] = time ( );
-        parent::complete ( );
     }
 
     function uncomplete ( )
     {
         array_pop ( $this->completions );
-        parent::uncomplete ( );
     }
 
     function isCompleted ( ) : bool
@@ -26,15 +24,6 @@ class dailyDue extends \task
         return end ( $this->completions ) >= $this->beginOfDay ( time ( ) );
     }
 
-    function dueToday ( ) : bool
-    {
-        return true;
-    }
-
-    /**
-     * Setting the due timestamp to the end of the day.
-     * This makes the goal only overdue based on the day.
-     */
     private function beginOfDay ( int $timestamp ) : int
     {
         return strtotime ( 'midnight', $timestamp );
