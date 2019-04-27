@@ -4,7 +4,7 @@ use function compact as with;
 
 status::matching ( 1007, function ( array $goals )
 {
-	view::title ( 'Select a goal' );
+	view::title ( 'Select goals' );
 	
 	usort ( $goals, function ( $a, $b )
 	{

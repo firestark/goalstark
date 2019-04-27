@@ -102,6 +102,10 @@ fieldset {
     fill: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
 }
 
+.mdc-checkbox__checkmark {
+    color: var(--mdc-theme-on-secondary);
+}
+
 
 /* ---------------------------------------------------------
     Styling 

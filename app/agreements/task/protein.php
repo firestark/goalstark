@@ -4,12 +4,12 @@ namespace task;
 
 class protein extends daily
 {
-    public $goal; 
+    public $goal = 0; 
 
-    function __construct ( $goalid, $id, float $goal )
+    function __construct ( array $goals, $id, int $goal )
     {
         $this->goal = $goal;
-        $description = "Consume {$goal}g of protein every day";
-        parent::__construct ( $goalid, $id, $description );
+        $description = "Consume {$goal}g of protein.";
+        parent::__construct ( $goals, $id, $description );
     }
 }
