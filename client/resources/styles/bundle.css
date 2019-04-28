@@ -2658,11 +2658,15 @@ fieldset {
 .mdc-list-item__meta {
   fill: var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.38)); }
 
-.mdc-text-field__icon {
-  fill: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54)); }
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon {
+  fill: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+  color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54)); }
 
 .mdc-checkbox__checkmark {
   color: var(--mdc-theme-on-secondary); }
+
+:not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item:hover::before {
+  filter: opacity(100%); }
 
 /* ---------------------------------------------------------
     Styling 
