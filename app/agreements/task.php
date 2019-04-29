@@ -12,4 +12,10 @@ abstract class task
         $this->id           = $id;
         $this->description  = $description;
     }
+
+    function remove ( $goalid )
+    {
+        if ( ( $key = array_search ( $goalid, $this->goals ) ) !== false )
+            unset ( $this->goals [ $key ] );
+    }
 }

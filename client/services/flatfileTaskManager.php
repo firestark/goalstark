@@ -83,11 +83,10 @@ class flatfileTaskManager extends \task\manager
         $this->write ( );
     }
 
-    function removeForGoal ( $goalid )
+    function removeGoal ( $goalid )
     {
         foreach ( $this->tasks as $task )
-            if ( $task->goalid === $goalid )
-                unset ( $this->tasks [ $task->id ] );
+           $task->remove ( $goalid );
         
         $this->write ( );
     }
