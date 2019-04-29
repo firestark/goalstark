@@ -8,7 +8,7 @@
                 @foreach ( $tasks as $task )
                     <li class="mdc-list-item" tabindex="0">
                         
-                        @if ( $task instanceof task\due )
+                        @if ( $task instanceof task\due or $task instanceof task\daily )
                             @if ( $task->isCompleted ( ) )
                                 <a  href="/tasks/{{ $task->id }}/uncomplete" 
                                     class="mdc-list-item__graphic completed" 
@@ -21,7 +21,7 @@
                                 </a>
                             @else
                                 <a  href="/tasks/{{ $task->id }}/complete" 
-                                    class="mdc-list-item__graphic {{ ( $task->due < time() ) ? 'overdue' : '' }}" 
+                                    class="mdc-list-item__graphic {{ ( isset ( $task->due ) and $task->due < time ( ) ) ? 'overdue' : '' }}" 
                                     aria-hidden="true">
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -44,8 +44,10 @@
                                 <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
                                 @if ( isset ( $task->due ) )
                                     <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $task->due ) }}</span>
-                                @else
+                                @elseif ( isset ( $task->goal ) )
                                     <span class="mdc-list-item__secondary-text">Consumed {{ $protein }} of {{ $task->goal }}</span>
+                                @else
+                                    <span class="mdc-list-item__secondary-text">Daily task</span>
                                 @endif
                             </span>
                         </a>
