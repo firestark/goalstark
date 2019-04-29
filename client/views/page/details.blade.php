@@ -26,7 +26,7 @@
             </div>
         </header>
 
-        <div id="page">
+        <div id="page" style="margin-top: 24px;">
             <div></div>      
             <main>
                 @yield ( 'content' )
