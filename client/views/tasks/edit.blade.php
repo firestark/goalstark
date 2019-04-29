@@ -29,7 +29,7 @@
     </section>
         
     @if ( count ( $goals ) )
-        <h2 class="mdc-typography--headline6">Goals</h2>
+        <h2 class="mdc-typography--subtitle1">Goals</h2>
         
         <section class="mdc-card" id="goal-listing">
             <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
