@@ -1,6 +1,6 @@
 <?php
 
-when ( 'i want to updated a task', then ( apply ( a ( 
+when ( 'i want to update a task', then ( apply ( a ( 
     
 function ( task $task, task\manager $taskManager )
 {
@@ -8,5 +8,5 @@ function ( task $task, task\manager $taskManager )
         return [ 4000, [ ] ];
         
     $taskManager->update ( $task );
-    return [ 3003, [ 'id' => $task->goalid ] ];
+    return [ 3003, [ ] ];
 } ) ) ) );

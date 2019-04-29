@@ -49,6 +49,11 @@ class session
             isset ( $_SESSION [ 'deprecated' ] [ $key ] );
     }
 
+    public function reflash ( )
+    {
+        $_SESSION [ 'flash' ] = array_merge ( $_SESSION [ 'flash' ], $_SESSION [ 'deprecated' ] );
+    }
+
     private function deprecate ( )
     {            
         foreach ( $_SESSION [ 'flash' ] as $key => $value )

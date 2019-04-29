@@ -1,7 +1,7 @@
 <?php
 
-status::matching ( 3003, function ( $id )
+status::matching ( 3003, function ( )
 {
 	session::flash ( 'message', 'Updated task.' );
-	return redirect::to ( "/{$id}" );
+	return redirect::to ( '/tasks/' );
 } );

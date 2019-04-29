@@ -9,7 +9,7 @@ class protein extends daily
     function __construct ( array $goals, $id, int $goal )
     {
         $this->goal = $goal;
-        $description = "Consume {$goal}g of protein.";
+        $description = "Consume {$goal}g of protein";
         parent::__construct ( $goals, $id, $description );
     }
 }

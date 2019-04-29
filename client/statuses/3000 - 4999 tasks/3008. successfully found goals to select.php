@@ -2,7 +2,7 @@
 
 use function compact as with;
 
-status::matching ( 1007, function ( array $goals )
+status::matching ( 3008, function ( array $goals )
 {
 	view::title ( 'Select goals' );
 	
@@ -14,5 +14,5 @@ status::matching ( 1007, function ( array $goals )
 		return ( $a->rating > $b->rating ) ? -1 : 1;
 	} );
 	
-	return view::ok ( 'tasks.select-goal', with ( 'goals' ) );
+	return view::ok ( 'tasks.wizard.select-goals', with ( 'goals' ) );
 } );

@@ -30,7 +30,7 @@ class flatfileTaskManager extends \task\manager
     function tasksFor ( goal $goal ) : array
     {
         foreach ( $this->tasks as $task )
-            if ( $task->goalid === $goal->id )
+            if ( in_array ( $goal->id, $task->goals ) )
                 $tasks [ ] = $task;
         
         return $tasks ?? [ ];

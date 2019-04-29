@@ -7,7 +7,7 @@
 @section ( 'content' )
     
     @if ( count ( $goals ) )
-        <form action="">
+        <form action="/tasks/select-type" method="GET">
             <section class="mdc-card" id="goal-listing">
                 <ul class="mdc-list mdc-list--two-line" role="group">
                     @foreach ( $goals as $goal )
@@ -18,6 +18,7 @@
                                         type="checkbox"
                                         class="mdc-checkbox__native-control"
                                         id="{{ $goal->id }}"
+                                        name="goals[]"
                                         value="{{ $goal->id }}">
                             
                                     <div class="mdc-checkbox__background">

@@ -10,7 +10,7 @@
         id="due" name="due"
         class="mdc-text-field__input"
         value="{{ date ( 'Y-m-d', $value ) }}" 
-        min="{{ date ( 'Y-m-d', $value ) }}">
+        min="{{ date ( 'Y-m-d', time ( ) ) }}">
     <label class="mdc-floating-label mdc-floating-label--float-above" for="due">Due date</label>
     <div class="mdc-line-ripple"></div>
 </div>

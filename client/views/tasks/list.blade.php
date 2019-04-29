@@ -118,7 +118,7 @@
     @endif
       --}}
 
-    @include ( 'partials.link.fab', [ 'link' => '/tasks/add', 'action' => 'add' ] )
+    @include ( 'partials.link.fab', [ 'link' => '/tasks/select-goal', 'action' => 'add' ] )
 
 @endsection
 

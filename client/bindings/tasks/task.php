@@ -1,10 +1,13 @@
 <?php
 
 app::bind ( task::class, function ( $app )
-{        
-    return new task (
-        input::get ( 'goals', [ ] ),
-        input::get ( 'taskid', uniqid ( ) ),
-        input::get ( 'description', '' )
-    );
+{   
+    switch ( input::get ( 'type', '' ) ) {
+        case 'due':
+            return app::make ( task\due::class );
+        case 'protein' :
+            return app::make ( task\protein::class );
+        default:
+            return app::make ( task\due::class );
+    }
 } );
