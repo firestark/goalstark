@@ -4,7 +4,9 @@
         id="protein" name="protein"
         class="mdc-text-field__input"
         value="{{ $value }}"
-        required>
+        required
+        {{ ( isset ( $autofocus ) and $autofocus ) ? 'autofocus' : '' }}
+        onFocus="this.select();">
     <label class="mdc-floating-label {{ ( $value ) ?  'mdc-floating-label--float-above' : '' }}" for="protein">Protein</label>
     <span class="mdc-text-field__icon">
         g

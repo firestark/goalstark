@@ -22,7 +22,7 @@
             @endif
 
             @if ( $type === 'protein' )
-                @include ( 'partials.input.protein', [ 'value' => 0 ] )
+                @include ( 'partials.input.protein', [ 'value' => 0, 'autofocus' => true ] )
             @endif
 
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )
