@@ -13,6 +13,8 @@ abstract class manager
 
     abstract function has ( task $task ) : bool;
 
+    abstract function hasWithDescription ( string $description ) : bool;
+
     abstract function all ( ) : array;
 
     abstract function find ( task $task ) : task;

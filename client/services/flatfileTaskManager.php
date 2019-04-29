@@ -46,6 +46,15 @@ class flatfileTaskManager extends \task\manager
         return isset ( $this->tasks [ $task->id ] );
     }
 
+    function hasWithDescription ( string $description ) : bool
+    {
+        foreach ( $this->tasks as $task )
+            if ( $task->description === $description )
+                return true;
+        
+        return false;
+    }
+
     function update ( task $task )
     {
         $this->check ( $task->id );
