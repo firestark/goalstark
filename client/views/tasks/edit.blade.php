@@ -21,7 +21,7 @@
             @endif
 
             @if ( $task instanceof task\protein )
-                @include ( 'partials.input.due', [ 'value' => $task->goal ] )
+                @include ( 'partials.input.protein', [ 'value' => $task->goal ] )
             @endif
 
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )
