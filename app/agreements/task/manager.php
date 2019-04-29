@@ -17,6 +17,8 @@ abstract class manager
 
     abstract function find ( task $task ) : task;
 
+    abstract function findById ( $id ) : task;
+
     abstract function update ( task $task );
 
     abstract function complete ( task $task );
