@@ -39,54 +39,59 @@
         </div>
     @endif
 
-<svg class="svg-bg" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <circle id="a" cx="1468" cy="133" r="35"></circle>
-        <mask id="h" x="0" y="0" width="70" height="70" fill="#fff">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a"></use>
-        </mask>
+    <div id="triangle"></div>
+    <div id="triangle2"></div>
 
-        <circle id="b" cx="236.5" cy="732.5" r="23.5"></circle>
-        <mask id="i" x="0" y="0" width="47" height="47" fill="#fff">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#b"></use>
-        </mask>
+    <svg class="svg-bg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <circle id="a" cx="1468" cy="133" r="35"></circle>
+            <mask id="h" x="0" y="0" width="70" height="70" fill="#fff">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a"></use>
+            </mask>
 
-        <circle id="c" cx="1120.5" cy="945.5" r="28.5"></circle>
-        <mask id="j" x="0" y="0" width="57" height="57" fill="#fff">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#c"></use>
-        </mask>
+            <circle id="b" cx="236.5" cy="732.5" r="23.5"></circle>
+            <mask id="i" x="0" y="0" width="47" height="47" fill="#fff">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#b"></use>
+            </mask>
+
+            <circle id="c" cx="1120.5" cy="945.5" r="28.5"></circle>
+            <mask id="j" x="0" y="0" width="57" height="57" fill="#fff">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#c"></use>
+            </mask>
+        
+            <path id="d" d="M1193.375 302.875l44.6 77.25h-89.2z"></path>
+            <mask id="k" x="0" y="0" width="89.201" height="77.25" fill="#fff">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#d"></use>
+            </mask>
+
+            <path id="e" d="M1610.8 513.3l34.14 59.128h-68.278z"></path>
+            <mask id="l" x="0" y="0" width="68.277" height="59.13" fill="#fff">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#e"></use>
+            </mask>
+
+            <path id="f" d="M51.045 967.864l38.314 66.362H12.73z"></path>
+            <mask id="m" x="0" y="0" width="76.629" height="66.362" fill="#fff">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#f"></use>
+            </mask>
+
+            <path id="g" d="M46.045 311.097l26.5 45.897H19.546z"></path>
+            <mask id="n" x="0" y="0" width="52.997" height="45.897" fill="#fff">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#g"></use>
+            </mask>
+        </defs>
+
+        <g class="bg-color" style="mix-blend-mode:overlay;" fill="none" fill-rule="evenodd" opacity=".40" stroke="#FFF">
+            <use class="svg-bg_element" mask="url(#h)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a"></use>
+            <use class="svg-bg_element" mask="url(#i)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#b"></use>
+            <use class="svg-bg_element opacity-anim" mask="url(#j)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#c"></use>
+            <path class="stroke-anim" d="M657.5 848.5l46 46" stroke-width="3" stroke-linecap="square"></path>
+            <use class="svg-bg_element" mask="url(#k)" stroke-width="6" transform="rotate(90 1193.375 341.5)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#d"></use>
+            <use class="svg-bg_element" mask="url(#l)" stroke-width="6" transform="rotate(45 1610.8 542.863)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#e"></use>
+            <use class="svg-bg_element rotate-anim" mask="url(#m)" stroke-width="6" transform="rotate(45 51.045 1001.045)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#f"></use>
+        </g>
+    </svg>
+
     
-        <path id="d" d="M1193.375 302.875l44.6 77.25h-89.2z"></path>
-        <mask id="k" x="0" y="0" width="89.201" height="77.25" fill="#fff">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#d"></use>
-        </mask>
-
-        <path id="e" d="M1610.8 513.3l34.14 59.128h-68.278z"></path>
-        <mask id="l" x="0" y="0" width="68.277" height="59.13" fill="#fff">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#e"></use>
-        </mask>
-
-        <path id="f" d="M51.045 967.864l38.314 66.362H12.73z"></path>
-        <mask id="m" x="0" y="0" width="76.629" height="66.362" fill="#fff">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#f"></use>
-        </mask>
-
-        <path id="g" d="M46.045 311.097l26.5 45.897H19.546z"></path>
-        <mask id="n" x="0" y="0" width="52.997" height="45.897" fill="#fff">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#g"></use>
-        </mask>
-    </defs>
-
-    <g class="bg-color" style="mix-blend-mode:overlay;" fill="none" fill-rule="evenodd" opacity=".40" stroke="#FFF">
-        <use class="svg-bg_element" mask="url(#h)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#a"></use>
-        <use class="svg-bg_element" mask="url(#i)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#b"></use>
-        <use class="svg-bg_element opacity-anim" mask="url(#j)" stroke-width="6" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#c"></use>
-        <path class="stroke-anim" d="M657.5 848.5l46 46" stroke-width="3" stroke-linecap="square"></path>
-        <use class="svg-bg_element" mask="url(#k)" stroke-width="6" transform="rotate(90 1193.375 341.5)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#d"></use>
-        <use class="svg-bg_element" mask="url(#l)" stroke-width="6" transform="rotate(45 1610.8 542.863)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#e"></use>
-        <use class="svg-bg_element rotate-anim" mask="url(#m)" stroke-width="6" transform="rotate(45 51.045 1001.045)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#f"></use>
-    </g>
-</svg>
 
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
