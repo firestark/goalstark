@@ -11,7 +11,7 @@
             <section class="mdc-card" id="goal-listing">
                 <ul class="mdc-list mdc-list--two-line" role="group">
                     @foreach ( $goals as $goal )
-                        <li class="mdc-list-item" role="checkbox" aria-checked="false">
+                        <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'true' : 'false' }}">
                             <span class="mdc-list-item__graphic">
                                 <div class="mdc-checkbox">
                                     <input 
@@ -19,7 +19,8 @@
                                         class="mdc-checkbox__native-control"
                                         id="{{ $goal->id }}"
                                         name="goals[]"
-                                        value="{{ $goal->id }}">
+                                        value="{{ $goal->id }}"
+                                        {{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'checked' : '' }}>
                             
                                     <div class="mdc-checkbox__background">
                                         <svg class="mdc-checkbox__checkmark"

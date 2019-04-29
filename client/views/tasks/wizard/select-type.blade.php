@@ -28,5 +28,11 @@
                 </a>
             </li>
         </ul>
+
+        <div class="mdc-card__actions">
+            <a href="/tasks/select-goal?{{ http_build_query ( input::all ( ) ) }}" class="mdc-button mdc-card__action mdc-card__action--button">
+                <span class="mdc-button__label">PREV</span>
+            </a>
+        </div>
     </section>
 @endsection
