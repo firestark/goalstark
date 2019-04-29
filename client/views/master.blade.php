@@ -39,8 +39,8 @@
         </div>
     @endif
 
-    <div id="triangle"></div>
-    <div id="triangle2"></div>
+    <div id="triangle" style="background: #909090;"></div>
+    <div id="triangle2" style="background: #909090;"></div>
 
     <svg class="svg-bg" xmlns="http://www.w3.org/2000/svg">
         <defs>
