@@ -4,11 +4,50 @@
     
     @if ( count ( $tasks ) )
         <section class="mdc-card">
-            <ul class="mdc-list linked">
+            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list linked">
                 @foreach ( $tasks as $task )
                     <li class="mdc-list-item" tabindex="0">
+                        
+                        @if ( $task instanceof task\due )
+                            @if ( $task->isCompleted ( ) )
+                                <a  href="/tasks/{{ $task->id }}/uncomplete" 
+                                    class="mdc-list-item__graphic completed" 
+                                    aria-hidden="true">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0V0z"/>
+                                        <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
+                                    </svg>
+                                </a>
+                            @else
+                                <a  href="/tasks/{{ $task->id }}/complete" 
+                                    class="mdc-list-item__graphic {{ ( $task->due < time() ) ? 'overdue' : '' }}" 
+                                    aria-hidden="true">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="none" d="M0 0h24v24H0V0z"/>
+                                        <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
+                                    </svg>
+                                </a>
+                            @endif
+                        @else
+                            <span class="mdc-list-item__graphic material-icons" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0V0z"/>
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1zm1-8h-2V7h2v2z"/>
+                                </svg>
+                            </span>
+                        @endif
+
                         <a href="/tasks/{{ $task->id }}">
-                            <span class="mdc-list-item__text">{{ $task->description }}</span>
+                            <span class="mdc-list-item__text">
+                                <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
+                                @if ( isset ( $task->due ) )
+                                    <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $task->due ) }}</span>
+                                @else
+                                    <span class="mdc-list-item__secondary-text">Daily</span>
+                                @endif
+                            </span>
                         </a>
 
                         <a href="/tasks/{{ $task->id }}/remove" class="mdc-list-item__meta" aria-hidden="true">
