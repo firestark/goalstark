@@ -36,7 +36,7 @@
                             <input class="mdc-radio__native-control"
                                 type="radio"
                                 id="type-2"
-                                name="demo-list-radio-item-group"
+                                name="type"
                                 value="protein">
                             <div class="mdc-radio__background">
                                 <div class="mdc-radio__outer-circle"></div>
@@ -71,9 +71,10 @@
 
         <script>
             const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
+            list.singleSelection = true;
             const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
 
-            const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+            const selector = '.mdc-button';
             const ripples = [].map.call ( document.querySelectorAll ( selector ), function ( el ) {
                 mdc.ripple.MDCRipple.attachTo ( el );
             } );
