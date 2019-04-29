@@ -8,6 +8,6 @@ function ( goal $goal, goalManager $manager, task\manager $taskManager )
         return [ 2001, [ ] ];
 
     $manager->remove ( $goal );
-    $taskManager->removeGoal ( $goal->id );
+    $taskManager->removeGoal ( $goal );
     return [ 1003, [ ] ];
 } ) ) ) );

@@ -41,6 +41,8 @@ abstract class goalManager
 
     abstract function find ( $id ) : goal;
 
+    abstract function findAllById ( array $ids ) : array;
+
     abstract function update ( goal $goal );
 
     abstract function remove ( goal $goal );

@@ -29,7 +29,9 @@ abstract class manager
 
     abstract function remove ( task $task );
 
-    abstract function removeGoal ( $goalid );
+    abstract function removeGoal ( goal $goal );
+
+    abstract function removeGoalFromTask ( task $task, goal $goal );
 
     function today ( ) : array
     {

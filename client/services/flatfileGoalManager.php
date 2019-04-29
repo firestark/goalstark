@@ -43,6 +43,15 @@ class flatfileGoalManager extends goalManager
         return $this->goals [ $id ];
     }
 
+    function findAllById ( array $ids ) : array 
+    {
+        foreach ( $this->goals as $id => $goal )
+            if ( in_array ( $id, $ids ) )
+                $goals [ ] = $goal;
+        
+        return $goals ?? [ ];
+    }
+
     function update ( goal $goal )
     {
         $this->check ( $goal );
