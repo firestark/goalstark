@@ -71,7 +71,6 @@
 
         <script>
             const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
-            list.singleSelection = true;
             const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
 
             const selector = '.mdc-button';
