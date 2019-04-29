@@ -8,7 +8,7 @@
                 @foreach ( $tasks as $task )
                     <li class="mdc-list-item" tabindex="0">
                         
-                        @if ( $task instanceof task\due or $task instanceof task\daily )
+                        @if ( $task instanceof task\due or ( $task instanceof task\daily and ! $task instanceof task\protein ) )
                             @if ( $task->isCompleted ( ) )
                                 <a  href="/tasks/{{ $task->id }}/uncomplete" 
                                     class="mdc-list-item__graphic completed" 
