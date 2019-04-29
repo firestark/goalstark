@@ -98,6 +98,10 @@ fieldset {
     fill: var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.38));
 }
 
+.star {
+    fill: #fdd835;
+}
+
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon {
     fill: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
     color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
