@@ -23,4 +23,13 @@ abstract class task
     {
         $this->goals = array_unique ( array_merge ( $this->goals, $goalids ) );
     }
+
+    abstract function dueToday ( ) : bool;
+
+    abstract function complete ( );
+
+    abstract function uncomplete ( );
+
+    abstract function isCompleted ( ) : bool;
+
 }

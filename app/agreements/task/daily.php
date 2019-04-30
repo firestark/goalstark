@@ -24,6 +24,11 @@ class daily extends \task
         return end ( $this->completions ) >= $this->beginOfDay ( time ( ) );
     }
 
+    function dueToday ( ) : bool
+    {
+        return true;
+    }
+
     private function beginOfDay ( int $timestamp ) : int
     {
         return strtotime ( 'midnight', $timestamp );

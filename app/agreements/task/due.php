@@ -29,6 +29,11 @@ class due extends \task
         return $this->completed;
     }
 
+    function dueToday ( ) : bool
+    {
+        return ( $this->due === $this->endOfDay ( time ( ) ) );
+    }
+
     private function endOfDay ( int $timestamp ) : int
     {
         $beginOfDay = strtotime ( 'midnight', $timestamp );

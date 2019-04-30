@@ -16,5 +16,8 @@ status::matching ( 3006, function ( array $tasks )
 
 
 	$tasks = array_reverse ( $tasks );
-	return view::ok ( 'tasks.list', with ( 'tasks', 'protein' ) );
+	$today = array_filter ( $tasks, function ( $task ) { return $task->dueToday ( ); } );
+	$later = array_filter ( $tasks, function ( $task ) { return ! $task->dueToday ( ); } );
+
+	return view::ok ( 'tasks.list', with ( 'tasks', 'today', 'later', 'protein' ) );
 } );
