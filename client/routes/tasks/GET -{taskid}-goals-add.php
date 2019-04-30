@@ -4,6 +4,7 @@ use function compact as with;
 
 route::get ( '/{taskid}/goals/add', function ( $taskid )
 {
+    $task = app::make ( task\manager::class )->findById ( $taskid );
     $goals = app::make ( goalManager::class )->all ( );
-    return view::ok ( 'tasks.select-goals', with ( 'taskid', 'goals' ) );
+    return view::ok ( 'tasks.select-goals', with ( 'task', 'goals' ) );
 } );
