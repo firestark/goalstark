@@ -9,9 +9,6 @@
 ## Tasks
 
 - Add more clarity to the task list
-- Show connected goals (tasks.edit)
-- Add ability to remove goals from task (tasks.edit)
-- Add ability to add goals from task (task.edit)
 
 
 ## Users
