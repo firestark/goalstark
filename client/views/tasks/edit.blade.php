@@ -38,7 +38,7 @@
         </header>
 
         @if ( count ( $goals ) )
-            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
+            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list linked">
                 @foreach ( $goals as $goal )
                     <li class="mdc-list-item" tabindex="0">
 

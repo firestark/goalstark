@@ -3,7 +3,7 @@
 @section ( 'content' )
     @if ( count ( $goals ) )
         <section class="mdc-card" id="goal-listing">
-            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
+            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list linked">
                 @foreach ( $goals as $goal )
                     <li class="mdc-list-item" tabindex="0">
 
