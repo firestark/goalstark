@@ -18,4 +18,9 @@ abstract class task
         if ( ( $key = array_search ( $goalid, $this->goals ) ) !== false )
             unset ( $this->goals [ $key ] );
     }
+
+    function merge ( array $goalids )
+    {
+        $this->goals = array_unique ( array_merge ( $this->goals, $goalids ) );
+    }
 }

@@ -98,6 +98,13 @@ class flatfileTaskManager extends \task\manager
         $this->write ( );
     }
 
+    function merge ( task $task, array $goals )
+    {
+        $this->check ( $task->id );
+        $this->tasks [ $task->id ]->merge ( $goals );
+        $this->write ( );
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->tasks ) );

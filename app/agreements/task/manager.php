@@ -33,6 +33,8 @@ abstract class manager
 
     abstract function removeGoalFromTask ( task $task, goal $goal );
 
+    abstract function merge ( task $task, array $goals );
+
     function today ( ) : array
     {
         foreach ( $this->all ( ) as $task )

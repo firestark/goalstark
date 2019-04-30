@@ -28,14 +28,16 @@
         </form>    
     </section>
         
-    @if ( count ( $goals ) )
-        <section class="mdc-card" id="goal-listing">
-            <header style="display: grid; grid-template-columns: auto 1fr; padding: 8px 16px 0; align-items: center;">
-                <h2 class="mdc-typography--subtitle1" style="margin: 0;">Goals</h2>   
-                <div style="text-align: right;">
-                    <a href="/tasks/{{ $task->id }}/add" class="mdc-button mdc-button--raised">Add goal</a>
-                </div>
-            </header>
+    
+    <section class="mdc-card" id="goal-listing">
+        <header style="display: grid; grid-template-columns: auto 1fr; padding: 8px 16px; align-items: center;">
+            <h2 class="mdc-typography--subtitle1" style="margin: 0;">Goals</h2>   
+            <div style="text-align: right;">
+                <a href="/tasks/{{ $task->id }}/goals/add" class="mdc-button mdc-button--raised">Add goal</a>
+            </div>
+        </header>
+
+        @if ( count ( $goals ) )
             <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list target-listing">
                 @foreach ( $goals as $goal )
                     <li class="mdc-list-item" tabindex="0">
@@ -89,6 +91,7 @@
                     </li>
                 @endforeach
             </ul>
-        </section>
-    @endif
+        @endif
+    </section>
+
 @endsection
