@@ -3,19 +3,29 @@
 use Firebase\JWT\JWT;
 use firestark\credentials;
 use firestark\guard;
+use firestark\session;
 
-class jwtFileGuard extends guard
+class jwtSessionGuard extends guard
 {
     const key = 'eye-fire';
+    private $session = null;
+
+    function __construct ( session $session )
+    {
+        $this->session = $session;
+    }
 
     function stamp ( credentials $credentials ) : string
     {
-        return JWT::encode (
+        $token = JWT::encode (
             [ 'username' => $credentials->username
             , 'password' => hash ( 'sha256', $credentials->password )
             ]
         , self::key
         );
+
+        $this->session->set ( 'token', $token );
+        return $token;
     }
 
     function authenticate ( string $token ) : bool
@@ -26,5 +36,10 @@ class jwtFileGuard extends guard
         } catch ( exception $e ) {
             return false;
         }
+    }
+
+    function invalidate ( )
+    {
+        $this->session->unset ( 'token' );
     }
 }

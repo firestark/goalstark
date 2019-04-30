@@ -26,6 +26,11 @@ abstract class guard
     abstract function authenticate ( string $token ) : bool;
 
     /**
+     * Remove token.
+     */
+    abstract function invalidate ( );
+
+    /**
      * Check if the guard allows access to a given request.
      * @param string $request       The application feature request.
      * @param string $token         An optional token to access the $request with. 

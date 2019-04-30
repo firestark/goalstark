@@ -10,7 +10,7 @@ route::post ( '/login', function ( )
         return redirect::back ( );
     }
 
-    session::set ( 'token', app::make ( 'guard' )->stamp ( app::make ( 'credentials' ) ) );
+    app::make ( 'guard' )->stamp ( $credentials );
     session::flash ( 'message', 'Logged in.' );
     return redirect::to ( '/' );
 } );

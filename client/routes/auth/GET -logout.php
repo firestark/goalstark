@@ -2,7 +2,8 @@
 
 route::get ( '/logout', function ( )
 {
-    session::unset ( 'token' );
+    app::make ( 'guard' )->invalidate ( );
+    
     session::flash ( 'message', 'Successfully logged out.' );
     return redirect::to ( '/login' );
 } );
