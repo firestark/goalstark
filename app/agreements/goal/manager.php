@@ -1,6 +1,10 @@
 <?php
 
-abstract class goalManager
+namespace goal;
+
+use goal;
+
+abstract class manager
 {
     abstract function all ( ) : array;
 

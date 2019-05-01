@@ -2,7 +2,7 @@
 
 when ( 'i want to update a goal', then ( apply ( a ( 
     
-function ( goal $goal, goalManager $manager )
+function ( goal $goal, goal\manager $manager )
 {
     if ( ! $manager->has ( $goal ) )
         return [ 2001, [ ] ];

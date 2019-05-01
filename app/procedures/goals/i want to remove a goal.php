@@ -2,7 +2,7 @@
 
 when ( 'i want to remove a goal', then ( apply ( a ( 
     
-function ( goal $goal, goalManager $manager, task\manager $taskManager )
+function ( goal $goal, goal\manager $manager, task\manager $taskManager )
 {
     if ( ! $manager->has ( $goal ) )
         return [ 2001, [ ] ];

@@ -4,7 +4,7 @@ use function compact as with;
 
 when ( 'i want to see a task', then ( apply ( a ( 
     
-function ( task $task, task\manager $taskManager, goalManager $goalManager )
+function ( task $task, task\manager $taskManager, goal\manager $goalManager )
 {
     if ( ! $taskManager->has ( $task ) )
         return [ 4000, [ ] ];

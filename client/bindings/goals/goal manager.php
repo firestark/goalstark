@@ -1,6 +1,6 @@
 <?php
 
-app::share ( goalManager::class, function ( $app )
+app::share ( goal\manager::class, function ( $app )
 {
     return new flatfileGoalManager (
         $app [ 'goals file' ],
