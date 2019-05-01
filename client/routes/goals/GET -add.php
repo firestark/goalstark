@@ -3,6 +3,6 @@
 
 route::get ( '/add', function ( )
 {
-    view::title ( 'Add a new goal' );
+    view::title ( 'Add goal' );
     return view::ok ( 'goals.add' );
 } );
