@@ -25,7 +25,7 @@
         <section class="mdc-card">
             <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list linked">
                 @foreach ( $tasks as $task )
-                    @include ( 'partials.task', [ 'task' => $task, 'protein' => 0 ] )
+                    @include ( 'partials.task', [ 'task' => $task, 'protein' => $protein ] )
                 @endforeach
             </ul>
         </section>

@@ -2,5 +2,8 @@
 
 route::get ( '/', function ( )
 {
-    return app::fulfill ( 'i want to see my tasks' );
+    return app::pipe ( [ 
+        'i want to see my tasks',
+        'i want to see my consumed protein for today'
+    ] );
 } );

@@ -5,5 +5,8 @@ use function compact as with;
 
 route::get ( '/{goalid}', function ( )
 {
-    return app::fulfill ( 'i want to see a goal' );
+    return app::pipe ( [ 
+        'i want to see a goal',
+        'i want to see my consumed protein for today'
+    ] );
 } );

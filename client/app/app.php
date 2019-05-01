@@ -8,6 +8,9 @@ use function compact as with;
 
 class app extends container
 {
+    private $statuses = [ ];
+    private $data = [ ];
+
     public function fulfill ( string $request, array $payload = [ ] ) : response
     {
         $token = $this [ 'session' ]->get ( 'token', '' );
@@ -19,6 +22,25 @@ class app extends container
                 return $this->run ( $request, $payload );
 
         return $this->deny ( );
+    }
+
+    function pipe ( array $procedures, array $payload = [ ] ) : response
+    {
+        $this->data = $payload;
+
+        foreach ( $procedures as $procedure )
+            $this->step ( $procedure, $this->data );
+
+        $response = $this->call ( $this [ 'statuses' ]->match ( $this->statuses ), $this->data );
+        $this->data = [ ];
+        return $response;
+    }
+
+    private function step ( string $request, array $payload = [ ] )
+    {
+        list ( $status, $body ) = $this->make ( $request, $payload );
+        $this->statuses [ ] = $status;
+        $this->data = array_merge ( $this->data, $body );        
     }
 
     private function run ( string $request, array $payload = [ ] ) : response
@@ -37,4 +59,3 @@ class app extends container
         return $response;
     }
 }
-
