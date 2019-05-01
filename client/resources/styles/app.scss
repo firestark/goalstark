@@ -32,6 +32,10 @@ $mdc-typography-font-family: "Exo 2", unquote("sans-serif");
     }
 }
 
+.mdc-text-field:not(.mdc-text-field--disabled) + .mdc-text-field-helper-line .mdc-text-field-helper-text {
+    color: var(--mdc-theme-text-secondary-on-light);
+}
+
 .mdc-card {
     @include mdc-card-shape-radius(0);
 }

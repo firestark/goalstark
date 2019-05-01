@@ -2752,6 +2752,9 @@ svg.mdc-button__icon {
   .mdc-text-field.mdc-text-field--disabled .mdc-floating-label {
     color: var(--mdc-theme-text-disabled-on-light); }
 
+.mdc-text-field:not(.mdc-text-field--disabled) + .mdc-text-field-helper-line .mdc-text-field-helper-text {
+  color: var(--mdc-theme-text-secondary-on-light); }
+
 .mdc-card {
   border-radius: 0; }
 
