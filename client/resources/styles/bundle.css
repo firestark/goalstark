@@ -2798,7 +2798,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  box-shadow: 0 0 0px 1000px var(--mdc-theme-background) inset;
+  box-shadow: 0 0 0px 1000px var(--mdc-theme-background) inset !important;
   -webkit-text-fill-color: var(--mdc-theme-text-primary-on-background) !important;
   border-bottom-color: #0392FF !important; }
 
