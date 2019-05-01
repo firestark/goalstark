@@ -7,11 +7,11 @@
 @section ( 'content' )
     
     @if ( count ( $tasks ) )
-        <form action="" method="POST">
+        <form action="/{{ $goalid }}/tasks" method="POST">
             <section class="mdc-card" id="goal-listing">
                 <ul class="mdc-list" role="group">
                     @foreach ( $tasks as $task )
-                        <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goalid, $task->goals ) ? true : false }}">
+                        <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goalid, $task->goals ) ? 'true' : 'false' }}">
                             <span class="mdc-list-item__graphic">
                                 <div class="mdc-checkbox">
                                     <input 

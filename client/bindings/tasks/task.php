@@ -1,9 +1,12 @@
 <?php
 
-app::bind ( task::class, function ( $app )
+app::bind ( task::class, function ( $app, array $payload = [ ] )
 {   
     if ( input::has ( 'taskid' ) )
         return $app [ task\manager::class ]->findById ( input::get ( 'taskid' ) );
+    
+    if ( isset ( $payload [ 'taskid' ] ) )
+        return $app [ task\manager::class ]->findById ( $payload [ 'taskid' ] );
 
     switch ( input::get ( 'type', '' ) ) {
         case 'daily' :
