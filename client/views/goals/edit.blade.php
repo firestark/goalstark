@@ -21,8 +21,15 @@
         </form>
     </section>
 
-    @if ( count ( $tasks ) )
-        <section class="mdc-card">
+    
+    <section class="mdc-card">
+        <header style="display: grid; grid-template-columns: auto 1fr; padding: 8px 16px; align-items: center;">
+            <h2 class="mdc-typography--subtitle1" style="margin: 0;">Goals</h2>   
+            <div style="text-align: right;">
+                <a href="/{{ $goal->id }}/select-tasks" class="mdc-button mdc-button--raised">Choose tasks</a>
+            </div>
+        </header>
+        @if ( count ( $tasks ) )
             <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list linked">
                 @foreach ( $tasks as $task )
                     <li class="mdc-list-item" tabindex="0">
@@ -79,8 +86,9 @@
                     </li>
                 @endforeach
             </ul>
-        </section>
-    @endif
+        @endif
+    </section>
+    
 @endsection
 
 @section( 'mdc-js' )
