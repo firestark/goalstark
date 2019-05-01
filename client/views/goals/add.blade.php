@@ -17,12 +17,4 @@
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )            
         </form>
     </section>
-
-    <section>
-        <div style="text-align: right; padding: 0 16px;">
-            <span id="disabled-add-task" class="mdc-tooltip mdc-tooltip--left" data-mdc-tooltip="Save goal first.">
-                <button class="mdc-button mdc-button--raised" disabled>Add task</button>
-            </span>
-        </div>
-    </section>
 @endsection
