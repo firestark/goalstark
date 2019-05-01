@@ -4,11 +4,7 @@
 
 - Adding task from the edit view
 - Removing tasks: only remove task from the goal, don't remove it completely 
-    unless the given task is no longer referenced by any goal
-
-## Tasks
-
-- Add more clarity to the task list
+    (unless the given task is no longer referenced by any goal?)
 
 
 ## Users
