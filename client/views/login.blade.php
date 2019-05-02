@@ -38,10 +38,6 @@
                 </button>
             </form> 
         </section>
-
-        
-        <div id="triangle"></div>
-        <div id="triangle2"></div>
     </main>
 @endsection
 
