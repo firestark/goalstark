@@ -18,8 +18,7 @@ class jwtSessionGuard extends guard
     function stamp ( credentials $credentials ) : string
     {
         $token = JWT::encode (
-            [ 'username' => $credentials->username
-            , 'password' => hash ( 'sha256', $credentials->password )
+            [ 'credentials' => serialize ( $credentials )
             ]
         , self::key
         );
@@ -41,5 +40,15 @@ class jwtSessionGuard extends guard
     function invalidate ( )
     {
         $this->session->unset ( 'token' );
+    }
+
+    function current ( ) : credentials
+    {
+        try {
+            return unserialize ( JWT::decode ( $this->session->get ( 'token' ), self::key, array ( 'HS256' ) )->credentials );
+        }
+        catch ( exception $e ) {
+            return new credentials ( '', '' );
+        }
     }
 }

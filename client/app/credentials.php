@@ -9,6 +9,6 @@ class credentials
     function __construct ( string $username, string $password )
     {
         $this->username = $username;
-        $this->password = $password;
+        $this->password = hash ( 'sha256', $password );
     }
 }
