@@ -2,16 +2,14 @@
 
 ## Goals
 
+- Connect goals file to user
 - Add the ability to add (custom) categories to goals
 - Add the ability to reschedule goals
 
-## Task
+## Tasks
 
+- Connect tasks file to user
 - Add task explanation 'header hero'
-
-## Users
-
-- Add ability to create an account
 
 
 ## Responsive design
