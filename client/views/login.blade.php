@@ -39,23 +39,6 @@
             </form> 
         </section>
 
-        <div id="login">
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-            <div class="firefly"></div>
-        </div>
         
         <div id="triangle"></div>
         <div id="triangle2"></div>
