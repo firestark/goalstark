@@ -3103,8 +3103,6 @@ section#login {
   box-sizing: border-box; }
   section#login form {
     display: grid; }
-  section#login .mdc-text-field {
-    margin: 16px 0; }
   section#login button[type='submit'] {
     margin-top: 32px;
     width: 140px;

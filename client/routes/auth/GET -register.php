@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/login', function ( )
+route::get ( '/register', function ( )
 {
     return view::ok ( 'login-register' );
 } );

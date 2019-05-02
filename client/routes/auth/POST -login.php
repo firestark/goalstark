@@ -1,10 +1,12 @@
 <?php
 
+use firestark\userManager;
+
 route::post ( '/login', function ( )
 {
     $credentials = app::make ( 'credentials' );
     
-    if ( $credentials->username !== 'admin' or $credentials->password !== 'admin' )
+    if ( ! app::make ( userManager::class )->has ( $credentials ) )
     {
         session::flash ( 'message', 'Invalid credentials' );
         return redirect::back ( );

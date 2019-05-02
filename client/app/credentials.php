@@ -4,7 +4,7 @@ namespace firestark;
 
 class credentials
 {
-    var $username, $password;
+    public $username, $password;
 
     function __construct ( string $username, string $password )
     {
