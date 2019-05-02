@@ -25,7 +25,7 @@
     
     <section class="mdc-card">
         <header style="display: grid; grid-template-columns: auto 1fr; padding: 8px 16px; align-items: center;">
-            <h2 class="mdc-typography--subtitle1" style="margin: 0;">Goals</h2>   
+            <h2 class="mdc-typography--subtitle1" style="margin: 0;">Tasks</h2>   
             <div style="text-align: right;">
                 <a href="/{{ $goal->id }}/select-tasks" class="mdc-button mdc-button--raised">Choose tasks</a>
             </div>
