@@ -2,8 +2,8 @@
 
 ## Goals
 
-- Add the ability to specify reasons why you want to achieve a certain goal
 - Add the ability to add (custom) categories to goals
+- Add the ability to reschedule goals
 
 ## Task
 
