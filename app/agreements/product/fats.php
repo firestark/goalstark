@@ -4,11 +4,11 @@ namespace product;
 
 class fats
 {
-    public $saturated, $unsaturated;
+    public $total, $saturated;
 
-    function __construct ( float $saturated, float $unsaturated )
+    function __construct ( float $total, float $saturated )
     {
+        $this->total        = $total;
         $this->saturated    = $saturated;
-        $this->unsaturated  = $unsaturated;
     }
 }

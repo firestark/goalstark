@@ -1,1 +1,1 @@
-a:1:{s:5:"admin";O:21:"firestark\credentials":2:{s:8:"username";s:5:"admin";s:8:"password";s:64:"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918";}}
+a:2:{s:5:"admin";O:21:"firestark\credentials":2:{s:8:"username";s:5:"admin";s:8:"password";s:64:"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918";}s:6:"lionar";O:21:"firestark\credentials":2:{s:8:"username";s:6:"lionar";s:8:"password";s:64:"dd06c71c4cea69e6304dc0816cff4eb35a44d089af16e0c0e4ae5239228a4589";}}
