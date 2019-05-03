@@ -18,3 +18,8 @@
 ## Food tracker
 
 - Schematics & graphs
+
+
+# refactor
+
+- Move creation of user directory and files to registration
