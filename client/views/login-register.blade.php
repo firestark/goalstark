@@ -69,6 +69,9 @@
 
         </section>
     </main>
+
+    <div id="triangle" style="background: #909090;"></div>
+    <div id="triangle2" style="background: #909090;"></div>
 @endsection
 
 @section ( 'mdc-js' )

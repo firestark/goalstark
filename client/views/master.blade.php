@@ -39,8 +39,6 @@
         </div>
     @endif
 
-    <div id="triangle" style="background: #909090;"></div>
-    <div id="triangle2" style="background: #909090;"></div>
 
     <svg class="svg-bg" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -90,9 +88,6 @@
             <use class="svg-bg_element rotate-anim" mask="url(#m)" stroke-width="6" transform="rotate(45 51.045 1001.045)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#f"></use>
         </g>
     </svg>
-
-    
-
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="/resources/bundle.js" async></script>

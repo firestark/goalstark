@@ -3301,3 +3301,46 @@ section#login {
 
 .bg-color {
   stroke: var(--mdc-theme-on-surface); }
+
+#bottom-navigation {
+  display: none;
+  background-color: white;
+  width: 100vw; }
+
+.mdc-tab__text-label {
+  text-transform: none;
+  font-size: 13px; }
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  main {
+    padding: 16px 0 0; }
+  #rail-navigation {
+    display: none; }
+  #page {
+    grid-template-columns: 1fr; }
+  .mdc-fab {
+    bottom: 80px;
+    right: 16px; }
+  #bottom-navigation {
+    display: block; } }
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+  main {
+    padding: 16px 0 0; }
+  #rail-navigation {
+    display: none; }
+  #page {
+    grid-template-columns: 1fr; }
+  .mdc-fab {
+    bottom: 80px;
+    right: 16px; }
+  #bottom-navigation {
+    display: block; } }
