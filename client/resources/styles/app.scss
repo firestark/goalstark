@@ -109,6 +109,10 @@ fieldset {
     fill: var(--mdc-theme-text-hint-on-background, rgba(0, 0, 0, 0.38));
 }
 
+.mdc-list-item__graphic {
+    position: relative;
+}
+
 .star {
     fill: #fdd835;
 }
@@ -347,14 +351,33 @@ main {
 
 // lists
 
+.mdc-list-item__graphic::before {
+    content: "";
+    opacity: 0.05;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--mdc-theme-text-primary-on-background);
+}
+
 .overdue {
     color: var(--mdc-theme-error, #f44336);
     fill: var(--mdc-theme-error, #f44336);
 }
 
+.mdc-list-item__graphic.overdue::before {
+    background-color: var(--mdc-theme-error);
+}
+
 .completed {
     color: #cddc39;
     fill: #cddc39;
+}
+
+.mdc-list-item__graphic.completed::before {
+    background-color: #cddc39;
+    opacity: 0.1;
 }
 
 .mdc-list.linked:not(.mdc-list--avatar-list) a:first-child {
