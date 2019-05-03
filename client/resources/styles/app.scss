@@ -8,6 +8,7 @@ $mdc-typography-font-family: "Exo 2", unquote("sans-serif");
 @import "@material/card/mdc-card";
 @import "@material/textfield/mdc-text-field";
 @import "@material/fab/mdc-fab";
+@import "@material/tab/mdc-tab";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
 
@@ -695,7 +696,7 @@ section#login {
 
 .mdc-tab__text-label {
     text-transform: none;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 
@@ -707,7 +708,7 @@ section#login {
 @media (min-width: 481px) and (max-width: 767px) {
 
     main {
-        padding : 0 8px;
+        padding : 0 8px 80px;
     }
   
     #rail-navigation {
@@ -737,7 +738,7 @@ section#login {
 @media (min-width: 320px) and (max-width: 480px) {
 
     main {
-        padding : 0 8px;
+        padding : 0 8px 80px;
     }
     
     #rail-navigation {
