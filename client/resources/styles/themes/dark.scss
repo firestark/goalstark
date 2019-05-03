@@ -1,3 +1,5 @@
+@import "@material/tab/mdc-tab";
+
 :root[data-theme="dark"] {
     --mdc-theme-primary: #EA4C62;
     --mdc-theme-secondary: #fff;
@@ -23,4 +25,14 @@
     --mdc-theme-text-hint-on-dark: rgba(0, 0, 0, 0.5);
     --mdc-theme-text-disabled-on-dark: rgba(0, 0, 0, 0.5);
     --mdc-theme-text-icon-on-dark: rgba(0, 0, 0, 0.5);
+
+    #bottom-navigation {
+        @include mdc-tab-text-label-color(#f2f2f2);
+        @include mdc-tab-icon-color(#f2f2f2);
+        @include mdc-tab-states-color(#f2f2f2);
+        
+        .mdc-tab-indicator > .mdc-tab-indicator__content--underline {
+            background-color: #f2f2f2;
+        }
+    }
 }
