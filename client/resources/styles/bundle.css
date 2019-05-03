@@ -3317,7 +3317,7 @@ section#login {
 */
 @media (min-width: 481px) and (max-width: 767px) {
   main {
-    padding: 16px 0 0; }
+    padding: 0 8px; }
   #rail-navigation {
     display: none; }
   #page {
@@ -3334,7 +3334,7 @@ section#login {
   */
 @media (min-width: 320px) and (max-width: 480px) {
   main {
-    padding: 16px 0 0; }
+    padding: 0 8px; }
   #rail-navigation {
     display: none; }
   #page {
