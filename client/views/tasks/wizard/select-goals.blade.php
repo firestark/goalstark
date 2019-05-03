@@ -8,7 +8,7 @@
     
     @if ( count ( $goals ) )
         <form action="/tasks/select-type" method="GET">
-            <section class="mdc-card" id="goal-listing">
+            <section class="mdc-card">
                 <ul class="mdc-list mdc-list--two-line" role="group">
                     @foreach ( $goals as $goal )
                         <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'true' : 'false' }}">

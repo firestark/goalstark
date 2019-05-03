@@ -29,7 +29,7 @@
     </section>
         
     
-    <section class="mdc-card" id="goal-listing">
+    <section class="mdc-card">
         <header style="display: grid; grid-template-columns: auto 1fr; padding: 8px 16px; align-items: center;">
             <h2 class="mdc-typography--subtitle1" style="margin: 0;">Goals</h2>   
             <div style="text-align: right;">
