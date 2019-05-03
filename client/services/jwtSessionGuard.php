@@ -27,6 +27,11 @@ class jwtSessionGuard extends guard
         return $token;
     }
 
+    function stamped ( ) : bool
+    {
+        return $this->session->has ( 'token' );
+    }
+
     function authenticate ( string $token ) : bool
     {
         try {
