@@ -1,8 +1,4 @@
 <div style="display: inline-block; position: relative; z-index: 1;">
-    @if ( $caption )
-        <h3 class="mdc-typography--caption">{{ $caption }}</h3>
-    @endif
-
     <svg class="svg-icon__sprite">
         <defs>
             <symbol id="star" viewbox="0 0 32 32">
@@ -53,4 +49,8 @@
             <div class="rating__background"></div>
         </div>
     </fieldset>
+
+    @if ( $caption )
+        <h3 style="padding-left: 16px; color: var(--mdc-theme-text-secondary-on-light);" class="mdc-typography--caption">{{ $caption }}</h3>
+    @endif
 </div>
