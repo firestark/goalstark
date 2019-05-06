@@ -1,35 +1,37 @@
-@extends ( 'page.details' )
+@extends ( 'page.overview' )
 
 @section ( 'navigation' )
     @include ( 'partials.up-arrow', [ 'link' => '/apps/food-tracker/products' ] )
 @endsection
 
+@section ( 'title' )
+    Add product
+@endsection
+
 @section ( 'content' )
-    <section class="mdc-card form-section">
-        <form method="POST" action="/apps/food-tracker/products">
+    <form method="POST" action="/apps/food-tracker/products" style="padding: 8px">
+        
+        @include ( 'partials.input.name' )
+        @include ( 'partials.input.product.per' )
+
+        <section style="margin-bottom: 32px;">
+            <h3 class="mdc-typography--caption">Fats</h3>
             
-            @include ( 'partials.input.name' )
-            @include ( 'partials.input.product.per' )
+            @include ( 'partials.input.product.total-fats' )
+            @include ( 'partials.input.product.saturated-fats' )
+        </section>            
 
-            <section style="margin-bottom: 32px;">
-                <h3 class="mdc-typography--caption">Fats</h3>
-                
-                @include ( 'partials.input.product.total-fats' )
-                @include ( 'partials.input.product.saturated-fats' )
-            </section>            
+        <section style="margin-bottom: 32px;">
+            <h3 class="mdc-typography--caption">Carbohydrates</h3>
 
-            <section style="margin-bottom: 32px;">
-                <h3 class="mdc-typography--caption">Carbohydrates</h3>
+            @include ( 'partials.input.product.total-carbohydrates' )
+            @include ( 'partials.input.product.fibers' )
+            @include ( 'partials.input.product.sugars' )
+        </section>
 
-                @include ( 'partials.input.product.total-carbohydrates' )
-                @include ( 'partials.input.product.fibers' )
-                @include ( 'partials.input.product.sugars' )
-            </section>
-
-            
-            @include ( 'partials.input.product.protein' )
-            @include ( 'partials.input.product.salt' )
-            @include ( 'partials.input.fab', [ 'action' => 'save' ] )            
-        </form>
-    </section>
+        
+        @include ( 'partials.input.product.protein' )
+        @include ( 'partials.input.product.salt' )
+        @include ( 'partials.input.fab', [ 'action' => 'save' ] )            
+    </form>
 @endsection

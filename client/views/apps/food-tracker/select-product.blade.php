@@ -1,4 +1,12 @@
-@extends ( 'apps.food-tracker.page.overview' )
+@extends ( 'page.overview' )
+
+@section ( 'navigation' )
+    @include ( 'partials.up-arrow', [ 'link' => '/apps/food-tracker' ] )
+@endsection
+
+@section ( 'title' )
+    Select product
+@endsection
 
 @section ( 'content' )
     @if ( count ( $products ) )
