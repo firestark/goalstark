@@ -61,7 +61,7 @@
         </section>
     @endif
 
-    @include ( 'partials.link.fab', [ 'link' => '/add', 'action' => 'add' ] )
+    @include ( 'partials.link.fab', [ 'link' => '/goals/add', 'action' => 'add' ] )
 @endsection
 
 
