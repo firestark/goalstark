@@ -1,7 +1,7 @@
 @extends ( 'page.overview' )
 
 @section ( 'title' )
-    My goal
+    My goal's tasks
 @endsection
 
 @section ( 'navigation' )
@@ -9,7 +9,7 @@
 @endsection
 
 @section ( 'tab-bar' )
-    <div class="mdc-tab-bar" role="tablist">
+    <div class="mdc-tab-bar mdc-tab-bar--top" role="tablist">
         <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
                 <div class="mdc-tab-scroller__scroll-content">
@@ -42,7 +42,7 @@
 @section ( 'content' )
     @include ( 'partials.tasks.list' )
 
-    @include ( 'partials.link.fab', [ 'link' => "/{$goal->id}/select-tasks", 'action' => 'edit' ] )
+    @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/select-tasks", 'action' => 'edit' ] )
 @endsection
 
 @section ( 'mdc-js' )

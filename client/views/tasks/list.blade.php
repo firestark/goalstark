@@ -1,5 +1,9 @@
 @extends ( 'page.overview' )
 
+@section ( 'title' )
+    My tasks
+@endsection
+
 @section( 'content' )
     
     @if ( count ( $tasks ) )

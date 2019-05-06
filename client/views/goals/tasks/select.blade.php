@@ -1,7 +1,7 @@
 @extends ( 'page.details' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => "/{$goalid}/tasks" ] )
+    @include ( 'partials.up-arrow', [ 'link' => "/goals/{$goalid}/tasks" ] )
 @endsection
 
 @section ( 'content' )

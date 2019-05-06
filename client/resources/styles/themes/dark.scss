@@ -33,4 +33,10 @@
     .mdc-tab--active .mdc-tab__text-label {
         font-weight: 500;
     }
+
+    .mdc-text-field {
+        input, textarea {
+            background-color: var(--mdc-theme-surface);
+        }    
+    }
 }

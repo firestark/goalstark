@@ -1,5 +1,9 @@
 @extends ( 'page.overview' )
 
+@section ( 'title' )
+    Apps
+@endsection
+
 @section ( 'content' )
     @if ( count ( $apps ) )
         <section class="mdc-card">
