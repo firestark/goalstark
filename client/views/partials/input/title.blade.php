@@ -1,4 +1,4 @@
-<div> 
+<div style="margin-bottom: 16px;"> 
     <div class="mdc-text-field mdc-text-field--with-leading-icon" id="title-field">
         <span class="material-icons mdc-text-field__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

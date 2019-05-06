@@ -3,7 +3,7 @@
 @section ( 'content' )
     @if ( count ( $apps ) )
         <section class="mdc-card">
-            <ul class="mdc-list linked">
+            <ul class="mdc-list mdc-list--linked">
                 @foreach ( $apps as $app )
                     <li class="mdc-list-item" tabindex="0">
                         <a href="/apps/{{ $app->uri }}">

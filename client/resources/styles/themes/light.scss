@@ -3,14 +3,14 @@
 :root[data-theme="light"] {
     --mdc-theme-primary: #EA4C62;
     --mdc-theme-secondary: #343434;
-    --mdc-theme-background: #F2F8FE;
+    --mdc-theme-background: #fff;
     --mdc-theme-surface: #fff;
     --mdc-theme-error: #f44336;
     --mdc-theme-on-primary: #fff;
     --mdc-theme-on-secondary: #fff;
-    --mdc-theme-on-surface: #343434;
+    --mdc-theme-on-surface: #000;
     --mdc-theme-on-error: #fff;
-    --mdc-theme-text-primary-on-background: #343434;
+    --mdc-theme-text-primary-on-background: #000;
     --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
     --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
     --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
@@ -25,17 +25,4 @@
     --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
     --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
     --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
-
-
-    #bottom-navigation {
-        @include mdc-tab-text-label-color(#343434);
-        @include mdc-tab-icon-color(#343434);
-        @include mdc-tab-states-color(#343434);
-        
-        .mdc-tab-indicator > .mdc-tab-indicator__content--underline {
-            background-color: #343434;
-        }
-    }
-
-
 }

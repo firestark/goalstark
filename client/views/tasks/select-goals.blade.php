@@ -57,7 +57,7 @@
 
                 <div class="mdc-card__actions">
                     <button type="submit" class="mdc-button mdc-card__action mdc-card__action--button">
-                        <span class="mdc-button__label">Add</span>
+                        <span class="mdc-button__label">Choose</span>
                     </button>
                 </div>
             </section>

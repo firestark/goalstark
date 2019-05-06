@@ -21,6 +21,11 @@
 - Schematics & graphs
 
 
-# refactor
+## refactor
 
 - Move creation of user directory and files to registration
+
+
+## Icons
+
+- Use 2 different icons for active and inactive states

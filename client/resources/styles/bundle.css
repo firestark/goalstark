@@ -1,3 +1,111 @@
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-Regular.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis Extra';
+  src: url("/resources/fonts/metropolis/Metropolis-ExtraBoldItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis Extra';
+  src: url("/resources/fonts/metropolis/Metropolis-ExtraLight.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-LightItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-BlackItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-BoldItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-Thin.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-MediumItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-Black.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-Light.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-Medium.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis Semi';
+  src: url("/resources/fonts/metropolis/Metropolis-SemiBold.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-RegularItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis Extra';
+  src: url("/resources/fonts/metropolis/Metropolis-ExtraBold.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-Bold.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis Extra';
+  src: url("/resources/fonts/metropolis/Metropolis-ExtraLightItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("/resources/fonts/metropolis/Metropolis-ThinItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Metropolis Semi';
+  src: url("/resources/fonts/metropolis/Metropolis-SemiBoldItalic.woff2") format("woff2"), url("/resources/fonts/metropolis/Metropolis-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic; }
+
 @keyframes mdc-ripple-fg-radius-in {
   from {
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,7 +157,7 @@
  */
 .mdc-tab {
   position: relative;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -225,14 +333,14 @@
 :root[data-theme="light"] {
   --mdc-theme-primary: #EA4C62;
   --mdc-theme-secondary: #343434;
-  --mdc-theme-background: #F2F8FE;
+  --mdc-theme-background: #fff;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #fff;
-  --mdc-theme-on-surface: #343434;
+  --mdc-theme-on-surface: #000;
   --mdc-theme-on-error: #fff;
-  --mdc-theme-text-primary-on-background: #343434;
+  --mdc-theme-text-primary-on-background: #000;
   --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
   --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
   --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
@@ -247,27 +355,6 @@
   --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5); }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__text-label {
-    color: #343434; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__icon {
-    color: #343434;
-    fill: currentColor; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple::before, :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple::after {
-    background-color: #343434; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple:hover::before {
-    opacity: 0.04; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple:not(.mdc-ripple-upgraded):focus::before, :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple.mdc-ripple-upgraded--background-focused::before {
-    transition-duration: 75ms;
-    opacity: 0.12; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple:not(.mdc-ripple-upgraded)::after {
-    transition: opacity 150ms linear; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple:not(.mdc-ripple-upgraded):active::after {
-    transition-duration: 75ms;
-    opacity: 0.12; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab__ripple.mdc-ripple-upgraded {
-    --mdc-ripple-fg-opacity: 0.12; }
-  :root[data-theme="light"] #bottom-navigation .mdc-tab-indicator > .mdc-tab-indicator__content--underline {
-    background-color: #343434; }
 
 /**
  * @license
@@ -293,7 +380,7 @@
  */
 .mdc-tab {
   position: relative;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -470,7 +557,7 @@
   --mdc-theme-primary: #EA4C62;
   --mdc-theme-secondary: #fff;
   --mdc-theme-background: #1D1D1D;
-  --mdc-theme-surface: #232323;
+  --mdc-theme-surface: #181617;
   --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #343434;
@@ -491,30 +578,13 @@
   --mdc-theme-text-hint-on-dark: rgba(0, 0, 0, 0.5);
   --mdc-theme-text-disabled-on-dark: rgba(0, 0, 0, 0.5);
   --mdc-theme-text-icon-on-dark: rgba(0, 0, 0, 0.5); }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__text-label {
-    color: #f2f2f2; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__icon {
-    color: #f2f2f2;
-    fill: currentColor; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple::before, :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple::after {
-    background-color: #f2f2f2; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple:hover::before {
-    opacity: 0.08; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple:not(.mdc-ripple-upgraded):focus::before, :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple.mdc-ripple-upgraded--background-focused::before {
-    transition-duration: 75ms;
-    opacity: 0.24; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple:not(.mdc-ripple-upgraded)::after {
-    transition: opacity 150ms linear; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple:not(.mdc-ripple-upgraded):active::after {
-    transition-duration: 75ms;
-    opacity: 0.24; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab__ripple.mdc-ripple-upgraded {
-    --mdc-ripple-fg-opacity: 0.24; }
-  :root[data-theme="dark"] #bottom-navigation .mdc-tab-indicator > .mdc-tab-indicator__content--underline {
-    background-color: #f2f2f2; }
+  :root[data-theme="dark"] .mdc-tab__text-label {
+    font-weight: 400; }
+  :root[data-theme="dark"] .mdc-tab--active .mdc-tab__text-label {
+    font-weight: 500; }
 
 .mdc-list {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
@@ -670,7 +740,7 @@
       vertical-align: -20px; }
 
 .mdc-list-item__secondary-text {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -805,7 +875,7 @@ a.mdc-list-item {
   padding: 0; }
 
 .mdc-list-group__subheader {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
@@ -916,7 +986,7 @@ a.mdc-list-item {
     --mdc-ripple-fg-opacity: 0.2; }
 
 .mdc-button {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -1383,7 +1453,7 @@ svg.mdc-button__icon {
     --mdc-ripple-fg-opacity: 0.12; }
 
 .mdc-floating-label {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
@@ -1530,7 +1600,7 @@ svg.mdc-button__icon {
   padding: 0; }
 
 .mdc-text-field-helper-text {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.75rem;
@@ -1560,7 +1630,7 @@ svg.mdc-button__icon {
   will-change: initial; }
 
 .mdc-text-field-character-counter {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.75rem;
@@ -1751,7 +1821,7 @@ svg.mdc-button__icon {
         right: 40px; }
 
 .mdc-text-field__input {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
@@ -2608,7 +2678,7 @@ svg.mdc-button__icon {
   height: 40px; }
 
 .mdc-fab--extended {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -2754,7 +2824,7 @@ svg.mdc-button__icon {
  */
 .mdc-tab {
   position: relative;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -2992,7 +3062,7 @@ svg.mdc-button__icon {
       justify-content: flex-end;
       order: 1; }
   .mdc-top-app-bar__title {
-    font-family: "Exo 2", sans-serif;
+    font-family: "Metropolis", sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size: 1.25rem;
@@ -3224,12 +3294,12 @@ svg.mdc-button__icon {
     padding-top: 56px; } }
 
 .mdc-typography {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
 
 .mdc-typography--headline1 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 6rem;
@@ -3240,7 +3310,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--headline2 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 3.75rem;
@@ -3251,7 +3321,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--headline3 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 3rem;
@@ -3262,7 +3332,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--headline4 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 2.125rem;
@@ -3273,7 +3343,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--headline5 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1.5rem;
@@ -3284,7 +3354,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--headline6 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1.25rem;
@@ -3295,7 +3365,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--subtitle1 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
@@ -3306,7 +3376,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--subtitle2 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -3317,7 +3387,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--body1 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
@@ -3328,7 +3398,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--body2 {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -3339,7 +3409,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--caption {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.75rem;
@@ -3350,7 +3420,7 @@ svg.mdc-button__icon {
   text-transform: inherit; }
 
 .mdc-typography--button {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
@@ -3361,7 +3431,7 @@ svg.mdc-button__icon {
   text-transform: uppercase; }
 
 .mdc-typography--overline {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Metropolis", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 0.75rem;
@@ -3379,7 +3449,7 @@ svg.mdc-button__icon {
   .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-text-primary-on-background, #343434); }
   .mdc-text-field input, .mdc-text-field textarea {
-    background-color: var(--mdc-theme-background, #fff); }
+    background-color: var(--mdc-theme-surface); }
   .mdc-text-field.mdc-text-field--disabled .mdc-text-field__input {
     color: var(--mdc-theme-text-disabled-on-light); }
   .mdc-text-field.mdc-text-field--disabled .mdc-floating-label {
@@ -3567,31 +3637,33 @@ body {
   position: relative;
   background: transparent; }
 
-:root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item,
-:root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
-  color: #343434; }
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item::before, :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item::after,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::before,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::after {
-    background-color: #343434; }
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:hover::before,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:hover::before {
-    opacity: 0.04; }
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:not(.mdc-ripple-upgraded):focus::before, :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item.mdc-ripple-upgraded--background-focused::before,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:not(.mdc-ripple-upgraded):focus::before,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon.mdc-ripple-upgraded--background-focused::before {
-    transition-duration: 75ms;
-    opacity: 0.12; }
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:not(.mdc-ripple-upgraded)::after,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:not(.mdc-ripple-upgraded)::after {
-    transition: opacity 150ms linear; }
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:not(.mdc-ripple-upgraded):active::after,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:not(.mdc-ripple-upgraded):active::after {
-    transition-duration: 75ms;
-    opacity: 0.12; }
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item.mdc-ripple-upgraded,
-  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon.mdc-ripple-upgraded {
-    --mdc-ripple-fg-opacity: 0.12; }
+:root[data-theme="light"] .mdc-top-app-bar {
+  opacity: 0.6; }
+  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item,
+  :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
+    color: #000; }
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item::before, :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item::after,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::before,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::after {
+      background-color: #000; }
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:hover::before,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:hover::before {
+      opacity: 0.04; }
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:not(.mdc-ripple-upgraded):focus::before, :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item.mdc-ripple-upgraded--background-focused::before,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:not(.mdc-ripple-upgraded):focus::before,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon.mdc-ripple-upgraded--background-focused::before {
+      transition-duration: 75ms;
+      opacity: 0.12; }
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:not(.mdc-ripple-upgraded)::after,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:not(.mdc-ripple-upgraded)::after {
+      transition: opacity 150ms linear; }
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item:not(.mdc-ripple-upgraded):active::after,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:not(.mdc-ripple-upgraded):active::after {
+      transition-duration: 75ms;
+      opacity: 0.12; }
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__action-item.mdc-ripple-upgraded,
+    :root[data-theme="light"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon.mdc-ripple-upgraded {
+      --mdc-ripple-fg-opacity: 0.12; }
 
 :root[data-theme="dark"] .mdc-top-app-bar .mdc-top-app-bar__action-item,
 :root[data-theme="dark"] .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
@@ -3664,9 +3736,17 @@ main {
   width: 100%;
   z-index: 2; }
 
-.mdc-list-item__graphic::before {
+.mdc-list-item__primary-text {
+  font-weight: 600;
+  font-size: 0.875rem;
+  opacity: 0.87; }
+
+.mdc-list-item__secondary-text {
+  font-size: 0.785rem; }
+
+.mdc-list--highlight .mdc-list-item__graphic::before {
   content: "";
-  opacity: 0.05;
+  opacity: 0.1;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3681,21 +3761,20 @@ main {
   background-color: var(--mdc-theme-error); }
 
 .completed {
-  color: #cddc39;
-  fill: #cddc39; }
+  color: #1F8D3E;
+  fill: #1F8D3E; }
 
 .mdc-list-item__graphic.completed::before {
-  background-color: #cddc39;
-  opacity: 0.1; }
+  background-color: #1F8D3E; }
 
-.mdc-list.linked:not(.mdc-list--avatar-list) a:first-child {
+.mdc-list--linked:not(.mdc-list--avatar-list) a:first-child {
   align-items: center;
   width: 100%;
   height: 100%;
   display: flex;
   color: var(--mdc-theme-text-primary-on-background, #343434); }
 
-.mdc-list.mdc-list--avatar-list.linked a:nth-child(2) {
+.mdc-list--linked.mdc-list--avatar-list a:nth-child(2) {
   align-items: center;
   width: 100%;
   height: 100%;
@@ -3706,29 +3785,7 @@ main {
   position: absolute;
   bottom: 34px;
   right: 40px;
-  z-index: 5000;
-  background-color: #EA4C62;
-  color: white;
-  /* @alternate */
-  color: var(--mdc-theme-text-primary-on-dark, white); }
-  .mdc-fab::before, .mdc-fab::after {
-    background-color: white; }
-    @supports not (-ms-ime-align: auto) {
-      .mdc-fab::before, .mdc-fab::after {
-        /* @alternate */
-        background-color: var(--mdc-theme-text-primary-on-dark, white); } }
-  .mdc-fab:hover::before {
-    opacity: 0.08; }
-  .mdc-fab:not(.mdc-ripple-upgraded):focus::before, .mdc-fab.mdc-ripple-upgraded--background-focused::before {
-    transition-duration: 75ms;
-    opacity: 0.24; }
-  .mdc-fab:not(.mdc-ripple-upgraded)::after {
-    transition: opacity 150ms linear; }
-  .mdc-fab:not(.mdc-ripple-upgraded):active::after {
-    transition-duration: 75ms;
-    opacity: 0.24; }
-  .mdc-fab.mdc-ripple-upgraded {
-    --mdc-ripple-fg-opacity: 0.24; }
+  z-index: 5000; }
 
 .form-section {
   padding: 16px; }
@@ -3738,7 +3795,7 @@ form > *:not(:last-of-type) {
 
 .mdc-text-field--textarea {
   width: 100%;
-  height: 200px; }
+  height: 100px; }
 
 #title-and-due {
   display: grid;
@@ -3862,7 +3919,8 @@ section#login {
   bottom: 0;
   left: 0;
   transition: width 0.3s cubic-bezier(0.54, -0.24, 0.46, 1.28);
-  background-color: var(--mdc-theme-on-surface); }
+  background-color: var(--mdc-theme-on-surface);
+  opacity: 0.87; }
 
 .rating [type='radio'] {
   display: none; }
@@ -3941,18 +3999,8 @@ section#login {
   width: 100vw; }
   #bottom-navigation .mdc-tab--stacked {
     height: 64px; }
-  #bottom-navigation .mdc-tab--active .mdc-tab__text-label {
-    display: block; }
-  #bottom-navigation .mdc-tab--active .mdc-tab__content {
-    justify-content: space-between; }
-  #bottom-navigation .mdc-tab--active .mdc-tab__icon {
-    padding-top: 8px; }
   #bottom-navigation .mdc-tab__icon {
-    padding-top: 0; }
-  #bottom-navigation .mdc-tab__content {
-    justify-content: center; }
-  #bottom-navigation .mdc-tab__text-label {
-    display: none; }
+    padding-top: 8px; }
   #bottom-navigation .mdc-tab-indicator {
     height: auto;
     left: auto;
@@ -3963,8 +4011,11 @@ section#login {
 
 .mdc-tab__text-label {
   text-transform: none;
-  font-size: 12px;
-  font-weight: bold; }
+  font-size: 11px; }
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field-character-counter,
+.mdc-text-field:not(.mdc-text-field--disabled) + .mdc-text-field-helper-line .mdc-text-field-character-counter {
+  color: var(--mdc-theme-text-secondary-on-light); }
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -3972,16 +4023,18 @@ section#login {
 */
 @media (min-width: 481px) and (max-width: 767px) {
   main {
-    padding: 0 8px 80px; }
+    padding: 0 0 80px; }
   #rail-navigation {
     display: none; }
   #page {
     grid-template-columns: 1fr; }
   .mdc-fab {
-    bottom: 88px;
+    bottom: 80px;
     right: 16px; }
   #bottom-navigation {
-    display: block; } }
+    display: block; }
+  .mdc-text-field {
+    width: 100%; } }
 
 /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -3989,13 +4042,15 @@ section#login {
   */
 @media (min-width: 320px) and (max-width: 480px) {
   main {
-    padding: 0 8px 80px; }
+    padding: 0 0 80px; }
   #rail-navigation {
     display: none; }
   #page {
     grid-template-columns: 1fr; }
   .mdc-fab {
-    bottom: 88px;
+    bottom: 80px;
     right: 16px; }
   #bottom-navigation {
-    display: block; } }
+    display: block; }
+  .mdc-text-field {
+    width: 100%; } }

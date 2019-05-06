@@ -3,7 +3,7 @@
 @section ( 'content' )
     @if ( count ( $products ) )
         <section class="mdc-card">
-            <ul class="mdc-list mdc-list--two-line linked">
+            <ul class="mdc-list mdc-list--two-line mdc-list--linked">
                 @foreach ( $products as $product )
                     <li class="mdc-list-item" tabindex="0">
                         <a href="/apps/food-tracker/add/{{ $product->id }}">
