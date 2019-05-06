@@ -47,7 +47,7 @@
                     <li class="mdc-list-item" tabindex="0">
 
                         @if ( $goal->completed )
-                            <a  href="/{{ $goal->id }}/uncomplete" 
+                            <a  href="/goals/{{ $goal->id }}/uncomplete" 
                                 class="mdc-list-item__graphic completed" 
                                 aria-hidden="true">
                                 
@@ -57,7 +57,7 @@
                                 </svg>
                             </a>
                         @else
-                            <a  href="/{{ $goal->id }}/complete" 
+                            <a  href="/goals/{{ $goal->id }}/complete" 
                                 class="mdc-list-item__graphic {{ ( $goal->due < time ( ) ) ? 'overdue' : '' }}" 
                                 aria-hidden="true">
                                 
@@ -68,7 +68,7 @@
                             </a>
                         @endif
 
-                        <a href="/{{ $goal->id }}">
+                        <a href="/goals/{{ $goal->id }}">
                             <span class="mdc-list-item__text" style="width: 100%;">
                                 <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
                                 <span class="mdc-list-item__secondary-text"><span>Due {{  date ( 'M d, Y ', $goal->due ) }}</span>        
