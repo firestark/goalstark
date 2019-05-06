@@ -9,6 +9,7 @@
 ## Tasks
 
 - Add task explanation 'header hero'
+- Adding the same due task throws error task already exists... shouldn't this be allowed?
 
 
 ## Responsive design
