@@ -1,7 +1,11 @@
-@extends ( 'page.details' )
+@extends ( 'page' )
 
 @section ( 'navigation' )
     @include ( 'partials.up-arrow', [ 'link' => '/tasks/' ] )
+@endsection
+
+@section ( 'title' )
+    Select task type
 @endsection
 
 @section ( 'content' )
@@ -30,7 +34,7 @@
                     <label class="mdc-list-item__text" for="type-1" style="width: 100%;">
                         <span class="mdc-list-item__text" style="width: 100%;">
                             <span class="mdc-list-item__primary-text">Due task</span>
-                            <span class="mdc-list-item__secondary-text">A task with a due date that has to be done once</span>
+                            <span class="mdc-list-item__secondary-text">A due task executed once</span>
                         </span>
                     </label>
                 </li>
@@ -75,7 +79,7 @@
                     <label class="mdc-list-item__text" for="type-3" style="width: 100%;">
                         <span class="mdc-list-item__text" style="width: 100%;">
                             <span class="mdc-list-item__primary-text">Protein task</span>
-                            <span class="mdc-list-item__secondary-text">A task to track protein consumption daily until the last due date of given goals</span>
+                            <span class="mdc-list-item__secondary-text">Daily protein consumption task</span>
                         </span>
                     </label>
                 </li>

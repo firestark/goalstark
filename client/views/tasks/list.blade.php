@@ -1,4 +1,4 @@
-@extends ( 'page.overview' )
+@extends ( 'page' )
 
 @section ( 'title' )
     My tasks
