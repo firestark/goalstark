@@ -1,4 +1,4 @@
-@extends( 'page.overview' )
+@extends( 'page' )
 
 @section ( 'navigation' )
     @include ( 'partials.up-arrow', [ 'link' => '/goals/' ] )
