@@ -19,6 +19,17 @@
                     @include ( 'partials.task', [ 'task' => $task ] )
                 @endforeach
             @endif
+
+            @if ( count ( $overdue ) )
+                @if ( count ( $today ) or count ( $later ) )
+                    <hr class="mdc-list-divider">
+                @endif
+                <h6 class="mdc-list-group__subheader">Overdue</h6>
+
+                @foreach ( $overdue as $task )
+                    @include ( 'partials.task', [ 'task' => $task ] )
+                @endforeach
+            @endif
         </ul>
     </section>
 @endif

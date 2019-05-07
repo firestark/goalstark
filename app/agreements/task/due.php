@@ -29,6 +29,14 @@ class due extends \task
         return $this->completed;
     }
 
+    function isOverdue ( ) : bool
+    {
+        return ( 
+            ! $this->isCompleted ( ) and 
+            $this->due < $this->endOfDay ( time ( ) )
+        );
+    }
+
     function dueToday ( ) : bool
     {
         return ( $this->due === $this->endOfDay ( time ( ) ) );
