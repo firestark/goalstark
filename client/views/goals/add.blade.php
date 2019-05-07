@@ -9,12 +9,11 @@
 @endsection
 
 @section ( 'content' )
-    <form method="POST" action="/" style="padding: 8px;">
+    <form method="POST" action="/goals/" style="padding: 8px;">
         @include ( 'partials.input.title', [ 'value' => '' ] )
         @include ( 'partials.input.due', [ 'value' => time ( ) ] )
         
         @include ( 'partials.input.description' )
-        @include ( 'partials.input.reasons', [ 'value' => '' ] )
         @include ( 'partials.input.fab', [ 'action' => 'save' ] )            
     </form>
 @endsection

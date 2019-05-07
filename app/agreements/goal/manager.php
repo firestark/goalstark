@@ -39,6 +39,8 @@ abstract class manager
 
     abstract function add ( goal $goal );
 
+    abstract function addReasonTo ( goal $goal, reason $reason );
+
     abstract function has ( goal $goal ) : bool;
 
     abstract function hasGoalWithDescription ( string $description ) : bool;
@@ -50,6 +52,8 @@ abstract class manager
     abstract function update ( goal $goal );
 
     abstract function remove ( goal $goal );
+
+    abstract function removeReasonFrom ( goal $goal, reason $reason );
 
     abstract function complete ( goal $goal );
 

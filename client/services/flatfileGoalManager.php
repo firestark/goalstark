@@ -21,6 +21,13 @@ class flatfileGoalManager extends goal\manager
         $this->write ( );
     }
 
+    function addReasonTo ( goal $goal, goal\reason $reason )
+    {
+        $this->check ( $goal );
+        $this->goals [ $goal->id ]->add ( $reason );
+        $this->write ( );
+    }
+
     function has ( goal $goal ) : bool
     {
         return isset ( $this->goals [ $goal->id ] );
@@ -63,6 +70,13 @@ class flatfileGoalManager extends goal\manager
     {
         $this->check ( $goal );
         unset ( $this->goals [ $goal->id ] );
+        $this->write ( );
+    }
+
+    function removeReasonFrom ( goal $goal, goal\reason $reason )
+    {
+        $this->check ( $goal );
+        $this->goals [ $goal->id ]->remove ( $reason );
         $this->write ( );
     }
 
