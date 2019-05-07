@@ -13,7 +13,7 @@
         @include ( 'partials.input.title', [ 'value' => '' ] )
         @include ( 'partials.input.due', [ 'value' => time ( ) ] )
         
-        @include ( 'partials.input.description', [ 'value' => '' ] )
+        @include ( 'partials.input.description' )
         @include ( 'partials.input.reasons', [ 'value' => '' ] )
         @include ( 'partials.input.fab', [ 'action' => 'save' ] )            
     </form>
