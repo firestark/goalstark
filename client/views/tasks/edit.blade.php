@@ -46,7 +46,12 @@
         @endforeach
 
         @if ( $task instanceof task\due )
+            <input type="hidden" name="type" value="due">
             @include ( 'partials.input.due', [ 'value' => $task->due ] )
+        @endif
+
+        @if ( $task instanceof task\daily and ! $task instanceof task\protein )
+            <input type="hidden" name="type" value="daily">
         @endif
 
         @if ( ! $task instanceof task\protein )
@@ -54,6 +59,7 @@
         @endif
 
         @if ( $task instanceof task\protein )
+            <input type="hidden" name="type" value="protein">
             @include ( 'partials.input.protein', [ 'value' => $task->goal ] )
         @endif
 

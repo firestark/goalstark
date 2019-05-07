@@ -4,9 +4,19 @@ namespace firestark;
 
 class request extends \http\request
 {
-    public function uri ( )
+    public function uri ( ) : string
     {
         return $this->uri;
+    }
+
+    public function method ( ) : string
+    {
+        return $this->method;
+    }
+
+    public function toString ( ) : string
+    {
+        return ( string ) $this;
     }
 
     public function header ( string $key, $value = null )

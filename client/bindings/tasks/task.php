@@ -2,10 +2,10 @@
 
 app::bind ( task::class, function ( $app, array $payload = [ ] )
 {   
-    if ( input::has ( 'taskid' ) )
+    if ( input::has ( 'taskid' ) and request::method ( ) !== 'POST' )
         return $app [ task\manager::class ]->findById ( input::get ( 'taskid' ) );
     
-    if ( isset ( $payload [ 'taskid' ] ) )
+    if ( isset ( $payload [ 'taskid' ] ) and request::method ( ) !== 'POST' )
         return $app [ task\manager::class ]->findById ( $payload [ 'taskid' ] );
 
     switch ( input::get ( 'type', '' ) ) {
