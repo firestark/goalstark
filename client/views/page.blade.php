@@ -70,7 +70,7 @@
                     <div class="mdc-tab-scroller__scroll-area">
                         <div class="mdc-tab-scroller__scroll-content">
                             
-                            <a href="/goals/" class="mdc-tab mdc-tab--stacked {{  ( substr ( request::uri ( ), 0, 7 ) === '/goals/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                            <a href="{{ request::uri ( ) === '/goals/' ? '#' : '/goals/' }}" class="mdc-tab mdc-tab--stacked {{  ( substr ( request::uri ( ), 0, 7 ) === '/goals/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                                 <span class="mdc-tab__content">
                                     <span class="mdc-tab__icon" aria-hidden="true">
                                         @if ( substr ( request::uri ( ), 0, 7 ) === '/goals/' )
@@ -95,7 +95,7 @@
                                 <span class="mdc-tab__ripple"></span>
                             </a>
 
-                            <a href="/tasks/" class="mdc-tab mdc-tab--stacked {{ ( substr ( request::uri ( ), 0, 7 ) === '/tasks/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                            <a href="{{ request::uri ( ) === '/tasks/' ? '#' : '/tasks/' }}" class="mdc-tab mdc-tab--stacked {{ ( substr ( request::uri ( ), 0, 7 ) === '/tasks/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                                 <span class="mdc-tab__content">
                                     <span class="mdc-tab__icon" aria-hidden="true">
                                         @if (  substr ( request::uri ( ), 0, 7 ) === '/tasks/' )
@@ -118,7 +118,7 @@
                                 <span class="mdc-tab__ripple"></span>
                             </a>
 
-                            <a href="/apps/" class="mdc-tab mdc-tab--stacked {{ ( substr ( request::uri ( ), 0, 6 ) === '/apps/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                            <a href="{{ request::uri ( ) === '/apps/' ? '#' : '/apps/' }}" class="mdc-tab mdc-tab--stacked {{ ( substr ( request::uri ( ), 0, 6 ) === '/apps/' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                                 <span class="mdc-tab__content">
                                     <span class="mdc-tab__icon" aria-hidden="true">
                                         @if (  substr ( request::uri ( ), 0, 6 ) === '/apps/' )
