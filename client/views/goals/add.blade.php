@@ -15,7 +15,6 @@
         
         @include ( 'partials.input.description', [ 'value' => '' ] )
         @include ( 'partials.input.reasons', [ 'value' => '' ] )
-        @include ( 'partials.input.rating', [ 'value' => 1, 'caption' => 'Importance' ] )
         @include ( 'partials.input.fab', [ 'action' => 'save' ] )            
     </form>
 @endsection

@@ -48,7 +48,6 @@
         
         @include ( 'partials.input.description', [ 'value' => $goal->description ] )
         @include ( 'partials.input.reasons', [ 'value' => $goal->reasons ] )
-        @include ( 'partials.input.rating', [ 'value' => $goal->rating, 'caption' => 'Importance' ] )
 
         @include ( 'partials.input.fab', [ 'action' => 'save' ] )
     </form>

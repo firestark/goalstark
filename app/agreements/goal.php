@@ -2,16 +2,15 @@
 
 class goal
 {
-    public $id, $title, $description, $reasons, $due, $rating, $completed;
+    public $id, $title, $description, $reasons, $due, $completed;
 
-    function __construct ( $id, string $title, string $description, string $reasons, int $due, int $rating, bool $completed = false )
+    function __construct ( $id, string $title, string $description, string $reasons, int $due, bool $completed = false )
     {
         $this->id           = $id;
         $this->title        = $title;
         $this->description  = $description;
         $this->reasons      = $reasons;
         $this->due          = $this->dueByEndOfDay ( $due );
-        $this->rating       = $rating;
         $this->completed    = $completed;
     }
 
