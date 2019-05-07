@@ -5,7 +5,7 @@
                 <h6 class="mdc-list-group__subheader">Today</h6>
 
                 @foreach ( $today as $task )
-                    @include ( 'partials.task', [ 'task' => $task ] )
+                    @include ( 'partials.task', [ 'task' => $task, 'goalid' => $goalid ?? '' ] )
                 @endforeach
             @endif
 
@@ -16,7 +16,7 @@
                 <h6 class="mdc-list-group__subheader">Later</h6>
 
                 @foreach ( $later as $task )
-                    @include ( 'partials.task', [ 'task' => $task ] )
+                    @include ( 'partials.task', [ 'task' => $task, 'goalid' => $goalid ?? '' ] )
                 @endforeach
             @endif
 
@@ -27,7 +27,7 @@
                 <h6 class="mdc-list-group__subheader">Overdue</h6>
 
                 @foreach ( $overdue as $task )
-                    @include ( 'partials.task', [ 'task' => $task ] )
+                    @include ( 'partials.task', [ 'task' => $task, 'goalid' => $goalid ?? '' ] )
                 @endforeach
             @endif
         </ul>

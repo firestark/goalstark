@@ -40,7 +40,7 @@
 @endsection
 
 @section ( 'content' )
-    @include ( 'partials.tasks.list' )
+    @include ( 'partials.tasks.list', [ 'goalid' => $goal->id ] )
 
     @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/select-tasks", 'action' => 'edit' ] )
 @endsection
