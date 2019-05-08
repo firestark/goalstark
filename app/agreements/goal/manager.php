@@ -51,6 +51,8 @@ abstract class manager
 
     abstract function update ( goal $goal );
 
+    abstract function updateReasonFor ( goal $goal, reason $reason );
+
     abstract function remove ( goal $goal );
 
     abstract function removeReasonFrom ( goal $goal, reason $reason );
