@@ -5,7 +5,7 @@
 @endsection
 
 @section ( 'title' )
-    My goal's reasons
+    Add goal reason
 @endsection
 
 @section ( 'content' )
