@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 a:1:{s:13:"5cd18e9847257";O:4:"goal":6:{s:2:"id";s:13:"5cd18e9847257";s:5:"title";s:6:"A goal";s:11:"description";s:15:"to test reasons";s:3:"due";i:1557266399;s:9:"completed";b:0;s:7:"reasons";a:0:{}}}
+=======
+a:1:{s:13:"5cd18e9847257";O:4:"goal":6:{s:2:"id";s:13:"5cd18e9847257";s:5:"title";s:6:"A goal";s:11:"description";s:15:"to test reasons";s:3:"due";i:1557266399;s:9:"completed";b:0;s:7:"reasons";a:1:{s:13:"5cd28cfdf0ec9";O:11:"goal\reason":2:{s:2:"id";s:13:"5cd28cfdf0ec9";s:11:"description";s:13:"yeah a reason";}}}}
+>>>>>>> fea34a328af2ec7197e9acbc02461720648a229e

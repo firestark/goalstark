@@ -56,9 +56,9 @@
             <ul class="mdc-list mdc-list--linked">
                 @foreach ( $reasons as $reason )
                     <li class="mdc-list-item" tabindex="0">
-                        {{-- <a href="/apps/{{ $app->uri }}"> --}}
+                        <a href="/goals/{{ $goalid }}/reasons/{{ $reason->id }}">
                             <span class="mdc-list-item__text">{{ $reason->description }}</span>
-                        {{-- </a> --}}
+                        </a>
 
                         <a href="/goals/{{ $goalid }}/reasons/{{ $reason->id }}/remove" class="mdc-list-item__meta" aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

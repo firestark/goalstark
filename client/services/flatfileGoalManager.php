@@ -66,6 +66,13 @@ class flatfileGoalManager extends goal\manager
         $this->write ( );
     }
 
+    function updateReasonFor ( goal $goal, goal\reason $reason )
+    {
+        $this->check ( $goal );
+        $this->goals [ $goal->id ]->reasons [ $reason->id ] = $reason;
+        $this->write ( );
+    }
+
     function remove ( goal $goal )
     {
         $this->check ( $goal );

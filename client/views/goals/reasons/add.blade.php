@@ -1,11 +1,11 @@
 @extends ( 'page' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => '/goals/' ] )
+    @include ( 'partials.up-arrow', [ 'link' => "/goals/{$goalid}/reasons" ] )
 @endsection
 
 @section ( 'title' )
-    My goal's reasons
+    Add goal reason
 @endsection
 
 @section ( 'content' )
