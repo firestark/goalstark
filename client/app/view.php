@@ -37,4 +37,9 @@ class view
     {
         $this->view->share ( 'title', $title );
     }
+
+    public function hasSection ( string $section ) : bool
+    {
+        return $this->view->hasSection ( $section );
+    }
 }
