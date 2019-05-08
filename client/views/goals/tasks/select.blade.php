@@ -11,7 +11,7 @@
 @section ( 'content' )
     
     @if ( count ( $tasks ) )
-        <form action="/{{ $goalid }}/tasks" method="POST">
+        <form action="/goals/{{ $goalid }}/tasks" method="POST">
             <section class="mdc-card">
                 <ul class="mdc-list" role="group">
                     @foreach ( $tasks as $task )
