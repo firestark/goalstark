@@ -416,18 +416,10 @@ body {
 }
 
 .mdc-top-app-bar {
-    @include mdc-top-app-bar-ink-color(var(--mdc-theme-text-primary-on-background));      
+    @include mdc-top-app-bar-ink-color(var(--mdc-theme-text-primary-on-surface));      
     
     position: relative;
-    background: transparent;
-}
-
-:root[data-theme="light"] {
-    .mdc-top-app-bar {
-        
-        @include mdc-top-app-bar-icon-ink-color(#000);
-        opacity: 0.6;
-    }
+    background: var(--mdc-theme-surface);
 }
 
 :root[data-theme="dark"] {
@@ -698,7 +690,7 @@ section#login {
 @media (min-width: 481px) and (max-width: 767px) {
 
     main {
-        padding : 0 0 80px;
+        padding : 8px 0 80px;
     }
   
     #rail-navigation {
@@ -731,7 +723,7 @@ section#login {
 @media (min-width: 320px) and (max-width: 480px) {
 
     main {
-        padding : 0 0 80px;
+        padding : 8px 0 80px;
     }
     
     #rail-navigation {

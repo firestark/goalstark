@@ -1,9 +1,10 @@
 @import "@material/tab/mdc-tab";
+@import "@material/top-app-bar/mdc-top-app-bar";
 
 :root[data-theme="light"] {
     --mdc-theme-primary: #EA4C62;
     --mdc-theme-secondary: #343434;
-    --mdc-theme-background: #fff;
+    --mdc-theme-background: #F3F9FF;
     --mdc-theme-surface: #fff;
     --mdc-theme-error: #f44336;
     --mdc-theme-on-primary: #fff;
@@ -25,4 +26,30 @@
     --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
     --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
     --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+
+    .mdc-top-app-bar {
+        
+        @include mdc-top-app-bar-icon-ink-color(#fff);
+        @include mdc-top-app-bar-ink-color(var(--mdc-theme-on-primary));      
+    
+        position: relative;
+        background: var(--mdc-theme-primary);
+        
+
+        .mdc-tab-bar {
+            @include mdc-tab-text-label-color(#fff);
+            @include mdc-tab-icon-color(#fff);
+            @include mdc-tab-states-color(#fff);
+
+            .mdc-tab-indicator .mdc-tab-indicator__content--underline {
+                border-color: #fff;
+            }
+        }
+    }
+
+    .mdc-text-field {
+        input, textarea {
+            background-color: #CCD1D6;
+        }    
+    }
 }

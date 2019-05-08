@@ -2,7 +2,7 @@
 
 @section ( 'page' )
     <div id="app">
-        <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+        <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z2">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                     @yield ( 'navigation' )
