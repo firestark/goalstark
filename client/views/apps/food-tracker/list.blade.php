@@ -60,6 +60,26 @@
                 @endforeach
             </ul>
         </section>
+    @else
+        <div style="text-align: center; margin: 56px auto 0; width: 230px;">
+            <svg xmlns="http://www.w3.org/2000/svg"width="96" height="96" viewBox="0 0 24 24" fill="var(--mdc-theme-secondary)" style="opacity: 0.7;">
+                <path fill="none" d="M0 0h24v24H0V0z"/>
+                <path d="M1 21.98c0 .56.45 1.01 1.01 1.01H15c.56 0 1.01-.45 1.01-1.01V21H1v.98z"/>
+                <path opacity=".3" d="M8.5 10.99c-1.42 0-3.77.46-4.88 2.01h9.77c-1.12-1.55-3.47-2.01-4.89-2.01z"/>
+                <path d="M8.5 8.99C4.75 8.99 1 11 1 15h15c0-4-3.75-6.01-7.5-6.01zM3.62 13c1.11-1.55 3.47-2.01 4.88-2.01s3.77.46 4.88 2.01H3.62zM1 17h15v2H1zM18 5V1h-2v4h-5l.23 2h9.56l-1.4 14H18v2h1.72c.84 0 1.53-.65 1.63-1.47L23 5h-5z"/>
+            </svg>
+
+            <h3 class="mdc-typography--subtitle2" style="font-weight: bold; margin: 8px 0 0;">No consumptions for today</h3>
+            <p class="mdc-typography--body2" style="color: var(--mdc-theme-text-secondary-on-background); margin: 0; line-height: 1.5rem;">Press the
+                {{-- <br> --}}
+                <span style="vertical-align: text-top;"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: var(--mdc-theme-text-secondary-on-background); position: relative; top: 4px;">
+                        <path fill="none" d="M0 0h24v24H0V0z"/>
+                        <path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/>
+                    </svg>
+                </span> button to register consumptions
+            </p>
+        </div>
     @endif
     
     @include ( 'partials.link.fab', [ 'link' => '/apps/food-tracker/add', 'action' => 'add' ] )
