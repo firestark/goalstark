@@ -535,7 +535,7 @@ button.reset {
     fill: var(--mdc-theme-error, #f44336);
 }
 
-.mdc-list-item__graphic.overdue::before {
+.mdc-list-item__graphic.overdue::after {
     background-color: var(--mdc-theme-error);
 }
 
@@ -544,7 +544,7 @@ button.reset {
     fill: #1F8D3E;
 }
 
-.mdc-list-item__graphic.completed::before {
+.mdc-list-item__graphic.completed::after {
     background-color: #1F8D3E;
 }
 
