@@ -71,7 +71,6 @@
 
             <h3 class="mdc-typography--subtitle2" style="font-weight: bold; margin: 8px 0 0;">No consumptions for today</h3>
             <p class="mdc-typography--body2" style="color: var(--mdc-theme-text-secondary-on-background); margin: 0; line-height: 1.5rem;">Press the
-                {{-- <br> --}}
                 <span style="vertical-align: text-top;"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: var(--mdc-theme-text-secondary-on-background); position: relative; top: 4px;">
                         <path fill="none" d="M0 0h24v24H0V0z"/>
