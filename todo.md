@@ -11,9 +11,14 @@
 
 ## Tasks
 
+- Wizard move the next / prev buttons (on alot of options they wont be visible anymore)
 - Adding tasks, what happens if there are no goals?
 - May tasks exist without goal?
-- Add task explanation 'header hero'
+- Add task explanation
+
+## Calendar
+
+- Create a goals / tasks calendar
 
 
 ## Food tracker
@@ -25,3 +30,4 @@
 
 - Abstract recurring view tab bars
 - Move creation of user directory and files to registration
+- Renamed flat file folders to user id instead of username (security)

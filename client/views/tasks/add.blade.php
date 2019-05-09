@@ -9,6 +9,77 @@
 @endsection
 
 @section ( 'content' )
+    <ol class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--stepper" style="padding-top: 0;">
+        <li class="mdc-list-item" tabindex="0" style="align-items: flex-start;">
+            <a 
+                style="display: flex; align-items: flex-end; color: inherit;"
+                href="/tasks/select-goal?{{ http_build_query ( input::all ( ) ) }}" 
+                tabindex="5">
+
+                <span 
+                    class="mdc-list-item__graphic" 
+                    aria-hidden="true">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z"/>
+                        <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
+                    </svg>
+
+                    <span class="mdc-list-stepper-line--after"></span>
+                </span>
+
+                <span class="mdc-list-item__text">
+                    <span class="mdc-list-item__primary-text">Select goals</span>
+                    <span class="mdc-list-item__secondary-text">Select goals for tasks</span>                                        
+                </span>
+            </a>
+        </li>
+
+        <li class="mdc-list-item" tabindex="0">
+            <a 
+                style="display: flex; align-items: flex-end; color: inherit;"
+                href="/tasks/select-type?{{ http_build_query ( input::all ( ) ) }}" 
+                tabindex="5">
+
+                <span 
+                    class="mdc-list-item__graphic" 
+                    aria-hidden="true">
+
+                    <span class="mdc-list-stepper-line--before"></span>
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z"/>
+                        <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
+                    </svg>
+
+                    <span class="mdc-list-stepper-line--after"></span>
+                </span>
+
+                <span class="mdc-list-item__text">
+                    <span class="mdc-list-item__primary-text">Select task type</span>
+                    <span class="mdc-list-item__secondary-text">Select a type of task</span>                                        
+                </span>
+            </a>
+        </li>
+        <li class="mdc-list-item mdc-list-stepper--current" tabindex="0">    
+            <span 
+                class="mdc-list-item__graphic" 
+                aria-hidden="true">
+
+                <span class="mdc-list-stepper-line--before"></span>
+                
+                <span>3</span>
+            </span>
+
+
+            <span class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">Describe task</span>
+                <span class="mdc-list-item__secondary-text">Create that task</span>                                        
+            </span>
+        </li>
+    </ol>
+
+
     <form method="POST" action="/tasks/" style="padding: 0 8px;">
         @foreach ( $goals as $goal )
             <input type="hidden" name="goals[]" value="{{ $goal }}">
