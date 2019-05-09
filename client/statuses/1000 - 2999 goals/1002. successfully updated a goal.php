@@ -2,6 +2,6 @@
 
 status::matching ( 1002, function ( )
 {
-	session::flash ( 'message', 'Successfully updated goal.' );
+	session::flash ( 'message', 'Goal updated.' );
 	return redirect::to ( '/goals/' );
 } );
