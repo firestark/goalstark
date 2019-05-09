@@ -19,10 +19,10 @@
 
                 </section>
             </div>
-            @if ( view::hasSection ( 'tab-bar' ) )
+            @if ( view::hasSection ( 'top-app-bar' ) )
                 <div class="mdc-top-app-bar__row">
                     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" style="padding: 0; align-items: flex-end;">
-                        @yield ( 'tab-bar' )
+                        @yield ( 'top-app-bar' )
                     </section>
                 </div>
             @endif

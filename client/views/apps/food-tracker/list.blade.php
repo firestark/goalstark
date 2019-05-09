@@ -8,7 +8,7 @@
     Consumptions
 @endsection
 
-@section ( 'tab-bar' )
+@section ( 'top-app-bar' )
     <div class="mdc-tab-bar mdc-tab-bar--top" role="tablist">
         <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
