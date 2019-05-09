@@ -11,10 +11,7 @@
 
 ## Tasks
 
-- Wizard move the next / prev buttons (on alot of options they wont be visible anymore)
-- Adding tasks, what happens if there are no goals?
-- May tasks exist without goal?
-- Add task explanation
+- Add task explanations
 
 ## Calendar
 
