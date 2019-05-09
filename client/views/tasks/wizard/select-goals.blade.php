@@ -101,12 +101,6 @@
                     
                     @endforeach
                 </ul>
-
-                <div class="mdc-card__actions">
-                    <button type="submit" class="mdc-button mdc-card__action mdc-card__action--button">
-                        <span class="mdc-button__label">NEXT</span>
-                    </button>
-                </div>
             </section>
         @else
             <div style="text-align: center; margin: 16px auto 56px; width: 230px;">
