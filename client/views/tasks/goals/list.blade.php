@@ -40,8 +40,8 @@
 @endsection
 
 @section ( 'content' )
-    <section class="mdc-card">
-        @if ( count ( $goals ) )
+    @if ( count ( $goals ) )
+        <section class="mdc-card">
             <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked">
                 @foreach ( $goals as $goal )
                     <li class="mdc-list-item" tabindex="0">
@@ -84,11 +84,30 @@
                     </li>
                 @endforeach
             </ul>
-        @endif
+        </section>
+    @else
+        <div style="text-align: center; margin: 56px auto 0; width: 230px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="var(--mdc-theme-secondary)" style="opacity: 0.7;">
+                <path fill="none" d="M0 0h24v24H0V0z"/>
+                <circle opacity=".3" cx="17.5" cy="17.5" r="2.5"/>
+                <path opacity=".3" d="M5 15.5h4v4H5zm7-9.66L10.07 9h3.86z"/>
+                <path d="M12 2l-5.5 9h11L12 2zm0 3.84L13.93 9h-3.87L12 5.84zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM11 13.5H3v8h8v-8zm-2 6H5v-4h4v4z"/>
+            </svg>
 
-        @include ( 'partials.link.fab', [ 'link' => "/tasks/{$taskid}/goals/add", 'action' => 'edit' ] )
-    </section>
+            <h3 class="mdc-typography--subtitle2" style="font-weight: bold; margin: 8px 0 0;">No goals here</h3>
+            <p class="mdc-typography--body2" style="color: var(--mdc-theme-text-secondary-on-background); margin: 0; line-height: 1.5rem;">Select goals with the
+                <span style="vertical-align: text-top;"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: var(--mdc-theme-text-secondary-on-background); position: relative; top: 4px;">
+                        <path fill="none" d="M0 0h24v24H0V0z"/>
+                        <path d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1c-.1.1-.15.22-.15.36zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                    </svg> 
+                </span> button
+            </p>
+        </div>
+    @endif
 
+    @include ( 'partials.link.fab', [ 'link' => "/tasks/{$taskid}/goals/add", 'action' => 'edit' ] )
+    
 @endsection
 
 @section ( 'mdc-js' )
