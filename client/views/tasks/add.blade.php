@@ -8,6 +8,7 @@
     Add task
 @endsection
 
+
 @section ( 'content' )
     <ol class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--stepper" style="padding-top: 0;">
         <li class="mdc-list-item" tabindex="0" style="align-items: flex-start;">
@@ -35,7 +36,7 @@
             </a>
         </li>
 
-        <li class="mdc-list-item" tabindex="0">
+        <li class="mdc-list-item" tabindex="0" style="align-items: flex-start;">
             <a 
                 style="display: flex; align-items: flex-end; color: inherit;"
                 href="/tasks/select-type?{{ http_build_query ( input::all ( ) ) }}" 
@@ -78,7 +79,6 @@
             </span>
         </li>
     </ol>
-
 
     <form method="POST" action="/tasks/" style="padding: 0 8px;">
         @foreach ( $goals as $goal )
