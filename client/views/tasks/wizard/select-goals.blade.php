@@ -8,62 +8,18 @@
     Add task
 @endsection
 
+@section ( 'top-app-bar' )
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">            
+            <span style="padding-left: 20px;">
+                Step 1 of 3: Select goals
+            </span>
+        </section>
+    </div>
+@endsection
+
 @section ( 'content' )
     <form action="/tasks/select-type" method="GET">
-        <ol class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--stepper" style="padding-top: 0;">
-            <li class="mdc-list-item mdc-list-stepper--current" tabindex="0">
-                <span 
-                    class="mdc-list-item__graphic" 
-                    aria-hidden="true">
-                    
-                    <span>1</span>
-
-                    <span class="mdc-list-stepper-line--after"></span>
-                </span>
-
-                <span class="mdc-list-item__text">
-                    <span class="mdc-list-item__primary-text">Select goals</span>
-                    <span class="mdc-list-item__secondary-text">Select goals for tasks</span>                                        
-                </span>
-            </li>
-
-            <li class="mdc-list-item" tabindex="0">
-                <button type="submit" class="reset">     
-                    <span 
-                        class="mdc-list-item__graphic" 
-                        aria-hidden="true">
-
-                        <span class="mdc-list-stepper-line--before"></span>
-                        
-                        <span>2</span>
-
-                        <span class="mdc-list-stepper-line--after"></span>
-                    </span>
-
-                    <span class="mdc-list-item__text">
-                        <span class="mdc-list-item__primary-text">Select task type</span>
-                        <span class="mdc-list-item__secondary-text">Select a type of task</span>                                        
-                    </span>
-                </button>
-            </li>
-            <li class="mdc-list-item" tabindex="0">
-                <span 
-                    class="mdc-list-item__graphic" 
-                    aria-hidden="true">
-
-                    <span class="mdc-list-stepper-line--before"></span>
-                    
-                    <span>3</span>
-                </span>
-
-
-                <span class="mdc-list-item__text">
-                    <span class="mdc-list-item__primary-text">Describe task</span>
-                    <span class="mdc-list-item__secondary-text">Create that task</span>                                        
-                </span>
-            </li>
-        </ol>
-
         @if ( count ( $goals ) )
             <section class="mdc-card">
                 <ul class="mdc-list mdc-list--two-line" role="group">
@@ -113,10 +69,36 @@
 
                 <h3 class="mdc-typography--subtitle2" style="font-weight: bold; margin: 8px 0 0;">No goals</h3>
                 <p class="mdc-typography--body2" style="color: var(--mdc-theme-text-secondary-on-background); margin: 0; line-height: 1.5rem;">
-                    There are no goals to select but you may still add a task, press 2: Select task type to proceed
+                    There are no goals to select but you may still add a task, press <span style="color: var(--mdc-theme-primary);">SELECT TYPE</span> to proceed
                 </p>
             </div>
         @endif
+
+        <section 
+            style="
+                height: 56px;
+                width: 100%;
+                box-sizing: border-box;
+                display: grid; 
+                grid-template-columns: 1fr 1fr; 
+                padding: 0; 
+                align-items: center;
+                position: fixed; 
+                bottom: 64px;
+                left: 0">
+            <div>
+               
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                <button class="mdc-button" type="submit">
+                    <span class="mdc-button__label">SELECT TYPE</span>
+                    <svg class="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
     </form>
 @endsection
 
