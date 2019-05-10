@@ -24,7 +24,7 @@
     <a href="/goals/{{ $goal->id }}">
         <span class="mdc-list-item__text" style="width: 100%;">
             <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
-            <span class="mdc-list-item__secondary-text"><span>Due {{  date ( 'M d, Y ', $goal->due ) }}</span>                                        
+            <span class="mdc-list-item__secondary-text"><span style="font-weight: bold;">Due {{  date ( 'M d, Y ', $goal->due ) }}</span> — {{ count ( $goal->tasks ) }} tasks</span>                                        
         </span>
     </a>
     
