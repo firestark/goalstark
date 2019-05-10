@@ -109,7 +109,8 @@
                 align-items: center;
                 position: fixed; 
                 bottom: 64px;
-                left: 0">
+                left: 0;
+                background-color: var(--mdc-theme-background);">
             <div>
                 <a href="/tasks/select-goal?{{ http_build_query ( input::all ( ) ) }}" class="mdc-button">
                     <svg class="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

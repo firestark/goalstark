@@ -91,7 +91,7 @@
                 position: fixed; 
                 bottom: 64px;
                 left: 0;
-                background-color: #252324"
+                background-color: var(--mdc-theme-background);"
                 class="mdc-elevation--z3">
             <div>
                
