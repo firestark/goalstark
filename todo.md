@@ -17,6 +17,10 @@
 
 - Create a goals / tasks calendar
 
+## Apps
+
+- Add avatar icons to app list
+
 
 ## Food tracker
 

@@ -4253,7 +4253,7 @@ section#login {
 */
 @media (min-width: 481px) and (max-width: 767px) {
   main {
-    padding: 16px 0 80px; }
+    padding: 0; }
   #rail-navigation {
     display: none; }
   #page {
@@ -4272,7 +4272,7 @@ section#login {
   */
 @media (min-width: 320px) and (max-width: 480px) {
   main {
-    padding: 16px 0 80px; }
+    padding: 0; }
   #rail-navigation {
     display: none; }
   #page {

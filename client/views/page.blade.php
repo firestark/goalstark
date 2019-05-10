@@ -66,7 +66,7 @@
             </main>
         </div>
 
-        <footer id="bottom-navigation" class="mdc-elevation--z2">
+        <footer id="bottom-navigation" class="mdc-elevation--z2" style="position: relative; z-index: 5;">
             <div class="mdc-tab-bar" role="tablist">
                 <div class="mdc-tab-scroller">
                     <div class="mdc-tab-scroller__scroll-area">

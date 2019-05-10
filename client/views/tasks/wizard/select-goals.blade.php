@@ -19,9 +19,14 @@
 @endsection
 
 @section ( 'content' )
-    <form action="/tasks/select-type" method="GET">
+    <form action="/tasks/select-type" method="GET" 
+        style="
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100%;
+            overflow: hidden;">
         @if ( count ( $goals ) )
-            <section class="mdc-card">
+            <section style="overflow: scroll">
                 <ul class="mdc-list mdc-list--two-line" role="group">
                     @foreach ( $goals as $goal )
                         <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'true' : 'false' }}">
@@ -74,7 +79,7 @@
             </div>
         @endif
 
-        <section 
+        <section
             style="
                 height: 56px;
                 width: 100%;
@@ -85,7 +90,9 @@
                 align-items: center;
                 position: fixed; 
                 bottom: 64px;
-                left: 0">
+                left: 0;
+                background-color: #252324"
+                class="mdc-elevation--z3">
             <div>
                
             </div>
