@@ -25,7 +25,7 @@ route::post ( '/register', function ( )
 
 function createFiles ( credentials $credentials )
 {
-    $path = __DIR__ . '/../../storage/databases/files/' . $credentials->username;
+    $path = __DIR__ . '/../../storage/databases/files/' . md5 ( $credentials->username );
 
     $files = [
         $path . '/consumations.data',
@@ -34,7 +34,7 @@ function createFiles ( credentials $credentials )
     ];
     
     if ( ! file_exists ( $path ) )
-        mkdir ( __DIR__ . '/../../storage/databases/files/' . $credentials->username, 0777, true );
+        mkdir ( $path, 0777, true );
     
     foreach ( $files as $file )
         if ( ! file_exists ( $file ) )
