@@ -31,6 +31,11 @@ class goal
         return isset ( $this->reasons [ $reason->id ] );
     }
 
+    function isOverdue ( ) : bool
+    {
+        return ( ! $this->completed and ( $this->due < time ( ) ) ); 
+    }
+
     /**
      * Setting the due timestamp to the end of the day.
      * This makes the goal only overdue based on the day.
