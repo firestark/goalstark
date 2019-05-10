@@ -1,5 +1,6 @@
 # Todo
 
+
 ## Goals
 
 - Should there be an explanation to the jump from goal add to edit (with the tabs that pop up) or should we make a wizzard?
@@ -26,9 +27,24 @@
 
 - Schematics & graphs
 
+## Onboarding
+
+- Create onboarding
+
+## Responsive design
+
+- Correct desktop design
+- Create tablet design
+
+
+## Users & authentication
+
+- Add ability for admin to delete users
+- Add ability to login with google
+- Add ability to reset password
+
 
 ## refactor
 
 - Abstract recurring view tab bars
-- Move creation of user directory and files to registration
-- Renamed flat file folders to user id instead of username (security)
+- Create a dedicated post install mechanism
