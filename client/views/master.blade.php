@@ -34,6 +34,7 @@
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="/resources/bundle.js" async></script>
+    <script src="/resources/scripts/slip.js"></script>
     
     <script>        
         @if ( session::has ( 'message' ) )
@@ -42,7 +43,7 @@
         @endif
     </script>
     
-    @yield ( 'mdc-js' )  
+    @yield ( 'js' )  
 </body>
 
 </html>

@@ -110,7 +110,7 @@
     
 @endsection
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     @parent
     
     <script>

@@ -110,7 +110,7 @@
 @endsection
 
 @if ( count ( $goals ) )
-    @section ( 'mdc-js' )
+    @section ( 'js' )
         @parent
 
         <script>

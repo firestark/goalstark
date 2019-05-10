@@ -151,7 +151,7 @@
 @endsection
 
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     <script>
         const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo ( document.querySelector ( '.mdc-top-app-bar' ) );
         mdc.tabBar.MDCTabBar.attachTo ( document.querySelector ( '.mdc-tab-bar' ) );

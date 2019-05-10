@@ -9,7 +9,7 @@
     <div class="mdc-line-ripple"></div>
 </div>
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     @parent
     
     <script>

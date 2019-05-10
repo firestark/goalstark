@@ -93,7 +93,7 @@
     @include ( 'partials.link.fab', [ 'link' => "/goals/{$goalid}/reasons/add", 'action' => 'add' ] )
 @endsection
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     @parent
 
     <script>        

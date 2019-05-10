@@ -9,7 +9,7 @@
     </span>
 </button>
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     @parent
     
     <script>

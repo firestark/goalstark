@@ -106,7 +106,7 @@
     @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/select-tasks", 'action' => 'edit' ] )
 @endsection
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     @parent
     
     <script>

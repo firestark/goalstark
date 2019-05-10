@@ -74,7 +74,7 @@
     <div id="triangle2" style="background: #909090;"></div>
 @endsection
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     <script>
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'username-input' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'password-input' ) );

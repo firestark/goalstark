@@ -14,7 +14,7 @@
     </span>
 </a>
 
-@section ( 'mdc-js' )
+@section ( 'js' )
     @parent
     
     <script>

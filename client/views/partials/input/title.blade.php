@@ -21,7 +21,7 @@
         <div class="mdc-text-field-character-counter">0 / 24</div>
     </div>
 </div>
-@section ( 'mdc-js' )
+@section ( 'js' )
     @parent
     
     <script>
