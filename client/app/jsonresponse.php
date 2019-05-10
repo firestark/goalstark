@@ -6,7 +6,7 @@ class jsonresponse extends response
 {
     protected $jsonheaders =
     [
-        'Content-Type'                      => 'application/json',
+        'Content-Type' => 'application/json',
     ];
 
 	private $unpreparedContent = null;
