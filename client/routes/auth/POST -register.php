@@ -15,7 +15,28 @@ route::post ( '/register', function ( )
     }
 
     $userManager->register ( $credentials );
+    createfiles ( $credentials );
+
     app::make ( 'guard' )->stamp ( $credentials );
     session::flash ( 'message', 'Logged in.' );
     return redirect::to ( '/' );
 } );
+
+
+function createFiles ( credentials $credentials )
+{
+    $path = __DIR__ . '/../../storage/databases/files/' . $credentials->username;
+
+    $files = [
+        $path . '/consumations.data',
+        $path . '/goals.data',
+        $path. '/tasks.data'
+    ];
+    
+    if ( ! file_exists ( $path ) )
+        mkdir ( __DIR__ . '/../../storage/databases/files/' . $credentials->username, 0777, true );
+    
+    foreach ( $files as $file )
+        if ( ! file_exists ( $file ) )
+            fopen ( $file, 'w' );
+}
