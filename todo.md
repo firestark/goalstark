@@ -1,6 +1,5 @@
 # Todo
 
-
 ## Goals
 
 - Should there be an explanation to the jump from goal add to edit (with the tabs that pop up) or should we make a wizzard?
@@ -17,10 +16,6 @@
 ## Calendar
 
 - Create a goals / tasks calendar
-
-## Apps
-
-- Add avatar icons to app list
 
 
 ## Food tracker
@@ -42,6 +37,7 @@
 - Add ability for admin to delete users
 - Add ability to login with google
 - Add ability to reset password
+- Redesign login/register screen
 
 
 ## refactor
