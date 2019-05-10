@@ -630,7 +630,7 @@ section#login {
     max-width: 480px;
     margin: auto;
     padding: 32px;
-    margin-top: 32px;
+    margin-top: 80px;
     position: relative;
     z-index: 1;
     box-sizing: border-box;
@@ -745,6 +745,10 @@ section#login {
     main {
         padding : 0;
     }
+
+    .content {
+        padding-bottom: 64px;
+    }
   
     #rail-navigation {
         display: none;
@@ -777,6 +781,10 @@ section#login {
 
     main {
         padding : 0;
+    }
+
+    .content {
+        padding-bottom: 64px;
     }
     
     #rail-navigation {

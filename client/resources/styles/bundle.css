@@ -3655,7 +3655,7 @@ svg.mdc-button__icon {
   font-size: 6rem;
   line-height: 6rem;
   font-weight: 300;
-  letter-spacing: -0.01563em;
+  letter-spacing: -0.01562em;
   text-decoration: inherit;
   text-transform: inherit; }
 
@@ -4172,7 +4172,7 @@ section#login {
   max-width: 480px;
   margin: auto;
   padding: 32px;
-  margin-top: 32px;
+  margin-top: 80px;
   position: relative;
   z-index: 1;
   box-sizing: border-box; }
@@ -4254,6 +4254,8 @@ section#login {
 @media (min-width: 481px) and (max-width: 767px) {
   main {
     padding: 0; }
+  .content {
+    padding-bottom: 64px; }
   #rail-navigation {
     display: none; }
   #page {
@@ -4273,6 +4275,8 @@ section#login {
 @media (min-width: 320px) and (max-width: 480px) {
   main {
     padding: 0; }
+  .content {
+    padding-bottom: 64px; }
   #rail-navigation {
     display: none; }
   #page {

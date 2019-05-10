@@ -52,7 +52,7 @@
 
 @section ( 'content' )
     @if ( count ( $reasons ) )
-        <section class="mdc-card">
+        <section class="content">
             <ul class="mdc-list mdc-list--linked">
                 @foreach ( $reasons as $reason )
                     <li class="mdc-list-item" tabindex="0">

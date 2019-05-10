@@ -6,7 +6,7 @@
 
 @section ( 'content' )
     @if ( count ( $apps ) )
-        <section>
+        <section class="content">
             <ul class="mdc-list mdc-list--linked">
                 @foreach ( $apps as $app )
                     <li class="mdc-list-item" tabindex="0">

@@ -41,7 +41,7 @@
 
 @section ( 'content' )
     @if ( count ( $consumations ) )
-        <section class="mdc-card">
+        <section class="content">
             <ul class="mdc-list mdc-list--two-line mdc-list--linked">
                 @foreach ( $consumations as $consumation )
                     <li class="mdc-list-item" tabindex="0">

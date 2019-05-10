@@ -6,7 +6,7 @@
 
 @section ( 'content' )
     @if ( count ( $goals ) )
-        <section style="padding-bottom: 64px;">
+        <section class="content">
             <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked" style="padding-top: 0;">
                 @foreach ( $goals as $goal )
                     <li class="mdc-list-item" tabindex="0">

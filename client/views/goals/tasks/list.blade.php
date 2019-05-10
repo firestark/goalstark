@@ -51,7 +51,7 @@
 
 @section ( 'content' )
     @if ( count ( $tasks ) )
-        <section class="mdc-card">
+        <section class="content">
             <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked">
                 @if ( count ( $today ) )
                     <h6 class="mdc-list-group__subheader">Today</h6>
