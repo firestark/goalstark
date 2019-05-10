@@ -47,6 +47,11 @@ class jwtSessionGuard extends guard
         $this->session->unset ( 'token' );
     }
 
+    function getToken ( ) : string
+    {
+        return $this->session->get ( 'token', '' );
+    }
+
     function current ( ) : credentials
     {
         try {

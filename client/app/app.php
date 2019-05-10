@@ -13,7 +13,7 @@ class app extends container
 
     public function fulfill ( string $request, array $payload = [ ] ) : response
     {
-        $token = $this [ 'session' ]->get ( 'token', '' );
+        $token = $this [ 'guard' ]->getToken ( );
 
         if ( $this [ 'guard' ]->allows ( $this [ 'request' ], $token ) )
             if ( $this [ 'session' ]->has ( 'intended' ) )
@@ -26,6 +26,14 @@ class app extends container
 
     function pipe ( array $procedures, array $payload = [ ] ) : response
     {
+        $token = $this [ 'guard' ]->getToken ( );
+
+        if ( ! $this [ 'guard' ]->allows ( $this [ 'request' ], $token ) )
+            return $this->deny ( );
+        
+        if ( $this [ 'session' ]->has ( 'intended' ) )
+            return $this [ 'redirector' ]->to ( $this [ 'session' ]->getAndForget ( 'intended' ) );
+
         $this->data = $payload;
 
         foreach ( $procedures as $procedure )

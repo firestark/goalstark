@@ -25,6 +25,8 @@ abstract class guard
      */
     abstract function authenticate ( string $token ) : bool;
 
+    abstract function getToken ( ) : string;
+
     /**
      * Remove token.
      */
