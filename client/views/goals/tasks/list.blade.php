@@ -62,9 +62,6 @@
                 @endif
 
                 @if ( count ( $later ) )
-                    @if ( count ( $today ) )
-                        <hr class="mdc-list-divider">
-                    @endif
                     <h6 class="mdc-list-group__subheader">Later</h6>
 
                     @foreach ( $later as $task )
@@ -73,9 +70,6 @@
                 @endif
 
                 @if ( count ( $overdue ) )
-                    @if ( count ( $today ) or count ( $later ) )
-                        <hr class="mdc-list-divider">
-                    @endif
                     <h6 class="mdc-list-group__subheader">Overdue</h6>
 
                     @foreach ( $overdue as $task )

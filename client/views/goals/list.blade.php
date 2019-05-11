@@ -15,9 +15,6 @@
                 @endif
                 
                 @if ( count ( $overdue ) )
-                    @if ( count ( $due ) )
-                        <hr class="mdc-list-divider">
-                    @endif
                     <h6 class="mdc-list-group__subheader">Overdue</h6>
 
                     @foreach ( $overdue as $goal )
@@ -26,9 +23,6 @@
                 @endif
 
                 @if ( count ( $completed ) )
-                    @if ( count ( $due ) or count ( $overdue ) )
-                        <hr class="mdc-list-divider">
-                    @endif
                     <h6 class="mdc-list-group__subheader">Completed</h6>
 
                     @foreach ( $completed as $goal )
