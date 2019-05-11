@@ -55,7 +55,7 @@
             </p>
         </div>
     @endif
-    <form method="POST" action="/tasks/{{ $task->id }}" style="padding: 0 8px;">
+    <form method="POST" action="/tasks/{{ $task->id }}" style="padding: 16px 8px 80px;">
         @foreach ( $task->goals as $goal )
             <input type="hidden" name="goals[]" value="{{ $goal }}">
         @endforeach

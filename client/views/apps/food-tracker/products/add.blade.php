@@ -9,7 +9,7 @@
 @endsection
 
 @section ( 'content' )
-    <form method="POST" action="/apps/food-tracker/products" style="padding: 8px">
+    <form method="POST" action="/apps/food-tracker/products" style="padding: 16px 8px 80px;">
         
         @include ( 'partials.input.name' )
         @include ( 'partials.input.product.per' )
