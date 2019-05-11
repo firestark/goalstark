@@ -495,8 +495,6 @@ main {
     line-height: 1.5rem;
 }
 
-
-
 .mdc-list-item__text, .mdc-list-item__primary-text {
     font-weight: 600;
     font-size: 0.875rem;
@@ -550,10 +548,12 @@ button.reset {
     background-color: #1F8D3E;
 }
 
-.mdc-list--linked a:not(.mdc-list-item__graphic) {
+.mdc-list--linked a:not(.mdc-list-item__graphic):not(.mdc-list-item__meta) {
     color: var(--mdc-theme-text-primary-on-background, #343434);
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .mdc-list--linked:not(.mdc-list--avatar-list) a:first-child {
