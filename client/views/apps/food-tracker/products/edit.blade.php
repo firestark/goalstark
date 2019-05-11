@@ -9,7 +9,7 @@
 @endsection
 
 @section ( 'content' )
-    <form method="POST" action="/apps/food-tracker/products/{{ $product->id }}" style="padding: 0 8px;">
+    <form method="POST" action="/apps/food-tracker/products/{{ $product->id }}" style="padding: 16px 8px 80px;">
         
         @include ( 'partials.input.name', [ 'value' => $product->name ] )
         @include ( 'partials.input.product.per', [ 'value' => $product->nutrition->per ] )
@@ -23,7 +23,7 @@
 
         <section style="margin-bottom: 32px;">
             <h3 class="mdc-typography--caption">Carbohydrates</h3>
-
+        
             @include ( 'partials.input.product.total-carbohydrates', [ 'value' => $product->nutrition->carbohydrates->total] )
             @include ( 'partials.input.product.fibers', [ 'value' => $product->nutrition->carbohydrates->fiber ] )
             @include ( 'partials.input.product.sugars', [ 'value' => $product->nutrition->carbohydrates->sugars ] )

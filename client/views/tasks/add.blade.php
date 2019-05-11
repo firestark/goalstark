@@ -19,7 +19,7 @@
 @endsection
 
 @section ( 'content' )
-    <form id="form" method="POST" action="/tasks/" style="padding: 0 8px;">
+    <form id="form" method="POST" action="/tasks/" style="padding: 16px 8px 0;">
         @foreach ( $goals as $goal )
             <input type="hidden" name="goals[]" value="{{ $goal }}">
         @endforeach
