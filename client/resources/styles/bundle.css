@@ -3877,10 +3877,6 @@ fieldset {
 .mdc-checkbox__checkmark {
   color: var(--mdc-theme-on-secondary); }
 
-:not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item:hover::before,
-:not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item:active::before {
-  filter: opacity(100%); }
-
 /* ---------------------------------------------------------
     Styling 
 --------------------------------------------------------- */

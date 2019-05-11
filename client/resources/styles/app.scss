@@ -271,13 +271,6 @@ fieldset {
     color: var(--mdc-theme-on-secondary);
 }
 
-// chrome bg bug fix
-:not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item:hover::before,
-:not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item:active::before {
-    filter: opacity(100%);
-}
-
-
 /* ---------------------------------------------------------
     Styling 
 --------------------------------------------------------- */
