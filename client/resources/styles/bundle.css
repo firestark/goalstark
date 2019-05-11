@@ -935,7 +935,7 @@
   :root[data-theme="dark"] .mdc-text-field input, :root[data-theme="dark"] .mdc-text-field textarea {
     background-color: var(--mdc-theme-surface); }
   :root[data-theme="dark"] .mdc-list--linked.mdc-list--avatar-list a:nth-child(2) {
-    border-bottom: 1px solid #353535; }
+    border-bottom: 1px solid #181617; }
 
 .mdc-list {
   font-family: "Metropolis", sans-serif;
