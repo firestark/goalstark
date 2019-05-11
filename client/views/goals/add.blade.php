@@ -9,7 +9,7 @@
 @endsection
 
 @section ( 'content' )
-    <form method="POST" action="/goals/" style="padding: 8px;">
+    <form method="POST" action="/goals/" style="padding: 16px 8px 80px;">
         @include ( 'partials.input.title', [ 'value' => '' ] )
         @include ( 'partials.input.due', [ 'value' => time ( ) ] )
         
