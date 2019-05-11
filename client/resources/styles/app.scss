@@ -600,6 +600,12 @@ button.reset {
     z-index: 5000;
 }
 
+.mdc-fab--secondary {
+    background-color: var(--mdc-theme-surface);
+    color: var(--mdc-theme-on-surface);
+}
+
+
 // Forms
 
 .form-section {
@@ -761,6 +767,10 @@ section#login {
         right: 16px;
     }
 
+    .mdc-fab--secondary {
+        bottom: 152px;
+    }
+
     #bottom-navigation {
         display: block;
     }
@@ -796,6 +806,10 @@ section#login {
     .mdc-fab {
         bottom: 80px;
         right: 16px;
+    }
+
+    .mdc-fab--secondary {
+        bottom: 152px;
     }
 
     #bottom-navigation {

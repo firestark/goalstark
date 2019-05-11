@@ -97,7 +97,8 @@
         </div>
     @endif
 
-    @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/select-tasks", 'action' => 'edit' ] )
+    @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/select-tasks", 'action' => 'edit', 'secondary' => 'mdc-fab--secondary' ] )
+    @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/select-tasks", 'action' => 'add' ] )
 @endsection
 
 @section ( 'js' )
