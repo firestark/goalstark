@@ -634,9 +634,9 @@
   --mdc-theme-error: #f44336;
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #fff;
-  --mdc-theme-on-surface: #000;
+  --mdc-theme-on-surface: #343434;
   --mdc-theme-on-error: #fff;
-  --mdc-theme-text-primary-on-background: #000;
+  --mdc-theme-text-primary-on-background: #343434;
   --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
   --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
   --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
@@ -4066,7 +4066,7 @@ main {
 .mdc-list-item__text, .mdc-list-item__primary-text {
   font-weight: 600;
   font-size: 0.875rem;
-  opacity: 0.87; }
+  opacity: 1; }
 
 .mdc-list-item__secondary-text {
   font-size: 0.785rem; }
