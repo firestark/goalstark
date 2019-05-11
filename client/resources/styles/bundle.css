@@ -4157,7 +4157,8 @@ button.reset {
 .form-section {
   padding: 16px; }
 
-form > *:not(:last-of-type) {
+form > *:not(:last-of-type),
+form > section > *:not(:last-of-type) {
   margin-bottom: 24px; }
 
 .mdc-text-field--textarea {

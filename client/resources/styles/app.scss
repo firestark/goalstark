@@ -611,7 +611,8 @@ button.reset {
     padding: 16px;
 }
 
-form > *:not(:last-of-type) {
+form > *:not(:last-of-type),
+form > section > *:not(:last-of-type) {
     margin-bottom: 24px;
 }
 
