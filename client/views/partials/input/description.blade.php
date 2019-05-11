@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="mdc-text-field-helper-line">
-        <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">Define your goal in specifics</div>
+        <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">What do you want to achieve?</div>
     </div>
 </div>
 
