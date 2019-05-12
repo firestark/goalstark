@@ -1,29 +1,10 @@
 # Todo
 
-## Refactor
-Should i put the focus back onto goals and only create tasks via the goal view
-'Duplicate' tasks (eg. 2x protein 185, due task with same description + same due date) get 'merged' into 1 element on the task list
-
-### Upsides
-
-- Simpler ui concept (Task list no longer has the ability to add tasks only done via goals)
-- Getting task count in goal list is easier 
-
-
-### Downsides
-
-- Potentially alot of duplicate tasks (Keep current implementation to fix?)
-- No longer the ability to find all goals associated to a task (Keep current implementation to fix?)
-- For goals with the same task the user now has to create that task twice (Could be fixed with: or choose an existing task)
-
-
-
 ## Goals
 
 - Adding tasks: Let the system automatically detect when a task that already exists is created
-    
-
-- should we make goal add a wizzard?
+- Goal task edit ( make task add wizard for singular goal )
+- should we make goal add a wizard?
 - Create a good mechanism to set smarter goals
 - Should tasks be completed by hand or do we monitor completion by tasks?
 - Add the ability to add (custom) categories to goals
