@@ -1,9 +1,10 @@
 <?php
 
-route::get ( '/{goalid}/tasks/add', function ( )
+use function compact as with;
+
+route::get ( '/{goalid}/tasks/add', function ( $goalid )
 {
-    return app::pipe ( [ 
-        'i want to see my tasks',
-        'i want to see my consumed protein for today'
-    ] );
+    // hookup select type view
+    $type = 'due';
+    return view::ok ( 'goals.tasks.add', with ( 'goalid', 'type' ) );
 } );
