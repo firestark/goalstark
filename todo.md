@@ -68,6 +68,7 @@
 
 ## refactor
 
+- Add a simple task type (good for task list)
 - Abstract recurring view tab bars
 - Create a dedicated post install mechanism
 
@@ -94,3 +95,7 @@ Should a task only belong to one goal ever?
 - Some goals are connected we lose the first step of this connection 
 - Changing a task potentially needs to be changed for every goal it occurs in
 - For some task types it doesnt make sense to have multiple of them (eg protein task)
+
+## Misc
+
+- Keep input in between switching themes
