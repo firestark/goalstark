@@ -1,5 +1,20 @@
 # Todo
 
+## Apps
+
+- Create 2 more apps
+
+
+### Food tracker
+
+- Eat x amount of product task (count adds consumptions)
+- Create consumption diet task (max cal)
+
+#### Products
+
+- Disallow edit / delete for non admin users
+
+
 ## Goals
 
 - should we make goal add a wizard?
@@ -9,9 +24,13 @@
 - Add the ability to reschedule goals
 - Add the ability to add new tasks directly from the choose tasks view
 
+
 ## Tasks
 
+- Add count task list counter
+- Add count task list aimed times
 - Add task explanations
+
 
 ## Calendar
 
@@ -22,9 +41,16 @@
 
 - Schematics & graphs
 
+
 ## Onboarding
 
+- Show reasons/benefits why they (should) download your app
 - Create onboarding
+- Pre filled data?
+- Get the user asap to success milestone (fulfillment of a goal? What about demo fulfillment run)
+- Spike feelings of accomplishment (After eg adding a goal,  In a non childish way!)
+- Push notification (On onboard failure?)
+
 
 ## Responsive design
 
