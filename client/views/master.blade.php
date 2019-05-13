@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/resources/styles/bundle.css">
     <link rel="icon" href="/favicon.png">
     <meta name="theme-color" content="#fff">
+
+    @yield ( 'style' )
 </head>
 
 <body class="mdc-typography">
@@ -21,7 +23,7 @@
     @yield ( 'page' )
 
     @if ( session::has ( 'message' ) )
-        <div class="mdc-snackbar" style="bottom: 138px;">
+        <div class="mdc-snackbar">
             <div class="mdc-snackbar__surface">
                 <div class="mdc-snackbar__label"
                     role="status"

@@ -1,5 +1,13 @@
 @extends ( 'page' )
 
+@section ( 'style' )
+    <style>
+        .mdc-snackbar {
+            bottom: 212px;
+        }
+    </style>
+@endsection
+
 @section ( 'title' )
     My goal's tasks
 @endsection
@@ -98,7 +106,7 @@
     @endif
 
     @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/select-tasks", 'action' => 'edit', 'secondary' => 'mdc-fab--secondary' ] )
-    @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/tasks/add", 'action' => 'add' ] )
+    @include ( 'partials.link.fab', [ 'link' => "/goals/{$goal->id}/tasks/select-type", 'action' => 'add' ] )
 @endsection
 
 @section ( 'js' )

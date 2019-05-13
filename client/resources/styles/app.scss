@@ -481,11 +481,17 @@ main {
     z-index: 2;
 }
 
+.mdc-snackbar {
+    bottom: 138px;
+}
+
 // lists
 
 .mdc-list-group__subheader {
     font-size: 0.875rem;
     line-height: 1.5rem;
+    color: var(--mdc-theme-text-icon-on-background);
+    font-weight: 500;
 }
 
 .mdc-list-item__text, .mdc-list-item__primary-text {
@@ -609,11 +615,6 @@ button.reset {
 
 .form-section {
     padding: 16px;
-}
-
-form > *:not(:last-of-type),
-form > section > *:not(:last-of-type) {
-    margin-bottom: 24px;
 }
 
 .mdc-text-field--textarea {
