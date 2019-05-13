@@ -27,8 +27,7 @@
 
 ## Tasks
 
-- Add count task list counter
-- Add count task list aimed times
+- Finish product count task (goals view / edit view) 
 - Add task explanations
 
 
