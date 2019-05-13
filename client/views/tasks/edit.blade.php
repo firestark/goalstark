@@ -61,7 +61,7 @@
         @endforeach
 
         @if ( $task instanceof task\count )
-            @include ( 'partials.input.count' [ 'value' => $task->times ] )
+            @include ( 'partials.input.count', [ 'value' => $task->times ] )
         @endif
 
         @if ( $task instanceof task\due )
