@@ -5,13 +5,22 @@
 @endsection
 
 @section ( 'title' )
-    Select goal tasks
+    My goal's tasks
+@endsection
+
+@section ( 'top-app-bar' )
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">            
+            <span style="padding-left: 20px;">
+                Select goal tasks
+            </span>
+        </section>
+    </div>
 @endsection
 
 @section ( 'content' )
-    
-    @if ( count ( $tasks ) )
-        <form action="/goals/{{ $goalid }}/tasks/select" method="POST" style="padding: 16px 0 80px;">
+    <form action="/goals/{{ $goalid }}/tasks/select" method="POST" style="padding: 16px 0 80px;">
+        @if ( count ( $tasks ) )
             <ul class="mdc-list" role="group">
                 @foreach ( $tasks as $task )
                     <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goalid, $task->goals ) ? 'true' : 'false' }}">
@@ -43,16 +52,37 @@
                     </li>
                 
                 @endforeach
-            </ul>
+            </ul>        
+        @endif
 
-            <div class="mdc-card__actions">
-                <button type="submit" class="mdc-button mdc-card__action mdc-card__action--button">
-                    <span class="mdc-button__label">Choose</span>
+        <section
+            style="
+                height: 56px;
+                width: 100%;
+                box-sizing: border-box;
+                display: grid; 
+                grid-template-columns: 1fr 1fr; 
+                padding: 0; 
+                align-items: center;
+                position: fixed; 
+                bottom: 64px;
+                left: 0;
+                background-color: var(--mdc-theme-background);"
+                class="mdc-elevation--z3">
+            <div>
+               
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                <button class="mdc-button" type="submit">
+                    <span class="mdc-button__label">SELECT</span>
+                    <svg class="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
                 </button>
             </div>
-        </form>
-    @endif
-
+        </section>
+    </form>
 @endsection
 
 @if ( count ( $tasks ) )
