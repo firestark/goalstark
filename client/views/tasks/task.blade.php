@@ -39,7 +39,7 @@
         @endif
 
     <a href="/tasks/{{ $task->id }}">
-        <span class="mdc-list-item__text">
+        <span class="mdc-list-item__text" style="width: 100%;">
             <span class="mdc-list-item__primary-text">{{ $task->description }}
                 @if ( isset ( $task->times ) )
                     <span style="
