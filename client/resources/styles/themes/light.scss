@@ -1,3 +1,4 @@
+@import "@material/select/mdc-select";
 @import "@material/tab/mdc-tab";
 @import "@material/top-app-bar/mdc-top-app-bar";
 
@@ -47,8 +48,19 @@
         }
     }
 
-    .mdc-text-field, .mdc-select {
-        input, textarea, select {
+    .mdc-select {
+        @include mdc-select-container-fill-color(#e9eff5);
+
+        select {
+            option {
+                background-color: #e9eff5;
+            }
+        }
+    }
+    
+
+    .mdc-text-field {
+        input, textarea {
             background-color: #e9eff5;
         }    
     }

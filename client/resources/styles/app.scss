@@ -179,7 +179,15 @@ $mdc-typography-font-family: "Metropolis", unquote("sans-serif");
 }
 
 .mdc-select {
+    @include mdc-select-ink-color(var(--mdc-theme-text-primary-on-background, #343434));
+    @include mdc-select-label-color(var(--mdc-theme-text-primary-on-background, #343434));
     @include mdc-select-shape-radius(0);
+    @include mdc-select-focused-label-color(var(--mdc-theme-primary));
+    height: 64px;
+
+    select {
+        height: 64px;
+    }
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled) + .mdc-text-field-helper-line .mdc-text-field-helper-text {

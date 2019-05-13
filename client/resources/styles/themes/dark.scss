@@ -34,6 +34,16 @@
         font-weight: 500;
     }
 
+    .mdc-select {
+        @include mdc-select-container-fill-color(var(--mdc-theme-surface));
+
+        select {
+            option {
+                background-color: var(--mdc-theme-surface);
+            }
+        }
+    }
+
     .mdc-text-field {
         input, textarea {
             background-color: var(--mdc-theme-surface);
