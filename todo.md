@@ -2,9 +2,6 @@
 
 ## Goals
 
-- Improve select tasks view
-- Adding tasks: Let the system automatically detect when a task that already exists is created
-- Goal task edit ( make task add wizard for singular goal )
 - should we make goal add a wizard?
 - Create a good mechanism to set smarter goals
 - Should tasks be completed by hand or do we monitor completion by tasks?
@@ -15,7 +12,6 @@
 ## Tasks
 
 - Add task explanations
-- In the task list: Set occurence labels on tasks (daily, due)
 
 ## Calendar
 
@@ -52,4 +48,23 @@
 
 ## UX
 
+### Tips
+
 - Let your users know that they’re doing great by acknowledging their progress, and celebrating the success with the user.
+
+
+### App (Re evaluate later)
+
+Should a task only belong to one goal ever?
+
+### Pros
+
+- The application will be simpler (a goal has tasks and that's it)
+- Changing a task doesn't mess up other goals
+
+
+### Cons
+
+- Some goals are connected we lose the first step of this connection 
+- Changing a task potentially needs to be changed for every goal it occurs in
+- For some task types it doesnt make sense to have multiple of them (eg protein task)
