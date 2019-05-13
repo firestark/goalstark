@@ -60,6 +60,10 @@
             <input type="hidden" name="goals[]" value="{{ $goal }}">
         @endforeach
 
+        @if ( $task instanceof task\count )
+            @include ( 'partials.input.count' [ 'value' => $task->times ] )
+        @endif
+
         @if ( $task instanceof task\due )
             <input type="hidden" name="type" value="due">
             @include ( 'partials.input.due', [ 'value' => $task->due ] )

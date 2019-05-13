@@ -22,8 +22,12 @@
     <form action="" method="POST" style="padding: 16px 8px 80px;">
         <input type="hidden" name="goal" value="{{ $goalid }}">
         <input type="hidden" name="type" value="{{ $type }}">
+        
+        @if ( $type === 'count' )
+            @include ( 'partials.input.count' )
+        @endif
 
-        @if ( $type === 'due' )
+        @if ( $type === 'due' or $type === 'count' )
             @include ( 'partials.input.due', [ 'value' => time ( ) ] )
         @endif
 

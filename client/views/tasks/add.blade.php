@@ -26,6 +26,10 @@
 
         <input type="hidden" name="type" value="{{ $type }}">
 
+        @if ( $type === 'count' )
+            @include ( 'partials.input.count' )
+        @endif
+
         @if ( $type === 'due' )
             @include ( 'partials.input.due', [ 'value' => time ( ) ] )
         @endif

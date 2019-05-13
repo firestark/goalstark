@@ -15,6 +15,8 @@ app::bind ( task::class, function ( $app, array $payload = [ ] )
             return app::make ( task\due::class );
         case 'protein' :
             return app::make ( task\protein::class );
+        case 'count':
+            return app::make ( task\count::class );
         default:
             throw new \exception ( 'unknown type' );
     }
