@@ -64,15 +64,12 @@
 @endsection
 
 @section ( 'js' )
-        @parent
+    @parent
 
-        <script>
-            const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
-            const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
-
-            const selector = '.mdc-button';
-            const ripples = [].map.call ( document.querySelectorAll ( selector ), function ( el ) {
-                mdc.ripple.MDCRipple.attachTo ( el );
-            } );
-        </script>
-    @endsection
+    <script>
+        const selector = '.mdc-button';
+        const ripples = [].map.call ( document.querySelectorAll ( selector ), function ( el ) {
+            mdc.ripple.MDCRipple.attachTo ( el );
+        } );
+    </script>
+@endsection
