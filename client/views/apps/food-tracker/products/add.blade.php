@@ -14,14 +14,14 @@
         @include ( 'partials.input.name' )
         @include ( 'partials.input.product.per' )
 
-        <section style="margin-bottom: 32px;">
+        <section style="margin-bottom: 32px;" class="mdc-text-field--group">
             <h3 class="mdc-typography--caption">Fats</h3>
             
             @include ( 'partials.input.product.total-fats' )
             @include ( 'partials.input.product.saturated-fats' )
         </section>            
 
-        <section style="margin-bottom: 32px;">
+        <section style="margin-bottom: 32px;" class="mdc-text-field--group">
             <h3 class="mdc-typography--caption">Carbohydrates</h3>
 
             @include ( 'partials.input.product.total-carbohydrates' )

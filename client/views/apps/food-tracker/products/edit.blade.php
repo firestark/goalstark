@@ -14,14 +14,14 @@
         @include ( 'partials.input.name', [ 'value' => $product->name ] )
         @include ( 'partials.input.product.per', [ 'value' => $product->nutrition->per ] )
 
-        <section style="margin-bottom: 32px;">
+        <section style="margin-bottom: 32px;" class="mdc-text-field--group">
             <h3 class="mdc-typography--caption">Fats</h3>
 
             @include ( 'partials.input.product.total-fats', [ 'value' => $product->nutrition->fats->total ] )
             @include ( 'partials.input.product.saturated-fats', [ 'value' => $product->nutrition->fats->saturated ] )
         </section>            
 
-        <section style="margin-bottom: 32px;">
+        <section style="margin-bottom: 32px;" class="mdc-text-field--group">
             <h3 class="mdc-typography--caption">Carbohydrates</h3>
         
             @include ( 'partials.input.product.total-carbohydrates', [ 'value' => $product->nutrition->carbohydrates->total] )

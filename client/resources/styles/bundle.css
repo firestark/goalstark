@@ -4164,6 +4164,10 @@ button.reset {
   background-color: var(--mdc-theme-surface);
   color: var(--mdc-theme-on-surface); }
 
+form > .mdc-text-field:not(:last-of-type),
+form > .mdc-text-field--group .mdc-text-field:not(:last-of-type) {
+  margin-bottom: 24px; }
+
 .form-section {
   padding: 16px; }
 
