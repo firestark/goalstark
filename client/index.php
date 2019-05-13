@@ -20,7 +20,7 @@ $app->instance ( 'view',
     ) 
 );
 
-$app [ 'session' ]->flash ( 'uri', $app [ 'request' ]->uri );
+$app [ 'session' ]->flash ( 'uri', $app [ 'request' ]->uri . '?' . http_build_query ( $app [ 'request' ]->parameters ) );
 
 facade::setFacadeApplication ( $app );
 
