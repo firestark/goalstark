@@ -11,7 +11,7 @@
 @section ( 'content' )
     
     @if ( count ( $tasks ) )
-        <form action="/goals/{{ $goalid }}/tasks" method="POST" style="padding: 16px 0 80px;">
+        <form action="/goals/{{ $goalid }}/tasks/select" method="POST" style="padding: 16px 0 80px;">
             <ul class="mdc-list" role="group">
                 @foreach ( $tasks as $task )
                     <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goalid, $task->goals ) ? 'true' : 'false' }}">

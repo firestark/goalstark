@@ -2,7 +2,7 @@
 
 use function compact as with;
 
-route::post ( '/{goalid}/tasks', function ( )
+route::post ( '/{goalid}/tasks/select', function ( )
 {
     $tasks = [ ];
 
