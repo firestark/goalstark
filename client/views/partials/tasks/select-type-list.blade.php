@@ -90,6 +90,29 @@
             </span>
         </label>
     </li>
+
+    <li class="mdc-list-item" role="radio" aria-checked="{{ input::get ( 'type' ) === 'product count' ? 'true' : 'false' }}" tabindex="5">
+        <span class="mdc-list-item__graphic">
+            <div class="mdc-radio">
+                <input class="mdc-radio__native-control"
+                    type="radio"
+                    id="type-5"
+                    name="type"
+                    value="product count"
+                    checked="{{ input::get ( 'type' ) === 'product count' ? 'true' : 'false' }}">
+                <div class="mdc-radio__background">
+                    <div class="mdc-radio__outer-circle"></div>
+                    <div class="mdc-radio__inner-circle"></div>
+                </div>
+            </div>
+        </span>
+        <label class="mdc-list-item__text" for="type-5" style="width: 100%;">
+            <span class="mdc-list-item__text" style="width: 100%;">
+                <span class="mdc-list-item__primary-text">Product count task</span>
+                <span class="mdc-list-item__secondary-text">A product count task executed once</span>
+            </span>
+        </label>
+    </li>
 </ul>
 
 @section ( 'js' )

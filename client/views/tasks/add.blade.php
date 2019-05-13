@@ -26,7 +26,24 @@
 
         <input type="hidden" name="type" value="{{ $type }}">
 
-        @if ( $type === 'count' )
+        @if ( $type === 'product count' )
+            <div class="mdc-select">
+                <i class="mdc-select__dropdown-icon"></i>
+                <select class="mdc-select__native-control">
+                    <option value="" disabled selected></option>
+
+                    @foreach ( $products as $product )
+                        <option value="{{ $product->id }}">
+                            {{ $product->name }}
+                        </option>
+                    @endforeach
+                </select>
+                <label class="mdc-floating-label">Pick a product</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+        @endif
+
+        @if ( $type === 'count' or $type === 'product count' )
             @include ( 'partials.input.count' )
         @endif
 
@@ -34,7 +51,7 @@
             @include ( 'partials.input.due', [ 'value' => time ( ) ] )
         @endif
 
-        @if ( $type !== 'protein' )
+        @if ( $type !== 'protein' and $type !== 'product count' )
             @include ( 'partials.input.description', [ 'value' => '' ] )
         @endif
 
@@ -90,5 +107,15 @@
                 A protein task sets a goal to consume an amount of protein every day
             </p>
         </div>
+    @endif
+@endsection
+
+@section ( 'js' )
+    @parent
+    
+    @if ( $type === 'product count' )
+        <script>
+            const select = mdc.select.MDCSelect.attachTo ( document.querySelector ( '.mdc-select' ) );
+        </script>
     @endif
 @endsection

@@ -47,8 +47,8 @@
         }
     }
 
-    .mdc-text-field {
-        input, textarea {
+    .mdc-text-field, .mdc-select {
+        input, textarea, select {
             background-color: #e9eff5;
         }    
     }
