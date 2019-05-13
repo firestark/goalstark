@@ -30,17 +30,27 @@
                 </svg>
             </span>
         @else
-            <span class="mdc-list-item__graphic {{ ( $task->isCompleted ( ) ) ? 'completed' : '' }}" aria-hidden="true">
+            <a href="/tasks/{{ $task->id }}/complete" class="mdc-list-item__graphic {{ ( $task->isCompleted ( ) ) ? 'completed' : '' }}" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z"/>
-                    <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
+                    <path d="M0 0h24v24H0zm0 0h24v24H0z" fill="none"/>
+                    <path d="M10 7H8v4H4v2h4v4h2v-4h4v-2h-4V7zm10 11h-2V7.38L15 8.4V6.7L19.7 5h.3v13z"/>
                 </svg>
-            </span>
+            </a>
         @endif
 
     <a href="/tasks/{{ $task->id }}">
         <span class="mdc-list-item__text">
-            <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
+            <span class="mdc-list-item__primary-text">{{ $task->description }}
+                @if ( isset ( $task->times ) )
+                    <span style="
+                        font-weight: normal; 
+                        color: var(--mdc-theme-text-icon-on-background); 
+                        position: relative; 
+                        top: -4px; 
+                        left: 4px;
+                        letter-spacing: -1px;">{{ count ( $task->completions ) }} / {{ $task->times }}</span>
+                @endif
+            </span>
             @if ( isset ( $task->due ) )
                 <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $task->due ) }}</span>
             @elseif ( isset ( $task->goal ) )

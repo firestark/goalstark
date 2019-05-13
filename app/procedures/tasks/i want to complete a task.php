@@ -10,5 +10,5 @@ function ( task $task, task\manager $taskManager )
         return [ 4000, [ ] ];
          
     $taskManager->complete ( $task );
-    return [ 3004, [ ] ];
+    return [ 3004, with ( 'task' ) ];
 } ) ) ) );
