@@ -29,7 +29,7 @@
         @if ( $type === 'product count' )
             <div class="mdc-select">
                 <i class="mdc-select__dropdown-icon"></i>
-                <select class="mdc-select__native-control">
+                <select class="mdc-select__native-control" name="productid">
                     <option value="" disabled selected></option>
 
                     @foreach ( $products as $product )

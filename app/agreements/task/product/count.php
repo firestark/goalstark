@@ -2,6 +2,8 @@
 
 namespace task\product;
 
+use product;
+
 class count extends \task
 {
     /**
@@ -10,13 +12,15 @@ class count extends \task
     public $completions = [ ];
     public $times = 0;
     public $due = 0;
-    public $productid = null;
+    public $product = null;
 
-    function __construct ( array $goals, $id, string $description, $productid, int $times, int $due )
+    function __construct ( array $goals, $id, product $product, int $times, int $due )
     {
-        $this->productid = $productid;
+        $this->product = $product;
         $this->times = $times;
         $this->due = $this->endOfDay ( $due );
+
+        $description = "Eat {$product->name}";
 
         parent::__construct ( $goals, $id, $description );
     }
