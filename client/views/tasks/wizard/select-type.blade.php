@@ -27,7 +27,7 @@
         @endforeach
 
         <ul class="mdc-list mdc-list--two-line" role="radiogroup">
-            <li class="mdc-list-item" role="radio" aria-checked="true" tabindex="1">
+            <li class="mdc-list-item" role="radio" aria-checked="{{ ! input::has ( 'type' ) ? 'true' : 'false' }}" tabindex="1">
                 <span class="mdc-list-item__graphic">
                     <div class="mdc-radio">
                         <input class="mdc-radio__native-control"
@@ -35,7 +35,7 @@
                             id="type-1"
                             name="type"
                             value="due"
-                            checked>
+                            checked="{{ ! input::has ( 'type' ) ? 'true' : 'false' }}">
                         <div class="mdc-radio__background">
                             <div class="mdc-radio__outer-circle"></div>
                             <div class="mdc-radio__inner-circle"></div>
@@ -50,7 +50,7 @@
                 </label>
             </li>
 
-            <li class="mdc-list-item" role="radio" aria-checked="true" tabindex="2">
+            <li class="mdc-list-item" role="radio" aria-checked="{{ input::get ( 'type' ) === 'daily' ? 'true' : 'false' }}" tabindex="2">
                 <span class="mdc-list-item__graphic">
                     <div class="mdc-radio">
                         <input class="mdc-radio__native-control"
@@ -58,7 +58,7 @@
                             id="type-2"
                             name="type"
                             value="daily"
-                            checked>
+                            checked="{{ input::get ( 'type' ) === 'daily' ? 'true' : 'false' }}">
                         <div class="mdc-radio__background">
                             <div class="mdc-radio__outer-circle"></div>
                             <div class="mdc-radio__inner-circle"></div>
@@ -73,14 +73,15 @@
                 </label>
             </li>
 
-            <li class="mdc-list-item" role="radio" aria-checked="false" tabindex="3">
+            <li class="mdc-list-item" role="radio" aria-checked="{{ input::get ( 'type' ) === 'protein' ? 'true' : 'false' }}" tabindex="3">
                 <span class="mdc-list-item__graphic">
                     <div class="mdc-radio">
                         <input class="mdc-radio__native-control"
                             type="radio"
                             id="type-3"
                             name="type"
-                            value="protein">
+                            value="protein"
+                            checked="{{ input::get ( 'type' ) === 'protein' ? 'true' : 'false' }}">
                         <div class="mdc-radio__background">
                             <div class="mdc-radio__outer-circle"></div>
                             <div class="mdc-radio__inner-circle"></div>
