@@ -2,6 +2,7 @@
 
 ## Goals
 
+- Improve select tasks view
 - Adding tasks: Let the system automatically detect when a task that already exists is created
 - Goal task edit ( make task add wizard for singular goal )
 - should we make goal add a wizard?
