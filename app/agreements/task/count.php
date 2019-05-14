@@ -44,6 +44,6 @@ class count extends \task
 
     function dueToday ( ) : bool
     {
-        return ( $this->due === endOfDay ( time ( ) ) );
+        return ( ! $this->isCompleted ( ) and $this->due === endOfDay ( time ( ) ) );
     }
 }

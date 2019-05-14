@@ -31,6 +31,14 @@
                         @include ( 'tasks.task', [ 'task' => $task ] )
                     @endforeach
                 @endif
+
+                @if ( count ( $completed ) )
+                    <h6 class="mdc-list-group__subheader">Completed</h6>
+
+                    @foreach ( $completed as $task )
+                        @include ( 'tasks.task', [ 'task' => $task ] )
+                    @endforeach
+                @endif
             </ul>
         </section>
     @else

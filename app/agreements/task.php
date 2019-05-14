@@ -29,6 +29,11 @@ abstract class task
         return false;
     }
 
+    function dueLater ( ) : bool
+    {
+        return ( ! $this->isCompleted ( ) and ! $this->isOverdue ( ) and ! $this->dueToday ( ) );
+    }
+
     abstract function dueToday ( ) : bool;
 
     abstract function complete ( );

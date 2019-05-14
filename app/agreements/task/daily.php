@@ -21,16 +21,11 @@ class daily extends \task
 
     function isCompleted ( ) : bool
     {
-        return end ( $this->completions ) >= $this->beginOfDay ( time ( ) );
+        return end ( $this->completions ) >= beginOfDay ( time ( ) );
     }
 
     function dueToday ( ) : bool
     {
-        return true;
-    }
-
-    private function beginOfDay ( int $timestamp ) : int
-    {
-        return strtotime ( 'midnight', $timestamp );
+        return ! $this->isCompleted ( );
     }
 }
