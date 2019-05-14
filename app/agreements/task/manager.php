@@ -16,6 +16,17 @@ abstract class manager
         $this->dietitian = $dietitian;
     }
 
+    function complete ( task $task )
+    {
+        $this->check ( $task );
+        $this->findById ( $task->id )->complete ( );
+
+        if ( $task instanceof task\product\count )
+            $this->dietitian->add ( new consumation ( uniqid ( ), $task->product ) );
+
+        $this->update ( $task );
+    }
+
     abstract function add ( task $task );
 
     abstract function tasksFor ( goal $goal ) : array;
@@ -31,19 +42,6 @@ abstract class manager
     abstract function findById ( $id ) : task;
 
     abstract function update ( task $task );
-
-    function complete ( task $task )
-    {
-        if ( ! $this->has ( $task ) )
-            throw new \exception ( "A task with id: {$task->id} does not exist." );
-
-        $this->findById ( $task->id )->complete ( );
-
-        if ( $task instanceof task\product\count )
-            $this->dietitian->add ( new consumation ( uniqid ( ), $task->product ) );
-
-        $this->update ( $task );
-    }
 
     abstract function uncomplete ( task $task );
 
@@ -71,5 +69,11 @@ abstract class manager
                 $tasks [ ] = $task;
         
         return $tasks ?? [ ];
+    }
+
+    protected function check ( task $task )
+    {
+        if ( ! $this->has ( $task ) )
+            throw new \exception ( "A task with id: {$task->id} does not exist." );
     }
 }

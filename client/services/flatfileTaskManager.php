@@ -29,7 +29,9 @@ class flatfileTaskManager extends \task\manager
 
     function findById ( $id ) : task
     {
-        $this->check ( $id );
+        if ( ! isset ( $this->tasks [ $id ] ) )
+            throw new \exception ( "A task with id: {$id} does not exist." );
+        
         return $this->tasks [ $id ];
     }
 
@@ -58,21 +60,21 @@ class flatfileTaskManager extends \task\manager
 
     function update ( task $task )
     {
-        $this->check ( $task->id );
+        $this->check ( $task );
         $this->tasks [ $task->id ] = $task;
         $this->write ( );
     }
 
     function uncomplete ( task $task )
     {
-        $this->check ( $task->id );
+        $this->check ( $task );
         $this->tasks [ $task->id ]->uncomplete ( );
         $this->write ( );
     }
 
     function remove ( task $task )
     {
-        $this->check ( $task->id );
+        $this->check ( $task );
         unset ( $this->tasks [ $task->id ] );
         $this->write ( );
     }
@@ -87,14 +89,14 @@ class flatfileTaskManager extends \task\manager
 
     function removeGoalFromTask ( task $task, goal $goal )
     {
-        $this->check ( $task->id );
+        $this->check ( $task );
         $this->tasks [ $task->id ]->remove ( $goal->id );
         $this->write ( );
     }
 
     function merge ( task $task, array $goals )
     {
-        $this->check ( $task->id );
+        $this->check ( $task );
         $this->tasks [ $task->id ]->merge ( $goals );
         $this->write ( );
     }
@@ -102,11 +104,5 @@ class flatfileTaskManager extends \task\manager
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->tasks ) );
-    }
-    
-    private function check ( $id )
-    {
-        if ( ! isset ( $this->tasks [ $id ] ) )
-            throw new \exception ( "A task with id: {$id} does not exist." );
     }
 }
