@@ -4817,7 +4817,7 @@ svg.mdc-button__icon {
   font-size: 6rem;
   line-height: 6rem;
   font-weight: 300;
-  letter-spacing: -0.01563em;
+  letter-spacing: -0.01562em;
   text-decoration: inherit;
   text-transform: inherit; }
 
@@ -5336,14 +5336,11 @@ button.reset {
   background-color: var(--mdc-theme-surface);
   color: var(--mdc-theme-on-surface); }
 
-form .mdc-select:not(:last-of-type),
-form .mdc-text-field:not(:last-of-type),
-form .mdc-text-field--group .mdc-select:not(:last-of-type),
-form .mdc-text-field--group .mdc-text-field:not(:last-of-type) {
+form .mdc-select,
+form .mdc-text-field,
+form .mdc-text-field--group .mdc-select,
+form .mdc-text-field--group .mdc-text-field {
   margin-bottom: 24px; }
-
-.form-section {
-  padding: 16px; }
 
 .mdc-text-field--textarea {
   width: 100%;

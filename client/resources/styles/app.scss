@@ -626,15 +626,11 @@ button.reset {
 
 // Forms
 
-form .mdc-select:not(:last-of-type),
-form .mdc-text-field:not(:last-of-type),
-form .mdc-text-field--group .mdc-select:not(:last-of-type),
-form .mdc-text-field--group .mdc-text-field:not(:last-of-type) {
+form .mdc-select,
+form .mdc-text-field,
+form .mdc-text-field--group .mdc-select,
+form .mdc-text-field--group .mdc-text-field {
     margin-bottom: 24px;
-}
-
-.form-section {
-    padding: 16px;
 }
 
 .mdc-text-field--textarea {
