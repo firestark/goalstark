@@ -8,6 +8,14 @@
     My task
 @endsection
 
+@section ( 'style' )
+    <style>
+        .mdc-fab {
+            bottom: 136px;
+        }
+    </style>
+@endsection
+
 @section ( 'top-app-bar' )
     <div class="mdc-tab-bar mdc-tab-bar--top" role="tablist">
         <div class="mdc-tab-scroller">
@@ -55,37 +63,62 @@
             </p>
         </div>
     @endif
-    <form method="POST" action="/tasks/{{ $task->id }}" style="padding: 16px 8px 80px;">
-        @foreach ( $task->goals as $goal )
-            <input type="hidden" name="goals[]" value="{{ $goal }}">
-        @endforeach
+    <form method="POST" action="/tasks/{{ $task->id }}" style="display: grid; grid-template-rows: 1fr auto; height: 100%;">
+        <section style="overflow: overlay; padding: 16px 8px 80px;">
+            @foreach ( $task->goals as $goal )
+                <input type="hidden" name="goals[]" value="{{ $goal }}">
+            @endforeach
 
-        @if ( $task instanceof task\count )
-            @include ( 'partials.input.count', [ 'value' => $task->times ] )
-        @endif
+            @if ( $task instanceof task\count )
+                @include ( 'partials.input.count', [ 'value' => $task->times ] )
+            @endif
 
-        @if ( $task instanceof task\due )
-            <input type="hidden" name="type" value="due">
-            @include ( 'partials.input.due', [ 'value' => $task->due ] )
-        @endif
+            @if ( $task instanceof task\due )
+                <input type="hidden" name="type" value="due">
+                @include ( 'partials.input.due', [ 'value' => $task->due ] )
+            @endif
 
-        @if ( $task instanceof task\daily and ! $task instanceof task\protein )
-            <input type="hidden" name="type" value="daily">
-        @endif
+            @if ( $task instanceof task\daily and ! $task instanceof task\protein )
+                <input type="hidden" name="type" value="daily">
+            @endif
 
-        @if ( ! $task instanceof task\protein )
-            @include ( 'partials.input.description', [ 'value' => $task->description ] )
-        @endif
+            @if ( ! $task instanceof task\protein )
+                @include ( 'partials.input.description', [ 'value' => $task->description ] )
+            @endif
 
-        @if ( $task instanceof task\protein )
-            <input type="hidden" name="type" value="protein">
-            @include ( 'partials.input.protein', [ 'value' => $task->goal ] )
-        @endif
+            @if ( $task instanceof task\protein )
+                <input type="hidden" name="type" value="protein">
+                @include ( 'partials.input.protein', [ 'value' => $task->goal ] )
+            @endif
 
-        @include ( 'partials.input.fab', [ 'action' => 'save' ] )
+            @include ( 'partials.input.fab', [ 'action' => 'save' ] )
+        </section>
+        <section
+            style="
+                height: 56px;
+                width: 100%;
+                box-sizing: border-box;
+                display: grid; 
+                grid-template-columns: 1fr 1fr; 
+                padding: 0; 
+                align-items: center;
+                background-color: var(--mdc-theme-background);"
+                class="mdc-elevation--z3">
+            <div>
+                
+            </div>
+            <div style="display: flex; justify-content: flex-end; padding: 0 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin: 0 4px;">
+                    <path d="M0 0h24v24H0zm0 0h24v24H0z" fill="none"/>
+                    <path d="M4 11v2h8v-2H4zm15 7h-2V7.38L14 8.4V6.7L18.7 5h.3v13z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin: 0 4px;">
+                    <path d="M0 0h24v24H0zm0 0h24v24H0z" fill="none"/>
+                    <path d="M10 7H8v4H4v2h4v4h2v-4h4v-2h-4V7zm10 11h-2V7.38L15 8.4V6.7L19.7 5h.3v13z"/>
+                </svg>
+            </div>
+        </section>
     </form>
-
-    
 @endsection
 
 @section ( 'js' )
