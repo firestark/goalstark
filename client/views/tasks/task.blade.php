@@ -29,13 +29,6 @@
                     <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
                 </svg>
             </span>
-        @elseif ( $task instanceof task\product\count )
-            <a href="/tasks/{{ $task->id }}/+1" class="mdc-list-item__graphic {{ ( $task->isCompleted ( ) ) ? 'completed' : '' }}" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M0 0h24v24H0zm0 0h24v24H0z" fill="none"/>
-                    <path d="M10 7H8v4H4v2h4v4h2v-4h4v-2h-4V7zm10 11h-2V7.38L15 8.4V6.7L19.7 5h.3v13z"/>
-                </svg>
-            </a>
         @else
             <a href="/tasks/{{ $task->id }}/complete" class="mdc-list-item__graphic {{ ( $task->isCompleted ( ) ) ? 'completed' : '' }}" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

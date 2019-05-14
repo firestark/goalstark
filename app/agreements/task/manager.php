@@ -2,11 +2,20 @@
 
 namespace task;
 
+use consumation;
+use dietitian;
 use goal;
 use task;
 
 abstract class manager
 {
+    protected $dietitian = null;
+
+    function __construct ( dietitian $dietitian )
+    {
+        $this->dietitian = $dietitian;
+    }
+
     abstract function add ( task $task );
 
     abstract function tasksFor ( goal $goal ) : array;
@@ -23,7 +32,18 @@ abstract class manager
 
     abstract function update ( task $task );
 
-    abstract function complete ( task $task );
+    function complete ( task $task )
+    {
+        if ( ! $this->has ( $task ) )
+            throw new \exception ( "A task with id: {$task->id} does not exist." );
+
+        $this->findById ( $task->id )->complete ( );
+
+        if ( $task instanceof task\product\count )
+            $this->dietitian->add ( new consumation ( uniqid ( ), $task->product ) );
+
+        $this->update ( $task );
+    }
 
     abstract function uncomplete ( task $task );
 

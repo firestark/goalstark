@@ -4,8 +4,9 @@ class flatfileTaskManager extends \task\manager
 {
     private $tasks, $file;
 
-    function __construct ( string $file, array $tasks )
+    function __construct ( dietitian $dietitian, string $file, array $tasks )
     {
+        parent::__construct ( $dietitian );
         $this->file = $file;
         $this->tasks = $tasks;
     }
@@ -59,13 +60,6 @@ class flatfileTaskManager extends \task\manager
     {
         $this->check ( $task->id );
         $this->tasks [ $task->id ] = $task;
-        $this->write ( );
-    }
-
-    function complete ( task $task )
-    {
-        $this->check ( $task->id );
-        $this->tasks [ $task->id ]->complete ( );
         $this->write ( );
     }
 
