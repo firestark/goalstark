@@ -23,6 +23,9 @@
         },
         "classmap": [
 
+        ],
+        "files": [
+        	"app/time.php"
         ]
     },
     "autoload-dev": {

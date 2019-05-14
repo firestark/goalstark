@@ -18,7 +18,7 @@ class count extends \task
     {
         $this->product = $product;
         $this->times = $times;
-        $this->due = $this->endOfDay ( $due );
+        $this->due = endOfDay ( $due );
 
         $description = "Eat {$product->name}";
 
@@ -44,13 +44,13 @@ class count extends \task
     {
         return ( 
             ! $this->isCompleted ( ) and 
-            $this->due < $this->endOfDay ( time ( ) )
+            $this->due < endOfDay ( time ( ) )
         );
     }
 
     function dueToday ( ) : bool
     {
-        return ( $this->due === $this->endOfDay ( time ( ) ) );
+        return ( $this->due === endOfDay ( time ( ) ) );
     }
 
     private function endOfDay ( int $timestamp ) : int

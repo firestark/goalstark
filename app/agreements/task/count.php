@@ -14,7 +14,7 @@ class count extends \task
     function __construct ( array $goals, $id, string $description, int $times, int $due )
     {
         $this->times = $times;
-        $this->due = $this->endOfDay ( $due );
+        $this->due = endOfDay ( $due );
 
         parent::__construct ( $goals, $id, $description );
     }
@@ -38,18 +38,12 @@ class count extends \task
     {
         return ( 
             ! $this->isCompleted ( ) and 
-            $this->due < $this->endOfDay ( time ( ) )
+            $this->due < endOfDay ( time ( ) )
         );
     }
 
     function dueToday ( ) : bool
     {
-        return ( $this->due === $this->endOfDay ( time ( ) ) );
-    }
-
-    private function endOfDay ( int $timestamp ) : int
-    {
-        $beginOfDay = strtotime ( 'midnight', $timestamp );
-        return strtotime ( 'tomorrow', $beginOfDay ) - 1;
+        return ( $this->due === endOfDay ( time ( ) ) );
     }
 }

@@ -9,7 +9,7 @@ class due extends \task
 
     function __construct ( array $goals, $id, string $description, int $due, bool $completed = false )
     {
-        $this->due = $this->endOfDay ( $due );
+        $this->due = endOfDay ( $due );
         $this->completed = $completed;
         parent::__construct ( $goals, $id, $description );
     }
@@ -33,13 +33,13 @@ class due extends \task
     {
         return ( 
             ! $this->isCompleted ( ) and 
-            $this->due < $this->endOfDay ( time ( ) )
+            $this->due < endOfDay ( time ( ) )
         );
     }
 
     function dueToday ( ) : bool
     {
-        return ( $this->due === $this->endOfDay ( time ( ) ) );
+        return ( $this->due === endOfDay ( time ( ) ) );
     }
 
     private function endOfDay ( int $timestamp ) : int
