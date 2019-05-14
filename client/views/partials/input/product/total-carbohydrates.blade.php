@@ -1,4 +1,4 @@
-<div class="mdc-text-field" id="total-carbohydrates-field">
+<div class="mdc-text-field form-field" id="total-carbohydrates-field">
     <input 
         type="number" 
         id="total-carbohydrates" name="total-carbohydrates"

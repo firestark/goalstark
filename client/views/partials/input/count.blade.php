@@ -1,4 +1,4 @@
-<div class="mdc-text-field mdc-text-field--with-trailing-icon" id="count-field">
+<div class="mdc-text-field mdc-text-field--with-trailing-icon form-field" id="count-field">
     <input 
         type="number" 
         id="count" name="count"

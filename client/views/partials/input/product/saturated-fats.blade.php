@@ -1,4 +1,4 @@
-<div class="mdc-text-field" id="saturated-fats-field">
+<div class="mdc-text-field form-field" id="saturated-fats-field">
     <input 
         type="number" 
         id="saturated-fats" name="saturated-fats"

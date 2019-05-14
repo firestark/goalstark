@@ -1,4 +1,4 @@
-<div class="mdc-text-field" id="fibers-field">
+<div class="mdc-text-field form-field" id="fibers-field">
     <input 
         type="number" 
         id="fibers" name="fibers"

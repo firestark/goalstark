@@ -1,4 +1,4 @@
-<div class="mdc-text-field" id="name-field">
+<div class="mdc-text-field form-field" id="name-field">
     <input 
         type="text" 
         id="name" name="name"

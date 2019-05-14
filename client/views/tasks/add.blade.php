@@ -35,7 +35,7 @@
             <input type="hidden" name="type" value="{{ $type }}">
 
             @if ( $type === 'product count' )
-                <div class="mdc-select">
+                <div class="mdc-select form-field">
                     <i class="mdc-select__dropdown-icon"></i>
                     <select class="mdc-select__native-control" name="productid">
                         <option value="" disabled selected></option>

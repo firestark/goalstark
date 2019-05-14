@@ -5336,10 +5336,7 @@ button.reset {
   background-color: var(--mdc-theme-surface);
   color: var(--mdc-theme-on-surface); }
 
-form .mdc-select,
-form .mdc-text-field,
-form .mdc-text-field--group .mdc-select,
-form .mdc-text-field--group .mdc-text-field {
+.form-field:not(:last-of-type) {
   margin-bottom: 24px; }
 
 .mdc-text-field--textarea {

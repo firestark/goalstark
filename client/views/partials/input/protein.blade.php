@@ -1,4 +1,4 @@
-<div class="mdc-text-field mdc-text-field--with-trailing-icon" id="protein-field">
+<div class="mdc-text-field mdc-text-field--with-trailing-icon form-field" id="protein-field">
     <input 
         type="number" 
         id="protein" name="protein"
