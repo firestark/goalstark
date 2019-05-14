@@ -41,10 +41,4 @@ class due extends \task
     {
         return ( $this->due === endOfDay ( time ( ) ) );
     }
-
-    private function endOfDay ( int $timestamp ) : int
-    {
-        $beginOfDay = strtotime ( 'midnight', $timestamp );
-        return strtotime ( 'tomorrow', $beginOfDay ) - 1;
-    }
 }
