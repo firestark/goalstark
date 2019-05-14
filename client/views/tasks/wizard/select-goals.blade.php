@@ -26,43 +26,41 @@
             height: 100%;
             overflow: hidden;">
         @if ( count ( $goals ) )
-            <section style="overflow: scroll">
-                <ul class="mdc-list mdc-list--two-line" role="group">
-                    @foreach ( $goals as $goal )
-                        <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'true' : 'false' }}">
-                            <span class="mdc-list-item__graphic">
-                                <div class="mdc-checkbox">
-                                    <input 
-                                        type="checkbox"
-                                        class="mdc-checkbox__native-control"
-                                        id="{{ $goal->id }}"
-                                        name="goals[]"
-                                        value="{{ $goal->id }}"
-                                        {{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'checked' : '' }}>
-                            
-                                    <div class="mdc-checkbox__background">
-                                        <svg class="mdc-checkbox__checkmark"
-                                            viewBox="0 0 24 24">
-                                            <path class="mdc-checkbox__checkmark-path"
-                                                fill="none"
-                                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                                        </svg>
-                                        <div class="mdc-checkbox__mixedmark"></div>
-                                    </div>
+            <ul class="mdc-list mdc-list--two-line" role="group" style="overflow: auto;">
+                @foreach ( $goals as $goal )
+                    <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'true' : 'false' }}">
+                        <span class="mdc-list-item__graphic">
+                            <div class="mdc-checkbox">
+                                <input 
+                                    type="checkbox"
+                                    class="mdc-checkbox__native-control"
+                                    id="{{ $goal->id }}"
+                                    name="goals[]"
+                                    value="{{ $goal->id }}"
+                                    {{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'checked' : '' }}>
+                        
+                                <div class="mdc-checkbox__background">
+                                    <svg class="mdc-checkbox__checkmark"
+                                        viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path"
+                                            fill="none"
+                                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
                                 </div>
-                            </span>
+                            </div>
+                        </span>
 
-                            <label class="mdc-list-item__text" for="{{ $goal->id }}" style="width: 100%;">
-                                <span class="mdc-list-item__text" style="width: 100%;">
-                                    <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
-                                    <span class="mdc-list-item__secondary-text"><span>Due {{  date ( 'M d, Y ', $goal->due ) }}</span>                                                
-                                </span>
-                            </label>
-                        </li>
-                    
-                    @endforeach
-                </ul>
-            </section>
+                        <label class="mdc-list-item__text" for="{{ $goal->id }}" style="width: 100%;">
+                            <span class="mdc-list-item__text" style="width: 100%;">
+                                <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
+                                <span class="mdc-list-item__secondary-text"><span>Due {{  date ( 'M d, Y ', $goal->due ) }}</span>                                                
+                            </span>
+                        </label>
+                    </li>
+                
+                @endforeach
+            </ul>
         @else
             <div style="text-align: center; margin: 16px auto 56px; width: 230px;">
 
@@ -88,9 +86,6 @@
                 grid-template-columns: 1fr 1fr; 
                 padding: 0; 
                 align-items: center;
-                position: fixed; 
-                bottom: 64px;
-                left: 0;
                 background-color: var(--mdc-theme-background);"
                 class="mdc-elevation--z3">
             <div>

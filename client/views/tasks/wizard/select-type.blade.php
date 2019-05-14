@@ -20,14 +20,20 @@
 
 @section ( 'content' )
 
-    <form action="/tasks/add" method="GET">
+    <form action="/tasks/add" method="GET" style="
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100%;
+            overflow: hidden;">
     
-        @foreach ( $goals as $goal )
-            <input type="hidden" name="goals[]" value="{{ $goal }}">
-        @endforeach
+        <section style="overflow: auto;">
+            @foreach ( $goals as $goal )
+                <input type="hidden" name="goals[]" value="{{ $goal }}">
+            @endforeach
 
-        @include ( 'partials.tasks.select-type-list' )
-
+            @include ( 'partials.tasks.select-type-list' )
+        </section>
+        
         <section 
             style="
                 height: 56px;
@@ -37,9 +43,6 @@
                 grid-template-columns: 1fr 1fr; 
                 padding: 0; 
                 align-items: center;
-                position: fixed; 
-                bottom: 64px;
-                left: 0;
                 background-color: var(--mdc-theme-background);">
             <div>
                 <a href="/tasks/select-goal?{{ http_build_query ( input::all ( ) ) }}" class="mdc-button">

@@ -20,9 +20,15 @@
 
 @section ( 'content' )
 
-    <form action="/goals/{{ $goalid }}/tasks/add" method="GET">
+    <form action="/goals/{{ $goalid }}/tasks/add" method="GET" style="
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100%;
+            overflow: hidden;">
 
-        @include ( 'partials.tasks.select-type-list' )
+        <section style="overflow: auto;">
+            @include ( 'partials.tasks.select-type-list' )
+        </section>
 
         <section 
             style="
@@ -33,9 +39,6 @@
                 grid-template-columns: 1fr 1fr; 
                 padding: 0; 
                 align-items: center;
-                position: fixed; 
-                bottom: 64px;
-                left: 0;
                 background-color: var(--mdc-theme-background);">
             <div>
                

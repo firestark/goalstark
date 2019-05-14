@@ -19,45 +19,55 @@
 @endsection
 
 @section ( 'content' )
-    <form id="form" method="POST" action="/tasks/" style="padding: 16px 8px 0;">
-        @foreach ( $goals as $goal )
-            <input type="hidden" name="goals[]" value="{{ $goal }}">
-        @endforeach
+    <form id="form" method="POST" action="/tasks/" 
+        style="
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;">
+        <section style="overflow: auto; padding: 16px 8px;">
 
-        <input type="hidden" name="type" value="{{ $type }}">
+            @foreach ( $goals as $goal )
+                <input type="hidden" name="goals[]" value="{{ $goal }}">
+            @endforeach
 
-        @if ( $type === 'product count' )
-            <div class="mdc-select">
-                <i class="mdc-select__dropdown-icon"></i>
-                <select class="mdc-select__native-control" name="productid">
-                    <option value="" disabled selected></option>
+            <input type="hidden" name="type" value="{{ $type }}">
 
-                    @foreach ( $products as $product )
-                        <option value="{{ $product->id }}">
-                            {{ $product->name }}
-                        </option>
-                    @endforeach
-                </select>
-                <label class="mdc-floating-label">Pick a product</label>
-                <div class="mdc-line-ripple"></div>
-            </div>
-        @endif
+            @if ( $type === 'product count' )
+                <div class="mdc-select">
+                    <i class="mdc-select__dropdown-icon"></i>
+                    <select class="mdc-select__native-control" name="productid">
+                        <option value="" disabled selected></option>
 
-        @if ( $type === 'count' or $type === 'product count' )
-            @include ( 'partials.input.count' )
-        @endif
+                        @foreach ( $products as $product )
+                            <option value="{{ $product->id }}">
+                                {{ $product->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                    <label class="mdc-floating-label">Pick a product</label>
+                    <div class="mdc-line-ripple"></div>
+                </div>
+            @endif
 
-        @if ( $type === 'due' )
-            @include ( 'partials.input.due', [ 'value' => time ( ) ] )
-        @endif
+            @if ( $type === 'count' or $type === 'product count' )
+                @include ( 'partials.input.count' )
+            @endif
 
-        @if ( $type !== 'protein' and $type !== 'product count' )
-            @include ( 'partials.input.description', [ 'value' => '' ] )
-        @endif
+            @if ( $type === 'due' )
+                @include ( 'partials.input.due', [ 'value' => time ( ) ] )
+            @endif
 
-        @if ( $type === 'protein' )
-            @include ( 'partials.input.protein', [ 'value' => 0, 'autofocus' => true ] )
-        @endif
+            @if ( $type !== 'protein' and $type !== 'product count' )
+                @include ( 'partials.input.description', [ 'value' => '' ] )
+            @endif
+
+            @if ( $type === 'protein' )
+                @include ( 'partials.input.protein', [ 'value' => 0, 'autofocus' => true ] )
+            @endif
+
+        </section>
 
         <section 
             style="
@@ -68,9 +78,6 @@
                 grid-template-columns: 1fr 1fr; 
                 padding: 0; 
                 align-items: center;
-                position: fixed; 
-                bottom: 64px;
-                left: 0;
                 background-color: var(--mdc-theme-background);">
             <div>
                 <a href="/tasks/select-type?{{ http_build_query ( input::all ( ) ) }}" class="mdc-button">

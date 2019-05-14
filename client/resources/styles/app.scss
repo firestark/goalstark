@@ -626,10 +626,10 @@ button.reset {
 
 // Forms
 
-form > .mdc-select:not(:last-of-type),
-form > .mdc-text-field:not(:last-of-type),
-form > .mdc-text-field--group .mdc-select:not(:last-of-type),
-form > .mdc-text-field--group .mdc-text-field:not(:last-of-type) {
+form .mdc-select:not(:last-of-type),
+form .mdc-text-field:not(:last-of-type),
+form .mdc-text-field--group .mdc-select:not(:last-of-type),
+form .mdc-text-field--group .mdc-text-field:not(:last-of-type) {
     margin-bottom: 24px;
 }
 

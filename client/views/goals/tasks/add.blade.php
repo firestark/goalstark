@@ -19,25 +19,32 @@
 @endsection
 
 @section ( 'content' )
-    <form action="" method="POST" style="padding: 16px 8px 80px;">
-        <input type="hidden" name="goal" value="{{ $goalid }}">
-        <input type="hidden" name="type" value="{{ $type }}">
-        
-        @if ( $type === 'count' )
-            @include ( 'partials.input.count' )
-        @endif
+    <form action="" method="POST" style="
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;">
+        <section style="overflow: auto; padding: 16px 8px;">
+            <input type="hidden" name="goal" value="{{ $goalid }}">
+            <input type="hidden" name="type" value="{{ $type }}">
+            
+            @if ( $type === 'count' )
+                @include ( 'partials.input.count' )
+            @endif
 
-        @if ( $type === 'due' or $type === 'count' )
-            @include ( 'partials.input.due', [ 'value' => time ( ) ] )
-        @endif
+            @if ( $type === 'due' or $type === 'count' )
+                @include ( 'partials.input.due', [ 'value' => time ( ) ] )
+            @endif
 
-        @if ( $type !== 'protein' )
-            @include ( 'partials.input.description', [ 'value' => '' ] )
-        @endif
+            @if ( $type !== 'protein' )
+                @include ( 'partials.input.description', [ 'value' => '' ] )
+            @endif
 
-        @if ( $type === 'protein' )
-            @include ( 'partials.input.protein', [ 'value' => 0, 'autofocus' => true ] )
-        @endif
+            @if ( $type === 'protein' )
+                @include ( 'partials.input.protein', [ 'value' => 0, 'autofocus' => true ] )
+            @endif
+        </section>
 
         <section 
             style="
@@ -48,9 +55,6 @@
                 grid-template-columns: 1fr 1fr; 
                 padding: 0; 
                 align-items: center;
-                position: fixed; 
-                bottom: 64px;
-                left: 0;
                 background-color: var(--mdc-theme-background);">
             <div>
                 <a href="/goals/{$goalid}/tasks/select-type?{{ http_build_query ( input::all ( ) ) }}" class="mdc-button">
