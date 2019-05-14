@@ -1,5 +1,6 @@
 # Todo
 
+
 ## Apps
 
 - Create 2 more apps
@@ -7,7 +8,6 @@
 
 ### Food tracker
 
-- Eat x amount of product task (count adds consumptions)
 - Create consumption diet task (max cal)
 
 #### Products
@@ -27,6 +27,7 @@
 
 ## Tasks
 
+- Group select tasks list into sections
 - Finish product count task (goals view / edit view) 
 - Add task explanations
 
