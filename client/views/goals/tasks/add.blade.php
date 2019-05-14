@@ -28,8 +28,12 @@
         <section style="overflow: auto; padding: 16px 8px;">
             <input type="hidden" name="goal" value="{{ $goalid }}">
             <input type="hidden" name="type" value="{{ $type }}">
-            
-            @if ( $type === 'count' )
+
+            @if ( $type === 'product count' )
+                @include ( 'partials.input.product.select', [ 'products' => $products ] )
+            @endif
+
+            @if ( $type === 'count' or $type === 'product count' )
                 @include ( 'partials.input.count' )
             @endif
 
@@ -37,7 +41,7 @@
                 @include ( 'partials.input.due', [ 'value' => time ( ) ] )
             @endif
 
-            @if ( $type !== 'protein' )
+            @if ( $type !== 'protein' and $type !== 'product count' )
                 @include ( 'partials.input.description', [ 'value' => '' ] )
             @endif
 
