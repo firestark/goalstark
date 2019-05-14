@@ -26,7 +26,7 @@
             height: 100%;
             overflow: hidden;">
         @if ( count ( $goals ) )
-            <ul class="mdc-list mdc-list--two-line" role="group" style="overflow: auto;">
+            <ul class="mdc-list mdc-list--two-line" role="group" style="overflow: overlay;">
                 @foreach ( $goals as $goal )
                     <li class="mdc-list-item" role="checkbox" aria-checked="{{ in_array ( $goal->id, input::get ( 'goals', [ ] ) ) ? 'true' : 'false' }}">
                         <span class="mdc-list-item__graphic">

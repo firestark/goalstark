@@ -25,7 +25,7 @@
             height: 100%;
             overflow: hidden;
             box-sizing: border-box;">
-        <section style="overflow: auto; padding: 16px 8px;">
+        <section style="overflow: overlay; padding: 16px 8px;">
             <input type="hidden" name="goal" value="{{ $goalid }}">
             <input type="hidden" name="type" value="{{ $type }}">
 

@@ -26,7 +26,7 @@
             height: 100%;
             overflow: hidden;">
 
-        <section style="overflow: auto;">
+        <section style="overflow: overlay;">
             @include ( 'partials.tasks.select-type-list' )
         </section>
 

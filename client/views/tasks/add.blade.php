@@ -26,7 +26,7 @@
             height: 100%;
             overflow: hidden;
             box-sizing: border-box;">
-        <section style="overflow: auto; padding: 16px 8px;">
+        <section style="overflow: overlay; padding: 16px 8px;">
 
             @foreach ( $goals as $goal )
                 <input type="hidden" name="goals[]" value="{{ $goal }}">
