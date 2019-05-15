@@ -13,7 +13,4 @@
     </section>
 </form>
 
-<section style="padding: 0 8px;">
-    <h2 class="mdc-typography--headline6">Completion status</h2>
-    <p>{{ count ( $task->completions ) }} of {{ $task->times }}</p>
-</section>
+@include ( 'partials.input.counter', [ 'title' => 'Completions' ] )
