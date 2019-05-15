@@ -1,4 +1,4 @@
-<div class="mdc-text-field mdc-text-field--with-trailing-icon form-field" id="count-field">
+<div class="mdc-text-field form-field" id="count-field">
     <input 
         type="number" 
         id="count" name="count"
@@ -9,9 +9,6 @@
         {{ ( isset ( $autofocus ) and $autofocus ) ? 'autofocus' : '' }}
         onFocus="this.select();">
     <label class="mdc-floating-label {{ ( isset ( $value ) and $value ) ?  'mdc-floating-label--float-above' : '' }}" for="count">Count</label>
-    {{-- <span class="mdc-text-field__icon">
-        g
-    </span> --}}
     <div class="mdc-line-ripple"></div>
 </div>
 
