@@ -28,7 +28,6 @@
 ## Tasks
 
 - Create tasks show views
-- Group select tasks list into sections
 - Finish product count task (goals view / edit view) 
 - Add task explanations
 
