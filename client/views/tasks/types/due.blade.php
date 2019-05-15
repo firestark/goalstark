@@ -7,5 +7,7 @@
         <input type="hidden" name="type" value="due">
         @include ( 'partials.input.due', [ 'value' => $task->due ] )
         @include ( 'partials.input.description', [ 'value' => $task->description ] )
+
+        @include ( 'partials.input.fab', [ 'action' => 'save' ] )
     </section>
 </form>

@@ -4,6 +4,8 @@
             <input type="hidden" name="goals[]" value="{{ $goal }}">
         @endforeach
 
-        @include ( 'partials.input.count', [ 'value' => $task->times ] )      
+        @include ( 'partials.input.count', [ 'value' => $task->times ] )
+        
+        @include ( 'partials.input.fab', [ 'action' => 'save' ] )
     </section>
 </form>

@@ -6,5 +6,7 @@
 
         <input type="hidden" name="type" value="daily">
         @include ( 'partials.input.description', [ 'value' => $task->description ] )
+
+        @include ( 'partials.input.fab', [ 'action' => 'save' ] )
     </section>
 </form>

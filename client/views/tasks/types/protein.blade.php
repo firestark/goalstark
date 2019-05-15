@@ -20,5 +20,7 @@
 
         <input type="hidden" name="type" value="protein">
         @include ( 'partials.input.protein', [ 'value' => $task->goal ] )
+
+        @include ( 'partials.input.fab', [ 'action' => 'save' ] )
     </section>
 </form>
