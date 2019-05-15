@@ -13,10 +13,8 @@
                 </section>
 
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">                
-                    
                     @include ( 'partials.theme-switcher' )
                     @include ( 'partials.logout' )
-
                 </section>
             </div>
            @yield ( 'top-app-bar' )               
