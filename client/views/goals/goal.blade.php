@@ -24,7 +24,12 @@
     <a href="/goals/{{ $goal->id }}">
         <span class="mdc-list-item__text" style="width: 100%;">
             <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
-            <span class="mdc-list-item__secondary-text"><span style="font-weight: 500;">Due {{  date ( 'M d, Y ', $goal->due ) }}</span> — {{ count ( $goal->tasks ) }} tasks</span>                                        
+            <span class="mdc-list-item__secondary-text" style="font-weight: 500;">Due {{  date ( 'M d, Y ', $goal->due ) }}</span>
+            <span class="mdc-list-item__secondary-text" style="font-weight: 500;">{{ 
+                count ( array_filter ( $goal->tasks, function ( $task ) { return $task->isCompleted ( ); } ) ) }} 
+                of
+                {{ count ( $goal->tasks ) }} tasks completed
+            </span>
         </span>
     </a>
     

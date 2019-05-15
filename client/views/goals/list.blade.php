@@ -7,7 +7,7 @@
 @section ( 'content' )
     @if ( count ( $goals ) )
         <section class="content">
-            <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked" style="padding-top: 0;">
+            <ul class="mdc-list mdc-list--three-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked" style="padding-top: 0;">
                 @if ( count ( $due ) )
                     @foreach ( $due as $goal )
                         @include ( 'goals.goal', [ 'goal' => $goal ] )

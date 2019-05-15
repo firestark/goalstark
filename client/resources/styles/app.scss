@@ -503,7 +503,7 @@ main {
     bottom: 138px;
 }
 
-// lists
+// Lists
 
 .mdc-list-group__subheader {
     font-size: 0.875rem;
@@ -536,6 +536,14 @@ main {
     border-radius: 50%;
     background-color: var(--mdc-theme-text-primary-on-background);
     z-index: 0;
+}
+
+.mdc-list--three-line .mdc-list-item {
+    height: 108px
+}
+
+.mdc-list--three-line .mdc-list-item__text {
+    align-self: center;
 }
 
 button.reset {
