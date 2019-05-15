@@ -8,7 +8,7 @@
     My task
 @endsection
 
-@include ( 'tasks.tab-bar' )
+@include ( 'tasks.tab-bar', [ 'taskid' => $task->id ] )
 
 @section ( 'content' )
     @if ( $task instanceof task\protein )

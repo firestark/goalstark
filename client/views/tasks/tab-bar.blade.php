@@ -4,21 +4,21 @@
             <div class="mdc-tab-scroller__scroll-area">
                 <div class="mdc-tab-scroller__scroll-content">
                     
-                    <a href="/tasks/{{ $task->id }}" class="mdc-tab {{ ( request::uri ( ) === "/tasks/{$task->id}" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                    <a href="/tasks/{{ $taskid }}" class="mdc-tab {{ ( request::uri ( ) === "/tasks/{$taskid}" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                         <span class="mdc-tab__content">
                             <span class="mdc-tab__text-label">Details</span>
                         </span>
-                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/tasks/{$task->id}" ) ? 'mdc-tab-indicator--active' : '' }}">
+                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/tasks/{$taskid}" ) ? 'mdc-tab-indicator--active' : '' }}">
                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                         </span>
                         <span class="mdc-tab__ripple"></span>
                     </a>
 
-                    <a href="/tasks/{{ $task->id }}/goals" class="mdc-tab {{ ( request::uri ( ) === "/tasks/{$task->id}/goals" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
+                    <a href="/tasks/{{ $taskid }}/goals" class="mdc-tab {{ ( request::uri ( ) === "/tasks/{$taskid}/goals" ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
                         <span class="mdc-tab__content">
                             <span class="mdc-tab__text-label">Goals</span>
                         </span>
-                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/tasks/{$task->id}/goals" ) ? 'mdc-tab-indicator--active' : '' }}">
+                        <span class="mdc-tab-indicator {{ ( request::uri ( ) === "/tasks/{$taskid}/goals" ) ? 'mdc-tab-indicator--active' : '' }}">
                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                         </span>
                         <span class="mdc-tab__ripple"></span>
