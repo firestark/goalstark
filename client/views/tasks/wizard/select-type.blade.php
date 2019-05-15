@@ -9,13 +9,7 @@
 @endsection
 
 @section ( 'top-app-bar' )
-    <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">            
-            <span style="padding-left: 20px;">
-                Step 2 of 3: Select type
-            </span>
-        </section>
-    </div>
+   @include ( 'partials.wizard.header', [ 'title' => 'Step 2 of 3: Select type' ] )
 @endsection
 
 @section ( 'content' )
