@@ -3,6 +3,7 @@
         @foreach ( $task->goals as $goal )
             <input type="hidden" name="goals[]" value="{{ $goal }}">
         @endforeach
+        <input type="hidden" name="type" value="count">
 
         @include ( 'partials.input.count', [ 'value' => $task->times ] )
         @include ( 'partials.input.due', [ 'value' => $task->due ] )

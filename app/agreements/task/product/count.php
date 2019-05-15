@@ -2,6 +2,7 @@
 
 namespace task\product;
 
+use consumation;
 use product;
 
 class count extends \task\count
@@ -14,5 +15,10 @@ class count extends \task\count
         $description = "Eat {$product->name}";
 
         parent::__construct ( $goals, $id, $description, $times, $due );
+    }
+
+    function complete ( )
+    {
+        $this->completions [ ] = new consumation ( uniqid ( ), $this->product );
     }
 }

@@ -64,14 +64,7 @@ class flatfileTaskManager extends \task\manager
         $this->tasks [ $task->id ] = $task;
         $this->write ( );
     }
-
-    function uncomplete ( task $task )
-    {
-        $this->check ( $task );
-        $this->tasks [ $task->id ]->uncomplete ( );
-        $this->write ( );
-    }
-
+    
     function remove ( task $task )
     {
         $this->check ( $task );

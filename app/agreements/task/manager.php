@@ -19,11 +19,24 @@ abstract class manager
     function complete ( task $task )
     {
         $this->check ( $task );
-        $this->findById ( $task->id )->complete ( );
+        $task = $this->findById ( $task->id );
+        $task->complete ( );
 
         if ( $task instanceof task\product\count )
-            $this->dietitian->add ( new consumation ( uniqid ( ), $task->product ) );
+            $this->dietitian->add ( end ( $task->completions ) );
 
+        $this->update ( $task );
+    }
+
+    function uncomplete ( task $task )
+    {
+        $this->check ( $task );
+        $task = $this->findById ( $task->id );
+
+        if ( $task instanceof task\product\count )
+            $this->dietitian->remove ( end ( $task->completions ) );
+        
+        $task->uncomplete ( );
         $this->update ( $task );
     }
 
@@ -42,8 +55,6 @@ abstract class manager
     abstract function findById ( $id ) : task;
 
     abstract function update ( task $task );
-
-    abstract function uncomplete ( task $task );
 
     abstract function remove ( task $task );
 
