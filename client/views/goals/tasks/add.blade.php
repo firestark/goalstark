@@ -50,17 +50,8 @@
             @endif
         </section>
 
-        <section 
-            style="
-                height: 56px;
-                width: 100%;
-                box-sizing: border-box;
-                display: grid; 
-                grid-template-columns: 1fr 1fr; 
-                padding: 0; 
-                align-items: center;
-                background-color: var(--mdc-theme-background);">
-            <div>
+        <footer class="mdc-wizard">
+            <section class="mdc-wizard__section mdc-wizard__section--align-start">
                 <a href="/goals/{{ $goalid }}/tasks/select-type?{{ http_build_query ( input::all ( ) ) }}" class="mdc-button">
                     <svg class="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
@@ -68,8 +59,8 @@
                     </svg>
                     <span class="mdc-button__label">SELECT TYPE</span>
                 </a>
-            </div>
-            <div style="display: flex; justify-content: flex-end;">
+            </section>
+            <section class="mdc-wizard__section mdc-wizard__section--align-end">
                 <button class="mdc-button" type="submit">
                     <span class="mdc-button__label">ADD TASK</span>
                     <svg class="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -77,7 +68,7 @@
                         <path d="M0 0h24v24H0z" fill="none"/>
                     </svg>
                 </button>
-            </div>
-        </section>
+            </section>
+        </footer>  
     </form>
 @endsection

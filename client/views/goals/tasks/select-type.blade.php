@@ -30,20 +30,8 @@
             @include ( 'partials.tasks.select-type-list' )
         </section>
 
-        <section 
-            style="
-                height: 56px;
-                width: 100%;
-                box-sizing: border-box;
-                display: grid; 
-                grid-template-columns: 1fr 1fr; 
-                padding: 0; 
-                align-items: center;
-                background-color: var(--mdc-theme-background);">
-            <div>
-               
-            </div>
-            <div style="display: flex; justify-content: flex-end;">
+        <footer class="mdc-wizard">
+            <section class="mdc-wizard__section mdc-wizard__section--align-end">
                 <button class="mdc-button" type="submit">
                     <span class="mdc-button__label">DESCRIBE TASK</span>
                     <svg class="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -51,8 +39,8 @@
                         <path d="M0 0h24v24H0z" fill="none"/>
                     </svg>
                 </button>
-            </div>
-        </section>
+            </section>
+        </footer>
     </form>
 @endsection
 

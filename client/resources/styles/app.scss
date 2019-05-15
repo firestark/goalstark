@@ -838,3 +838,36 @@ section#login {
         width: 100%;
     }
 }
+
+
+// Wizard
+
+footer.mdc-wizard {
+    height: 56px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0; 
+    background-color: var(--mdc-theme-background);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+    
+.mdc-wizard__section {
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+    z-index: 1;
+    height: 100%;
+}
+  
+.mdc-wizard__section--align-start {
+    justify-content: flex-start;
+    order: -1;
+}
+  
+.mdc-wizard__section--align-end {
+    justify-content: flex-end;
+    order: 1;
+}
