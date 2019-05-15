@@ -40,18 +40,10 @@
 
     <a href="/tasks/{{ $task->id }}">
         <span class="mdc-list-item__text" style="width: 100%;">
-            <span class="mdc-list-item__primary-text">{{ $task->description }}
-                @if ( isset ( $task->times ) )
-                    <span style="
-                        font-weight: normal; 
-                        color: var(--mdc-theme-text-icon-on-background); 
-                        position: relative; 
-                        top: -4px; 
-                        left: 4px;
-                        letter-spacing: -1px;">{{ count ( $task->completions ) }} / {{ $task->times }}</span>
-                @endif
-            </span>
-            @if ( isset ( $task->due ) )
+            <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
+            @if ( isset ( $task->times ) )
+                <span class="mdc-list-item__secondary-text">{{ count ( $task->completions ) }} / {{ $task->times }}</span>     
+            @elseif ( isset ( $task->due ) )
                 <span class="mdc-list-item__secondary-text">Due {{  date ( 'M d, Y ', $task->due ) }}</span>
             @elseif ( isset ( $task->goal ) )
                 <span class="mdc-list-item__secondary-text">Consumed {{ $protein }} of {{ $task->goal }}</span>
