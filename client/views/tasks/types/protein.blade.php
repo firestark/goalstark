@@ -1,4 +1,4 @@
-<section style="display: grid; height: 100%; grid-template-rows: auto 1fr;">
+<section style="height: 100%;">
     <div style="text-align: center; margin: 16px auto 56px; width: 230px;">
 
         <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="var(--mdc-theme-secondary)" style="opacity: 0.7;">
