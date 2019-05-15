@@ -67,6 +67,7 @@
 
 ## refactor
 
+- Correct list item with (add truncation for items that are too long) (or introduce task titles)
 - Add a simple task type (good for task list)
 - Abstract recurring view tab bars
 - Create a dedicated post install mechanism
