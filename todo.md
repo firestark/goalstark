@@ -30,8 +30,6 @@
 - Add daily task complete action (edit view)
 - Add due task complete action (with remaining days?) (edit view)
 - Add task explanations
-- Add task list task type tags
-
 
 ## Calendar
 
