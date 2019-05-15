@@ -5266,6 +5266,9 @@ main {
   background-color: var(--mdc-theme-text-primary-on-background);
   z-index: 0; }
 
+.mdc-list--with-chip .mdc-list-item {
+  height: 80px; }
+
 .mdc-list--three-line .mdc-list-item {
   height: 108px; }
 

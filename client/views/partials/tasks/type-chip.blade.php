@@ -5,7 +5,7 @@
     bottom: 8px;
     font-size: 12px;
     color: var(--mdc-theme-on-surface);
-    right: 52px;
+    right: 16px;
     padding: 0 8px;">
     
     @switch ( $task )
