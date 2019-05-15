@@ -1545,12 +1545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3105255a111764e0e931d155cb88f586f515464a"
+                "reference": "5accd363c310167f850e4f5388b128ad3f76a68c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3105255a111764e0e931d155cb88f586f515464a",
-                "reference": "3105255a111764e0e931d155cb88f586f515464a",
+                "url": "https://api.github.com/repos/symfony/console/zipball/5accd363c310167f850e4f5388b128ad3f76a68c",
+                "reference": "5accd363c310167f850e4f5388b128ad3f76a68c",
                 "shasum": ""
             },
             "require": {
@@ -1612,7 +1612,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-05-09T09:43:27+00:00"
+            "time": "2019-05-14T12:53:33+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
