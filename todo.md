@@ -17,18 +17,15 @@
 
 ## Goals
 
+- Make goals measurable ( by tasks? )
 - should we make goal add a wizard?
 - Create a good mechanism to set smarter goals
-- Should tasks be completed by hand or do we monitor completion by tasks?
 - Add the ability to add (custom) categories to goals
 - Add the ability to reschedule goals
-- Add the ability to add new tasks directly from the choose tasks view
 
 
 ## Tasks
 
-- Add daily task complete action (edit view)
-- Add due task complete action (with remaining days?) (edit view)
 - Add task explanations
 
 ## Calendar
@@ -95,3 +92,8 @@ Should a task only belong to one goal ever?
 - Some goals are connected we lose the first step of this connection 
 - Changing a task potentially needs to be changed for every goal it occurs in
 - For some task types it doesnt make sense to have multiple of them (eg protein task)
+
+
+## Technicalities
+
+- Manifest.json
