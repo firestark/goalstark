@@ -6,6 +6,7 @@ class session
 {
     public function __construct ( )
     {
+        session_name ( 'stark' );
         session_start ( );
         $this->initiliaze ( 'flash' );
         $this->initiliaze ( 'deprecated' );        
