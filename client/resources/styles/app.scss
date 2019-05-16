@@ -551,14 +551,25 @@ main {
 }
 
 .mdc-list-chip {
-    background-color: var(--mdc-theme-surface);
-    color: var(--mdc-theme-on-surface);
+    color: var(--mdc-theme-text-icon-on-background, rgba(0, 0, 0, 0.38));
     border-radius: 12px;
     position: absolute;
     bottom: 8px;
     right: 16px;
     font-size: 12px;
     padding: 0 8px;
+}
+
+.mdc-list-chip::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--mdc-theme-text-primary-on-background);
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
 }
 
 button.reset {
