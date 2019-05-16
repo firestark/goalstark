@@ -9,6 +9,8 @@
         <section class="content">
             <ul class="mdc-list mdc-list--three-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked" style="padding-top: 0;">
                 @if ( count ( $due ) )
+                    <h6 class="mdc-list-group__subheader">Due</h6>
+
                     @foreach ( $due as $goal )
                         @include ( 'goals.goal', [ 'goal' => $goal ] )
                     @endforeach
