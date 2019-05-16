@@ -8,30 +8,28 @@ abstract class manager
 {
     abstract function all ( ) : array;
 
-    function open ( ) : array
+    function open ( array $tasks ) : array
     {
         foreach ( $this->all ( ) as $goal )
-            if ( ! $goal->completed )
+            if ( ! $goal->isCompleted ( $tasks ) )
                 $open [ ] = $goal;
         
         return $open ?? [ ];
     }
 
-    function completed ( ) : array
+    function completed ( array $tasks ) : array
     {
         foreach ( $this->all ( ) as $goal )
-            if ( $goal->completed )
+            if ( $goal->isCompleted ( $tasks ) )
                 $completed [ ] = $goal;
 
         return $completed ?? [ ];
     }
 
-    function overdue ( ) : array
-    {
-        $now = time ( );
-        
+    function overdue ( array $tasks ) : array
+    {        
         foreach ( $this->all ( ) as $goal )
-            if ( ! $goal->completed and $goal->completeBy < $now )
+            if ( ! $goal->isOverdue ( $tasks ) )
                 $overdue [ ] = $goal;
 
         return $overdue ?? [ ];

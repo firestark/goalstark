@@ -10,7 +10,6 @@ app::bind ( goal::class, function ( $app )
         input::get ( 'title', '' ),
         input::get ( 'description', '' ),
         input::get ( 'reasons', [ ] ),
-        strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) ),
-        input::get ( 'completed', false )
+        strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) )
     );
 } );

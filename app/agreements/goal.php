@@ -2,17 +2,16 @@
 
 class goal
 {
-    public $id, $title, $description, $due, $completed;
+    public $id, $title, $description, $due;
     public $reasons = [ ];
 
-    function __construct ( $id, string $title, string $description, array $reasons, int $due, bool $completed = false )
+    function __construct ( $id, string $title, string $description, array $reasons, int $due )
     {
         $this->id           = $id;
         $this->title        = $title;
         $this->description  = $description;
         $this->reasons      = $reasons;
         $this->due          = $this->dueByEndOfDay ( $due );
-        $this->completed    = $completed;
     }
 
     function add ( goal\reason $reason )
@@ -31,9 +30,18 @@ class goal
         return isset ( $this->reasons [ $reason->id ] );
     }
 
-    function isOverdue ( ) : bool
+    function isOverdue ( array $tasks ) : bool
     {
-        return ( ! $this->completed and ( $this->due < time ( ) ) ); 
+        return ( ! $this->isCompleted ( $tasks ) and ( $this->due < time ( ) ) ); 
+    }
+
+    function isCompleted ( array $tasks ) : bool
+    {
+        foreach ( $tasks as $task )
+            if ( ! $task->isCompleted ( ) )
+                return false;
+        
+        return  ! empty ( $tasks );
     }
 
     /**
