@@ -14,6 +14,10 @@
     <form method="POST" action="/goals/{{ $goal->id }}" style="padding: 16px 8px;">
         <input type="hidden" name="goalid" value="{{ $goal->id }}">
 
+        @foreach ( $goal->reasons as $reason )
+            <input type="hidden" name="reasons[{{ $reason->id }}]" value="{{ $reason->description }}">
+        @endforeach
+
         @include ( 'partials.input.title', [ 'value' => $goal->title ] )
         @include ( 'partials.input.due', [ 'value' => $goal->due ] )
         
