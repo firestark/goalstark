@@ -1,4 +1,4 @@
-<div class="form-field">
+<div class="form-field form-field--with-helper">
     <div id="description-field" class="mdc-text-field mdc-text-field--textarea">
         <textarea id="description" name="description" class="mdc-text-field__input" required>{{ $value ?? '' }}</textarea>
         <div class="mdc-notched-outline">
