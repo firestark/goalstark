@@ -1,6 +1,6 @@
 <li class="mdc-list-item" tabindex="0">
     @if ( $goal->isCompleted ( $goal->tasks ) )
-        <a  href="/goals/{{ $goal->id }}/uncomplete" 
+        <span 
             class="mdc-list-item__graphic completed" 
             aria-hidden="true">
             
@@ -8,9 +8,9 @@
                 <path fill="none" d="M0 0h24v24H0V0z"/>
                 <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
             </svg>
-        </a>
+        </span>
     @else
-        <a  href="/goals/{{ $goal->id }}/complete" 
+        <span 
             class="mdc-list-item__graphic {{ ( $goal->isOverdue ( $goal->tasks ) ) ? 'overdue' : '' }}" 
             aria-hidden="true">
             
@@ -18,7 +18,7 @@
                 <path fill="none" d="M0 0h24v24H0V0z"/>
                 <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
             </svg>
-        </a>
+        </span>
     @endif
 
     <a href="/goals/{{ $goal->id }}">
