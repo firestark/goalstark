@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="/resources/styles/bundle.css">
     <link rel="icon" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#fff">
 
     @yield ( 'style' )
