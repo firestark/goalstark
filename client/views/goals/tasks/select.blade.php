@@ -48,6 +48,8 @@
 
                         <label class="mdc-list-item__text" for="{{ $task->id }}" style="width: 100%;">
                             {{ $task->description }}
+
+                            @include ( 'partials.tasks.type-chip', [ 'task' => $task ] )
                         </label>
                     </li>
                 

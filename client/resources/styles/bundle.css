@@ -5282,7 +5282,8 @@ main {
   bottom: 8px;
   right: 16px;
   font-size: 12px;
-  padding: 0 8px; }
+  padding: 0 8px;
+  font-weight: normal; }
 
 .mdc-list-chip::after {
   content: "";
