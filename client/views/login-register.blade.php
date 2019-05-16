@@ -2,41 +2,8 @@
 
 @section ( 'page' )
 
-    <div id="login-theme-switcher">
-        @include ( 'partials.theme-switcher' )
-    </div>
-
-    <main>
-        <section id="login" class="mdc-card">
-            <div class="mdc-tab-bar" role="tablist" style="margin-bottom: 40px;">
-                <div class="mdc-tab-scroller">
-                    <div class="mdc-tab-scroller__scroll-area">
-                        <div class="mdc-tab-scroller__scroll-content">
-                            <a href="/login" class="mdc-tab {{ ( request::uri ( ) === '/login' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                <span class="mdc-tab__content">
-                                    <span class="mdc-tab__text-label">Login</span>
-                                </span>
-                                <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/login' ) ? 'mdc-tab-indicator--active' : '' }}">
-                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                            </a>
-
-                            <a href="/register" class="mdc-tab {{ ( request::uri ( ) === '/register' ) ? 'mdc-tab--active' : '' }}" role="tab" aria-selected="true" tabindex="0">
-                                <span class="mdc-tab__content">
-                                    <span class="mdc-tab__text-label">Register</span>
-                                </span>
-                                <span class="mdc-tab-indicator {{ ( request::uri ( ) === '/register' ) ? 'mdc-tab-indicator--active' : '' }}">
-                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+    <main style="display: grid; grid-template-rows: auto 1fr; height: 100%;">
+        <section id="login">
             <form action="{{ request::uri ( ) }}" method="POST" autocomplete="{{ ( request::uri ( ) === '/login' ) ? 'on' : 'off' }}">                
                 <div id="username-input" class="mdc-text-field mdc-text-field--with-leading-icon" style="margin-bottom: 32px;">
                     <span class="mdc-text-field__icon" tabindex="0" role="button">
@@ -68,18 +35,45 @@
             </form>
 
         </section>
+
+        <div class="slider">
+            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+            <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+            <div class="slider__inner">
+                <div class="slider__contents">
+                    <i class="slider__image fab fa-galactic-senate"></i>
+                    <h2 class="slider__caption">Create your goals</h2>
+                    <p class="slider__txt">Achieve your goals by completing trackable tasks.</p>
+                </div>
+                <div class="slider__contents">
+                    <i class="slider__image fab fa-jedi-order"></i>
+                    <h2 class="slider__caption">Add your tasks</h2>
+                    <p class="slider__txt">Choose from a range of tasks.</p>
+                </div>
+                <div class="slider__contents">
+                    <i class="slider__image fab fa-old-republic"></i>
+                    <h2 class="slider__caption">television</h2>
+                    <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                </div>
+                <div class="slider__contents">
+                    <i class="slider__image fab fa-galactic-republic"></i>
+                    <h2 class="slider__caption">diamond</h2>
+                    <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <div id="triangle" style="background: #909090;"></div>
-    <div id="triangle2" style="background: #909090;"></div>
 @endsection
 
 @section ( 'js' )
-    <script>
+    {{-- <script>
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'username-input' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'password-input' ) );
         
         mdc.ripple.MDCRipple.attachTo ( document.querySelector ( '.mdc-button' ) );
         mdc.tabBar.MDCTabBar.attachTo ( document.querySelector ( '.mdc-tab-bar' ) );
-    </script>
+    </script> --}}
 @endsection
