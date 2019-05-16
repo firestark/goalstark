@@ -550,6 +550,17 @@ main {
     align-self: center;
 }
 
+.mdc-list-chip {
+    background-color: var(--mdc-theme-surface);
+    color: var(--mdc-theme-on-surface);
+    border-radius: 12px;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
 button.reset {
     display: contents;
     height: 72px;
