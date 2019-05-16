@@ -19,6 +19,5 @@
         <span class="mdc-list-chip">Due</span>
         @break
 
-    @default
-        
+    @default 
 @endswitch
