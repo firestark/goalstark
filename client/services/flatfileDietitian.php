@@ -21,6 +21,13 @@ class flatfileDietitian implements dietitian
         return $this->consumations;
     }
 
+    function findById ( $id ) : consumation
+    {
+        if ( ! isset ( $this->consumations [ $id ] ) )
+            throw new \exception ( "A consumation with id: {$id} does not exist." );
+        return $this->consumations [ $id ];
+    }
+
     function today ( ) : array
     {
         $date = date ( 'Ymd' );

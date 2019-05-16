@@ -5,6 +5,10 @@
         @endforeach
         <input type="hidden" name="type" value="product count">
 
+        @foreach ( $task->completions as $consumation )
+            <input type="hidden" name="consumations[]" value="{{ $consumation->id }}">
+        @endforeach
+
         @include ( 'partials.input.product.select', [ 'products' => app::make ( productManager::class )->all ( ), 'selected' => $task->product ] )
 
         @include ( 'partials.input.count', [ 'value' => $task->times ] )

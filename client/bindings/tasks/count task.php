@@ -7,6 +7,7 @@ app::bind ( task\count::class, function ( )
         input::get ( 'taskid', uniqid ( ) ),
         input::get ( 'description', '' ),
         input::get ( 'count', 0 ),
-        strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) )
+        strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) ),
+        input::get ( 'completions', [ ] )
     );
 } );

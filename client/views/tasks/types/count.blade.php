@@ -4,6 +4,10 @@
             <input type="hidden" name="goals[]" value="{{ $goal }}">
         @endforeach
         <input type="hidden" name="type" value="count">
+        
+        @foreach ( $task->completions as $completion )
+            <input type="hidden" name="completions[]" value="{{ $completion }}">
+        @endforeach
 
         @include ( 'partials.input.count', [ 'value' => $task->times ] )
         @include ( 'partials.input.due', [ 'value' => $task->due ] )

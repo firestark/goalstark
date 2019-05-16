@@ -6,6 +6,8 @@ interface dietitian
 
     function all ( ) : array;
 
+    function findById ( $id ) : consumation;
+
     function remove ( consumation $consumation );
 
     function today ( ) : array;
