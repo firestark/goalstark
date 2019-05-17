@@ -16,7 +16,7 @@
                     <a href="/apps/food-tracker/add/{{ $product->id }}">
                         <span class="mdc-list-item__text">
                             <span class="mdc-list-item__primary-text">{{ $product->name }}</span>
-                            <span class="mdc-list-item__secondary-text">{{ $product->nutrition->per }}</span>
+                            <span class="mdc-list-item__secondary-text">{{ $product->nutrition->per }} — {{ $product->nutrition->kcal }} kcal</span>
                         </span>
                     </a>
                 </li>
