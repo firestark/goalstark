@@ -1,4 +1,8 @@
 @switch ( $task )
+    @case ( $task instanceof task\product\maxKcal )
+        <span class="mdc-list-chip">Max kcal</span>
+        @break
+
     @case ( $task instanceof task\product\count )
         <span class="mdc-list-chip">Product count</span>
         @break

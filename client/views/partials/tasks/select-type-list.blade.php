@@ -117,6 +117,29 @@
             </span>
         </label>
     </li>
+
+    <li class="mdc-list-item" role="radio" aria-checked="{{ input::get ( 'type' ) === 'max kcal' ? 'true' : 'false' }}" tabindex="6">
+        <span class="mdc-list-item__graphic">
+            <div class="mdc-radio">
+                <input class="mdc-radio__native-control"
+                    type="radio"
+                    id="type-6"
+                    name="type"
+                    value="max kcal"
+                    checked="{{ input::get ( 'type' ) === 'max kcal' ? 'true' : 'false' }}">
+                <div class="mdc-radio__background">
+                    <div class="mdc-radio__outer-circle"></div>
+                    <div class="mdc-radio__inner-circle"></div>
+                </div>
+            </div>
+        </span>
+        <label class="mdc-list-item__text" for="type-6" style="width: 100%;">
+            <span class="mdc-list-item__text" style="width: 100%;">
+                <span class="mdc-list-item__primary-text">Max kcal task</span>
+                <span class="mdc-list-item__secondary-text">Stay under an amount of kcal every day</span>
+            </span>
+        </label>
+    </li>
 </ul>
 
 @section ( 'js' )

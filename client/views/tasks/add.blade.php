@@ -44,6 +44,10 @@
 
                 <input type="hidden" name="type" value="{{ $type }}">
 
+                @if ( $type === 'max kcal' )
+                    @include ( 'partials.input.product.kcal' )
+                @endif
+
                 @if ( $type === 'product count' )
                     @include ( 'partials.input.product.select', [ 'products' => $products ] )
                 @endif
@@ -56,7 +60,7 @@
                     @include ( 'partials.input.due', [ 'value' => time ( ) ] )
                 @endif
 
-                @if ( $type !== 'protein' and $type !== 'product count' )
+                @if ( $type !== 'protein' and $type !== 'product count' and $type !== 'max kcal' )
                     @include ( 'partials.input.description', [ 'value' => '' ] )
                 @endif
 
