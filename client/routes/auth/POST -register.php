@@ -19,7 +19,7 @@ route::post ( '/register', function ( )
 
     app::make ( 'guard' )->stamp ( $credentials );
     session::flash ( 'message', 'Logged in.' );
-    return redirect::to ( '/' );
+    return redirect::to ( '/onboarding' );
 } );
 
 
