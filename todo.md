@@ -1,5 +1,7 @@
 # Todo
 
+- Specify MVP
+
 
 ## Apps
 
@@ -27,6 +29,12 @@
 ## Tasks
 
 - Add task explanations
+
+
+## Misc
+
+- Set theme based on day inside the login / registration / onboarding views
+
 
 ## Calendar
 
@@ -64,8 +72,8 @@
 
 ## refactor
 
+- Refactor add task into partials (partialize the different types like done with edit)
 - Correct list item with (add truncation for items that are too long) (or introduce task titles)
-- Add a simple task type (good for task list)
 - Abstract recurring view tab bars
 - Create a dedicated post install mechanism
 
