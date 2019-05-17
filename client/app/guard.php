@@ -9,8 +9,8 @@ abstract class guard
      * All the publicly accessible routes.
      */
     private $public = 
-        [ 'GET' => [ ]
-        , 'POST' => [ '/login' ]
+        [ 'GET' => [ '/login', '/register', '/onboarding' ]
+        , 'POST' => [ '/login', '/register' ]
         ];
 
     /**

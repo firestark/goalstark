@@ -14,5 +14,5 @@ route::post ( '/login', function ( )
 
     app::make ( 'guard' )->stamp ( $credentials );
     session::flash ( 'message', 'Logged in.' );
-    return redirect::to ( '/' );
+    return redirect::to ( session::get ( 'intended', '/' ) );
 } );

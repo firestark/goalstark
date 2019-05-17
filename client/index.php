@@ -29,8 +29,8 @@ requiring ( __DIR__ . '/bindings' );
 requiring ( __DIR__ . '/statuses' );
 requiring ( __DIR__ . '/../app/procedures' );
 
-$dispatcher = new http\dispatcher ( $app [ 'router' ]->routes, $app [ 'router' ]->groups );
-$kernel = new firestark\kernel ( $dispatcher );
+$app->instance ( 'dispatcher', new http\dispatcher ( $app [ 'router' ]->routes, $app [ 'router' ]->groups ) );
+$kernel = new firestark\kernel ( $app );
 $response = $kernel->handle ( $app [ 'request' ] );
 
 $response->send ( );

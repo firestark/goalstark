@@ -13,27 +13,14 @@ class app extends container
 
     public function fulfill ( string $request, array $payload = [ ] ) : response
     {
-        $token = $this [ 'guard' ]->getToken ( );
-
-        if ( $this [ 'guard' ]->allows ( $this [ 'request' ], $token ) )
-            if ( $this [ 'session' ]->has ( 'intended' ) )
-                return $this [ 'redirector' ]->to ( $this [ 'session' ]->getAndForget ( 'intended' ) );
-            else
-                return $this->run ( $request, $payload );
-
-        return $this->deny ( );
+        list ( $status, $body ) = $this->make ( $request, $payload );
+        $response = $this->call ( $this [ 'statuses' ]->match ( $status ), $body );
+        $response->status ( $status );
+        return $response;
     }
 
     function pipe ( array $procedures, array $payload = [ ] ) : response
     {
-        $token = $this [ 'guard' ]->getToken ( );
-
-        if ( ! $this [ 'guard' ]->allows ( $this [ 'request' ], $token ) )
-            return $this->deny ( );
-        
-        if ( $this [ 'session' ]->has ( 'intended' ) )
-            return $this [ 'redirector' ]->to ( $this [ 'session' ]->getAndForget ( 'intended' ) );
-
         $this->data = $payload;
 
         foreach ( $procedures as $procedure )
@@ -49,21 +36,5 @@ class app extends container
         list ( $status, $body ) = $this->make ( $request, $payload );
         $this->statuses [ ] = $status;
         $this->data = array_merge ( $this->data, $body );        
-    }
-
-    private function run ( string $request, array $payload = [ ] ) : response
-    {
-        list ( $status, $body ) = $this->make ( $request, $payload );
-        $response = $this->call ( $this [ 'statuses' ]->match ( $status ), $body );
-        $response->status ( $status );
-        return $response;
-    }
-
-    private function deny ( )
-    {
-        $this [ 'session' ]->set ( 'intended', $this [ 'request' ]->uri ( ) );
-        $response = $this->call ( $this [ 'statuses' ]->match ( 0 ), [ ] );
-        $response [ 'X-Firestark-Status' ] = 0;
-        return $response;
     }
 }
