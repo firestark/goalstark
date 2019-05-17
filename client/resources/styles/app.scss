@@ -217,6 +217,7 @@ $mdc-typography-font-family: "Metropolis", unquote("sans-serif");
 }
 
 html, body {
+    height: 100vh;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -909,21 +910,10 @@ footer.mdc-wizard {
     order: 1;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    color: #444;
-    font-size: 1rem;
-    line-height: 1.5;
-}
+// Onboarding
 
 .slider {
+    box-sizing: border-box;
     height: 100%;
     position: relative;
     overflow: hidden;
