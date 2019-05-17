@@ -2,7 +2,7 @@
 
 @section ( 'page' )
 
-    <main style="display: grid; grid-template-rows: auto 1fr; height: 100%;">
+    <main>
         <section id="login">
             <form action="{{ request::uri ( ) }}" method="POST" autocomplete="{{ ( request::uri ( ) === '/login' ) ? 'on' : 'off' }}">                
                 <div id="username-input" class="mdc-text-field mdc-text-field--with-leading-icon" style="margin-bottom: 32px;">
@@ -29,51 +29,26 @@
                     <div class="mdc-line-ripple"></div>
                 </div>
 
-                <button type="submit" class="mdc-button mdc-button--raised">
-                    <span class="mdc-button__label">{{ ( request::uri ( ) === '/login' ) ? 'login' : 'register' }}</span>
-                </button>
+                <div style="display: flex; align-items: center; justify-content: flex-end; margin-top: 24px;">
+                    <button type="submit" class="mdc-button mdc-button--raised">
+                        <span class="mdc-button__label">{{ ( request::uri ( ) === '/login' ) ? 'login' : 'register' }}</span>
+                    </button>
+
+                    <a href="{{ ( request::uri ( ) === '/register' ) ? '/login' : '/register' }}" class="mdc-button">
+                        <span class="mdc-button__label">{{ ( request::uri ( ) === '/register' ) ? 'login' : 'register' }}</span>
+                    </a>
+                </div>
             </form>
-
         </section>
-
-        <div class="slider">
-            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
-            <input type="radio" name="slider" title="slide2" class="slider__nav"/>
-            <input type="radio" name="slider" title="slide3" class="slider__nav"/>
-            <input type="radio" name="slider" title="slide4" class="slider__nav"/>
-            <div class="slider__inner">
-                <div class="slider__contents">
-                    <i class="slider__image fab fa-galactic-senate"></i>
-                    <h2 class="slider__caption">Create your goals</h2>
-                    <p class="slider__txt">Achieve your goals by completing trackable tasks.</p>
-                </div>
-                <div class="slider__contents">
-                    <i class="slider__image fab fa-jedi-order"></i>
-                    <h2 class="slider__caption">Add your tasks</h2>
-                    <p class="slider__txt">Choose from a range of tasks.</p>
-                </div>
-                <div class="slider__contents">
-                    <i class="slider__image fab fa-old-republic"></i>
-                    <h2 class="slider__caption">television</h2>
-                    <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
-                </div>
-                <div class="slider__contents">
-                    <i class="slider__image fab fa-galactic-republic"></i>
-                    <h2 class="slider__caption">diamond</h2>
-                    <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
-                </div>
-            </div>
-        </div>
     </main>
 
 @endsection
 
 @section ( 'js' )
-    {{-- <script>
+    <script>
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'username-input' ) );
         mdc.textField.MDCTextField.attachTo ( document.getElementById ( 'password-input' ) );
         
         mdc.ripple.MDCRipple.attachTo ( document.querySelector ( '.mdc-button' ) );
-        mdc.tabBar.MDCTabBar.attachTo ( document.querySelector ( '.mdc-tab-bar' ) );
-    </script> --}}
+    </script>
 @endsection
