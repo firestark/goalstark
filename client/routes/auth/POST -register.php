@@ -18,7 +18,6 @@ route::post ( '/register', function ( )
     createfiles ( $credentials );
 
     app::make ( 'guard' )->stamp ( $credentials );
-    session::flash ( 'message', 'Logged in.' );
     return redirect::to ( '/onboarding' );
 } );
 
