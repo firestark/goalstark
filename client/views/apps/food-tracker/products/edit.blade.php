@@ -14,6 +14,8 @@
         @include ( 'partials.input.name', [ 'value' => $product->name ] )
         @include ( 'partials.input.product.per', [ 'value' => $product->nutrition->per ] )
 
+        @include ( 'partials.input.product.kcal', [ 'value' => $product->nutrition->kcal ] )
+
         <section style="margin-bottom: 32px;" class="mdc-text-field--group">
             <h3 class="mdc-typography--caption">Fats</h3>
 

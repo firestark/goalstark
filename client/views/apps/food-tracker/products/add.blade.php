@@ -14,6 +14,8 @@
         @include ( 'partials.input.name' )
         @include ( 'partials.input.product.per' )
 
+        @include ( 'partials.input.product.kcal' )
+
         <section style="margin-bottom: 32px;" class="mdc-text-field--group">
             <h3 class="mdc-typography--caption">Fats</h3>
             

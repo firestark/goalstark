@@ -4,11 +4,12 @@ namespace product;
 
 class nutrition
 {
-    public $fats, $carbohydrates, $protein;
+    public $per, $kcal, $fats, $carbohydrates, $protein, $salt;
 
-    function __construct ( string $per, fats $fats, carbohydrates $carbohydrates, float $protein, float $salt )
+    function __construct ( string $per, int $kcal, fats $fats, carbohydrates $carbohydrates, float $protein, float $salt )
     {
         $this->per              = $per;
+        $this->kcal             = $kcal;
         $this->fats             = $fats;
         $this->carbohydrates    = $carbohydrates;
         $this->protein          = $protein;
