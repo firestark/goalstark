@@ -43,6 +43,8 @@
     @if ( count ( $consumations ) )
         <section class="content">
             <ul class="mdc-list mdc-list--two-line mdc-list--linked">
+                <h6 class="mdc-list-group__subheader">Total {{ $kcal }} kcal</h6>
+
                 @foreach ( $consumations as $consumation )
                     <li class="mdc-list-item" tabindex="0">
                         <span class="mdc-list-item__text">
