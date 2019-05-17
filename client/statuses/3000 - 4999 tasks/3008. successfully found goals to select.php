@@ -4,5 +4,6 @@ use function compact as with;
 
 status::matching ( 3008, function ( array $goals )
 {	
+	$goals = array_reverse ( $goals );
 	return view::ok ( 'tasks.wizard.select-goals', with ( 'goals' ) );
 } );
