@@ -1,5 +1,13 @@
 @extends ( 'master' )
 
+@section ( 'style' )
+    <style>
+        .mdc-snackbar {
+            bottom: 8px;
+        }
+    </style>
+@endsection
+
 @section ( 'page' )
 
     <main>
