@@ -881,6 +881,7 @@ section#login {
 // Wizard
 
 footer.mdc-wizard {
+    @include mdc-elevation(1);
     height: 56px;
     width: 100%;
     box-sizing: border-box;
