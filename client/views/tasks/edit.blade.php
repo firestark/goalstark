@@ -13,6 +13,8 @@
 @section ( 'content' )
     @if ( $task instanceof task\protein )
         @include ( 'tasks.types.protein' )
+    @elseif ( $task instanceof task\product\maxKcal )
+        @include ( 'tasks.types.product.max-kcal' )
     @elseif ( $task instanceof task\product\count )
         @include ( 'tasks.types.product.count' )
     @elseif ( $task instanceof task\count )
