@@ -12,17 +12,17 @@
 
 @section ( 'content' )
     @if ( $task instanceof task\protein )
-        @include ( 'tasks.types.protein' )
+        @include ( 'tasks.types.protein.edit' )
     @elseif ( $task instanceof task\product\maxKcal )
-        @include ( 'tasks.types.product.max-kcal' )
+        @include ( 'tasks.types.product.max-kcal.edit' )
     @elseif ( $task instanceof task\product\count )
-        @include ( 'tasks.types.product.count' )
+        @include ( 'tasks.types.product.count.edit' )
     @elseif ( $task instanceof task\count )
-        @include ( 'tasks.types.count' )
+        @include ( 'tasks.types.count.edit' )
     @elseif ( $task instanceof task\due )
-        @include ( 'tasks.types.due' )
+        @include ( 'tasks.types.due.edit' )
     @elseif ( $task instanceof task\daily )
-        @include ( 'tasks.types.daily' )
+        @include ( 'tasks.types.daily.edit' )
     @endif
 @endsection
 
