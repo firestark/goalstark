@@ -49,7 +49,6 @@
 ## Onboarding
 
 - Show reasons/benefits why they (should) download your app
-- Create onboarding
 - Pre filled data?
 - Get the user asap to success milestone (fulfillment of a goal? What about demo fulfillment run)
 - Spike feelings of accomplishment (After eg adding a goal,  In a non childish way!)
@@ -76,6 +75,7 @@
 - Correct list item with (add truncation for items that are too long) (or introduce task titles)
 - Abstract recurring view tab bars
 - Create a dedicated post install mechanism
+- Use of app::make inside views?
 
 
 ## UX
