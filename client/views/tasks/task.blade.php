@@ -3,7 +3,6 @@
 
     <a href="/tasks/{{ $task->id }}" style="position: relative">
         @include ( 'tasks.types.' . taskToTypeString ( $task ) . '.list-item-text' )
-        @include ( 'partials.tasks.type-chip', [ 'task' => $task ] )
     </a>
 
     <a href="/tasks/{{ $task->id }}/remove" class="mdc-list-item__meta" aria-hidden="true">
