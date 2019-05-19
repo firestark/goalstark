@@ -16,4 +16,9 @@ interface dietitian
      * Return todays consumed protein.
      */
     function protein ( ) : int;
+
+    /**
+     * @return Int todays consumed kcal's 
+     */
+    function kcal ( ) : int;
 }

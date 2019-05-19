@@ -55,6 +55,16 @@ class flatfileDietitian implements dietitian
         return $protein;
     }
 
+    function kcal ( ) : int
+    {
+        $kcal = 0;
+
+        foreach ( $this->today ( ) as $consumation )
+            $kcal += $consumation->product->nutrition->kcal;
+
+        return $kcal;
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->consumations ) );
