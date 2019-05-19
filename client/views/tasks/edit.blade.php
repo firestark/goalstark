@@ -11,25 +11,22 @@
 @include ( 'tasks.tab-bar', [ 'taskid' => $task->id ] )
 
 @section ( 'content' )
-    @if ( $task instanceof task\protein )
-        @include ( 'tasks.types.protein.edit' )
-    @elseif ( $task instanceof task\product\maxKcal )
-        @include ( 'tasks.types.product.max-kcal.edit' )
-    @elseif ( $task instanceof task\product\count )
-        @include ( 'tasks.types.product.count.edit' )
-    @elseif ( $task instanceof task\count )
-        @include ( 'tasks.types.count.edit' )
-    @elseif ( $task instanceof task\due )
-        @include ( 'tasks.types.due.edit' )
-    @elseif ( $task instanceof task\daily )
-        @include ( 'tasks.types.daily.edit' )
-    @endif
+
+    @include ( 'tasks.types.' . $type . '.description' )
+        
+    <form method="POST" action="/tasks/{{ $task->id }}" style="display: grid; grid-template-rows: 1fr auto;">
+        <section style="overflow: overlay; padding: 16px 8px 80px;">
+            @foreach ( $task->goals as $goal )
+                <input type="hidden" name="goals[]" value="{{ $goal }}">
+            @endforeach
+
+            <input type="hidden" name="type" value="{{ $type }}">
+            @include ( 'tasks.types.' . $type . '.fields' )
+
+            @include ( 'partials.input.fab', [ 'action' => 'save' ] )
+        </section>
+    </form>
+
+    @include ( 'tasks.types.' . $type . '.status' )
 @endsection
 
-@section ( 'js' )
-    @parent
-    
-    <script>
-        mdc.tabBar.MDCTabBar.attachTo ( document.querySelector ( '.mdc-tab-bar' ) );
-    </script>
-@endsection

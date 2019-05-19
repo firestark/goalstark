@@ -4,7 +4,7 @@
         <option value="" disabled {{ isset ( $selected ) ? '' : 'selected' }}></option>
 
         @foreach ( $products as $product )
-            <option value="{{ $product->id }}" {{ ( isset ( $selected ) and $selected->id === $product->id ) ? 'selected' : '' }}>
+            <option value="{{ $product->id }}" {{ ( isset ( $selected ) and ! is_null ( $selected ) and $selected->id === $product->id ) ? 'selected' : '' }}>
                 {{ $product->name }}
             </option>
         @endforeach

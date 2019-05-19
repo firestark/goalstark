@@ -28,3 +28,11 @@
         </div>
     </div>
 @endsection
+
+@section ( 'js' )
+    @parent
+    
+    <script>
+        mdc.tabBar.MDCTabBar.attachTo ( document.querySelector ( '.mdc-tab-bar' ) );
+    </script>
+@endsection

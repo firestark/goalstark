@@ -14,7 +14,7 @@
 
 @section ( 'content' )
     <section style="height: 100%; display: grid;">
-        @yield ( 'description' )
+        @include ( 'tasks.types.' . $type . '.description' )
 
         <form id="form" method="POST" action="/tasks/" 
             style="
@@ -30,36 +30,7 @@
                 
                 <input type="hidden" name="type" value="{{ $type }}">
 
-                @yield ( 'form-fields' )
-
-                {{-- 
-
-                <input type="hidden" name="type" value="{{ $type }}">
-
-                @if ( $type === 'max kcal' )
-                    @include ( 'partials.input.product.kcal' )
-                @endif
-
-                @if ( $type === 'product count' )
-                    @include ( 'partials.input.product.select', [ 'products' => $products ] )
-                @endif
-
-                @if ( $type === 'count' or $type === 'product count' )
-                    @include ( 'partials.input.count' )
-                @endif
-
-                @if ( $type === 'due' )
-                    @include ( 'partials.input.due', [ 'value' => time ( ) ] )
-                @endif
-
-                @if ( $type !== 'protein' and $type !== 'product count' and $type !== 'max kcal' )
-                    @include ( 'partials.input.description', [ 'value' => '' ] )
-                @endif
-
-                @if ( $type === 'protein' )
-                    @include ( 'partials.input.protein', [ 'value' => 0, 'autofocus' => true ] )
-                @endif --}}
-
+                @include ( 'tasks.types.' . $type . '.fields' )
             </section>
 
             <footer class="mdc-wizard">

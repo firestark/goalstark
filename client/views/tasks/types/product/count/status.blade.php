@@ -1,0 +1,1 @@
+@include ( 'partials.input.counter', [ 'title' => 'Consumations' ] )

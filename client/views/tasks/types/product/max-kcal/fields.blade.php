@@ -1,0 +1,1 @@
+@include ( 'partials.input.product.kcal', [ 'value' => $task->kcal ?? 0 ] )

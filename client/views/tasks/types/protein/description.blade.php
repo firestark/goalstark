@@ -1,4 +1,4 @@
-<div style="text-align: center; margin: 16px auto 56px; width: 230px;">
+<div style="text-align: center; margin: 56px auto 0; width: 230px;">
 
     <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="var(--mdc-theme-secondary)" style="opacity: 0.7;">
         <path fill="none" d="M0 0h24v24H0V0z"/>
@@ -10,22 +10,4 @@
     <p class="mdc-typography--body2" style="color: var(--mdc-theme-text-secondary-on-background); margin: 0; line-height: 1.5rem;">
         A protein task sets a goal to consume an amount of protein every day
     </p>
-</div>
-
-<form method="POST" action="/tasks/{{ $task->id }}" style="display: grid; grid-template-rows: 1fr auto;">
-    <section style="overflow: overlay; padding: 16px 8px 80px;">
-        @foreach ( $task->goals as $goal )
-            <input type="hidden" name="goals[]" value="{{ $goal }}">
-        @endforeach
-
-        <input type="hidden" name="type" value="protein">
-        @include ( 'partials.input.protein', [ 'value' => $task->goal ] )
-
-        @include ( 'partials.input.fab', [ 'action' => 'save' ] )
-    </section>
-</form>
-
-
-<div style="text-align: center;">
-    <h2 class="mdc-typography--headline6">Consumed {{ app::make ( dietitian::class )->protein ( ) }} protein today</h2>
 </div>
