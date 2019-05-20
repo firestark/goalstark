@@ -10,7 +10,9 @@ interface manager
 
     function add ( scheme $scheme );
 
-    function find ( string $name ) : scheme;
+    function find ( $id ) : scheme;
 
     function remove ( scheme $scheme );
+
+    function update ( scheme $scheme );
 }

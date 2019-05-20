@@ -2,10 +2,11 @@
 
 class scheme
 {
-    public $name;
+    public $id, $name;
 
-    function __construct ( string $name )
+    function __construct ( $id, string $name )
     {
+        $this->id = $id;
         $this->name = $name;
     }
 }

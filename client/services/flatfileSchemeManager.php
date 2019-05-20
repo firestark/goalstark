@@ -17,28 +17,35 @@ class flatfileSchemeManager implements scheme\manager
 
     function add ( scheme $scheme )
     {
-        $this->schemes [ $scheme->name ] = $scheme;
+        $this->schemes [ $scheme->id ] = $scheme;
         $this->write ( );
     }
 
-    function find ( string $name ) : scheme
+    function find ( $id ) : scheme
     {
-        if ( ! isset ( $this->schemes [ $name ] ) )
-            throw new exception ( "scheme: {$name} not found." );
+        if ( ! isset ( $this->schemes [ $id ] ) )
+            throw new exception ( "scheme with id: {$id} not found." );
         
-        return $this->schemes [ $name ];
+        return $this->schemes [ $id ];
     }
 
     function remove ( scheme $scheme ) 
     {
-        unset ( $this->schemes [ $scheme->name ] );
+        unset ( $this->schemes [ $scheme->id ] );
+        $this->write ( );
+    }
+
+    function update ( scheme $scheme )
+    {
+        $this->check ( $scheme );
+        $this->schemes [ $scheme->id ] = $scheme;
         $this->write ( );
     }
 
     private function check ( scheme $scheme )
     {
-        if ( ! isset ( $this->schemes [ $scheme->name ] ) )
-            throw new \exception ( "A scheme with name: {$scheme->name} does not exist." );
+        if ( ! isset ( $this->schemes [ $scheme->id ] ) )
+            throw new \exception ( "A scheme with id: {$scheme->id} does not exist." );
     }
 
     private function write ( )

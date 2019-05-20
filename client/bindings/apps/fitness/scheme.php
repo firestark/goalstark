@@ -2,5 +2,8 @@
 
 app::bind ( scheme::class, function ( )
 {
-    return new scheme ( input::get ( 'name' ) );
+    return new scheme (
+        input::get ( 'scheme_id', uniqid ( ) ),
+        input::get ( 'name', '' ) 
+    );
 } );
