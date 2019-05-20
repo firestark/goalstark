@@ -30,6 +30,7 @@
 			"firestark\\": "app"
  	 	},
         "files": [
+			"app/helpers.php",
             "app/readability.php"
         ]
 	},

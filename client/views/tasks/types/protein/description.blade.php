@@ -1,0 +1,1 @@
+A protein task sets a goal to consume an amount of protein every day.

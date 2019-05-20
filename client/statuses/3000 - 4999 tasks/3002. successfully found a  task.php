@@ -4,5 +4,6 @@ use function compact as with;
 
 status::matching ( 3002, function ( task $task )
 {
-	return view::ok ( 'tasks.edit', with ( 'task' ) );
+	$type = taskToTypeString ( $task );
+	return view::ok ( 'tasks.edit', with ( 'task', 'type' ) );
 } );

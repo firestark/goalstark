@@ -15,11 +15,11 @@ app::bind ( task::class, function ( $app, array $payload = [ ] )
             return app::make ( task\due::class );
         case 'protein' :
             return app::make ( task\protein::class );
-        case 'max kcal' :
+        case 'product.max-kcal' :
             return app::make ( task\product\maxKcal::class );
         case 'count':
             return app::make ( task\count::class );
-        case 'product count':
+        case 'product.count':
             return app::make ( task\product\count::class );
         default:
             throw new \exception ( 'unknown type' );

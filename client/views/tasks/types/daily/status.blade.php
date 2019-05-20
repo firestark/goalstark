@@ -1,21 +1,6 @@
-<form method="POST" action="/tasks/{{ $task->id }}">
-    <section style="overflow: overlay; padding: 16px 8px 80px;">
-        @foreach ( $task->goals as $goal )
-            <input type="hidden" name="goals[]" value="{{ $goal }}">
-        @endforeach
-
-        <input type="hidden" name="type" value="due">
-        @include ( 'partials.input.due', [ 'value' => $task->due ] )
-        @include ( 'partials.input.description', [ 'value' => $task->description ] )
-
-        @include ( 'partials.input.fab', [ 'action' => 'save' ] )
-    </section>
-</form>
-
-
 <div style="text-align: center;">
     @if ( $task->isCompleted ( ) )
-        <h2 class="mdc-typography--headline6">Uncomplete</h2>
+        <h2 class="mdc-typography--headline6">Uncomplete for today</h2>
         <a  href="/tasks/{{ $task->id }}/uncomplete" 
             class="completed" 
             aria-hidden="true">
@@ -26,9 +11,8 @@
             </svg>
         </a>
     @else
-        <h2 class="mdc-typography--headline6">Complete</h2>
-        <a  href="/tasks/{{ $task->id }}/complete"
-            class="{{ ( $task->due < time ( ) ) ? 'overdue' : '' }}" 
+        <h2 class="mdc-typography--headline6">Complete for today</h2>
+        <a  href="/tasks/{{ $task->id }}/complete" 
             aria-hidden="true">
             
             <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="var(--mdc-theme-secondary)" style="opacity: 0.7;">
