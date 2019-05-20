@@ -38,7 +38,7 @@ class flatfileExerciseManager implements exercise\manager
     private function check ( exercise $exercise )
     {
         if ( ! isset ( $this->exercises [ $exercise->name ] ) )
-            throw new \exception ( "A goal with id: {$exercise->name} does not exist." );
+            throw new \exception ( "An exercise with name: {$exercise->name} does not exist." );
     }
 
     private function write ( )
