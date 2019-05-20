@@ -72,9 +72,7 @@
 
 ## refactor
 
-- Refactor add task into partials (partialize the different types like done with edit)
 - Correct list item with (add truncation for items that are too long) (or introduce task titles)
-- Abstract recurring view tab bars
 - Create a dedicated post install mechanism
 
 
