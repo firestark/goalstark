@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/food-tracker', function ( )
+route::get ( '/', function ( )
 {
     return app::fulfill ( 'i want to see my consumations' );
 } );

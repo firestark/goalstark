@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/fitness/add', function ( )
+route::get ( '/add', function ( )
 {
     return view::ok ( 'apps.fitness.schemes.add' );
 } );

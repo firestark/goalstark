@@ -5,10 +5,7 @@ route::get ( '/', function ( )
     return redirect::to ( '/goals/' );
 } );
 
-route::group ( '/apps', function ( )
-{
-    requiring ( __DIR__ . '/apps' );
-} );
+require __DIR__ . '/apps/routes.php';
 
 requiring ( __DIR__ . '/auth' );
 

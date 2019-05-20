@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/fitness/{scheme_id}/remove', function ( )
+route::get ( '/{scheme_id}/remove', function ( )
 {
     return app::fulfill ( 'i want to remove a scheme' );
 } );

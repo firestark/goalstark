@@ -1,7 +1,7 @@
 @extends ( 'page' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => '/apps/fitness' ] )
+    @include ( 'partials.up-arrow', [ 'link' => '/apps/fitness/' ] )
 @endsection
 
 @section ( 'title' )
@@ -15,4 +15,18 @@
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )
         </form>   
     </section>
+
+    <a href="/apps/fitness/{{ $scheme->id }}/routines/add" class="mdc-button">
+        <span class="mdc-button__label">Add routine</span>
+    </a>
+
+    @if ( count ( $scheme->routines ) )
+        <ul class="mdc-list">
+            @foreach ( $scheme->routine as $routine )
+                <li class="mdc-list-item" tabindex="0">
+                    <span class="mdc-list-item__text">{{ $routine->exercise->name }}</span>
+                </li>
+            @endforeach
+        </ul>
+    @endif
 @endsection

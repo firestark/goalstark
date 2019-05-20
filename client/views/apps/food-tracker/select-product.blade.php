@@ -1,7 +1,7 @@
 @extends ( 'page' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => '/apps/food-tracker' ] )
+    @include ( 'partials.up-arrow', [ 'link' => '/apps/food-tracker/' ] )
 @endsection
 
 @section ( 'title' )

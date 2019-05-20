@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/food-tracker/products', function ( )
+route::get ( '/products', function ( )
 {
     return app::fulfill ( 'i want to see my products' );
 } );
