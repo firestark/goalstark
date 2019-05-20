@@ -5091,7 +5091,6 @@ fieldset {
   border-width: 0px 0px 0px 4px; }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #dadce0;
   box-shadow: none;
   border-style: solid;
   border-color: transparent;
