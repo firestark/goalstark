@@ -29,6 +29,7 @@ function createFiles ( credentials $credentials )
     $files = [
         $path . '/consumations.data',
         $path . '/goals.data',
+        $path . '/schemes.data',
         $path. '/tasks.data'
     ];
     
