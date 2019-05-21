@@ -38,10 +38,11 @@ class goal
     function isCompleted ( array $tasks ) : bool
     {
         foreach ( $tasks as $task )
-            if ( ! $task->isCompleted ( ) )
-                return false;
+            if ( ! $task instanceof task\daily )
+                if ( ! $task->isCompleted ( ) )
+                    return false;
         
-        return  ! empty ( $tasks );
+        return ! empty ( $tasks );
     }
 
     /**

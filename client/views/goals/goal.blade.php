@@ -16,7 +16,7 @@
             <span class="mdc-list-item__secondary-text" style="font-weight: 500;">{{ 
                 count ( array_filter ( $goal->tasks, function ( $task ) { return $task->isCompleted ( ); } ) ) }} 
                 of
-                {{ count ( $goal->tasks ) }} tasks completed
+                {{ count ( array_filter ( $goal->tasks, function ( $task ) { return ! $task instanceof task\daily; } ) ) }} tasks completed
             </span>
         </span>
     </a>
