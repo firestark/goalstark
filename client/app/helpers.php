@@ -22,3 +22,14 @@ function taskToTypeString ( task $task ) : string
 			throw new \exception ( 'Unknown type' );
 	}
 }
+
+function taskStatusClass ( task $task ) : string
+{
+	if ( $task->isCompleted ( ) )
+        return 'completed';
+	
+		elseif ( $task->isOverdue ( ) )
+		return 'overdue';
+	
+	return '';
+}
