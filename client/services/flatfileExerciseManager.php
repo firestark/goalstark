@@ -17,33 +17,33 @@ class flatfileExerciseManager implements exercise\manager
 
     function add ( exercise $exercise )
     {
-        $this->exercises [ $exercise->name ] = $exercise;
+        $this->exercises [ $exercise->id ] = $exercise;
         $this->write ( );
     }
 
-    function find ( string $name ) : exercise
+    function find ( $id ) : exercise
     {
-        if ( ! isset ( $this->exercises [ $name ] ) )
-            throw new exception ( "Exercise: {$name} not found." );
+        if ( ! isset ( $this->exercises [ $id ] ) )
+            throw new exception ( "Exercise with id: {$id} not found." );
         
-        return $this->exercises [ $name ];
+        return $this->exercises [ $id ];
     }
 
     function remove ( exercise $exercise ) 
     {
-        unset ( $this->exercises [ $exercise->name ] );
+        unset ( $this->exercises [ $exercise->id ] );
         $this->write ( );
     }
 
-    function has ( string $name ) : bool
+    function has ( $id ) : bool
     {
-        return isset ( $this->exercises [ $name ] );
+        return isset ( $this->exercises [ $id ] );
     }
 
     private function check ( exercise $exercise )
     {
-        if ( ! isset ( $this->exercises [ $exercise->name ] ) )
-            throw new \exception ( "An exercise with name: {$exercise->name} does not exist." );
+        if ( ! isset ( $this->exercises [ $exercise->id ] ) )
+            throw new \exception ( "An exercise with id: {$exercise->id} does not exist." );
     }
 
     private function write ( )

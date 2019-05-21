@@ -10,9 +10,9 @@ interface manager
 
     function add ( exercise $exercise );
 
-    function find ( string $name ) : exercise;
+    function find ( $id ) : exercise;
 
     function remove ( exercise $exercise );
 
-    function has ( string $name ) : bool;
+    function has ( $id ) : bool;
 }

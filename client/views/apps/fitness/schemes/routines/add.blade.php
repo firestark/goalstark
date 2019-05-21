@@ -20,7 +20,7 @@
                     <option value="" disabled {{ isset ( $selected ) ? '' : 'selected' }}></option>
 
                     @foreach ( app::make ( exercise\manager::class )->all ( ) as $exercise )
-                        <option value="{{ $exercise->name }}">
+                        <option value="{{ $exercise->id }}">
                             {{ $exercise->name }}
                         </option>
                     @endforeach
