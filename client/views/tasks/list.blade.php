@@ -8,6 +8,16 @@
     @if ( count ( $tasks ) )
         <section class="content">
             <ul class="mdc-list mdc-list--two-line mdc-list--with-chip mdc-list--avatar-list mdc-list--highlight mdc-list--linked">
+
+                @if ( count ( $dailies ) )
+                    <h6 class="mdc-list-group__subheader">Dailies</h6>
+
+                    @foreach ( $dailies as $task )
+                        @include ( 'tasks.task', [ 'task' => $task ] )
+                    @endforeach
+                @endif
+                
+                
                 @if ( count ( $today ) )
                     <h6 class="mdc-list-group__subheader">Today</h6>
 
