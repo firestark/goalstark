@@ -33,3 +33,17 @@ function taskStatusClass ( task $task ) : string
 	
 	return '';
 }
+
+function goalStatusClass ( goal $goal, array $tasks ) : string
+{
+	if ( empty ( $tasks ) )
+		return 'draft';
+		
+	if ( $goal->isCompleted ( $tasks ) )
+		return 'completed';
+
+	if ( $goal->isOverdue ( $goal->tasks ) )
+		return 'overdue';
+	
+	return '';
+}
