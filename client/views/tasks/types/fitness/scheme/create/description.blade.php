@@ -1,0 +1,1 @@
+A fitness scheme task sets the task to create 1 fitness scheme before the set due date.

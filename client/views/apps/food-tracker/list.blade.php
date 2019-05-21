@@ -56,3 +56,15 @@
     
     @include ( 'partials.link.fab', [ 'link' => '/apps/food-tracker/add', 'action' => 'add' ] )
 @endsection
+
+
+@if ( count ( $consumations ) )
+    @section ( 'js' )
+        @parent
+
+        <script>        
+            const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
+            const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
+        </script>        
+    @endsection
+@endif

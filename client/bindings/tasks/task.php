@@ -13,6 +13,8 @@ app::bind ( task::class, function ( $app, array $payload = [ ] )
             return app::make ( task\daily::class );
         case 'due':
             return app::make ( task\due::class );
+        case 'fitness.scheme.create' :
+            return app::make ( task\scheme\create::class );
         case 'protein' :
             return app::make ( task\protein::class );
         case 'product.max-kcal' :

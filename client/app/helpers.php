@@ -3,6 +3,8 @@
 function taskToTypeString ( task $task ) : string
 {
 	switch ( $task ) {
+		case $task instanceof task\scheme\create:
+			return 'fitness.scheme.create';
 		case $task instanceof task\product\maxKcal:
 			return 'product.max-kcal';
 		case $task instanceof task\product\count:
