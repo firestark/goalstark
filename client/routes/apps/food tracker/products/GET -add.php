@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/products/add', function ( )
+route::get ( '/add', function ( )
 {
     return view::ok ( 'apps.food-tracker.products.add' );
 } );

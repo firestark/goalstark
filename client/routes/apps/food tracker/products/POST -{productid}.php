@@ -1,6 +1,6 @@
 <?php
 
-route::post ( '/products/{productid}', function ( )
+route::post ( '/{productid}', function ( )
 {
     return app::fulfill ( 'i want to update a product' );
 } );

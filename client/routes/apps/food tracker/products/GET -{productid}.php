@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/products/{productid}', function ( )
+route::get ( '/{productid}', function ( )
 {
     return app::fulfill ( 'i want to see a product' );
 } );
