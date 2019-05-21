@@ -5524,11 +5524,11 @@ button.reset {
   background-color: #1F8D3E; }
 
 .draft {
-  color: #ff5722;
-  fill: #ff5722; }
+  color: #ff9800;
+  fill: #ff9800; }
 
 .mdc-list-item__graphic.draft::after {
-  background-color: #ff5722; }
+  background-color: #ff9800; }
 
 .mdc-list--linked a:not(.mdc-list-item__graphic):not(.mdc-list-item__meta) {
   color: var(--mdc-theme-text-primary-on-background, #343434);
