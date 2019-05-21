@@ -8,10 +8,6 @@
 - Create 2 more apps
 
 
-### Food tracker
-
-- Create consumption diet task (max cal)
-
 #### Products
 
 - Disallow edit / delete for non admin users
