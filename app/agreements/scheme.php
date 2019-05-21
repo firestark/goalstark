@@ -16,6 +16,11 @@ class scheme
 
     function add ( routine $routine )
     {
-        $this->routines [ ] = $routine;
+        $this->routines [ $routine->id ] = $routine;
+    }
+
+    function remove ( routine $routine )
+    {
+        unset ( $this->routines [ $routine->id ] );
     }
 }
