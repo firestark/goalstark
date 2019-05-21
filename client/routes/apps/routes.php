@@ -5,10 +5,7 @@ route::group ( '/apps', function ( )
     require __DIR__ . '/GET -.php';
 } );
 
-route::group ( '/apps/fitness', function ( )
-{
-    requiring ( __DIR__ . '/fitness' );
-} );
+require __DIR__ . '/fitness/routes.php';
 
 route::group ( '/apps/food-tracker', function ( )
 {

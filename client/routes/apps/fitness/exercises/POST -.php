@@ -1,6 +1,6 @@
 <?php
 
-route::post ( '/exercises', function ( )
+route::post ( '/', function ( )
 {
     return app::fulfill ( 'i want to add an exercise' );
 } );
