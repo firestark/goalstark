@@ -1,1 +1,1 @@
-a:1:{s:13:"5ce310079653b";O:6:"scheme":2:{s:2:"id";s:13:"5ce310079653b";s:4:"name";s:4:"test";}}
+a:1:{s:13:"5ce310079653b";O:6:"scheme":3:{s:2:"id";s:13:"5ce310079653b";s:4:"name";s:5:"test3";s:8:"routines";a:1:{i:0;O:14:"scheme\routine":3:{s:8:"exercise";O:8:"exercise":1:{s:4:"name";s:11:"Bench press";}s:4:"sets";i:4;s:4:"reps";i:12;}}}}

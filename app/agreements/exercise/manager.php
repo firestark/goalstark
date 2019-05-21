@@ -13,4 +13,6 @@ interface manager
     function find ( string $name ) : exercise;
 
     function remove ( exercise $exercise );
+
+    function has ( string $name ) : bool;
 }

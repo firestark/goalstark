@@ -2,6 +2,8 @@
 
 namespace scheme;
 
+use exercise;
+
 class routine
 {
     public $exercise, $sets, $reps;

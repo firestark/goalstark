@@ -15,4 +15,6 @@ interface manager
     function remove ( scheme $scheme );
 
     function update ( scheme $scheme );
+
+    function has ( $id ) : bool;
 }

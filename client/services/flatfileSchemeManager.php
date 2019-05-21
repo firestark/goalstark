@@ -42,6 +42,11 @@ class flatfileSchemeManager implements scheme\manager
         $this->write ( );
     }
 
+    function has ( $id ) : bool
+    {
+        return isset ( $this->schemes [ $id ] );
+    }
+
     private function check ( scheme $scheme )
     {
         if ( ! isset ( $this->schemes [ $scheme->id ] ) )

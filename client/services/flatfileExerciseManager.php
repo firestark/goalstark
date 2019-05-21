@@ -35,6 +35,11 @@ class flatfileExerciseManager implements exercise\manager
         $this->write ( );
     }
 
+    function has ( string $name ) : bool
+    {
+        return isset ( $this->exercises [ $name ] );
+    }
+
     private function check ( exercise $exercise )
     {
         if ( ! isset ( $this->exercises [ $exercise->name ] ) )
