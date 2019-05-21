@@ -5435,7 +5435,8 @@ body {
 
 main {
   padding: 0 168px 32px 16px;
-  overflow: overlay;
+  overflow-y: overlay;
+  overflow-x: hidden;
   box-sizing: border-box;
   width: 100%;
   z-index: 2; }
