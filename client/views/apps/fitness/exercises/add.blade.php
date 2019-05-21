@@ -10,7 +10,7 @@
 
 @section ( 'content' )
     <section class="content" style="padding: 16px 8px 80px;">
-        <form action="/apps/fitness/exercises" method="POST">
+        <form action="/apps/fitness/exercises/" method="POST">
             @include ( 'partials.input.name' )
             @include ( 'partials.input.fab', [ 'action' => 'save' ] )
         </form>   
