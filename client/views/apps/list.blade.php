@@ -22,3 +22,15 @@
         </section>
     @endif
 @endsection
+
+
+@if ( count ( $apps ) )
+    @section ( 'js' )
+        @parent
+
+        <script>        
+            const list = mdc.list.MDCList.attachTo ( document.querySelector ( '.mdc-list' ) );
+            const listItemRipples = list.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
+        </script>        
+    @endsection
+@endif
