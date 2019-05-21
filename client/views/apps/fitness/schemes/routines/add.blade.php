@@ -1,7 +1,7 @@
 @extends ( 'page' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => "apps/fitness/{$scheme_id}" ] )
+    @include ( 'partials.up-arrow', [ 'link' => "/apps/fitness/{$scheme_id}" ] )
 @endsection
 
 @section ( 'title' )
