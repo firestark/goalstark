@@ -38,7 +38,7 @@ class goal
     function isCompleted ( array $tasks ) : bool
     {
         foreach ( $tasks as $task )
-            if ( ( $task instanceof task\daily and time ( ) < $this->due ) or ! $task->isCompleted ( ) )
+            if ( ( $task instanceof task\daily and time ( ) < $this->due ) or ( ! $task instanceof task\daily and ! $task->isCompleted ( ) ) )
                 return false;
         
         return ! empty ( $tasks );
