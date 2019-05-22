@@ -5477,6 +5477,8 @@ main {
 
 .mdc-list--three-line .mdc-list-item {
   height: 108px; }
+  .mdc-list--three-line .mdc-list-item .mdc-list-item__secondary-text:nth-child(2) {
+    margin-bottom: -4px; }
 
 .mdc-list--three-line .mdc-list-item__text {
   align-self: center; }
