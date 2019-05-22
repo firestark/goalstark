@@ -44,6 +44,11 @@ class goal
         return ! empty ( $tasks );
     }
 
+    function isDraft ( array $tasks ) : bool
+    {
+        return ( empty ( $tasks ) and ! $this->isOverdue ( $tasks ) );
+    }
+
     /**
      * Setting the due timestamp to the end of the day.
      * This makes the goal only overdue based on the day.
