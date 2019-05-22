@@ -96,7 +96,8 @@ Should a task only belong to one goal ever?
 
 - How are you going to make the task list (if you crop duplicates how will you show each one for each goal?)
 - Some goals are connected we lose the first step of this connection 
-- Changing a task potentially needs to be changed for every goal it occurs in
+- Changing a task potentially needs to be changed for every goal it occurs in 
+    (Should be solved in the view to make it explicit ( Found same task in the following goals would you like to update them there too?))
 - For some task types it doesnt make sense to have multiple of them (eg protein task)
 
 
