@@ -1,7 +1,6 @@
 <?php
 
-route::post ( '/{goalid}/tasks/add', function ( $goalid )
+route::post ( '/{goalid}/tasks/add', function ( )
 {
-    input::set ( 'goals', [ $goalid ] );
     return app::fulfill ( 'i want to add a task' );
 } );

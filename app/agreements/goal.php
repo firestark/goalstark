@@ -2,14 +2,14 @@
 
 class goal
 {
-    public $id, $title, $description, $due;
-    public $reasons = [ ];
+    public $id, $title, $description, $due, $tasks, $reasons;
 
-    function __construct ( $id, string $title, string $description, array $reasons, int $due )
+    function __construct ( $id, string $title, string $description, array $tasks, array $reasons, int $due )
     {
         $this->id           = $id;
         $this->title        = $title;
         $this->description  = $description;
+        $this->tasks        = $tasks;
         $this->reasons      = $reasons;
         $this->due          = $this->dueByEndOfDay ( $due );
     }
