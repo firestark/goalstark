@@ -4,11 +4,9 @@ use function compact as with;
 
 when ( 'i want to remove a task', then ( apply ( a ( 
     
-function ( task $task, task\manager $taskManager )
+function ( $taskid, goal $goal, goal\manager $manager )
 {
-    if ( ! $taskManager->has ( $task ) )
-        return [ 4000, [ ] ];
-         
-    $taskManager->remove ( $task );
+    unset ( $goal->tasks [ $taskid ] );
+    $manager->update ( $goal );
     return [ 3007, [ ] ];
 } ) ) ) );
