@@ -87,10 +87,14 @@ Should a task only belong to one goal ever?
 
 - The application will be simpler (a goal has tasks and that's it)
 - Changing a task doesn't mess up other goals
+- The end date of a daily tasks will be a bit more clear
+- It's easy to enforce the rule that a task must belong to a goal
+- Removing a goal easily removes all connected tasks
 
 
 ### Cons
 
+- How are you going to make the task list (if you crop duplicates how will you show each one for each goal?)
 - Some goals are connected we lose the first step of this connection 
 - Changing a task potentially needs to be changed for every goal it occurs in
 - For some task types it doesnt make sense to have multiple of them (eg protein task)
