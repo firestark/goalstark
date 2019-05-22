@@ -69,8 +69,6 @@
             </p>
         </div>
     @endif
-
-    @include ( 'partials.link.fab', [ 'link' => '/tasks/select-goal', 'action' => 'add' ] )
 @endsection
 
 

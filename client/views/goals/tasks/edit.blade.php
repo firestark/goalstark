@@ -1,7 +1,7 @@
 @extends ( 'page' )
 
 @section ( 'navigation' )
-    @include ( 'partials.up-arrow', [ 'link' => '/tasks/' ] )
+    @include ( 'partials.up-arrow', [ 'link' => "/goals/{$goal->id}/tasks" ] )
 @endsection
 
 @section ( 'title' )
@@ -20,7 +20,7 @@
 @section ( 'content' )
 
     <section class="content">        
-        <form method="POST" action="/tasks/{{ $task->id }}" style="display: grid; grid-template-rows: 1fr auto;">
+        <form method="POST" action="/goals/{{ $goal->id}}/tasks/{{ $task->id }}" style="display: grid; grid-template-rows: 1fr auto;">
             <section style="overflow: overlay; padding: 16px 8px 80px;">
                 <input type="hidden" name="type" value="{{ $type }}">
                 @include ( 'tasks.types.' . $type . '.fields' )

@@ -1,7 +1,7 @@
 <li class="mdc-list-item" tabindex="0">
     @include ( 'tasks.types.' . taskToTypeString ( $task ) . '.list-item-action' )
 
-    <a href="/tasks/{{ $task->id }}" style="position: relative">
+    <a href="/goals/{{ $goal->id }}/tasks/{{ $task->id }}" style="position: relative">
         @include ( 'tasks.types.' . taskToTypeString ( $task ) . '.list-item-text' )
     </a>
 

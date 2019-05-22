@@ -18,7 +18,7 @@
                     <h6 class="mdc-list-group__subheader">Dailies</h6>
 
                     @foreach ( $dailies as $task )
-                        @include ( 'tasks.task', [ 'task' => $task ] )
+                        @include ( 'goals.tasks.task', [ 'task' => $task ] )
                     @endforeach
                 @endif
                 
@@ -50,7 +50,7 @@
                     <h6 class="mdc-list-group__subheader">Completed</h6>
 
                     @foreach ( $completed as $task )
-                        @include ( 'tasks.task', [ 'task' => $task ] )
+                        @include ( 'goals.tasks.task', [ 'task' => $task ] )
                     @endforeach
                 @endif
             </ul>
