@@ -2,7 +2,12 @@
 
 when ( 'i want to see my tasks', then ( apply ( a ( 
     
-function ( task\manager $taskManager )
+function ( goal\manager $manager )
 {
-    return [ 3006, [ 'tasks' => $taskManager->all ( ) ] ];
+    $tasks = [ ];
+    
+    foreach ( $manager->all ( ) as $goal )
+        $tasks = array_merge ( $tasks, $goal->tasks );
+
+    return [ 3006, [ 'tasks' => $tasks ] ];
 } ) ) ) );

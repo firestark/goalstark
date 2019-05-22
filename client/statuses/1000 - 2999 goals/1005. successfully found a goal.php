@@ -2,8 +2,7 @@
 
 use function compact as with;
 
-status::matching ( 1005, function ( goal $goal, array $tasks )
+status::matching ( 1005, function ( goal $goal )
 {
-	$tasks = array_reverse ( $tasks );
-	return view::ok ( 'goals.edit', with ( 'goal', 'tasks' ) );
+	return view::ok ( 'goals.edit', with ( 'goal' ) );
 } );
