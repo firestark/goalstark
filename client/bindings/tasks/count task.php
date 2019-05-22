@@ -3,7 +3,6 @@
 app::bind ( task\count::class, function ( )
 {
     return new task\count (
-        input::get ( 'goals', [ ] ),
         input::get ( 'taskid', uniqid ( ) ),
         input::get ( 'description', '' ),
         input::get ( 'count', 0 ),

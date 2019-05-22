@@ -11,13 +11,13 @@ class count extends \task
     public $times = 0;
     public $due = 0;
 
-    function __construct ( array $goals, $id, string $description, int $times, int $due, array $completions = [ ] )
+    function __construct ( $id, string $description, int $times, int $due, array $completions = [ ] )
     {
         $this->times = $times;
         $this->due = endOfDay ( $due );
         $this->completions = $completions;
 
-        parent::__construct ( $goals, $id, $description );
+        parent::__construct ( $id, $description );
     }
 
     function complete ( )

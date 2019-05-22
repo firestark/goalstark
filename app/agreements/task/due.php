@@ -7,11 +7,11 @@ class due extends \task
     public $due = 0;
     private $completed = false;
 
-    function __construct ( array $goals, $id, string $description, int $due, bool $completed = false )
+    function __construct ( $id, string $description, int $due, bool $completed = false )
     {
         $this->due = endOfDay ( $due );
         $this->completed = $completed;
-        parent::__construct ( $goals, $id, $description );
+        parent::__construct ( $id, $description );
     }
 
     function complete ( )
