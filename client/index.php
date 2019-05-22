@@ -20,7 +20,8 @@ $app->instance ( 'view',
     ) 
 );
 
-$app [ 'session' ]->flash ( 'uri', $app [ 'request' ]->uri . '?' . http_build_query ( $app [ 'request' ]->parameters ) );
+if ( strpos (  $app [ 'request' ]->uri, '.' ) === false )
+    $app [ 'session' ]->flash ( 'uri', $app [ 'request' ]->uri . '?' . http_build_query ( $app [ 'request' ]->parameters ) );
 
 facade::setFacadeApplication ( $app );
 
