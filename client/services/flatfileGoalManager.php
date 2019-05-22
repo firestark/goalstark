@@ -75,7 +75,6 @@ class flatfileGoalManager extends goal\manager
 
     function remove ( goal $goal )
     {
-        $this->check ( $goal );
         unset ( $this->goals [ $goal->id ] );
         $this->write ( );
     }
