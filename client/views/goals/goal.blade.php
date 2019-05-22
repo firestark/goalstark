@@ -13,10 +13,8 @@
         <span class="mdc-list-item__text" style="width: 100%;">
             <span class="mdc-list-item__primary-text">{{ $goal->title }}</span>
             <span class="mdc-list-item__secondary-text" style="font-weight: 500;">Due {{  date ( 'M d, Y ', $goal->due ) }}</span>
-            <span class="mdc-list-item__secondary-text" style="font-weight: 500;">{{ 
-                count ( array_filter ( $goal->tasks, function ( $task ) { return $task->isCompleted ( ); } ) ) }} 
-                of
-                {{ count ( array_filter ( $goal->tasks, function ( $task ) { return ! $task instanceof task\daily; } ) ) }} tasks completed
+            <span class="mdc-list-item__secondary-text" style="font-weight: 500;">{{ count ( $goal->tasks ) }}
+                {{ ( count ( $goal->tasks ) === 1 ) ? 'task' : 'tasks' }}
             </span>
         </span>
     </a>
