@@ -24,6 +24,8 @@
 
 ## Tasks
 
+- Remove completed state from task agreements
+- Fix product count +1 redirect
 - Add task explanations
 
 
