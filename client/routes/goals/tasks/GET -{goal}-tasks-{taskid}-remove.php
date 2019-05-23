@@ -2,7 +2,7 @@
 
 use function compact as with;
 
-route::get ( '/{goalid}/tasks/{taskid}/remove', function ( $goalid, $taskid )
+route::get ( '/{goal}/tasks/{taskid}/remove', function ( $goal, $taskid )
 {
     return app::fulfill ( 'i want to remove a task', with ( 'taskid' ) );
 } );

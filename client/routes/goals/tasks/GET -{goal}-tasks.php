@@ -1,6 +1,6 @@
 <?php
 
-route::get ( '/{goalid}/tasks', function ( )
+route::get ( '/{goal}/tasks', function ( )
 {
     return app::pipe ( [ 
         'i want to see a goal\'s tasks',

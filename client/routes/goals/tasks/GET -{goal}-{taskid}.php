@@ -2,7 +2,7 @@
 
 use function compact as with;
 
-route::get ( '/{goalid}/tasks/{taskid}', function ( $goalid, $taskid )
+route::get ( '/{goal}/tasks/{taskid}', function ( $goal, $taskid )
 {
     return app::fulfill ( 'i want to see a task', with ( 'taskid' ) );
 } );
