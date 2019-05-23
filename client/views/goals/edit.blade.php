@@ -11,7 +11,7 @@
 @include ( 'goals.tab-bar', [ 'goalid' => $goal->id ] )
 
 @section ( 'content' )
-    <form method="POST" action="/goals/{{ $goal->id }}" style="padding: 16px 8px;">
+    <form method="POST" action="/goals/{{ $goal->id }}" style="padding: 24px">
         <input type="hidden" name="goalid" value="{{ $goal->id }}">
 
         @foreach ( $goal->reasons as $reason )

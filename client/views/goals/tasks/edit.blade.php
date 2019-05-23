@@ -21,7 +21,7 @@
 
     <section class="content">        
         <form method="POST" action="/goals/{{ $goal->id}}/tasks/{{ $task->id }}" style="display: grid; grid-template-rows: 1fr auto;">
-            <section style="overflow: overlay; padding: 16px 8px 80px;">
+            <section style="overflow: overlay; padding: 24px 24px 80px;">
                 <input type="hidden" name="type" value="{{ $type }}">
                 @include ( 'tasks.types.' . $type . '.fields' )
 
