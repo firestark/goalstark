@@ -9,7 +9,6 @@ app::bind ( task\product\count::class, function ( $app )
         input::get ( 'taskid', uniqid ( ) ),
         app::make ( productManager::class )->find ( app::make ( product::class ) ),
         input::get ( 'count', 0 ),
-        strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) ),
-        $completions ?? [ ]
+        strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) )
     );
 } );

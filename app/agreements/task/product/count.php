@@ -11,7 +11,7 @@ class count extends \task
     public $times = 0;
     public $due = 0;
 
-    function __construct ( $id, product $product, int $times, int $due, array $completions = [ ] )
+    function __construct ( $id, product $product, int $times, int $due )
     {
         $this->product = $product;
         $this->times = $times;
