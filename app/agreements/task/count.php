@@ -47,4 +47,9 @@ class count extends \task
     {
         return ( ! $this->isCompleted ( ) and $this->due === endOfDay ( time ( ) ) );
     }
+
+    function __toString ( )
+    {
+        return uniqid ( );
+    }
 }

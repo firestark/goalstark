@@ -28,4 +28,9 @@ class daily extends \task
     {
         return ! $this->isCompleted ( );
     }
+
+    function __toString ( )
+    {
+        return uniqid ( );
+    }
 }
