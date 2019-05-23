@@ -4,7 +4,8 @@ use function compact as with;
 
 status::matching ( [ 3006, 7009 ], function ( array $tasks, int $protein )
 {
-	$tasks = array_reverse ( $tasks );
+	
+	$tasks = array_reverse ( array_unique ( $tasks ) );
 	$dailies = array_filter ( $tasks, function ( $task ) { return $task instanceof task\daily; } );
 	$today = array_filter ( $tasks, function ( $task ) { return $task->dueToday ( ) and ! $task instanceof task\daily; } );
 	$later = array_filter ( $tasks, function ( $task ) { return $task->dueLater ( ); } );

@@ -21,6 +21,11 @@ abstract class task
         return ( ! $this->isCompleted ( ) and ! $this->isOverdue ( ) and ! $this->dueToday ( ) );
     }
 
+    function __toString ( )
+    {
+        return $this->description;
+    }
+
     abstract function dueToday ( ) : bool;
 
     abstract function complete ( );
