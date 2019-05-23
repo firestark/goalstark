@@ -5475,7 +5475,7 @@ main {
 .mdc-list--with-chip .mdc-list-item {
   height: 80px; }
 
-.mdc-list--avatar-list .mdc-list--two-line .mdc-list-item__text {
+.mdc-list--two-line.mdc-list--avatar-list .mdc-list-item__text {
   top: 4px;
   position: relative; }
 
