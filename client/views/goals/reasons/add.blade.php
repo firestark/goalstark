@@ -9,7 +9,7 @@
 @endsection
 
 @section ( 'content' )
-    <form action="/goals/{{ $goalid }}/reasons" method="POST" style="padding: 21px 8px 0;">
+    <form action="/goals/{{ $goalid }}/reasons" method="POST" style="padding: 29px 24px 0;">
         @include ( 'partials.input.description' )
 
         @include ( 'partials.input.fab', [ 'action' => 'save' ] )
