@@ -1,7 +1,10 @@
 <?php
 
-app::bind ( task::class, function ( $app, array $payload = [ ] )
+app::bind ( task::class, function ( $app )
 {   
+    if ( isset ( $app [ goal::class ]->tasks [ input::get ( 'task', '' ) ] ) )
+        return $app [ goal::class ]->tasks [ input::get ( 'task', '' ) ];
+
     switch ( input::get ( 'type', '' ) ) {
         case 'daily' :
             return app::make ( task\daily::class );
