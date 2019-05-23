@@ -65,6 +65,17 @@ class flatfileDietitian implements dietitian
         return $kcal;
     }
 
+    function eatenTimes ( product $product ) : int
+    {
+        $times = 0;
+
+        foreach ( $this->today ( ) as $consumation )
+            if ( $consumation->product->id === $product->id )
+                $times++;
+        
+        return $times;
+    }
+
     private function write ( )
 	{
 		file_put_contents ( $this->file, serialize ( $this->consumations ) );

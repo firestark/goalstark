@@ -10,7 +10,7 @@ status::matching ( [ 3006, 7009 ], function ( array $tasks, int $protein )
 	$today = array_filter ( $tasks, function ( $task ) { return $task->dueToday ( ) and ! $task instanceof task\daily; } );
 	$later = array_filter ( $tasks, function ( $task ) { return $task->dueLater ( ); } );
 	$overdue = array_filter ( $tasks, function ( $task ) { return $task->isOverdue ( ); } );
-	$completed = array_filter ( $tasks, function ( $task ) { return $task->isCompleted ( ); } );
+	$completed = array_filter ( $tasks, function ( $task ) { return app::make ( task\manager::class )->isCompleted ( $task ); } );
 	
 	return view::ok ( 'tasks.list', with ( 'tasks', 'dailies', 'today', 'later', 'overdue', 'protein', 'completed' ) );
 } );

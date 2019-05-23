@@ -21,4 +21,9 @@ interface dietitian
      * @return Int todays consumed kcal's 
      */
     function kcal ( ) : int;
+
+    /**
+     * @return Int how many times product has been eaten today.
+     */
+    function eatenTimes ( product $product ) : int;
 }

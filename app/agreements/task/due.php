@@ -5,7 +5,7 @@ namespace task;
 class due extends \task
 {
     public $due = 0;
-    private $completed = false;
+    public $completed = false;
 
     function __construct ( $id, string $description, int $due, bool $completed = false )
     {
