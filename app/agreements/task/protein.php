@@ -12,4 +12,9 @@ class protein extends daily
         $description = "Consume {$target}g of protein";
         parent::__construct ( $id, $description );
     }
+
+    function __toString ( )
+    {
+        return $this->description;
+    }
 }
