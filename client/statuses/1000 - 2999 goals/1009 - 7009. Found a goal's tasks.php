@@ -4,12 +4,17 @@ use function compact as with;
 
 status::matching ( [ 1009, 7009 ], function ( goal $goal, int $protein )
 {
+	$manager = app::make ( task\manager::class );
+
 	$tasks = array_reverse ( $goal->tasks );
-	$dailies = array_filter ( $tasks, function ( $task ) { return $task instanceof task\daily; } );
-	$today = array_filter ( $tasks, function ( $task ) { return $task->dueToday ( ) and ! $task instanceof task\daily; } );
-	$later = array_filter ( $tasks, function ( $task ) { return $task->dueLater ( ); } );
-	$overdue = array_filter ( $tasks, function ( $task ) { return $task->isOverdue ( ); } );
-	$completed = array_filter ( $tasks, function ( $task ) { return $task->isCompleted ( ); } );
+	foreach ( $tasks as $task )
+		$task->goal = $goal;
+	
+	$dailies = array_filter ( $tasks, function ( $task ) use ( $manager ) { return $task instanceof task\daily; } );
+	$today = array_filter ( $tasks, function ( $task ) use ( $manager ) { return ! $task instanceof task\daily and $manager->isDueToday ( $task ); } );
+	$later = array_filter ( $tasks, function ( $task ) use ( $manager ) { return $manager->isDueLater ( $task ); } );
+	$overdue = array_filter ( $tasks, function ( $task ) use ( $manager ) { return $manager->isOverdue ( $task ); } );
+	$completed = array_filter ( $tasks, function ( $task ) use ( $manager ) { return $manager->isCompleted ( $task ); } );
 
 	return view::ok ( 'goals.tasks.list', with ( 'goal', 'tasks', 'dailies', 'today', 'later', 'overdue', 'protein', 'completed' ) );
 } );

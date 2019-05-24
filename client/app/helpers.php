@@ -15,7 +15,7 @@ function taskToTypeString ( task $task ) : string
 			return 'count';
 		case $task instanceof task\daily:
 			return 'daily';
-		case $task instanceof task\due:
+		case $task instanceof task\due\simple:
 			return 'due';
 		
 		default:
@@ -28,7 +28,7 @@ function taskStatusClass ( task $task ) : string
 	if ( $task->isCompleted ( ) )
         return 'completed';
 	
-		elseif ( $task->isOverdue ( ) )
+	elseif ( $task->isOverdue ( ) )
 		return 'overdue';
 	
 	return '';

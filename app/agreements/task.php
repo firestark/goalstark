@@ -25,13 +25,4 @@ abstract class task
     {
         return $this->description;
     }
-
-    abstract function dueToday ( ) : bool;
-
-    abstract function complete ( );
-
-    abstract function uncomplete ( );
-
-    abstract function isCompleted ( ) : bool;
-
 }

@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-    @if ( $task->isCompleted ( ) )
+    @if ( $task->completed )
         <h2 class="mdc-typography--headline6">Uncomplete</h2>
         <a  href="/tasks/{{ $task->id }}/uncomplete" 
             class="completed" 

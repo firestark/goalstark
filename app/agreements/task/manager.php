@@ -30,7 +30,7 @@ class manager
                 return $task->completed;
 
             case $task instanceof protein:
-                return $this->dietitian->protein ( ) >= $task->goal;
+                return ( $this->dietitian->protein ( ) >= $task->goal );
             
             default:
                 return false;
@@ -39,6 +39,65 @@ class manager
 
     function isOverdue ( task $task ) : bool
     {
+        if ( $this->isCompleted ( $task ) )
+            return false;
         
+        switch ( $task ) {
+            case $task instanceof due:
+                return ( $task->due < time ( ) );
+            
+            default:
+                return false;
+        }
+    }
+
+    function isDueToday ( task $task ) : bool
+    {
+        if ( $this->isCompleted ( $task ) )
+            return false;
+        
+        switch ( $task ) {
+            case $task instanceof due:
+                return ( $task->due === endOfDay ( time ( ) ) );
+            
+            default:
+                return false;
+        }
+    }
+
+    function isDueLater ( task $task ) : bool
+    {
+        if ( $this->isCompleted ( $task ) )
+            return false;
+        
+        switch ( $task ) {
+            case $task instanceof daily:
+                return false;
+            
+            default:
+                return false;
+        }
+    }
+
+    function complete ( task $task )
+    {
+        switch ( $task ) {
+            case $task instanceof due\simple:
+                $task->completed = true;
+                break;
+            default:
+                return;
+        }
+    }
+
+    function uncomplete ( task $task )
+    {
+        switch ( $task ) {
+            case $task instanceof due\simple:
+                $task->completed = false;
+                break;
+            default:
+                return;
+        }
     }
 }

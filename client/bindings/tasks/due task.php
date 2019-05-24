@@ -2,7 +2,7 @@
 
 app::bind ( task\due::class, function ( )
 {
-    return new task\due (
+    return new task\due\simple (
         input::get ( 'taskid', uniqid ( ) ),
         input::get ( 'description', '' ),
         strtotime ( input::get ( 'due', date ( 'Y-m-d' ) ) )

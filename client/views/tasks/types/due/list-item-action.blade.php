@@ -1,5 +1,5 @@
-@if ( $task->isCompleted ( ) )
-    <a  href="/tasks/{{ $task->id }}/uncomplete" 
+@if ( $task->completed )
+    <a  href="/goals/{{ $task->goal->id }}/tasks/{{ $task->id }}/uncomplete" 
         class="mdc-list-item__graphic completed" 
         aria-hidden="true">
         
@@ -9,7 +9,7 @@
         </svg>
     </a>
 @else
-    <a  href="/tasks/{{ $task->id }}/complete" 
+    <a  href="/goals/{{ $task->goal->id }}/tasks/{{ $task->id }}/complete" 
         class="mdc-list-item__graphic {{ ( $task->due < time ( ) ) ? 'overdue' : '' }}" 
         aria-hidden="true">
         
