@@ -14,7 +14,7 @@ class count extends \task\due
     {
         $this->product = $product;
         $this->times = $times;
-        $description = "Eat {$product->name}";
+        $description = "Consume {$product->name}";
 
         parent::__construct ( $id, $description, $due );
     }
