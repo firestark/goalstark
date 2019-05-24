@@ -4,6 +4,14 @@
     My tasks
 @endsection
 
+@section ( 'style' )
+    <style>
+        .mdc-snackbar {
+            bottom: 64px;
+        }
+    </style>
+@endsection
+
 @section( 'content' )
     @if ( count ( $tasks ) )
         <section class="content">
