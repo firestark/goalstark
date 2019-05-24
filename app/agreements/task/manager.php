@@ -27,7 +27,7 @@ class manager
             case $task instanceof daily:
                 return end ( $task->completions ) >= beginOfDay ( time ( ) );
 
-            case $task instanceof due:
+            case $task instanceof due\simple:
                 return $task->completed;
 
             case $task instanceof protein:
@@ -89,6 +89,9 @@ class manager
             case $task instanceof product\count:
                 $this->dietitian->add ( new consumation ( uniqid ( ), $task->product ) );
                 break;
+            case $task instanceof count:
+                $task->completions [ ] = time ( );
+                break;
             case $task instanceof due\simple:
                 $task->completed = true;
                 break;
@@ -102,6 +105,9 @@ class manager
         switch ( $task ) {
             case $task instanceof product\count:
                 $this->dietitian->removeLastWithProduct ( $task->product );
+                break;
+            case $task instanceof count:
+                array_pop ( $task->completions );
                 break;
             case $task instanceof due\simple:
                 $task->completed = false;
