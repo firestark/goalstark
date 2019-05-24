@@ -2,6 +2,7 @@
 
 namespace task;
 
+use consumation;
 use dietitian;
 use task;
 
@@ -85,6 +86,8 @@ class manager
     function complete ( task $task )
     {
         switch ( $task ) {
+            case $task instanceof product\count:
+                $this->dietitian->add ( new consumation ( uniqid ( ), $task->product ) );
             case $task instanceof due\simple:
                 $task->completed = true;
                 break;
