@@ -25,6 +25,9 @@ function taskToTypeString ( task $task ) : string
 
 function taskStatusClass ( task $task ) : string
 {
+	if ( $task instanceof task\product\maxKcal )
+		return ( app::make ( dietitian::class )->kcal ( ) <= $task->kcal ) ? 'completed' : 'overdue';
+
 	if ( app::make ( task\manager::class )->isCompleted ( $task ) ) 
 		return 'completed';
 	
