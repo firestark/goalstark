@@ -25,10 +25,10 @@ function taskToTypeString ( task $task ) : string
 
 function taskStatusClass ( task $task ) : string
 {
-	if ( $task->isCompleted ( ) )
-        return 'completed';
+	if ( app::make ( task\manager::class )->isCompleted ( $task ) ) 
+		return 'completed';
 	
-	elseif ( $task->isOverdue ( ) )
+	elseif ( app::make ( task\manager::class )->isOverdue ( $task ) )
 		return 'overdue';
 	
 	return '';
