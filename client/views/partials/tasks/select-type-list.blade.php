@@ -140,31 +140,6 @@
             </span>
         </label>
     </li>
-
-    <h3 class="mdc-list-group__subheader">Fitness tasks</h3>
-
-    <li class="mdc-list-item" role="radio" aria-checked="{{ input::get ( 'type' ) === 'fitness.scheme.create' ? 'true' : 'false' }}" tabindex="7">
-        <span class="mdc-list-item__graphic">
-            <div class="mdc-radio">
-                <input class="mdc-radio__native-control"
-                    type="radio"
-                    id="type-7"
-                    name="type"
-                    value="fitness.scheme.create"
-                    checked="{{ input::get ( 'type' ) === 'fitness.scheme.create' ? 'true' : 'false' }}">
-                <div class="mdc-radio__background">
-                    <div class="mdc-radio__outer-circle"></div>
-                    <div class="mdc-radio__inner-circle"></div>
-                </div>
-            </div>
-        </span>
-        <label class="mdc-list-item__text" for="type-7" style="width: 100%;">
-            <span class="mdc-list-item__text" style="width: 100%;">
-                <span class="mdc-list-item__primary-text">Fitness scheme</span>
-                <span class="mdc-list-item__secondary-text">Create a fitness scheme</span>
-            </span>
-        </label>
-    </li>
 </ul>
 
 @section ( 'js' )
