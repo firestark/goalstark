@@ -74,6 +74,9 @@ class manager
             case $task instanceof daily:
                 return false;
             
+            case $task instanceof due:
+                return ( ! $this->isDueToday ( $task ) and ! $this->isOverdue ( $task ) );
+            
             default:
                 return false;
         }
