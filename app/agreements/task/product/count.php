@@ -5,20 +5,18 @@ namespace task\product;
 use consumation;
 use product;
 
-class count extends \task
+class count extends \task\due
 {
     public $product = null;
     public $times = 0;
-    public $due = 0;
 
     function __construct ( $id, product $product, int $times, int $due )
     {
         $this->product = $product;
         $this->times = $times;
-        $this->due = endOfDay ( $due );
         $description = "Eat {$product->name}";
 
-        parent::__construct ( $id, $description );
+        parent::__construct ( $id, $description, $due );
     }
 
     function complete ( )
