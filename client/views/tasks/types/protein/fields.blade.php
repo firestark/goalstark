@@ -1,1 +1,1 @@
-@include ( 'partials.input.protein', [ 'value' => $task->goal ?? 0, 'autofocus' => true ] )
+@include ( 'partials.input.protein', [ 'value' => $task->target ?? 0, 'autofocus' => true ] )
