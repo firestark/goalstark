@@ -45,6 +45,13 @@ class flatfileDietitian implements dietitian
         $this->write ( );
     }
 
+    function removeLastWithProduct ( product $product )
+    {
+        foreach ( array_reverse ( $this->all ( ) ) as $consumation )
+            if ( $consumation->product->id === $product->id )
+                return $this->remove ( $consumation );
+    }
+
     function protein ( ) : int
     {
         $protein = 0;

@@ -88,6 +88,7 @@ class manager
         switch ( $task ) {
             case $task instanceof product\count:
                 $this->dietitian->add ( new consumation ( uniqid ( ), $task->product ) );
+                break;
             case $task instanceof due\simple:
                 $task->completed = true;
                 break;
@@ -99,6 +100,9 @@ class manager
     function uncomplete ( task $task )
     {
         switch ( $task ) {
+            case $task instanceof product\count:
+                $this->dietitian->removeLastWithProduct ( $task->product );
+                break;
             case $task instanceof due\simple:
                 $task->completed = false;
                 break;

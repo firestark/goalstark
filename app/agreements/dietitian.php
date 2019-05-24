@@ -26,4 +26,6 @@ interface dietitian
      * @return Int how many times product has been eaten today.
      */
     function eatenTimes ( product $product ) : int;
+
+    function removeLastWithProduct ( product $product );
 }

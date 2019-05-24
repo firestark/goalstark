@@ -19,39 +19,6 @@ class count extends \task\due
         parent::__construct ( $id, $description, $due );
     }
 
-    function complete ( )
-    {
-
-    }
-
-    function uncomplete ( )
-    {
-
-    }
-
-    function isCompleted ( ) : bool
-    {
-        return false;
-    }
-
-    function isOverdue ( ) : bool
-    {
-        return ( 
-            ! $this->isCompleted ( ) and 
-            $this->due < endOfDay ( time ( ) )
-        );
-    }
-
-    function dueToday ( ) : bool
-    {
-        return ( ! $this->isCompleted ( ) and $this->due === endOfDay ( time ( ) ) );
-    }
-
-    function dueLater ( ) : bool
-    {
-        return ( ! $this->isCompleted ( ) and ! $this->isOverdue ( ) and ! $this->dueToday ( ) );
-    }
-
     function __toString ( )
     {
         return uniqid ( );

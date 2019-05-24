@@ -2,9 +2,6 @@
 
 app::bind ( task\product\count::class, function ( $app )
 {
-    foreach ( input::get ( 'consumations', [ ] ) as $consumationid )
-        $completions [ ] = $app [ dietitian::class ]->findById ( $consumationid );
-
     return new task\product\count (
         input::get ( 'taskid', uniqid ( ) ),
         app::make ( productManager::class )->find ( app::make ( product::class ) ),
