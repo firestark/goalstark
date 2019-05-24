@@ -25,7 +25,6 @@
 ## Tasks
 
 - Remove completed state from task agreements
-- Fix product count +1 redirect
 - Add task explanations
 
 
@@ -46,11 +45,11 @@
 
 ## Onboarding
 
-- Show reasons/benefits why they (should) download your app
+- Finish onboarding
+- Show reasons/benefits why they (should) download goalstark
 - Pre filled data?
 - Get the user asap to success milestone (fulfillment of a goal? What about demo fulfillment run)
 - Spike feelings of accomplishment (After eg adding a goal,  In a non childish way!)
-- Push notification (On onboard failure?)
 
 
 ## Responsive design
