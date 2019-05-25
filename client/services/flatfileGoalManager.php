@@ -4,8 +4,9 @@ class flatfileGoalManager extends goal\manager
 {
     private $goals, $file;
 
-    function __construct ( string $file, array $goals )
+    function __construct ( task\manager $tasks, string $file, array $goals )
     {
+        parent::__construct ( $tasks );
         $this->file = $file;
         $this->goals = $goals;
     }

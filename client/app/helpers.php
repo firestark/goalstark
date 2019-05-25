@@ -37,15 +37,15 @@ function taskStatusClass ( task $task ) : string
 	return '';
 }
 
-function goalStatusClass ( goal $goal, array $tasks ) : string
+function goalStatusClass ( goal $goal ) : string
 {		
-	if ( $goal->isCompleted ( $tasks ) )
+	if ( app::make ( goal\manager::class )->isCompleted ( $goal ) )
 		return 'completed';
 
-	if ( $goal->isOverdue ( $goal->tasks ) )
+	if ( app::make ( goal\manager::class )->isOverdue ( $goal ) )
 		return 'overdue';
 	
-	if ( $goal->isDraft ( $tasks ) )
+	if ( app::make ( goal\manager::class )->isDraft ( $goal ) )
 		return 'draft';
 	
 	return '';

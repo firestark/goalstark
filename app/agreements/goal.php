@@ -30,25 +30,6 @@ class goal
         return isset ( $this->reasons [ $reason->id ] );
     }
 
-    function isOverdue ( array $tasks ) : bool
-    {
-        return ( ! $this->isCompleted ( $tasks ) and ( $this->due < time ( ) ) ); 
-    }
-
-    function isCompleted ( array $tasks ) : bool
-    {
-        foreach ( $tasks as $task )
-            if ( ( $task instanceof task\daily and time ( ) < $this->due ) or ( ! $task instanceof task\daily and ! $task->isCompleted ( ) ) )
-                return false;
-        
-        return ! empty ( $tasks );
-    }
-
-    function isDraft ( array $tasks ) : bool
-    {
-        return ( empty ( $tasks ) and ! $this->isOverdue ( $tasks ) );
-    }
-
     /**
      * Setting the due timestamp to the end of the day.
      * This makes the goal only overdue based on the day.

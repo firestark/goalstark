@@ -1,6 +1,6 @@
 <li class="mdc-list-item" tabindex="0">
     <span 
-        class="mdc-list-item__graphic {{ goalStatusClass ( $goal, $goal->tasks ) }}" 
+        class="mdc-list-item__graphic {{ goalStatusClass ( $goal ) }}" 
         aria-hidden="true">
         
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
