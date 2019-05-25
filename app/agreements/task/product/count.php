@@ -18,4 +18,9 @@ class count extends \task\due
 
         parent::__construct ( $id, $description, $due );
     }
+
+    function __toString ( )
+    {
+        return uniqid ( );
+    }
 }
