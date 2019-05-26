@@ -20,9 +20,6 @@ $app->instance ( 'view',
     ) 
 );
 
-if ( strpos (  $app [ 'request' ]->uri, '.' ) === false )
-    $app [ 'session' ]->flash ( 'uri', $app [ 'request' ]->uri . '?' . http_build_query ( $app [ 'request' ]->parameters ) );
-
 facade::setFacadeApplication ( $app );
 
 require ( __DIR__ . '/routes/routes.php' );
@@ -35,3 +32,6 @@ $kernel = new firestark\kernel ( $app );
 $response = $kernel->handle ( $app [ 'request' ] );
 
 $response->send ( );
+
+if ( strpos (  $app [ 'request' ]->uri, '.' ) === false and $app [ 'request' ]->uri !== '/login' )
+    $app [ 'session' ]->flash ( 'uri', $app [ 'request' ]->uri . '?' . http_build_query ( $_GET ) );
