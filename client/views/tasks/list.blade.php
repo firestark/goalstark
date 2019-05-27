@@ -15,7 +15,7 @@
 @section( 'content' )
     @if ( count ( $tasks ) )
         <section class="content">
-            <ul class="mdc-list mdc-list--two-line mdc-list--with-chip mdc-list--avatar-list mdc-list--highlight mdc-list--linked">
+            <ul class="mdc-list mdc-list--three-line mdc-list--with-chip mdc-list--avatar-list mdc-list--highlight mdc-list--linked">
 
                 @if ( count ( $dailies ) )
                     <h6 class="mdc-list-group__subheader">Dailies</h6>

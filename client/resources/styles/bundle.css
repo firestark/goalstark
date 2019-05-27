@@ -5885,3 +5885,25 @@ footer.mdc-wizard {
 
 .mdc-dialog .mdc-dialog__content {
   opacity: 0.6; }
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden; }
+  .tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; }
+  .tab-content {
+    max-height: 0;
+    padding: 0 0 0 16px;
+    transition: all .35s; }
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    cursor: pointer; }
+
+input:checked ~ .tab-content {
+  max-height: 100vh; }

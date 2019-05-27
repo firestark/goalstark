@@ -2,7 +2,10 @@
     @include ( 'tasks.types.' . taskToTypeString ( $task ) . '.list-item-action' )
 
     <a href="/goals/{{ $goal->id }}/tasks/{{ $task->id }}" style="position: relative">
-        @include ( 'tasks.types.' . taskToTypeString ( $task ) . '.list-item-text' )
+        <span class="mdc-list-item__text" style="width: 100%;">
+            <span class="mdc-list-item__primary-text">{{ $task->description }}</span>
+            <span class="mdc-list-item__secondary-text">@include ( 'tasks.types.' . taskToTypeString ( $task ) . '.list-item-text' )</span>
+        </span>
     </a>
 
     <a href="/goals/{{ $goal->id }}/tasks/{{ $task->id }}/remove" class="mdc-list-item__meta" aria-hidden="true">
