@@ -14,7 +14,7 @@
 
             <input type="hidden" name="scheme" value="{{ $scheme_id }}">
             
-            <div class="mdc-select form-field" style="width: 100%;">
+            <div class="mdc-select form-field">
                 <i class="mdc-select__dropdown-icon"></i>
                 <select class="mdc-select__native-control" name="exercise" required>
                     <option value="" disabled {{ isset ( $selected ) ? '' : 'selected' }}></option>
