@@ -16,7 +16,6 @@
 ## Goals
 
 - Make goals measurable (by tasks?)
-- should we make goal add a wizard?
 - Create a good mechanism to set smarter goals
 - Add the ability to add (custom) categories to goals
 - Add the ability to reschedule goals (from the list)
