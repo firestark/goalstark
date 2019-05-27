@@ -4,7 +4,7 @@
         
         <label for="{{ $task [ 0 ]->id }}" class="tab-label">
             <li class="mdc-list-item" tabindex="0">
-                @include ( 'tasks.types.' . taskToTypeString ( $task [ 0 ] ) . '.list-item-action', [ 'task' => $task [ 0 ] ] )
+                @include ( 'tasks.types.' . taskToTypeString ( $task [ 0 ] ) . '.nested-list-item-action', [ 'tasks' => $task ] )
                 
                 <a style="position: relative">
                     <span class="mdc-list-item__text" style="width: 100%;">
