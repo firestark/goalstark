@@ -15,15 +15,16 @@
 
 ## Goals
 
-- Make goals measurable ( by tasks? )
+- Make goals measurable (by tasks?)
 - should we make goal add a wizard?
 - Create a good mechanism to set smarter goals
 - Add the ability to add (custom) categories to goals
-- Add the ability to reschedule goals
+- Add the ability to reschedule goals (from the list)
 
 
 ## Tasks
 
+- The consumation count task resets every day (Doesn't make sense when having a due date)
 - Remove completed state from task agreements
 - Add task explanations
 
@@ -78,28 +79,6 @@
 ### Tips
 
 - Let your users know that they’re doing great by acknowledging their progress, and celebrating the success with the user.
-
-
-### App (Re evaluate later)
-
-Should a task only belong to one goal ever?
-
-### Pros
-
-- The application will be simpler (a goal has tasks and that's it)
-- Changing a task doesn't mess up other goals
-- The end date of a daily tasks will be a bit more clear
-- It's easy to enforce the rule that a task must belong to a goal
-- Removing a goal easily removes all connected tasks
-
-
-### Cons
-
-- How are you going to make the task list (if you crop duplicates how will you show each one for each goal?)
-- Some goals are connected we lose the first step of this connection 
-- Changing a task potentially needs to be changed for every goal it occurs in 
-    (Should be solved in the view to make it explicit ( Found same task in the following goals would you like to update them there too?))
-- For some task types it doesnt make sense to have multiple of them (eg protein task)
 
 
 ## Technicalities
