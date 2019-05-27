@@ -5022,7 +5022,7 @@ svg.mdc-button__icon {
   font-size: 6rem;
   line-height: 6rem;
   font-weight: 300;
-  letter-spacing: -0.01562em;
+  letter-spacing: -0.01563em;
   text-decoration: inherit;
   text-transform: inherit; }
 
@@ -5686,6 +5686,8 @@ section#login {
   ##Screen = B/w 481px to 767px
 */
 @media (min-width: 481px) and (max-width: 767px) {
+  .mdc-select {
+    width: 100%; }
   main {
     padding: 0; }
   .content {
@@ -5709,6 +5711,8 @@ section#login {
     ##Screen = B/w 320px to 479px
   */
 @media (min-width: 320px) and (max-width: 480px) {
+  .mdc-select {
+    width: 100%; }
   main {
     padding: 0; }
   .content {

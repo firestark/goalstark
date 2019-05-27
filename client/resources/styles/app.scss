@@ -822,6 +822,10 @@ section#login {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+    .mdc-select {
+        width: 100%;
+    }
+
     main {
         padding : 0;
     }
@@ -862,6 +866,10 @@ section#login {
   */
   
 @media (min-width: 320px) and (max-width: 480px) {
+
+    .mdc-select {
+        width: 100%;
+    }
 
     main {
         padding : 0;
@@ -1124,25 +1132,3 @@ input:checked {
         max-height: 100vh;
     }
 }
-
-
-// .mdc-list-item--nested {
-//     > input[ type="checkbox" ] {
-//         position: absolute;
-//         opacity: 0;
-//     }
-
-//     .items {
-//         height: 0;
-//         max-height: 0;
-//         transition: max-height .35s;
-//         opacity: 0;
-//     }
-
-//     > input[ type="checkbox" ]:checked {
-//         ~ .items {
-//             max-height: 100vh;
-//             opacity: 1;
-//         }
-//     }
-// }
