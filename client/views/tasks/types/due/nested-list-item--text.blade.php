@@ -1,0 +1,1 @@
+Due {{  date ( 'M d, Y ', max ( array_map ( function ( $task ) { return $task->due; }, $tasks ) ) }}

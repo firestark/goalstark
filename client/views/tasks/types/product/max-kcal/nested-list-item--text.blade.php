@@ -1,0 +1,1 @@
+{{ app::make ( dietitian::class )->kcal ( ) }} kcal consumed today
