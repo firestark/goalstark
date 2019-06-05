@@ -1,5 +1,6 @@
 # Todo
 
+- Logo
 - Specify MVP
 
 
@@ -16,7 +17,6 @@
 ## Goals
 
 - Make goals measurable (by tasks?)
-- should we make goal add a wizard?
 - Create a good mechanism to set smarter goals
 - Add the ability to add (custom) categories to goals
 - Add the ability to reschedule goals (from the list)
@@ -24,9 +24,10 @@
 
 ## Tasks
 
-- The consumation count task resets every day (Doesn't make sense when having a due date)
-- Remove completed state from task agreements
-- Add task explanations
+- Improve ux for task edit status (actions) they are unclear now as to what they do
+- Add minimal completion times for daily tasks 
+- Improve task explanations (What do they do?)
+- Correct list item width (add truncation for items that are too long) (or introduce task titles)
 
 
 ## Misc
@@ -69,7 +70,7 @@
 
 ## refactor
 
-- Correct list item with (add truncation for items that are too long) (or introduce task titles)
+- Rename nested-list-item--text and nested-list-item--action
 - Create a dedicated post install mechanism
 - Use of app::make inside views?
 

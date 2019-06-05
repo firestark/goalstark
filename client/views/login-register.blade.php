@@ -10,7 +10,7 @@
 
 @section ( 'page' )
 
-    <main style="display: grid; align-items: center; height: 100vh;">
+    <main style="display: grid; align-items: end; height: 100vh;">
         <section id="login">
             <form action="{{ request::uri ( ) }}" method="POST" autocomplete="{{ ( request::uri ( ) === '/login' ) ? 'on' : 'off' }}">                
                 <div id="username-input" class="mdc-text-field mdc-text-field--with-leading-icon" style="margin-bottom: 32px;">
