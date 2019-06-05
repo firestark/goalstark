@@ -9,7 +9,7 @@
 @endsection
 
 @section ( 'content' )
-    <form method="POST" action="/apps/food-tracker/products/{{ $product->id }}" style="padding: 16px 8px 80px;">
+    <form method="POST" action="/apps/food-tracker/products/{{ $product->id }}" style="padding: 24px 24px 80px;">
         
         @include ( 'partials.input.name', [ 'value' => $product->name ] )
         @include ( 'partials.input.product.per', [ 'value' => $product->nutrition->per ] )
