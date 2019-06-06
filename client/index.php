@@ -22,10 +22,10 @@ $app->instance ( 'view',
 
 facade::setFacadeApplication ( $app );
 
-require ( __DIR__ . '/routes/routes.php' );
-requiring ( __DIR__ . '/bindings' );
-requiring ( __DIR__ . '/statuses' );
-requiring ( __DIR__ . '/../app/procedures' );
+include ( __DIR__ . '/routes/routes.php' );
+including ( __DIR__ . '/bindings' );
+including ( __DIR__ . '/statuses' );
+including ( __DIR__ . '/../app/procedures' );
 
 $app->instance ( 'dispatcher', new http\dispatcher ( $app [ 'router' ]->routes, $app [ 'router' ]->groups ) );
 $kernel = new firestark\kernel ( $app );
